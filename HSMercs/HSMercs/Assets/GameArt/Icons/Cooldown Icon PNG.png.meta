@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 607827bd67788f14d9c1914ad35b8ad8
+guid: 9a80b3b6cefbdab4783310c282a2cdc9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5036585045616186
-    second: Cooldown Icon_0
+      213: 2191217381837477777
+    second: Cooldown Icon PNG_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cooldown Icon_0
+      name: Cooldown Icon PNG_0
       rect:
         serializedVersion: 2
-        x: 1008
-        y: 1393
-        width: 342
-        height: 536
+        x: 559
+        y: 512
+        width: 1647
+        height: 2355
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3666865fb4e11000800000000000000
-      internalID: 5036585045616186
+      spriteID: 19795166994c86e10800000000000000
+      internalID: 2191217381837477777
       vertices: []
       indices: 
       edges: []
