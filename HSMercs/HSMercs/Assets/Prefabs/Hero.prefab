@@ -3769,7 +3769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5836474907505557809}
   m_Layer: 0
-  m_Name: Hero 1
+  m_Name: Hero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5348,7 +5348,7 @@ GameObject:
   - component: {fileID: 5916406173857048976}
   - component: {fileID: 5916406173857048978}
   m_Layer: 10
-  m_Name: StatusEffectGrid
+  m_Name: StatusEffectDescriptions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
