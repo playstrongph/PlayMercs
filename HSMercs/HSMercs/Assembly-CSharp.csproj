@@ -64,6 +64,8 @@
      <Compile Include="Assets\Scripts\IDisplayHeroPreview.cs" />
      <Compile Include="Assets\Scripts\IHero.cs" />
      <Compile Include="Assets\Scripts\IHeroTargetCollider.cs" />
+     <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceAttribute.cs" />
+     <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceDrawer.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

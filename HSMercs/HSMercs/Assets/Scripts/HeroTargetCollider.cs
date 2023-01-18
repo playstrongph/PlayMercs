@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHero))]
+    private Object hero;
+    
+    public IHero Hero
     {
-        
+        get => hero as IHero;
+        set => hero = value as Object;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }
