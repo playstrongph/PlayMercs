@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HeroPreviewGraphic : MonoBehaviour
+public class HeroPreviewGraphic : MonoBehaviour, IHeroPreviewGraphic
 {
     /// <summary>
     /// All the hero colored frames for fighter, tank, and caster

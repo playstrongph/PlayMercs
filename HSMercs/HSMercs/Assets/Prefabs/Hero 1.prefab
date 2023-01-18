@@ -1246,6 +1246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previewCanvas: {fileID: 4868830558819725606}
+  heroPreviewGraphic: {fileID: 5134894957696654911}
 --- !u!1 &4868830557738572334
 GameObject:
   m_ObjectHideFlags: 0

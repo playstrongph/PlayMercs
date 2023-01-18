@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public interface IHero
+public interface IHeroVisual
 {
     Canvas PreviewCanvas { get; set; }
 }
