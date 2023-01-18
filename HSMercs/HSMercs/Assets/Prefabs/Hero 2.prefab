@@ -249,6 +249,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6148457374952758694}
+  - component: {fileID: 2353428970796878255}
   m_Layer: 10
   m_Name: HeroPreviewSkill2
   m_TagString: Untagged
@@ -284,6 +285,29 @@ RectTransform:
   m_AnchoredPosition: {x: -0.7720032, y: 0.5099182}
   m_SizeDelta: {x: -0.19306839, y: -0.35440302}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2353428970796878255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148457374952758695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6350fdd6396ecd04ead3ac110bc5fe12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillImage: {fileID: 6148457375130386032}
+  speedIcon: {fileID: 8501312058569356830}
+  cooldownIcon: {fileID: 8501312056810488320}
+  greenFrame: {fileID: 6148457375949415599}
+  redFrame: {fileID: 6148457375425233030}
+  blueFrame: {fileID: 6148457374934742822}
+  heroPreviewSkillName: {fileID: 6148457375762418548}
+  heroPreviewSkillElement: {fileID: 6148457375342663759}
+  heroPreviewSkillDescription: {fileID: 6148457375207282918}
+  heroPreviewSkillSpeed: {fileID: 8501312057269919754}
+  heroPreviewSkillCooldown: {fileID: 8501312057918630073}
 --- !u!1 &6148457374954009999
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,6 +543,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6148457375190903131}
+  - component: {fileID: 2353428971093556562}
   m_Layer: 10
   m_Name: HeroPreviewSkill3
   m_TagString: Untagged
@@ -554,6 +579,29 @@ RectTransform:
   m_AnchoredPosition: {x: -1.0949097, y: 0.5024414}
   m_SizeDelta: {x: -0.7387703, y: -0.32966852}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2353428971093556562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6148457375190903128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6350fdd6396ecd04ead3ac110bc5fe12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillImage: {fileID: 6148457376414870333}
+  speedIcon: {fileID: 8501312057375882978}
+  cooldownIcon: {fileID: 8501312058140842723}
+  greenFrame: {fileID: 6148457376132028565}
+  redFrame: {fileID: 6148457375361882893}
+  blueFrame: {fileID: 6148457376186197091}
+  heroPreviewSkillName: {fileID: 6148457376481833952}
+  heroPreviewSkillElement: {fileID: 6148457376340964611}
+  heroPreviewSkillDescription: {fileID: 6148457375616644033}
+  heroPreviewSkillSpeed: {fileID: 8501312058109250256}
+  heroPreviewSkillCooldown: {fileID: 8501312056969204048}
 --- !u!1 &6148457375207282916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1669,12 +1717,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillImage: {fileID: 6148457374901023981}
+  speedIcon: {fileID: 8501312057813480660}
+  cooldownIcon: {fileID: 8501312056744422987}
   greenFrame: {fileID: 6148457375739012837}
   redFrame: {fileID: 6148457376271223091}
   blueFrame: {fileID: 6148457375473018903}
   heroPreviewSkillName: {fileID: 6148457376021220094}
   heroPreviewSkillElement: {fileID: 6148457376643063989}
   heroPreviewSkillDescription: {fileID: 6148457375884040165}
+  heroPreviewSkillSpeed: {fileID: 8501312057018966743}
+  heroPreviewSkillCooldown: {fileID: 8501312058349139112}
 --- !u!1 &6148457375425233028
 GameObject:
   m_ObjectHideFlags: 0

@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\HeroVisual.cs" />
      <Compile Include="Assets\Scripts\IDisplayHeroPreview.cs" />
      <Compile Include="Assets\Scripts\IHeroPreviewGraphic.cs" />
+     <Compile Include="Assets\Scripts\IHeroPreviewSkill.cs" />
      <Compile Include="Assets\Scripts\IHeroTargetCollider.cs" />
      <Compile Include="Assets\Scripts\IHeroVisual.cs" />
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceAttribute.cs" />

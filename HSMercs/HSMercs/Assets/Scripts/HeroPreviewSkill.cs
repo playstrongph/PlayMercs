@@ -9,12 +9,14 @@ using UnityEngine.UI;
 /// Class for Skill Visual displays inside the hero preview.  NOT to be
 /// confused for skill previews (different)
 /// </summary>
-public class HeroPreviewSkill : MonoBehaviour
+public class HeroPreviewSkill : MonoBehaviour, IHeroPreviewSkill
 {
 
 
-    [Header("SKILL IMAGE")] 
+    [Header("SKILL IMAGES")] 
     [SerializeField] private Image skillImage;
+    [SerializeField] private Image speedIcon;
+    [SerializeField] private Image cooldownIcon;
     
     /// <summary>
     /// All the skill colored frames for fighter, tank, and caster
@@ -28,6 +30,9 @@ public class HeroPreviewSkill : MonoBehaviour
     [SerializeField] private TextMeshProUGUI heroPreviewSkillName;
     [SerializeField] private TextMeshProUGUI heroPreviewSkillElement;
     [SerializeField] private TextMeshProUGUI heroPreviewSkillDescription;
+    [SerializeField] private TextMeshProUGUI heroPreviewSkillSpeed;
+    [SerializeField] private TextMeshProUGUI heroPreviewSkillCooldown;
+    
     
     /// <summary>
     /// The hero skill preview image
@@ -36,6 +41,24 @@ public class HeroPreviewSkill : MonoBehaviour
     {
         get => skillImage;
         set => skillImage = value;
+    }
+    
+    /// <summary>
+    /// Reference to speed icon graphic
+    /// </summary>
+    public Image SpeedIcon
+    {
+        get => speedIcon;
+        set => speedIcon = value;
+    }
+    
+    /// <summary>
+    /// Reference to cooldown icon graphic
+    /// </summary>
+    public Image CooldownIcon
+    {
+        get => cooldownIcon;
+        set => cooldownIcon = value;
     }
 
     /// <summary>
@@ -90,6 +113,24 @@ public class HeroPreviewSkill : MonoBehaviour
     {
         get => heroPreviewSkillDescription;
         set => heroPreviewSkillDescription = value;
+    }
+    
+    /// <summary>
+    /// Hero preview skill speed text
+    /// </summary>
+    public TextMeshProUGUI HeroPreviewSkillSpeed
+    {
+        get => heroPreviewSkillSpeed;
+        set => heroPreviewSkillSpeed = value;
+    }
+    
+    /// <summary>
+    /// Hero preview skill cooldown text
+    /// </summary>
+    public TextMeshProUGUI HeroPreviewSkillCooldown
+    {
+        get => heroPreviewSkillCooldown;
+        set => heroPreviewSkillCooldown = value;
     }
     
     
