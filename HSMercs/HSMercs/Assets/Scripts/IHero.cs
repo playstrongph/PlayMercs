@@ -1,3 +1,6 @@
-﻿public interface IHero
+﻿using UnityEngine;
+
+public interface IHero
 {
+    Canvas PreviewCanvas { get; set; }
 }

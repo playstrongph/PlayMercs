@@ -60,6 +60,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\DisplayHeroPreview.cs" />
      <Compile Include="Assets\Scripts\Hero.cs" />
+     <Compile Include="Assets\Scripts\HeroPreviewGraphic.cs" />
      <Compile Include="Assets\Scripts\HeroTargetCollider.cs" />
      <Compile Include="Assets\Scripts\IDisplayHeroPreview.cs" />
      <Compile Include="Assets\Scripts\IHero.cs" />

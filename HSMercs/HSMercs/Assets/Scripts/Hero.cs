@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Hero : MonoBehaviour, IHero
 {
-    // Start is called before the first frame update
-    void Start()
+   
+    /// <summary>
+    /// Reference to hero preview canvas
+    /// </summary>
+    [SerializeField] private Canvas previewCanvas;
+    public Canvas PreviewCanvas
     {
-        
+        get => previewCanvas;
+        set => previewCanvas = value;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+    
+    
 }
