@@ -7,8 +7,8 @@ public class DisplayHeroPreview : MonoBehaviour, IDisplayHeroPreview
 {
     
 
-    [SerializeField] private float displayDelay = 0.5f;
-    [SerializeField] private bool enablePreview = false;
+    /*[SerializeField] private float displayDelay = 0.5f;
+    [SerializeField] private bool enablePreview = false;*/
     
     private IHeroTargetCollider _heroTargetCollider;
 
