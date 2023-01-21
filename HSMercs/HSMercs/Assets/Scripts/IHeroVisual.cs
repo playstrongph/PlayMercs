@@ -2,5 +2,5 @@
 
 public interface IHeroVisual
 {
-    Canvas PreviewCanvas { get; set; }
+    IHeroPreviewGraphic HeroPreviewGraphic { get; }
 }

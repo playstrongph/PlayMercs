@@ -6,6 +6,13 @@ using UnityEngine.UI;
 
 public class HeroPreviewGraphic : MonoBehaviour, IHeroPreviewGraphic
 {
+
+    /// <summary>
+    /// The hero Preview Canvas
+    /// </summary>
+    [Header("PREVIEW CANVAS")] 
+    [SerializeField] private Canvas heroPreviewCanvas;
+    
     /// <summary>
     /// All the hero colored frames for fighter, tank, and caster
     /// </summary>
@@ -17,7 +24,7 @@ public class HeroPreviewGraphic : MonoBehaviour, IHeroPreviewGraphic
     /// <summary>
     /// All the hero graphic images for fighter, tank, and caster
     /// </summary>
-    [Header("HERO FRAMES")] 
+    [Header("HERO GRAPHIC")] 
     [SerializeField] private Image greenHeroGraphic;
     [SerializeField]private Image redHeroGraphic;
     [SerializeField]private Image blueHeroGraphic;
@@ -33,6 +40,15 @@ public class HeroPreviewGraphic : MonoBehaviour, IHeroPreviewGraphic
 
     #region SERIALIZED VARIABLES PROPERTIES
 
+    /// <summary>
+    /// Hero Preview Canvas
+    /// </summary>
+    public Canvas HeroPreviewCanvas
+    {
+        get => heroPreviewCanvas;
+        set => heroPreviewCanvas = value;
+    }
+    
     /// <summary>
     /// Tank Preview Frame
     /// </summary>

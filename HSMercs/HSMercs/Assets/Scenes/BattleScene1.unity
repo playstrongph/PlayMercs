@@ -326,6 +326,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skills
       objectReference: {fileID: 0}
+    - target: {fileID: 2336871806215674162, guid: 77cf42a106e215448a3d34ec11b17ac6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2336871806215674165, guid: 77cf42a106e215448a3d34ec11b17ac6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -672,11 +677,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1034006511}
     m_Modifications:
-    - target: {fileID: 2353428972052328585, guid: af084b2fdf250124e861c5e644e2aafe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6148457375561492200, guid: af084b2fdf250124e861c5e644e2aafe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -787,14 +787,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hero 2
       objectReference: {fileID: 0}
-    - target: {fileID: 6148457375561492201, guid: af084b2fdf250124e861c5e644e2aafe,
+    - target: {fileID: 6148457376554156829, guid: af084b2fdf250124e861c5e644e2aafe,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6148457376554156825, guid: af084b2fdf250124e861c5e644e2aafe,
-        type: 3}
-      propertyPath: m_IsActive
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

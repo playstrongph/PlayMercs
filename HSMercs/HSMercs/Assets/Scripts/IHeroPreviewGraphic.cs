@@ -1,8 +1,15 @@
 ﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public interface IHeroPreviewGraphic
 {
+
+    /// <summary>
+    /// The hero Preview Canvas
+    /// </summary>
+    Canvas HeroPreviewCanvas { get; set; }
+
     /// <summary>
     /// Fighter Preview Frame
     /// </summary>
