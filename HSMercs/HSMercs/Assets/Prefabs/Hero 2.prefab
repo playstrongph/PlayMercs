@@ -890,12 +890,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ceefa4732155c044b027ae2b8d30ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heroGraphicCanvas: {fileID: 6148457375218461495}
   greenFrame: {fileID: 6148457374960883165}
   redFrame: {fileID: 6148457376474323032}
   blueFrame: {fileID: 6148457375953126601}
-  greenHeroGraphic: {fileID: 0}
-  redHeroGraphic: {fileID: 0}
-  blueHeroGraphic: {fileID: 0}
+  greenHeroGraphic: {fileID: 6148457376346945036}
+  redHeroGraphic: {fileID: 6148457374954010001}
+  blueHeroGraphic: {fileID: 6148457375932314083}
+  armorGraphic: {fileID: 6148457376103374978}
+  attackText: {fileID: 6148457375379524481}
+  healthText: {fileID: 6148457375690990019}
+  armorText: {fileID: 6148457375541231800}
 --- !u!1 &6148457375251974098
 GameObject:
   m_ObjectHideFlags: 0
@@ -2170,8 +2175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ed5ad757d5bc4c44b34337384ec637b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  previewCanvas: {fileID: 6148457376554156829}
   heroPreviewGraphic: {fileID: 5872963512213711876}
+  heroGraphic: {fileID: 8501312056539386894}
 --- !u!1 &6148457375616644159
 GameObject:
   m_ObjectHideFlags: 0
@@ -5283,7 +5288,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6148457376554156825}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}

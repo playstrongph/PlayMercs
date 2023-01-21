@@ -787,10 +787,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hero 2
       objectReference: {fileID: 0}
-    - target: {fileID: 6148457376554156829, guid: af084b2fdf250124e861c5e644e2aafe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af084b2fdf250124e861c5e644e2aafe, type: 3}
