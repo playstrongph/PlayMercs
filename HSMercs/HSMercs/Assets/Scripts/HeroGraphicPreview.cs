@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HeroPreviewGraphic : MonoBehaviour, IHeroPreviewGraphic
+public class HeroGraphicPreview : MonoBehaviour, IHeroGraphicPreview
 {
 
     /// <summary>

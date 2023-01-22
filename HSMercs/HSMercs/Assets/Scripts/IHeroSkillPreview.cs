@@ -1,7 +1,7 @@
 ﻿using TMPro;
 using UnityEngine.UI;
 
-public interface IHeroPreviewSkill
+public interface IHeroSkillPreview
 {
     /// <summary>
     /// The hero skill preview image

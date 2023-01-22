@@ -8,15 +8,15 @@ public class HeroVisual : MonoBehaviour, IHeroVisual
     /// <summary>
     /// Reference to hero preview graphics
     /// </summary>
-    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroPreviewGraphic))]
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroGraphicPreview))]
     private Object heroPreviewGraphic;
     
     /// <summary>
     /// Hero Preview Graphic - get only
     /// </summary>
-    public IHeroPreviewGraphic HeroPreviewGraphic
+    public IHeroGraphicPreview HeroGraphicPreview
     {
-        get => heroPreviewGraphic as IHeroPreviewGraphic;
+        get => heroPreviewGraphic as IHeroGraphicPreview;
         set => heroPreviewGraphic = value as Object;
     }
     

@@ -9,7 +9,7 @@ using UnityEngine.UI;
 /// Class for Skill Visual displays inside the hero preview.  NOT to be
 /// confused for skill previews (different)
 /// </summary>
-public class HeroPreviewSkill : MonoBehaviour, IHeroPreviewSkill
+public class HeroSkillPreview : MonoBehaviour, IHeroSkillPreview
 {
 
 

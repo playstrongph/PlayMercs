@@ -60,14 +60,15 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\DisplayHeroPreview.cs" />
      <Compile Include="Assets\Scripts\HeroGraphic.cs" />
-     <Compile Include="Assets\Scripts\HeroPreviewGraphic.cs" />
-     <Compile Include="Assets\Scripts\HeroPreviewSkill.cs" />
+     <Compile Include="Assets\Scripts\HeroGraphicPreview.cs" />
+     <Compile Include="Assets\Scripts\HeroSkillPreview.cs" />
+     <Compile Include="Assets\Scripts\HeroStatusEffectPreview.cs" />
      <Compile Include="Assets\Scripts\HeroTargetCollider.cs" />
      <Compile Include="Assets\Scripts\HeroVisual.cs" />
      <Compile Include="Assets\Scripts\IDisplayHeroPreview.cs" />
      <Compile Include="Assets\Scripts\IHeroGraphic.cs" />
-     <Compile Include="Assets\Scripts\IHeroPreviewGraphic.cs" />
-     <Compile Include="Assets\Scripts\IHeroPreviewSkill.cs" />
+     <Compile Include="Assets\Scripts\IHeroGraphicPreview.cs" />
+     <Compile Include="Assets\Scripts\IHeroSkillPreview.cs" />
      <Compile Include="Assets\Scripts\IHeroTargetCollider.cs" />
      <Compile Include="Assets\Scripts\IHeroVisual.cs" />
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceAttribute.cs" />
