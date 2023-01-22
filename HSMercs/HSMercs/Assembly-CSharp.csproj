@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\DisplayHeroPreview.cs" />
      <Compile Include="Assets\Scripts\HeroGraphic.cs" />
      <Compile Include="Assets\Scripts\HeroGraphicPreview.cs" />
+     <Compile Include="Assets\Scripts\HeroPreview.cs" />
      <Compile Include="Assets\Scripts\HeroSkillPreview.cs" />
      <Compile Include="Assets\Scripts\HeroStatusEffectPreview.cs" />
      <Compile Include="Assets\Scripts\HeroTargetCollider.cs" />
@@ -68,7 +69,9 @@
      <Compile Include="Assets\Scripts\IDisplayHeroPreview.cs" />
      <Compile Include="Assets\Scripts\IHeroGraphic.cs" />
      <Compile Include="Assets\Scripts\IHeroGraphicPreview.cs" />
+     <Compile Include="Assets\Scripts\IHeroPreview.cs" />
      <Compile Include="Assets\Scripts\IHeroSkillPreview.cs" />
+     <Compile Include="Assets\Scripts\IHeroStatusEffectPreview.cs" />
      <Compile Include="Assets\Scripts\IHeroTargetCollider.cs" />
      <Compile Include="Assets\Scripts\IHeroVisual.cs" />
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceAttribute.cs" />

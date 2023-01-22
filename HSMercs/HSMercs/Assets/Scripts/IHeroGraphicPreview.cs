@@ -4,12 +4,6 @@ using UnityEngine.UI;
 
 public interface IHeroGraphicPreview
 {
-
-    /// <summary>
-    /// The hero Preview Canvas
-    /// </summary>
-    Canvas HeroPreviewCanvas { get; set; }
-
     /// <summary>
     /// Fighter Preview Frame
     /// </summary>

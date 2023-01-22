@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 6270910777893048100}
   - component: {fileID: 6270910777893048099}
   m_Layer: 10
-  m_Name: StatusEffectDescription
+  m_Name: StatusEffectPreview
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -304,7 +304,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 7
+  m_fontSize: 6.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
