@@ -561,6 +561,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1718177154}
   - component: {fileID: 1718177155}
+  - component: {fileID: 1718177156}
   m_Layer: 0
   m_Name: SkillTargetCollider
   m_TagString: Untagged
@@ -610,6 +611,19 @@ Canvas:
   m_SortingLayerID: -1913335363
   m_SortingOrder: 10
   m_TargetDisplay: 0
+--- !u!65 &1718177156
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718177153}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 40, y: 40, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!222 &8101446666074217
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3153,7 +3167,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821249280156111462}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
