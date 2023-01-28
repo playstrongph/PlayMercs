@@ -1,26 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SkillVisual : MonoBehaviour
 {
-    [SerializeField] private Canvas skillCanvas;
-    
-    [Header("FRAME IMAGES")]
-    [SerializeField] private Image skillReadyFrame;
-    [SerializeField] private Image skillNotReadyFrame;
-    [SerializeField] private Image passiveSkillFrame;
-    
-    [Header("SKILL IMAGES")]
-    [SerializeField] private Image skillReadyGraphic;
-    [SerializeField] private Image skillNotReadyGraphic;
-    [SerializeField] private Image passiveSkillGraphic;
-    [SerializeField] private Image targetArrow;
 
-    [Header("SKILL TEXTS")] 
-    [SerializeField] private TextMeshProUGUI skillReadyText;
-    [SerializeField] private TextMeshProUGUI skillNotReadyText;
+    #region VARIABLES
+    
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillGraphics))]
+    private Object skillGraphics;
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPreviewVisual))]
+    private Object skillPreviewVisual;
 
+    #endregion
+
+    #region PROPERTIES
+
+    public ISkillGraphics SkillGraphics { get=> skillGraphics as ISkillGraphics; private set => skillGraphics = value as Object; }
+    public ISkillPreviewVisual SkillPreviewVisual { get=> skillPreviewVisual as ISkillPreviewVisual; private set => skillPreviewVisual = value as Object; }
+    
+    #endregion
+    
 }

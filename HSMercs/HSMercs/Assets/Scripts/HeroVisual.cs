@@ -8,7 +8,7 @@ public class HeroVisual : MonoBehaviour, IHeroVisual
     /// <summary>
     /// Reference to hero graphics
     /// </summary>
-    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroGraphic))]
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroGraphics))]
     private Object heroGraphic;
     
     /// <summary>
@@ -23,9 +23,9 @@ public class HeroVisual : MonoBehaviour, IHeroVisual
     /// <summary>
     /// Reference to hero graphics
     /// </summary>
-    public IHeroGraphic HeroGraphic
+    public IHeroGraphics HeroGraphics
     {
-        get => heroGraphic as IHeroGraphic;
+        get => heroGraphic as IHeroGraphics;
         set => heroGraphic = value as Object;
     }
     

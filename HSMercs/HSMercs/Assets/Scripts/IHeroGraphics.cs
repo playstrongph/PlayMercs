@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public interface IHeroGraphic
+public interface IHeroGraphics
 {
     /// <summary>
     /// Hero Graphic Canvas

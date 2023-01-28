@@ -6,7 +6,7 @@ public interface IHeroVisual
     /// <summary>
     /// Returns hero graphic reference for changing hero visuals
     /// </summary>
-    IHeroGraphic HeroGraphic { get; }
+    IHeroGraphics HeroGraphics { get; }
 
     /// <summary>
     /// Reference to hero preview
