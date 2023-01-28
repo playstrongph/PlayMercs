@@ -29,7 +29,7 @@ public interface IHeroPreview
     IHeroSkillPreview HeroSkillPreview3 { get; }
 
     /// <summary>
-    /// Reference to hero status effects previews 
+    /// Reference to hero status effects preview transform
     /// </summary>
-    IHeroStatusEffectPreview HeroStatusEffectPreview { get; }
+    Transform StatusEffectPreviewTransform { get; }
 }

@@ -18,9 +18,8 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
 
     [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillPreview))]
     [SerializeField] private Object heroSkillPreview3;
-    
-    [RequireInterfaceAttribute.RequireInterface(typeof(IHeroStatusEffectPreview))]
-    [SerializeField] private Object heroStatusEffectPreview;
+
+    [SerializeField] private Transform statusEffectPreviewTransform;
 
 
     #region Variable Properties
@@ -69,15 +68,8 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
         get => heroSkillPreview3 as IHeroSkillPreview;
         private set => heroSkillPreview3 = value as Object;
     }
-    
-    /// <summary>
-    /// Reference to hero status effects previews 
-    /// </summary>
-    public IHeroStatusEffectPreview HeroStatusEffectPreview
-    {
-        get => heroStatusEffectPreview as IHeroStatusEffectPreview;
-        private set => heroStatusEffectPreview = value as Object;
-    }
+
+    public Transform StatusEffectPreviewTransform { get => statusEffectPreviewTransform; set => statusEffectPreviewTransform = value; }
 
     #endregion
     
