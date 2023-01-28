@@ -5355,7 +5355,7 @@ GameObject:
   - component: {fileID: 2064930021382051020}
   - component: {fileID: 2064930021382051023}
   m_Layer: 0
-  m_Name: Hero 3
+  m_Name: Hero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 3137831375553177056}
   - component: {fileID: 574882913}
   m_Layer: 0
-  m_Name: AllHeroSkills 1
+  m_Name: AllHeroSkills
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
