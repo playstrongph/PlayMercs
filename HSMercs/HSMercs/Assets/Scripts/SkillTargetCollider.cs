@@ -11,7 +11,10 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     [SerializeField] private Canvas targetCanvas;
     
     public ISelectDragTarget SelectDragTarget { get; private set; }
-    
+
+
+    public IDraggable Draggable { get; private set; }
+
     #endregion
 
     #region Properties
@@ -27,7 +30,7 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     {
         //DisplaySkillPreview = GetComponent<IDisplaySkillPreview>();
         SelectDragTarget = GetComponent<ISelectDragTarget>();
-        //Draggable = GetComponent<IDraggable>();
+        Draggable = GetComponent<IDraggable>();
         //GetSkillTargets = GetComponent<IGetSkillTargets>();
     }
     
