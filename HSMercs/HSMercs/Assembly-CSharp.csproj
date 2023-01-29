@@ -60,6 +60,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AllHeroSkillsVisual.cs" />
      <Compile Include="Assets\Scripts\DisplayHeroPreview.cs" />
+     <Compile Include="Assets\Scripts\Draggable.cs" />
      <Compile Include="Assets\Scripts\HeroGraphicPreview.cs" />
      <Compile Include="Assets\Scripts\HeroGraphics.cs" />
      <Compile Include="Assets\Scripts\HeroPreview.cs" />
@@ -74,13 +75,16 @@
      <Compile Include="Assets\Scripts\IHeroSkillPreview.cs" />
      <Compile Include="Assets\Scripts\IHeroTargetCollider.cs" />
      <Compile Include="Assets\Scripts\IHeroVisual.cs" />
+     <Compile Include="Assets\Scripts\ISelectDragTarget.cs" />
      <Compile Include="Assets\Scripts\ISkillGraphics.cs" />
      <Compile Include="Assets\Scripts\ISkillPanelVisual.cs" />
      <Compile Include="Assets\Scripts\ISkillPreviewVisual.cs" />
+     <Compile Include="Assets\Scripts\ISkillTargetCollider.cs" />
      <Compile Include="Assets\Scripts\IStatusEffectPreviewVisual.cs" />
      <Compile Include="Assets\Scripts\IStatusEffectVisual.cs" />
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceAttribute.cs" />
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceDrawer.cs" />
+     <Compile Include="Assets\Scripts\SelectDragTarget.cs" />
      <Compile Include="Assets\Scripts\SkillGraphics.cs" />
      <Compile Include="Assets\Scripts\SkillPanelVisual.cs" />
      <Compile Include="Assets\Scripts\SkillPreviewVisual.cs" />

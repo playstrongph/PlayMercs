@@ -27,11 +27,7 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
     /// <summary>
     /// Reference to the hero preview canvas
     /// </summary>
-    public Canvas HeroPreviewCanvas
-    {
-        get => heroPreviewCanvas;
-        private set => heroPreviewCanvas = value;
-    }
+    public Canvas HeroPreviewCanvas { get => heroPreviewCanvas; private set => heroPreviewCanvas = value; }
 
     /// <summary>
     /// Reference to hero preview graphics
