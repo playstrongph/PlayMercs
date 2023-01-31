@@ -53,6 +53,10 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
         SkillTargetCollider.TargetArrow.SetActive(true);
             
         SkillTargetCollider.TargetLine.SetPositions(new Vector3[]{transform.parent.position, transform.position - direction*20f});
+        
+        
+        
+        
         SkillTargetCollider.TargetArrow.transform.position = transform.position - 15f * direction;
             
         float rotZ = Mathf.Atan2(notNormalized.y, notNormalized.x) * Mathf.Rad2Deg;

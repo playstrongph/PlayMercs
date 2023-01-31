@@ -8,6 +8,9 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     
     [SerializeField] private GameObject targetArrow;
     [SerializeField] private LineRenderer targetLine;
+    
+    [SerializeField] private GameObject targetNode;
+    
     [SerializeField] private Canvas targetCanvas;
     
     public ISelectDragTarget SelectDragTarget { get; private set; }
