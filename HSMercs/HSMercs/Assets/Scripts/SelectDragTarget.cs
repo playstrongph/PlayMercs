@@ -99,7 +99,21 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
         SkillTargetCollider.TargetLine.gameObject.SetActive(false);
         SkillTargetCollider.Draggable.DisableDraggable();
     }
+
+
+    #region TEST
     
+    private void InitializeBezierCurve()
+    {
+        var arrowNodes = 4;
+    }
     
+    private void BezierCurveNodes()
+    {
+    }
+
+    #endregion
     
+
+
 }

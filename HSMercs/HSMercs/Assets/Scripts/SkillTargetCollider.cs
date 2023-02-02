@@ -24,6 +24,8 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
 
     public GameObject TargetArrow { get => targetArrow; private set => targetArrow = value;}
     public LineRenderer TargetLine { get => targetLine; private set => targetLine = value;}
+    
+    public GameObject TargetNode { get => targetNode; private set => targetNode = value;}
     public Canvas TargetCanvas { get => targetCanvas; private set => targetCanvas = value;}
 
     #endregion
