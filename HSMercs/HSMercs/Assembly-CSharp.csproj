@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\HeroTargetCollider.cs" />
      <Compile Include="Assets\Scripts\HeroVisual.cs" />
      <Compile Include="Assets\Scripts\IAllHeroSkillsVisual.cs" />
+     <Compile Include="Assets\Scripts\IBezierNodes.cs" />
      <Compile Include="Assets\Scripts\IDisplayHeroPreview.cs" />
      <Compile Include="Assets\Scripts\IDraggable.cs" />
      <Compile Include="Assets\Scripts\IHeroGraphicPreview.cs" />

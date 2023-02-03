@@ -44,12 +44,21 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
         var index = Mathf.Clamp(intDifference, 0, 1);
 
         if (intDifference > 0)
+        {
             DisplayLineAndTriangle(notNormalized,direction);
+            
+            //TEST
+            SkillTargetCollider.BezierNodes.ShowArrowAndNodes();
+        }
+
+        
     }
     
     private void DisplayLineAndTriangle(Vector3 notNormalized, Vector3 direction)
     {
-        SkillTargetCollider.TargetLine.enabled = true;
+        //TEST - disable
+        //SkillTargetCollider.TargetLine.enabled = true;
+        
         SkillTargetCollider.TargetArrow.SetActive(true);
             
         SkillTargetCollider.TargetLine.SetPositions(new Vector3[]{transform.parent.position, transform.position - direction*20f});
@@ -98,19 +107,15 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
         SkillTargetCollider.TargetArrow.SetActive(false);
         SkillTargetCollider.TargetLine.gameObject.SetActive(false);
         SkillTargetCollider.Draggable.DisableDraggable();
+        
+        //TEST
+        SkillTargetCollider.BezierNodes.HideArrowAndNodes();
     }
 
 
     #region TEST
     
-    private void InitializeBezierCurve()
-    {
-        var arrowNodes = 4;
-    }
     
-    private void BezierCurveNodes()
-    {
-    }
 
     #endregion
     

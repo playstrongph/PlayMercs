@@ -8,8 +8,9 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     
     [SerializeField] private GameObject targetArrow;
     [SerializeField] private LineRenderer targetLine;
-    
-    [SerializeField] private GameObject targetNode;
+
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBezierNodes))]
+    private Object bezierNodes;
     
     [SerializeField] private Canvas targetCanvas;
     
@@ -25,7 +26,7 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     public GameObject TargetArrow { get => targetArrow; private set => targetArrow = value;}
     public LineRenderer TargetLine { get => targetLine; private set => targetLine = value;}
     
-    public GameObject TargetNode { get => targetNode; private set => targetNode = value;}
+    public IBezierNodes BezierNodes { get => bezierNodes as IBezierNodes; private set => bezierNodes = value as Object;}
     public Canvas TargetCanvas { get => targetCanvas; private set => targetCanvas = value;}
 
     #endregion

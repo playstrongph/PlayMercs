@@ -4,7 +4,7 @@ public interface ISkillTargetCollider
 {
     GameObject TargetArrow { get; }
 
-    GameObject TargetNode { get; }
+    IBezierNodes BezierNodes { get; }
     LineRenderer TargetLine { get; }
     Canvas TargetCanvas { get; }
     
