@@ -86,7 +86,9 @@ public class BezierNodes : MonoBehaviour, IBezierNodes
 
            for (int i = 0; i < arrowNodes.Count; i++)
            {
-               var t = (i+1) / ((arrowNodes.Count - 1) + 1f);
+               //var t = (i+1) / ((arrowNodes.Count - 1) + 1f);
+               
+               var t = (i+1.5f) / ((arrowNodes.Count - 1) + 1f);
 
                //Quadratic Bezier Curve
                arrowNodes[i].transform.position =

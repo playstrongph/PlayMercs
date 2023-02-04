@@ -728,7 +728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowNode: {fileID: 5314962536489535950, guid: 713850254cb23a342955e33f36b981a7,
     type: 3}
-  arrowNodeNum: 4
+  arrowNodeNum: 5
   scaleFactor: 1
   arrowNodes: []
   controlPoints: []
