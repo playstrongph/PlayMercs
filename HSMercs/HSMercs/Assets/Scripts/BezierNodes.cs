@@ -38,7 +38,7 @@ public class BezierNodes : MonoBehaviour, IBezierNodes
            //Creates arrow nodes 
            for (int i = 0; i < arrowNodeNum; i++)
            {
-               var node = Instantiate(ArrowNode, transform.parent, true);
+               var node = Instantiate(ArrowNode, transform, true);
                arrowNodes.Add(node);
            }
 
