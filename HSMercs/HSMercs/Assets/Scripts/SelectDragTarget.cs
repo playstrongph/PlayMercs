@@ -37,7 +37,7 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
             
         //Hide Triangle and Line while target is close to HeroObject
         SkillTargetCollider.TargetArrow.SetActive(false);
-        SkillTargetCollider.TargetLine.enabled = false;
+       
             
         var difference = notNormalized.magnitude - distanceFromHero;
         var intDifference = Mathf.RoundToInt(difference);
@@ -62,7 +62,7 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
         
         SkillTargetCollider.TargetArrow.SetActive(true);
             
-        SkillTargetCollider.TargetLine.SetPositions(new Vector3[]{transform.parent.position, transform.position - direction*20f});
+        
         
         
         
@@ -89,7 +89,7 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
         //SkillTargetCollider.CrossHair.SetActive(true);
         
         SkillTargetCollider.TargetArrow.SetActive(true);
-        SkillTargetCollider.TargetLine.gameObject.SetActive(true);
+        
         SkillTargetCollider.Draggable.EnableDraggable();
         
         ShowLineAndTarget();
@@ -106,7 +106,7 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
         //SkillTargetCollider.CrossHair.SetActive(false);
         
         SkillTargetCollider.TargetArrow.SetActive(false);
-        SkillTargetCollider.TargetLine.gameObject.SetActive(false);
+        
         SkillTargetCollider.Draggable.DisableDraggable();
         
         //TEST
