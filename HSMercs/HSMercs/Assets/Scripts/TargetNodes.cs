@@ -8,7 +8,7 @@ using UnityEngine.UI;
 /// <summary>
 /// Target Arrow Nodes
 /// </summary>
-public class BezierNodes : MonoBehaviour, IBezierNodes
+public class TargetNodes : MonoBehaviour, ITargetNodes
 {
     [SerializeField] private GameObject arrowNode;
     [SerializeField] private int arrowNodeNum = 10;
@@ -29,28 +29,20 @@ public class BezierNodes : MonoBehaviour, IBezierNodes
 
     private void Awake()
        {
-
-           //Gets position of the arrows emitter point
-           //_origin = GetComponent<RectTransform>();
-           
-           
-   
-           //Creates arrow nodes 
+           //Creates targetting nodes 
            for (int i = 0; i < arrowNodeNum; i++)
            {
                var node = Instantiate(ArrowNode, transform, true);
                arrowNodes.Add(node);
            }
 
-           
-
-           HideArrowAndNodes();
-           
-           //Quadratic Bezier control 3 control points, P0, P1, P2
+           //Create Bezier Curve control points - P0,P1, and P2
            for (int i = 0; i < 3; i++)
            {
                controlPoints.Add(Vector3.zero);
            }
+           
+           HideArrowAndNodes();
 
        }//End of Awake
 

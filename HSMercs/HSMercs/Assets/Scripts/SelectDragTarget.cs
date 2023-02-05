@@ -48,9 +48,9 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
             DisplayLineAndTriangle(notNormalized,direction);
             
             //Test Success
-            SkillTargetCollider.BezierNodes.ShowArrowAndNodes();
+            SkillTargetCollider.TargetNodes.ShowArrowAndNodes();
         }else //Test Success
-            SkillTargetCollider.BezierNodes.HideArrowAndNodes();
+            SkillTargetCollider.TargetNodes.HideArrowAndNodes();
 
         
     }
@@ -110,7 +110,7 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
         SkillTargetCollider.Draggable.DisableDraggable();
         
         //TEST
-        SkillTargetCollider.BezierNodes.HideArrowAndNodes();
+        SkillTargetCollider.TargetNodes.HideArrowAndNodes();
     }
 
 
