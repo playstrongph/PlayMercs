@@ -10,7 +10,7 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
    
 
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ITargetNodes))]
-    private Object bezierNodes;
+    private Object targetNodes;
     
     [SerializeField] private Canvas targetCanvas;
     
@@ -26,7 +26,7 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     public GameObject TargetArrow { get => targetArrow; private set => targetArrow = value;}
     
     
-    public ITargetNodes TargetNodes { get => bezierNodes as ITargetNodes; private set => bezierNodes = value as Object;}
+    public ITargetNodes TargetNodes { get => targetNodes as ITargetNodes; private set => targetNodes = value as Object;}
     public Canvas TargetCanvas { get => targetCanvas; private set => targetCanvas = value;}
 
     #endregion

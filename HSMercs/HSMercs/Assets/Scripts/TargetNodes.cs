@@ -15,7 +15,7 @@ public class TargetNodes : MonoBehaviour, ITargetNodes
     [SerializeField] private float scaleFactor = 1f;
     
     private readonly List<GameObject> _arrowNodes = new List<GameObject>();
-    [SerializeField]private List<Vector3> _controlPoints = new List<Vector3>();
+    private readonly List<Vector3> _controlPoints = new List<Vector3>();
     private GameObject ArrowNode { get => arrowNode; set => arrowNode = value; } //To avoid warning in Unity Inspector
 
 
