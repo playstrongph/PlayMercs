@@ -1,5 +1,5 @@
 ﻿public interface ITargetNodes
 {
-    void HideArrowAndNodes();
-    void ShowArrowAndNodes();
+    void HideArrowNodes();
+    void ShowArrowNodes();
 }
