@@ -6,7 +6,7 @@ using UnityEngine;
 public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
 {
     
-    [SerializeField] private float distanceMultiplier = 50f;
+    [SerializeField] private float distanceMultiplier = 40;
     
     private ISkillTargetCollider SkillTargetCollider { get; set; }
 
@@ -57,19 +57,12 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
     
     private void DisplayLineAndTriangle(Vector3 notNormalized, Vector3 direction)
     {
-        //TEST - disable
-        //SkillTargetCollider.TargetLine.enabled = true;
         
         SkillTargetCollider.TargetArrow.SetActive(true);
-            
-        
-        
-        
-        
-        
+
         SkillTargetCollider.TargetArrow.transform.position = transform.position - 15f * direction;
             
-        float rotZ = Mathf.Atan2(notNormalized.y, notNormalized.x) * Mathf.Rad2Deg;
+        var rotZ = Mathf.Atan2(notNormalized.y, notNormalized.x) * Mathf.Rad2Deg;
         SkillTargetCollider.TargetArrow.transform.rotation = Quaternion.Euler(0f,0f,rotZ-90);
             
         //Disable Hero Preview
@@ -109,7 +102,6 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
         
         SkillTargetCollider.Draggable.DisableDraggable();
         
-        //TEST
         SkillTargetCollider.TargetNodes.HideArrowNodes();
     }
 

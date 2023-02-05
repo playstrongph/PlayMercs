@@ -1486,7 +1486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 926731bdaaa32f4458b0999b3f186e82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distanceMultiplier: 25
+  distanceMultiplier: 40
 --- !u!1 &8868256306820245271
 GameObject:
   m_ObjectHideFlags: 0
@@ -1856,7 +1856,6 @@ MonoBehaviour:
     type: 3}
   arrowNodeNum: 5
   scaleFactor: 1
-  _controlPoints: []
 --- !u!1 &8868256307084837279
 GameObject:
   m_ObjectHideFlags: 0

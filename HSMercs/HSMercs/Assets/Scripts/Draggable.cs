@@ -14,6 +14,8 @@ public class Draggable : MonoBehaviour, IDraggable
     private Camera _mainCamera;
     
     private ISelectDragTarget SelectDragTarget { get; set; }
+    
+    
 
     private void Awake()
     {
@@ -24,15 +26,18 @@ public class Draggable : MonoBehaviour, IDraggable
     
     private void OnEnable()
     {
-        _zDisplacement = -_mainCamera.transform.position.z + transform.position.z;
-        _pointerDisplacement = -transform.position + MouseInWorldCoords();
+        var thisPosition = this.transform.position;
+        
+        _zDisplacement = -_mainCamera.transform.position.z + thisPosition.z;
+        _pointerDisplacement = -thisPosition + MouseInWorldCoords();
     }
     
     private void Update()
     {
         var mousePos = MouseInWorldCoords();    
+        var thisTransform = this.transform;
             
-        transform.position = new Vector3(mousePos.x - _pointerDisplacement.x, mousePos.y - _pointerDisplacement.y, transform.position.z);
+        thisTransform.position = new Vector3(mousePos.x - _pointerDisplacement.x, mousePos.y - _pointerDisplacement.y, thisTransform.position.z);
             
         SkillTargetCollider.SelectDragTarget.ShowLineAndTarget();
         
