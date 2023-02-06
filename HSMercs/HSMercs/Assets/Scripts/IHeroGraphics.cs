@@ -44,6 +44,8 @@ public interface IHeroGraphics
     /// </summary>
     Image ArmorGraphic { get; set; }
 
+    Image TargetCrossHairGraphic { get; set; }
+
     /// <summary>
     /// Attack Text Graphic
     /// </summary>

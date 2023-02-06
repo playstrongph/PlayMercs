@@ -6,7 +6,9 @@ using UnityEngine.UI;
 
 public class HeroGraphics : MonoBehaviour, IHeroGraphics
 {
-    
+
+    #region VARIABLES
+
     /// <summary>
     /// The hero Preview Canvas
     /// </summary>
@@ -29,6 +31,7 @@ public class HeroGraphics : MonoBehaviour, IHeroGraphics
     [SerializeField]private Image redHeroGraphic;
     [SerializeField]private Image blueHeroGraphic;
     [SerializeField]private Image armorGraphic;
+    [SerializeField]private Image targetCrossHairGraphic;
 
     /// <summary>
     /// Hero preview texts
@@ -37,6 +40,8 @@ public class HeroGraphics : MonoBehaviour, IHeroGraphics
     [SerializeField] private TextMeshProUGUI attackText;
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private TextMeshProUGUI armorText;
+    
+    #endregion
 
     #region SERIALIZED VARIABLE PROPERTIES
 
@@ -110,6 +115,12 @@ public class HeroGraphics : MonoBehaviour, IHeroGraphics
     {
         get => armorGraphic;
         set => armorGraphic = value;
+    }
+    
+    public Image TargetCrossHairGraphic
+    {
+        get => targetCrossHairGraphic;
+        set => targetCrossHairGraphic = value;
     }
     
     /// <summary>

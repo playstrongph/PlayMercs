@@ -28,46 +28,41 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
     }
 
 
+    #region VISUAL METHODS
+
+
     public void ShowLineAndTarget()
     {
-        var notNormalized = transform.position - transform.parent.position;
+        var thisTransform = transform;
+        var notNormalized = thisTransform.position - thisTransform.parent.position;
         var direction = notNormalized.normalized;
         var distanceFromHero = (direction*distanceMultiplier).magnitude;
-        
+        var difference = notNormalized.magnitude - distanceFromHero;
+        var intDifference = Mathf.RoundToInt(difference);
+        //var index = Mathf.Clamp(intDifference, 0, 1);
             
         //Hide Triangle and Line while target is close to HeroObject
         SkillTargetCollider.TargetArrow.SetActive(false);
-       
-            
-        var difference = notNormalized.magnitude - distanceFromHero;
-        var intDifference = Mathf.RoundToInt(difference);
-        var index = Mathf.Clamp(intDifference, 0, 1);
 
         if (intDifference > 0)
         {
-            DisplayLineAndTriangle(notNormalized,direction);
-            
-            //Test Success
+            ShowArrow(notNormalized,direction); 
             SkillTargetCollider.TargetNodes.ShowArrowNodes();
-        }else //Test Success
+        }
+        else 
             SkillTargetCollider.TargetNodes.HideArrowNodes();
-
-        
     }
     
-    private void DisplayLineAndTriangle(Vector3 notNormalized, Vector3 direction)
+    private void ShowArrow(Vector3 notNormalized, Vector3 direction)
     {
+        var rotZ = Mathf.Atan2(notNormalized.y, notNormalized.x) * Mathf.Rad2Deg;
         
         SkillTargetCollider.TargetArrow.SetActive(true);
-
         SkillTargetCollider.TargetArrow.transform.position = transform.position - 15f * direction;
-            
-        var rotZ = Mathf.Atan2(notNormalized.y, notNormalized.x) * Mathf.Rad2Deg;
         SkillTargetCollider.TargetArrow.transform.rotation = Quaternion.Euler(0f,0f,rotZ-90);
             
         //Disable Hero Preview
         //SkillTargetCollider.DisplaySkillPreview.HidePreview();  //Temp Disable
-
     }
 
     /// <summary>
@@ -78,13 +73,8 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
     {
         //Resets local position to zero
         transform.localPosition = Vector3.zero;
-            
-        //SkillTargetCollider.CrossHair.SetActive(true);
-        
         SkillTargetCollider.TargetArrow.SetActive(true);
-        
         SkillTargetCollider.Draggable.EnableDraggable();
-        
         ShowLineAndTarget();
     }
     
@@ -95,20 +85,50 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
     private void DisableTargetVisuals()
     {
         transform.localPosition = Vector3.zero;
-            
-        //SkillTargetCollider.CrossHair.SetActive(false);
-        
         SkillTargetCollider.TargetArrow.SetActive(false);
-        
         SkillTargetCollider.Draggable.DisableDraggable();
-        
         SkillTargetCollider.TargetNodes.HideArrowNodes();
     }
-
+    
+    #endregion
 
     #region TEST
-    
-    
+
+
+    private void ShowTargetCrossHair()
+    {
+        // ReSharper disable once PossibleNullReferenceException
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        //Store at most 5 ray cast hits
+        var mResults = new RaycastHit[5];
+            
+        //ray traverses all layers
+        var layerMask = ~0;
+            
+        //Same to RayCastAll but with no additional garbage
+        int hitsCount = Physics.RaycastNonAlloc(ray, mResults, Mathf.Infinity,layerMask);
+            
+        //Update the latest targeted hero to null
+        //_validSkillTargetHero = null;
+            
+        //SkillTargetCollider.Skill.CasterHero.HeroLogic.LastHeroTargets.SetTargetedHero(_validSkillTargetHero);
+
+        for (int i = 0; i < hitsCount; i++)
+        {
+            if (mResults[i].transform.GetComponent<IHero>() != null)
+            {
+                var targetHero = mResults[i].transform.GetComponent<IHero>();
+                
+               
+
+                //check if hero is included in the valid targets.  Set hero to targetHero or Null;
+               //_validSkillTargetHero = _validTargets.Contains(targetHeroCollider.Hero) ? targetHeroCollider.Hero : null;
+            }
+
+        }
+    }
+
 
     #endregion
     

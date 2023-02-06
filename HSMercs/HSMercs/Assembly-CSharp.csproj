@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\AllHeroSkillsVisual.cs" />
      <Compile Include="Assets\Scripts\DisplayHeroPreview.cs" />
      <Compile Include="Assets\Scripts\Draggable.cs" />
+     <Compile Include="Assets\Scripts\Hero.cs" />
      <Compile Include="Assets\Scripts\HeroGraphicPreview.cs" />
      <Compile Include="Assets\Scripts\HeroGraphics.cs" />
      <Compile Include="Assets\Scripts\HeroPreview.cs" />
@@ -70,6 +71,7 @@
      <Compile Include="Assets\Scripts\IAllHeroSkillsVisual.cs" />
      <Compile Include="Assets\Scripts\IDisplayHeroPreview.cs" />
      <Compile Include="Assets\Scripts\IDraggable.cs" />
+     <Compile Include="Assets\Scripts\IHero.cs" />
      <Compile Include="Assets\Scripts\IHeroGraphicPreview.cs" />
      <Compile Include="Assets\Scripts\IHeroGraphics.cs" />
      <Compile Include="Assets\Scripts\IHeroPreview.cs" />
