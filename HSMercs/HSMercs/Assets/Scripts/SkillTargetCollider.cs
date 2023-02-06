@@ -22,7 +22,8 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     #endregion
 
     #region Properties
-
+    
+    //GameObject used because both Transform and Image components are utilized
     public GameObject TargetArrow { get => targetArrow; private set => targetArrow = value;}
 
     public ITargetNodes TargetNodes { get => targetNodes as ITargetNodes; private set => targetNodes = value as Object;}

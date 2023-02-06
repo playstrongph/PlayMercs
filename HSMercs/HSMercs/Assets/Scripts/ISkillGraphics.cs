@@ -10,6 +10,8 @@ public interface ISkillGraphics
     Image SkillNotReadyGraphic { get; }
     Image PassiveSkillGraphic { get; }
     Image TargetArrow { get; }
+    Image CrossHairGraphic { get; }
+    
     TextMeshProUGUI SkillReadyText { get; }
     TextMeshProUGUI SkillNotReadyText { get; }
 }
