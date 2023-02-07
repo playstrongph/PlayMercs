@@ -1,8 +1,10 @@
 ﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public interface ISkillGraphics
 {
+    Canvas SkillCanvas { get; }
     Image SkillReadyFrame { get; }
     Image SkillNotReadyFrame { get; }
     Image PassiveSkillFrame { get; }

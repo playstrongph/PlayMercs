@@ -2577,7 +2577,7 @@ MonoBehaviour:
   skillNotReadyGraphic: {fileID: 8868256307702997505}
   passiveSkillGraphic: {fileID: 8868256308062968132}
   targetArrow: {fileID: 8868256308928330867}
-  crossHairGraphic: {fileID: 0}
+  crossHairGraphic: {fileID: 792381386}
   skillReadyText: {fileID: 8868256308760770384}
   skillNotReadyText: {fileID: 8868256308000988829}
 --- !u!1 &8868256307749342061

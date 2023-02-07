@@ -26,6 +26,8 @@ public class SkillGraphics : MonoBehaviour, ISkillGraphics
 
     #region PROPERTIES
 
+    public Canvas SkillCanvas { get => skillCanvas; private set => skillCanvas = value; }
+
     //FRAME IMAGES
     public Image SkillReadyFrame { get => skillReadyFrame; private set => skillReadyFrame = value; } 
     public Image SkillNotReadyFrame { get => skillNotReadyFrame; private set => skillNotReadyFrame = value; }
