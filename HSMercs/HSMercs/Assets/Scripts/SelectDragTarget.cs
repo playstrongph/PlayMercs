@@ -124,7 +124,8 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
             
         //SkillTargetCollider.Skill.CasterHero.HeroLogic.LastHeroTargets.SetTargetedHero(_validSkillTargetHero);
         
-        HideTargetCrossHair();
+        //Hide target cross hair by default
+        SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = true;
 
         for (int i = 0; i < hitsCount; i++)
         {
@@ -133,8 +134,10 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
                 
                 //TEMP - Valid Target Checking to be introduced either here or in calling function
                 
+                //Display cross hair
                 SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = true;
-
+                
+                //Set cross hair position to position of target hero
                 SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.transform.position =
                     mResults[i].transform.position;
             }
