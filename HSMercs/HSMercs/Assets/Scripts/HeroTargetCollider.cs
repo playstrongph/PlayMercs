@@ -5,12 +5,12 @@ using UnityEngine;
 public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
 {
 
-    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroVisual))]
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHero))]
     private Object hero;
     
-    public IHeroVisual HeroVisual
+    public IHero Hero
     {
-        get => hero as IHeroVisual;
+        get => hero as IHero;
         set => hero = value as Object;
     }
 

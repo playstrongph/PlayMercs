@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillVisual : MonoBehaviour
+public class SkillVisual : MonoBehaviour, ISkillVisual
 {
 
     #region VARIABLES

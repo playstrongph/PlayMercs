@@ -2,6 +2,8 @@
 
 public interface ISkillTargetCollider
 {
+
+    ISkill Skill { get; }
     GameObject TargetArrow { get; }
 
     ITargetNodes TargetNodes { get; }

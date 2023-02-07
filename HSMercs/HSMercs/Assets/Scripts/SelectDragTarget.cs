@@ -48,6 +48,8 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
         {
             ShowArrow(notNormalized,direction); 
             SkillTargetCollider.TargetNodes.ShowArrowNodes();
+            
+            ShowTargetCrossHair();
         }
         else 
             SkillTargetCollider.TargetNodes.HideArrowNodes();
@@ -76,6 +78,8 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
         SkillTargetCollider.TargetArrow.SetActive(true);
         SkillTargetCollider.Draggable.EnableDraggable();
         ShowLineAndTarget();
+        
+       
     }
     
     /// <summary>
@@ -88,12 +92,18 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
         SkillTargetCollider.TargetArrow.SetActive(false);
         SkillTargetCollider.Draggable.DisableDraggable();
         SkillTargetCollider.TargetNodes.HideArrowNodes();
+        
+        HideTargetCrossHair();
     }
     
     #endregion
 
     #region TEST
 
+    private void HideTargetCrossHair()
+    {
+        SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = false;
+    }
 
     private void ShowTargetCrossHair()
     {
@@ -113,19 +123,21 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
         //_validSkillTargetHero = null;
             
         //SkillTargetCollider.Skill.CasterHero.HeroLogic.LastHeroTargets.SetTargetedHero(_validSkillTargetHero);
+        
+        HideTargetCrossHair();
 
         for (int i = 0; i < hitsCount; i++)
         {
-            if (mResults[i].transform.GetComponent<IHero>() != null)
+            if (mResults[i].transform.GetComponent<IHeroTargetCollider>() != null)
             {
-                var targetHero = mResults[i].transform.GetComponent<IHero>();
                 
-               
+                //TEMP - Valid Target Checking to be introduced either here or in calling function
+                
+                SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = true;
 
-                //check if hero is included in the valid targets.  Set hero to targetHero or Null;
-               //_validSkillTargetHero = _validTargets.Contains(targetHeroCollider.Hero) ? targetHeroCollider.Hero : null;
+                SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.transform.position =
+                    mResults[i].transform.position;
             }
-
         }
     }
 

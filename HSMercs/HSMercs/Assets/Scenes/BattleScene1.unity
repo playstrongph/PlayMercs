@@ -404,12 +404,12 @@ PrefabInstance:
     - target: {fileID: 7496268453336677752, guid: 59cf0425656410245a615587dbcd1435,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 288
+      value: 354
       objectReference: {fileID: 0}
     - target: {fileID: 7496268453336677752, guid: 59cf0425656410245a615587dbcd1435,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -500
+      value: -410
       objectReference: {fileID: 0}
     - target: {fileID: 7496268453336677752, guid: 59cf0425656410245a615587dbcd1435,
         type: 3}
@@ -2065,6 +2065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4229b9de9f27a94ba45bb3f6f707364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skill: {fileID: 8868256308787965546}
   targetArrow: {fileID: 8868256308928330877}
   targetNodes: {fileID: 8868256308928330876}
   targetCanvas: {fileID: 8104168148969939864}
@@ -3223,6 +3224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8868256308787965550}
+  - component: {fileID: 8868256308787965546}
   - component: {fileID: 8868256308787965544}
   m_Layer: 0
   m_Name: Skill
@@ -3231,6 +3233,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8868256308787965546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8868256308787965545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6b493d7e3c05b145bfc667028482558, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillVisual: {fileID: 8868256308787965544}
 --- !u!224 &8868256308787965550
 RectTransform:
   m_ObjectHideFlags: 0
