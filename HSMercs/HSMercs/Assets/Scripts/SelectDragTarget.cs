@@ -48,7 +48,6 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
         {
             ShowArrow(notNormalized,direction); 
             SkillTargetCollider.TargetNodes.ShowArrowNodes();
-            
             ShowTargetCrossHair();
         }
         else 
@@ -125,12 +124,13 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
         //SkillTargetCollider.Skill.CasterHero.HeroLogic.LastHeroTargets.SetTargetedHero(_validSkillTargetHero);
         
         //Hide target cross hair by default
-        SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = true;
+        SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = false;
 
         for (int i = 0; i < hitsCount; i++)
         {
             if (mResults[i].transform.GetComponent<IHeroTargetCollider>() != null)
             {
+                var heroGameObject = mResults[i];
                 
                 //TEMP - Valid Target Checking to be introduced either here or in calling function
                 
@@ -139,7 +139,7 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
                 
                 //Set cross hair position to position of target hero
                 SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.transform.position =
-                    mResults[i].transform.position;
+                    heroGameObject.transform.position;
             }
         }
     }
