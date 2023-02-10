@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class HeroGraphicPreview : MonoBehaviour, IHeroGraphicPreview
 {
+
+    #region VARIABLES
     
     /// <summary>
     /// All the hero colored frames for fighter, tank, and caster
@@ -31,7 +33,9 @@ public class HeroGraphicPreview : MonoBehaviour, IHeroGraphicPreview
     [SerializeField] private TextMeshProUGUI previewRaceText;
     [SerializeField] private TextMeshProUGUI previewAttackText;
     [SerializeField] private TextMeshProUGUI previewHealthText;
-
+        
+    #endregion
+    
     #region SERIALIZED VARIABLES PROPERTIES
 
     /// <summary>
@@ -138,16 +142,6 @@ public class HeroGraphicPreview : MonoBehaviour, IHeroGraphicPreview
 
 
 
-    /*/// <summary>
-    /// Preview graphic reference
-    /// set in Inspector
-    /// </summary>
-    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroPreviewGraphic))]
-    private Object heroPreviewGraphic;
-    public IHeroPreviewGraphic HeroPreviewGraphic
-    {
-        get => heroPreviewGraphic as IHeroPreviewGraphic;
-        set => heroPreviewGraphic = value as Object;
-    }*/
+    
 
 }

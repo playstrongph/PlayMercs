@@ -95,10 +95,6 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
         HideTargetCrossHair();
     }
     
-    #endregion
-
-    #region TEST
-
     private void HideTargetCrossHair()
     {
         SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = false;
@@ -143,6 +139,13 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
             }
         }
     }
+    
+    
+    #endregion
+
+    #region TEST
+
+    
 
 
     #endregion
