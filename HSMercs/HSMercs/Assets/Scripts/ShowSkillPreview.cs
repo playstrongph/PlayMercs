@@ -13,9 +13,7 @@ public class ShowSkillPreview : MonoBehaviour, IShowSkillPreview
 
     #region PROPERTIES
 
-    private Canvas SkillPreviewVisual
-    {
-        get => skillPreviewCanvas; set => skillPreviewCanvas = value; }
+    private Canvas SkillPreviewVisual { get => skillPreviewCanvas; set => skillPreviewCanvas = value; }
 
     #endregion
     
