@@ -1,4 +1,5 @@
 ﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public interface ISkillPreviewVisual
@@ -14,4 +15,7 @@ public interface ISkillPreviewVisual
     TextMeshProUGUI SkillNameText { get; }
     TextMeshProUGUI SkillDescriptionText { get; }
     TextMeshProUGUI SkillElementText { get; }
+    Canvas PreviewCanvas { get; }
+
+    IShowSkillPreview ShowSkillPreview { get; }
 }

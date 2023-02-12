@@ -49,9 +49,15 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
             ShowArrow(notNormalized,direction); 
             SkillTargetCollider.TargetNodes.ShowArrowNodes();
             ShowTargetCrossHair();
+            SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOff();
         }
-        else 
+        else
+        {
             SkillTargetCollider.TargetNodes.HideArrowNodes();
+            SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOn();    
+        }
+
+        
     }
     
     private void ShowArrow(Vector3 notNormalized, Vector3 direction)

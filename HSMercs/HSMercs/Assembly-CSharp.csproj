@@ -79,6 +79,7 @@
      <Compile Include="Assets\Scripts\IHeroTargetCollider.cs" />
      <Compile Include="Assets\Scripts\IHeroVisual.cs" />
      <Compile Include="Assets\Scripts\ISelectDragTarget.cs" />
+     <Compile Include="Assets\Scripts\IShowSkillPreview.cs" />
      <Compile Include="Assets\Scripts\ISkill.cs" />
      <Compile Include="Assets\Scripts\ISkillGraphics.cs" />
      <Compile Include="Assets\Scripts\ISkillPanelVisual.cs" />
@@ -91,6 +92,7 @@
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceAttribute.cs" />
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceDrawer.cs" />
      <Compile Include="Assets\Scripts\SelectDragTarget.cs" />
+     <Compile Include="Assets\Scripts\ShowSkillPreview.cs" />
      <Compile Include="Assets\Scripts\Skill.cs" />
      <Compile Include="Assets\Scripts\SkillGraphics.cs" />
      <Compile Include="Assets\Scripts\SkillPanelVisual.cs" />
