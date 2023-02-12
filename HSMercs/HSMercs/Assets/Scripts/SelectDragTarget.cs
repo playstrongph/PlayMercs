@@ -25,7 +25,10 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
     {
         //TEMP SCRIPT 
         DisableTargetVisuals();
+        SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOff();
     }
+
+    
 
 
     #region VISUAL METHODS

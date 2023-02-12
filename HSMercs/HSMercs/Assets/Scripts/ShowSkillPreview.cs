@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +17,9 @@ public class ShowSkillPreview : MonoBehaviour, IShowSkillPreview
     private Canvas SkillPreviewVisual { get => skillPreviewCanvas; set => skillPreviewCanvas = value; }
 
     #endregion
-    
+
+
+
     /// <summary>
     /// Turn On Skill Preview
     /// </summary>
@@ -26,7 +29,7 @@ public class ShowSkillPreview : MonoBehaviour, IShowSkillPreview
     }
 
     /// <summary>
-    /// Turn Offf Skill Preview
+    /// Turn Off Skill Preview
     /// </summary>
     public void TurnOff()
     {
