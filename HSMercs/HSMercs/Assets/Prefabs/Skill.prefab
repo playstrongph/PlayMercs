@@ -1528,7 +1528,6 @@ GameObject:
   m_Component:
   - component: {fileID: 786818593667696037}
   - component: {fileID: 6203712798908358103}
-  - component: {fileID: 7867340266731509131}
   m_Layer: 0
   m_Name: SkillPreview
   m_TagString: Untagged
@@ -1575,20 +1574,7 @@ MonoBehaviour:
   skillNameText: {fileID: 786818595292995540}
   skillDescriptionText: {fileID: 786818594055714349}
   skillElementText: {fileID: 786818594020019487}
-  showSkillPreview: {fileID: 7867340266731509131}
---- !u!114 &7867340266731509131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 786818593667696034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6be90d58cffec243afd0e390f0f2e32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skillPreviewCanvas: {fileID: 786818595297471893}
+  showSkillPreview: {fileID: 942120513}
 --- !u!1 &786818593891750457
 GameObject:
   m_ObjectHideFlags: 0
@@ -2679,6 +2665,7 @@ GameObject:
   - component: {fileID: 790275556968475195}
   - component: {fileID: 790275556968475193}
   - component: {fileID: 790275556968475192}
+  - component: {fileID: 942120513}
   m_Layer: 0
   m_Name: SkillTargetCollider
   m_TagString: Untagged
@@ -2781,6 +2768,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceMultiplier: 40
+--- !u!114 &942120513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790275556968475199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6be90d58cffec243afd0e390f0f2e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillPreviewCanvas: {fileID: 786818595297471893}
+  displayDelay: 0.5
 --- !u!1 &8827150449873129069
 GameObject:
   m_ObjectHideFlags: 0
