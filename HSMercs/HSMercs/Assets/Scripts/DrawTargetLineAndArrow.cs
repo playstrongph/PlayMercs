@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
+public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
 {
     
     [SerializeField] private float distanceMultiplier = 40;
@@ -25,13 +25,42 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
     {
         //TEMP SCRIPT 
         DisableTargetVisuals();
-        SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOff();
     }
 
     
 
 
     #region VISUAL METHODS
+    
+    
+    /// <summary>
+    /// Enables the targeting component visuals - cross hair, triangle, and line renderer.
+    /// Also enables draggable. 
+    /// </summary>
+    public void EnableTargetVisuals()
+    {
+        //Resets local position to zero
+        transform.localPosition = Vector3.zero;
+        SkillTargetCollider.TargetArrow.SetActive(true);
+        SkillTargetCollider.Draggable.EnableDraggable();
+        
+        //ShowLineAndTarget();
+    }
+    
+    /// <summary>
+    /// Disables the targeting component visuals - cross hair, triangle, and line renderer
+    /// Also disables draggable.
+    /// </summary>
+    public void DisableTargetVisuals()
+    {
+        transform.localPosition = Vector3.zero;
+        SkillTargetCollider.TargetArrow.SetActive(false);
+        SkillTargetCollider.Draggable.DisableDraggable();
+        SkillTargetCollider.TargetNodes.HideArrowNodes();
+        
+        HideTargetCrossHair();
+        SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOff();
+    }
 
 
     public void ShowLineAndTarget()
@@ -75,35 +104,7 @@ public class SelectDragTarget : MonoBehaviour, ISelectDragTarget
         //SkillTargetCollider.DisplaySkillPreview.HidePreview();  //Temp Disable
     }
 
-    /// <summary>
-    /// Enables the targeting component visuals - cross hair, triangle, and line renderer.
-    /// Also enables draggable. 
-    /// </summary>
-    private void EnableTargetVisuals()
-    {
-        //Resets local position to zero
-        transform.localPosition = Vector3.zero;
-        SkillTargetCollider.TargetArrow.SetActive(true);
-        SkillTargetCollider.Draggable.EnableDraggable();
-        ShowLineAndTarget();
-        
-       
-    }
-    
-    /// <summary>
-    /// Disables the targeting component visuals - cross hair, triangle, and line renderer
-    /// Also disables draggable.
-    /// </summary>
-    private void DisableTargetVisuals()
-    {
-        transform.localPosition = Vector3.zero;
-        SkillTargetCollider.TargetArrow.SetActive(false);
-        SkillTargetCollider.Draggable.DisableDraggable();
-        SkillTargetCollider.TargetNodes.HideArrowNodes();
-        
-        HideTargetCrossHair();
-    }
-    
+   
     private void HideTargetCrossHair()
     {
         SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = false;

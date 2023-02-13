@@ -13,14 +13,14 @@ public class Draggable : MonoBehaviour, IDraggable
 
     private Camera _mainCamera;
     
-    private ISelectDragTarget SelectDragTarget { get; set; }
+    private IDrawTargetLineAndArrow SelectDragTarget { get; set; }
     
     
 
     private void Awake()
     {
         SkillTargetCollider = GetComponent<ISkillTargetCollider>();
-        SelectDragTarget = GetComponent<ISelectDragTarget>();
+        SelectDragTarget = GetComponent<IDrawTargetLineAndArrow>();
         _mainCamera = Camera.main;
     }
     

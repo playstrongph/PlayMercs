@@ -60,6 +60,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AllHeroSkillsVisual.cs" />
      <Compile Include="Assets\Scripts\Draggable.cs" />
+     <Compile Include="Assets\Scripts\DrawTargetLineAndArrow.cs" />
      <Compile Include="Assets\Scripts\Hero.cs" />
      <Compile Include="Assets\Scripts\HeroGraphicPreview.cs" />
      <Compile Include="Assets\Scripts\HeroGraphics.cs" />
@@ -69,6 +70,7 @@
      <Compile Include="Assets\Scripts\HeroVisual.cs" />
      <Compile Include="Assets\Scripts\IAllHeroSkillsVisual.cs" />
      <Compile Include="Assets\Scripts\IDraggable.cs" />
+     <Compile Include="Assets\Scripts\IDrawTargetLineAndArrow.cs" />
      <Compile Include="Assets\Scripts\IHero.cs" />
      <Compile Include="Assets\Scripts\IHeroGraphicPreview.cs" />
      <Compile Include="Assets\Scripts\IHeroGraphics.cs" />
@@ -76,7 +78,6 @@
      <Compile Include="Assets\Scripts\IHeroSkillPreview.cs" />
      <Compile Include="Assets\Scripts\IHeroTargetCollider.cs" />
      <Compile Include="Assets\Scripts\IHeroVisual.cs" />
-     <Compile Include="Assets\Scripts\ISelectDragTarget.cs" />
      <Compile Include="Assets\Scripts\IShowHeroPreview.cs" />
      <Compile Include="Assets\Scripts\IShowSkillPreview.cs" />
      <Compile Include="Assets\Scripts\ISkill.cs" />
@@ -90,7 +91,6 @@
      <Compile Include="Assets\Scripts\ITargetNodes.cs" />
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceAttribute.cs" />
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceDrawer.cs" />
-     <Compile Include="Assets\Scripts\SelectDragTarget.cs" />
      <Compile Include="Assets\Scripts\ShowHeroPreview.cs" />
      <Compile Include="Assets\Scripts\ShowSkillPreview.cs" />
      <Compile Include="Assets\Scripts\Skill.cs" />

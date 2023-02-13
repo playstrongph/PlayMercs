@@ -28,17 +28,30 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     public ITargetNodes TargetNodes { get => targetNodes as ITargetNodes; private set => targetNodes = value as Object;}
     public Canvas TargetCanvas { get => targetCanvas; private set => targetCanvas = value;}
     
-    public ISelectDragTarget SelectDragTarget { get; private set; }
+    public IDrawTargetLineAndArrow SelectDragTarget { get; private set; }
 
     public IDraggable Draggable { get; private set; }
 
     #endregion
     
+    private void OnMouseDown()
+    {
+        //TEMP SCRIPT - shall be tied to skill readiness in the future
+        //EnableTargetVisuals();
+    }
+        
+    private void OnMouseUp()
+    {
+        //TEMP SCRIPT 
+        //DisableTargetVisuals();
+        //Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOff();
+    }
+    
     
     private void Awake()
     {
         //DisplaySkillPreview = GetComponent<IDisplaySkillPreview>();
-        SelectDragTarget = GetComponent<ISelectDragTarget>();
+        SelectDragTarget = GetComponent<IDrawTargetLineAndArrow>();
         Draggable = GetComponent<IDraggable>();
         //GetSkillTargets = GetComponent<IGetSkillTargets>();
     }

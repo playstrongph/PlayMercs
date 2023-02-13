@@ -4197,9 +4197,9 @@ GameObject:
   - component: {fileID: 7496268452072806536}
   - component: {fileID: 7496268452072806540}
   - component: {fileID: 7496268452072806541}
+  - component: {fileID: 487313486}
   - component: {fileID: 7496268452072806538}
   - component: {fileID: 7496268452072806539}
-  - component: {fileID: 487313486}
   m_Layer: 10
   m_Name: HeroPreview
   m_TagString: Untagged
@@ -4271,6 +4271,20 @@ Canvas:
   m_SortingLayerID: -1567186081
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &487313486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7496268452072806537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c322111d4d9cf14a89d42098f24900b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroPreviewCanvas: {fileID: 7496268452072806541}
+  displayDelay: 0.5
 --- !u!114 &7496268452072806538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4310,20 +4324,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &487313486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7496268452072806537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c322111d4d9cf14a89d42098f24900b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  heroPreviewCanvas: {fileID: 7496268452072806541}
-  displayDelay: 0.5
 --- !u!1 &7496268452077627369
 GameObject:
   m_ObjectHideFlags: 0
