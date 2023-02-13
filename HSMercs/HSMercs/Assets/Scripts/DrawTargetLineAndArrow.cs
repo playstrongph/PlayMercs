@@ -28,7 +28,7 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
     {
         //Resets local position to zero
         transform.localPosition = Vector3.zero;
-        SkillTargetCollider.TargetArrow.SetActive(true);
+        //SkillTargetCollider.TargetArrow.SetActive(true);
         SkillTargetCollider.Draggable.EnableDraggable();
     }
     
@@ -39,7 +39,7 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
     public void DisableTargetVisuals()
     {
         transform.localPosition = Vector3.zero;
-        SkillTargetCollider.TargetArrow.SetActive(false);
+        //SkillTargetCollider.TargetArrow.SetActive(false);
         SkillTargetCollider.Draggable.DisableDraggable();
         SkillTargetCollider.TargetNodes.HideArrowNodes();
         

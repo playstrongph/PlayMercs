@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Object = UnityEngine.Object;
 
 public class SkillPreviewVisual : MonoBehaviour, ISkillPreviewVisual
 {
@@ -25,7 +27,7 @@ public class SkillPreviewVisual : MonoBehaviour, ISkillPreviewVisual
     [SerializeField] private TextMeshProUGUI skillDescriptionText;
     [SerializeField] private TextMeshProUGUI skillElementText;
 
-    [Header("METHODS")] [SerializeField][RequireInterfaceAttribute.RequireInterface(typeof(IShowSkillPreview))] private Object showSkillPreview;
+    
 
     #endregion
 
@@ -45,9 +47,13 @@ public class SkillPreviewVisual : MonoBehaviour, ISkillPreviewVisual
     public TextMeshProUGUI SkillElementText { get => skillElementText; private set => skillElementText = value; }
     public Canvas PreviewCanvas { get => previewCanvas; private set => previewCanvas = value; }
 
-    public IShowSkillPreview ShowSkillPreview{ get => showSkillPreview as IShowSkillPreview; set => showSkillPreview = value as Object; }
+    public IShowSkillPreview ShowSkillPreview { get; private set; }
 
     #endregion
 
 
+    private void Awake()
+    {
+        ShowSkillPreview = GetComponent<IShowSkillPreview>();
+    }
 }

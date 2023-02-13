@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public class HeroPreview : MonoBehaviour, IHeroPreview
 {
@@ -18,9 +20,6 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
 
     [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillPreview))]
     [SerializeField] private Object heroSkillPreview3;
-    
-    [RequireInterfaceAttribute.RequireInterface(typeof(IShowHeroPreview))] [SerializeField]
-    private Object showHeroPreview;
 
     [SerializeField] private Transform statusEffectPreviewTransform;
 
@@ -72,15 +71,14 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
     /// <summary>
     /// Reference to Show Hero Preview
     /// </summary>
-    public IShowHeroPreview ShowHeroPreview
-    {
-        get => showHeroPreview as IShowHeroPreview;
-        private set => showHeroPreview = value as Object;
-    }
+    public IShowHeroPreview ShowHeroPreview { get; private set; }
     
     public Transform StatusEffectPreviewTransform { get => statusEffectPreviewTransform; set => statusEffectPreviewTransform = value; }
 
     #endregion
-    
-    
+
+    private void Awake()
+    {
+        ShowHeroPreview = GetComponent<IShowHeroPreview>();
+    }
 }
