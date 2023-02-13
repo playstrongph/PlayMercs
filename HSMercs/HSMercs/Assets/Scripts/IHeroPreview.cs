@@ -29,6 +29,11 @@ public interface IHeroPreview
     IHeroSkillPreview HeroSkillPreview3 { get; }
 
     /// <summary>
+    /// Reference to ShowHeroPreview component
+    /// </summary>
+    IShowHeroPreview ShowHeroPreview { get; }
+
+    /// <summary>
     /// Reference to hero status effects preview transform
     /// </summary>
     Transform StatusEffectPreviewTransform { get; }
