@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
 {
-    
     #region VARIABLES
 
     [SerializeField] private Canvas heroPreviewCanvas = new Canvas();
@@ -14,6 +13,8 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
     private bool _enablePreview = false;
 
     #endregion
+
+    #region METHODS
 
     /// <summary>
     /// Shows Hero Preview
@@ -49,32 +50,6 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
         heroPreviewCanvas.enabled = false;
     }
 
-
-
-    /*private void OnMouseDown()
-    {
-        _enablePreview = true;
-        StartCoroutine(ShowPreview());
-    }
-        
-    private void OnMouseUp()
-    {
-        _enablePreview = false;
-        heroPreviewCanvas.enabled = false;
-    }
-    
-    private void OnMouseExit()
-    {
-        _enablePreview = false;
-        heroPreviewCanvas.enabled = false;
-    }
-    
-    private void OnMouseEnter()
-    {
-        _enablePreview = true;
-        StartCoroutine(ShowPreview());
-    }*/
-    
     /// <summary>
     /// Waits for a delay before checking if preview is enabled
     /// </summary>
@@ -88,11 +63,6 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
         }
     }
 
-    
-   
-
-
-
-
+    #endregion
 
 }

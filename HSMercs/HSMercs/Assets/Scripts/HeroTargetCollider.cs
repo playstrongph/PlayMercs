@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This is the class where the mouse actions should be assigned to
+/// </summary>
 public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
 {
 
