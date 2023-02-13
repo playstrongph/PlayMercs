@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
 {
@@ -10,28 +11,14 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
     
     private ISkillTargetCollider SkillTargetCollider { get; set; }
 
+   
+
+    #region METHODS
+    
     private void Awake()
     {
         SkillTargetCollider = GetComponent<ISkillTargetCollider>();
     }
-    
-    private void OnMouseDown()
-    {
-        //TEMP SCRIPT - shall be tied to skill readiness in the future
-        //EnableTargetVisuals();
-    }
-        
-    private void OnMouseUp()
-    {
-        //TEMP SCRIPT 
-        //DisableTargetVisuals();
-    }
-
-    
-
-
-    #region VISUAL METHODS
-    
     
     /// <summary>
     /// Enables the targeting component visuals - cross hair, triangle, and line renderer.
@@ -43,8 +30,6 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
         transform.localPosition = Vector3.zero;
         SkillTargetCollider.TargetArrow.SetActive(true);
         SkillTargetCollider.Draggable.EnableDraggable();
-        
-        //ShowLineAndTarget();
     }
     
     /// <summary>
@@ -62,7 +47,10 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
         SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOff();
     }
 
-
+    
+    /// <summary>
+    /// Used by Draggable.cs to display the line and target sprites
+    /// </summary>
     public void ShowLineAndTarget()
     {
         var thisTransform = transform;
@@ -71,20 +59,18 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
         var distanceFromHero = (direction*distanceMultiplier).magnitude;
         var difference = notNormalized.magnitude - distanceFromHero;
         var intDifference = Mathf.RoundToInt(difference);
-        //var index = Mathf.Clamp(intDifference, 0, 1);
-            
-        //Hide Triangle and Line while target is close to HeroObject
-        SkillTargetCollider.TargetArrow.SetActive(false);
+        var distanceLimit = 0f;  //default value is zero
 
-        if (intDifference > 0)
+        if (intDifference > distanceLimit)  //if there is some distance between skill position and mouse position
         {
             ShowArrow(notNormalized,direction); 
             SkillTargetCollider.TargetNodes.ShowArrowNodes();
             ShowTargetCrossHair();
             SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOff();
         }
-        else
+        else  //if there is NO distance between skill position and mouse position
         {
+            HideArrow();
             SkillTargetCollider.TargetNodes.HideArrowNodes();
             SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOn();    
         }
@@ -96,7 +82,9 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
     {
         var rotZ = Mathf.Atan2(notNormalized.y, notNormalized.x) * Mathf.Rad2Deg;
         
-        SkillTargetCollider.TargetArrow.SetActive(true);
+        //SkillTargetCollider.TargetArrow.SetActive(true);
+
+        SkillTargetCollider.TargetArrow.GetComponent<Image>().enabled = true;
         SkillTargetCollider.TargetArrow.transform.position = transform.position - 15f * direction;
         SkillTargetCollider.TargetArrow.transform.rotation = Quaternion.Euler(0f,0f,rotZ-90);
             
@@ -104,11 +92,13 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
         //SkillTargetCollider.DisplaySkillPreview.HidePreview();  //Temp Disable
     }
 
-   
-    private void HideTargetCrossHair()
+    private void HideArrow()
     {
-        SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = false;
+        SkillTargetCollider.TargetArrow.GetComponent<Image>().enabled = false;
     }
+
+
+   
 
     private void ShowTargetCrossHair()
     {
@@ -150,16 +140,14 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
         }
     }
     
+    private void HideTargetCrossHair()
+    {
+        SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = false;
+    }
+    
     
     #endregion
 
-    #region TEST
-
-    
-
-
-    #endregion
-    
 
 
 }
