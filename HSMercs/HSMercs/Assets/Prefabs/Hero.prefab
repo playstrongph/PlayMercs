@@ -1061,7 +1061,7 @@ GameObject:
   - component: {fileID: 5233489938597889672}
   - component: {fileID: 5233489938597889675}
   - component: {fileID: 5233489938597889674}
-  - component: {fileID: 5233489938597889677}
+  - component: {fileID: 221766842}
   m_Layer: 0
   m_Name: HeroTargetCollider
   m_TagString: Untagged
@@ -1109,7 +1109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hero: {fileID: 6029727381968587455}
---- !u!114 &5233489938597889677
+--- !u!114 &221766842
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1121,6 +1121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c322111d4d9cf14a89d42098f24900b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  heroPreviewCanvas: {fileID: 7496268452072806541}
 --- !u!1 &5233489938614451096
 GameObject:
   m_ObjectHideFlags: 0
