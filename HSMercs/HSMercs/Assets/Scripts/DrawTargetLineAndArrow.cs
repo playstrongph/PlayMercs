@@ -18,13 +18,13 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
     private void OnMouseDown()
     {
         //TEMP SCRIPT - shall be tied to skill readiness in the future
-        EnableTargetVisuals();
+        //EnableTargetVisuals();
     }
         
     private void OnMouseUp()
     {
         //TEMP SCRIPT 
-        DisableTargetVisuals();
+        //DisableTargetVisuals();
     }
 
     
