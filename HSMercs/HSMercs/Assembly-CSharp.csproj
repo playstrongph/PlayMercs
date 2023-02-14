@@ -58,7 +58,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\AllHeroSkillsVisual.cs" />
      <Compile Include="Assets\Scripts\Draggable.cs" />
      <Compile Include="Assets\Scripts\DrawTargetLineAndArrow.cs" />
      <Compile Include="Assets\Scripts\Hero.cs" />
@@ -68,7 +67,6 @@
      <Compile Include="Assets\Scripts\HeroSkillPreview.cs" />
      <Compile Include="Assets\Scripts\HeroTargetCollider.cs" />
      <Compile Include="Assets\Scripts\HeroVisual.cs" />
-     <Compile Include="Assets\Scripts\IAllHeroSkillsVisual.cs" />
      <Compile Include="Assets\Scripts\IDraggable.cs" />
      <Compile Include="Assets\Scripts\IDrawTargetLineAndArrow.cs" />
      <Compile Include="Assets\Scripts\IHero.cs" />
@@ -78,6 +76,7 @@
      <Compile Include="Assets\Scripts\IHeroSkillPreview.cs" />
      <Compile Include="Assets\Scripts\IHeroTargetCollider.cs" />
      <Compile Include="Assets\Scripts\IHeroVisual.cs" />
+     <Compile Include="Assets\Scripts\IPlayer.cs" />
      <Compile Include="Assets\Scripts\IShowHeroPreview.cs" />
      <Compile Include="Assets\Scripts\IShowSkillPreview.cs" />
      <Compile Include="Assets\Scripts\ISkill.cs" />
@@ -86,11 +85,16 @@
      <Compile Include="Assets\Scripts\ISkillPreviewVisual.cs" />
      <Compile Include="Assets\Scripts\ISkillTargetCollider.cs" />
      <Compile Include="Assets\Scripts\ISkillVisual.cs" />
+     <Compile Include="Assets\Scripts\ISkillsPanel.cs" />
+     <Compile Include="Assets\Scripts\ISkillsPanelVisual.cs" />
      <Compile Include="Assets\Scripts\IStatusEffectPreviewVisual.cs" />
      <Compile Include="Assets\Scripts\IStatusEffectVisual.cs" />
      <Compile Include="Assets\Scripts\ITargetNodes.cs" />
+     <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceAttribute.cs" />
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceDrawer.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\BattleSceneSettingsAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\IBattleSceneSettingsAsset.cs" />
      <Compile Include="Assets\Scripts\ShowHeroPreview.cs" />
      <Compile Include="Assets\Scripts\ShowSkillPreview.cs" />
      <Compile Include="Assets\Scripts\Skill.cs" />
@@ -99,6 +103,8 @@
      <Compile Include="Assets\Scripts\SkillPreviewVisual.cs" />
      <Compile Include="Assets\Scripts\SkillTargetCollider.cs" />
      <Compile Include="Assets\Scripts\SkillVisual.cs" />
+     <Compile Include="Assets\Scripts\SkillsPanel.cs" />
+     <Compile Include="Assets\Scripts\SkillsPanelVisual.cs" />
      <Compile Include="Assets\Scripts\StatusEffectPreviewVisual.cs" />
      <Compile Include="Assets\Scripts\StatusEffectVisual.cs" />
      <Compile Include="Assets\Scripts\TargetNodes.cs" />

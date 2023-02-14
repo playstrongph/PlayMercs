@@ -827,9 +827,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7200100416571824167}
+  - component: {fileID: 159556638}
   - component: {fileID: 5215225734868498854}
   m_Layer: 0
-  m_Name: AllHeroSkills 1
+  m_Name: SkillsPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -855,6 +856,18 @@ RectTransform:
   m_AnchoredPosition: {x: -1.0768433, y: 0.9879761}
   m_SizeDelta: {x: -2.7940207, y: -7.4591255}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &159556638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7200100416571824160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ea005c324fdd645847006eaa93c856, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5215225734868498854
 MonoBehaviour:
   m_ObjectHideFlags: 0
