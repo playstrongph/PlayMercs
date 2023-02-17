@@ -1,10 +1,12 @@
-﻿namespace SOAssets
+﻿using UnityEngine;
+
+namespace SOAssets
 {
     public interface IBattleSceneSettingsAsset
     {
-        IHero Hero { get; }
-        ISkill Skill { get; }
-        ISkillsPanel SkillsPanel { get; }
-        IPlayer Player { get; }
+        GameObject HeroPrefab { get; }
+        GameObject SkillPrefab { get; }
+        GameObject SkillsPanelPrefab { get; }
+        GameObject PlayerPrefab { get; }
     }
 }

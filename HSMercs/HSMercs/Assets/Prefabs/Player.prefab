@@ -54,6 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8058846799579564180}
   - component: {fileID: 8058846799579564267}
+  - component: {fileID: 1267152366}
   m_Layer: 0
   m_Name: AliveHeroes
   m_TagString: Untagged
@@ -104,3 +105,15 @@ MonoBehaviour:
   m_Spacing: {x: -25, y: 0}
   m_Constraint: 2
   m_ConstraintCount: 1
+--- !u!114 &1267152366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8058846799579564181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14c4786988141984cbdb43edd165ea97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
