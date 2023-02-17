@@ -16,5 +16,6 @@ MonoBehaviour:
     type: 3}
   skillPrefab: {fileID: 113213072441124815, guid: 7e88120a6696d29499c8499dfdcdd39e,
     type: 3}
-  skillsPanelPrefab: {fileID: 0}
-  playerPrefab: {fileID: 0}
+  skillsPanelPrefab: {fileID: 159556638, guid: 30979758459c5ee40a5015ea72e75bcb, type: 3}
+  playerPrefab: {fileID: 8058846799119040704, guid: c5c7138d0cca77a4087c3f815541a23e,
+    type: 3}

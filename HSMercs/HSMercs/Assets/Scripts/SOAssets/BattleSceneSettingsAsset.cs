@@ -22,7 +22,7 @@ namespace SOAssets
 
     [SerializeField]  [RequireInterfaceAttribute.RequireInterface(typeof(ISkillsPanel))] private Object skillsPanelPrefab;
 
-    [SerializeField]  [RequireInterfaceAttribute.RequireInterface(typeof(IPlayer))]private Object playerPrefab;
+    [SerializeField]  private GameObject playerPrefab;
 
     #endregion
 
@@ -31,7 +31,7 @@ namespace SOAssets
     public GameObject HeroPrefab { get=> heroPrefab as GameObject; private set => heroPrefab = value as Object;}
     public GameObject SkillPrefab { get=> skillPrefab as GameObject; private set => skillPrefab = value as Object;}
     public GameObject SkillsPanelPrefab { get=> skillsPanelPrefab as GameObject; private set => skillsPanelPrefab = value as Object;}
-    public GameObject PlayerPrefab { get=> playerPrefab as GameObject; private set => playerPrefab = value as Object;}
+    public GameObject PlayerPrefab { get=> playerPrefab; private set => playerPrefab = value;}
 
 
     #endregion

@@ -31,6 +31,10 @@ public class InitializePlayersVisual : MonoBehaviour, IInitializePlayersVisual
       _battleSceneManager = GetComponent<IBattleSceneManager>();
    }
 
+   private void Start()
+   {
+      StartAction();
+   }
 
    public void StartAction()
    {
@@ -47,11 +51,6 @@ public class InitializePlayersVisual : MonoBehaviour, IInitializePlayersVisual
       var enemyPlayer = enemyPlayerGameObject.GetComponent<IPlayer>();
       enemyPlayerGameObject.name = "Enemy Player";
       enemyPlayerGameObject.transform.position = mainPlayer.EnemiesPosition;
-
-
-
-
-
 
    }
 
