@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using SOAssets;
 using UnityEngine;
 
-public class BattleSceneManager : MonoBehaviour
+public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 {
    #region VARIABLES
 

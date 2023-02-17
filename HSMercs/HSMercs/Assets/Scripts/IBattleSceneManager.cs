@@ -1,0 +1,8 @@
+﻿using SOAssets;
+using UnityEngine;
+
+public interface IBattleSceneManager
+{
+    IBattleSceneSettingsAsset BattleSceneSettings { get; }
+    GameObject ThisGameObject { get; }
+}
