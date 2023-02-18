@@ -51,6 +51,10 @@ public class InitializePlayersVisual : MonoBehaviour, IInitializePlayersVisual
       var enemyPlayer = enemyPlayerGameObject.GetComponent<IPlayer>();
       enemyPlayerGameObject.name = "Enemy Player";
       enemyPlayerGameObject.transform.position = mainPlayer.EnemiesPosition;
+      
+      var compTest = GetComponent(playerPrefab.GetType());
+      
+      Debug.Log("compTest: " +compTest.ToString());
 
    }
 
