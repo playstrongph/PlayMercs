@@ -100,6 +100,7 @@
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceDrawer.cs" />
      <Compile Include="Assets\Scripts\SOAssets\BattleSceneSettingsAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\IBattleSceneSettingsAsset.cs" />
+     <Compile Include="Assets\Scripts\ScenePrefabs.cs" />
      <Compile Include="Assets\Scripts\ShowHeroPreview.cs" />
      <Compile Include="Assets\Scripts\ShowSkillPreview.cs" />
      <Compile Include="Assets\Scripts\Skill.cs" />
