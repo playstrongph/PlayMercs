@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33aae4d2f628ffa438210df5d124fb7e, type: 3}
   m_Name: BattleSceneSettings
   m_EditorClassIdentifier: 
-  heroPrefab: {fileID: 6029727381968587455, guid: 59cf0425656410245a615587dbcd1435,
+  heroPrefab: {fileID: 7496268453336677753, guid: 59cf0425656410245a615587dbcd1435,
     type: 3}
-  skillPrefab: {fileID: 113213072441124815, guid: 7e88120a6696d29499c8499dfdcdd39e,
+  skillPrefab: {fileID: 113213072441124812, guid: 7e88120a6696d29499c8499dfdcdd39e,
     type: 3}
-  skillsPanelPrefab: {fileID: 159556638, guid: 30979758459c5ee40a5015ea72e75bcb, type: 3}
+  skillsPanelPrefab: {fileID: 7200100416571824160, guid: 30979758459c5ee40a5015ea72e75bcb,
+    type: 3}
   playerPrefab: {fileID: 8058846799119040704, guid: c5c7138d0cca77a4087c3f815541a23e,
     type: 3}
