@@ -33,7 +33,7 @@ public class InitializePlayersVisual : MonoBehaviour, IInitializePlayersVisual
 
    private void Start()
    {
-      StartAction();
+      
    }
 
    public void StartAction()

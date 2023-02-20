@@ -34,5 +34,10 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
       _initializePlayersVisual = GetComponent<IInitializePlayersVisual>();
    }
 
+   private void Start()
+   {
+      _initializePlayersVisual.StartAction();
+   }
+
    #endregion
 }
