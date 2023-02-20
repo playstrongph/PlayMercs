@@ -31,10 +31,7 @@ public class InitializePlayersVisual : MonoBehaviour, IInitializePlayersVisual
       _battleSceneManager = GetComponent<IBattleSceneManager>();
    }
 
-   private void Start()
-   {
-      
-   }
+  
 
    public void StartAction()
    {
