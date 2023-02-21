@@ -8,4 +8,6 @@ public interface IBattleSceneManager
     
      IPlayer MainPlayer { get; set; }
      IPlayer EnemyPlayer { get; set; }
+
+     IInitializeTeamHeroesVisual InitializeTeamHeroesVisual { get; }
 }

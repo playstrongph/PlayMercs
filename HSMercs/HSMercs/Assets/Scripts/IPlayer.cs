@@ -6,5 +6,7 @@ public interface IPlayer
 
     IHeroesList AliveHeroes { get; }
 
+    IInitializePlayerHeroesVisual InitializePlayerHeroesVisual { get; }
+
 
 }

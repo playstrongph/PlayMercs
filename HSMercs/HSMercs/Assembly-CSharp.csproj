@@ -83,6 +83,7 @@
      <Compile Include="Assets\Scripts\IHeroesList.cs" />
      <Compile Include="Assets\Scripts\IInitializePlayerHeroesVisual.cs" />
      <Compile Include="Assets\Scripts\IInitializePlayersVisual.cs" />
+     <Compile Include="Assets\Scripts\IInitializeTeamHeroesVisual.cs" />
      <Compile Include="Assets\Scripts\IPlayer.cs" />
      <Compile Include="Assets\Scripts\IShowHeroPreview.cs" />
      <Compile Include="Assets\Scripts\IShowSkillPreview.cs" />

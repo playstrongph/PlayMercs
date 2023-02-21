@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InitializeTeamHeroesVisual : MonoBehaviour
+public class InitializeTeamHeroesVisual : MonoBehaviour, IInitializeTeamHeroesVisual
 {
    #region VARIABLES
 
@@ -30,7 +30,13 @@ public class InitializeTeamHeroesVisual : MonoBehaviour
       var allyHeroesAsset = _battleSceneManager.BattleSceneSettings.AllyTeamHeroes;
       var enemyHeroesAsset = _battleSceneManager.BattleSceneSettings.EnemyTeamHeroes;
 
+      var allyHeroesParent = _battleSceneManager.MainPlayer.AliveHeroes.ThisGameObject.transform;
       
+      var enemyHeroesParent = _battleSceneManager.EnemyPlayer.AliveHeroes.ThisGameObject.transform;
+      
+     _battleSceneManager.MainPlayer.InitializePlayerHeroesVisual.StartAction(allyHeroesAsset,heroPrefab,allyHeroesParent);
+     
+     _battleSceneManager.EnemyPlayer.InitializePlayerHeroesVisual.StartAction(enemyHeroesAsset,heroPrefab,enemyHeroesParent);
 
    }
 
