@@ -8,14 +8,6 @@ namespace SOAssets
 
     #region VARIABLES
 
-    /*[SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHero))] private Object hero;
-
-    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkill))] private Object skill;
-
-    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillsPanel))] private Object skillsPanel;
-
-    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayer))] private Object player;*/
-    
     [SerializeField]  private GameObject heroPrefab;
 
     [SerializeField]  private GameObject skillPrefab;
@@ -24,6 +16,11 @@ namespace SOAssets
 
     [SerializeField]  private GameObject playerPrefab;
 
+    
+    [Header("SCRIPTABLE OBJECT ASSETS")]
+    [SerializeField]  [RequireInterfaceAttribute.RequireInterface(typeof(ITeamHeroesAsset))] private ScriptableObject allyTeamHeroes; 
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ITeamHeroesAsset))]private ScriptableObject enemyTeamHeroes;
+    
     #endregion
 
     #region PROPERTIES
@@ -32,6 +29,9 @@ namespace SOAssets
     public GameObject SkillPrefab { get=> skillPrefab; private set => skillPrefab = value;}
     public GameObject SkillsPanelPrefab { get=> skillsPanelPrefab; private set => skillsPanelPrefab = value;}
     public GameObject PlayerPrefab { get=> playerPrefab; private set => playerPrefab = value;}
+
+    public ITeamHeroesAsset AllyTeamHeroes { get => allyTeamHeroes as ITeamHeroesAsset; private set => allyTeamHeroes = value as ScriptableObject; }
+    public ITeamHeroesAsset EnemyTeamHeroes { get => allyTeamHeroes as ITeamHeroesAsset; private set => enemyTeamHeroes = value as ScriptableObject; }
 
 
     #endregion

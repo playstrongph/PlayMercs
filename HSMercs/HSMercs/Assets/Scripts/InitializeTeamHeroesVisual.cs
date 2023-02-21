@@ -26,9 +26,12 @@ public class InitializeTeamHeroesVisual : MonoBehaviour
    public void StartAction()
    {
       var heroPrefab = _battleSceneManager.BattleSceneSettings.HeroPrefab;
+
+      var allyHeroesAsset = _battleSceneManager.BattleSceneSettings.AllyTeamHeroes;
+      var enemyHeroesAsset = _battleSceneManager.BattleSceneSettings.EnemyTeamHeroes;
+
       
-      
-      
+
    }
 
 

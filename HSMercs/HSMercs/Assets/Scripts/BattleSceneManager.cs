@@ -37,6 +37,8 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    private void Start()
    {
       _initializePlayersVisual.StartAction();
+      
+      //initialize heroes
    }
 
    #endregion

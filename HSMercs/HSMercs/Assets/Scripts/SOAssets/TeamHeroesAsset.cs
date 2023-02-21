@@ -4,7 +4,7 @@ using UnityEngine;
 namespace SOAssets
 {
    [CreateAssetMenu(fileName = "TeamHeroes", menuName = "Assets/TeamHeroes")]
-   public class TeamHeroesAsset : ScriptableObject
+   public class TeamHeroesAsset : ScriptableObject, ITeamHeroesAsset
    {
       #region VARIABLES
 

@@ -5,19 +5,19 @@ using UnityEngine;
 public class Player : MonoBehaviour, IPlayer
 {
    #region VARIABLES
-   
-   [SerializeField] private Vector3 alliesPosition = new Vector3(0, -90, 0);
-   [SerializeField] private Vector3 enemiesPosition = new Vector3(0, 90, 0);
+
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroesList))] private Object aliveHeroes;
+  
         
 
    #endregion
         
    #region PROPERTIES
 
-   public IBattleSceneManager BattleSceneManager { get; set; }
-   public Vector3 AlliesPosition { get => alliesPosition; private set => alliesPosition = value; }
-   public Vector3 EnemiesPosition { get => enemiesPosition; private set => enemiesPosition = value; }
+   public IHeroesList AliveHeroes { get=> aliveHeroes as IHeroesList; private set => aliveHeroes = value as Object;}
 
+   public IBattleSceneManager BattleSceneManager { get; set; }
+  
 
    #endregion
         

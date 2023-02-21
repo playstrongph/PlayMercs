@@ -9,6 +9,8 @@ public class InitializePlayersVisual : MonoBehaviour, IInitializePlayersVisual
    #region VARIABLES
 
    private IBattleSceneManager _battleSceneManager;
+   [SerializeField] private Vector3 alliesPosition = new Vector3(0, -90, 0);
+   [SerializeField] private Vector3 enemiesPosition = new Vector3(0, 90, 0);
 
    #endregion
    
@@ -41,13 +43,14 @@ public class InitializePlayersVisual : MonoBehaviour, IInitializePlayersVisual
       var mainPlayerGameObject = Instantiate(playerPrefab, playerParentTransform);
       var mainPlayer = mainPlayerGameObject.GetComponent<IPlayer>();
       mainPlayerGameObject.name = "Main Player";
-      mainPlayerGameObject.transform.position = mainPlayer.AlliesPosition;
+      
+      mainPlayerGameObject.transform.position = alliesPosition;
       
 
       var enemyPlayerGameObject = Instantiate(playerPrefab, playerParentTransform);
       var enemyPlayer = enemyPlayerGameObject.GetComponent<IPlayer>();
       enemyPlayerGameObject.name = "Enemy Player";
-      enemyPlayerGameObject.transform.position = mainPlayer.EnemiesPosition;
+      enemyPlayerGameObject.transform.position = enemiesPosition;
 
    }
 

@@ -11,6 +11,7 @@ public class AliveHeroes : MonoBehaviour, IHeroesList
    [Header("SET IN RUNTIME")] 
    [SerializeField] private List<GameObject> heroesList = new List<GameObject>();
 
+   
 
    #endregion
 

@@ -45,8 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45122046e242439438e9177c17e0eb92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alliesPosition: {x: 0, y: -90, z: 0}
-  enemiesPosition: {x: 0, y: 90, z: 0}
+  aliveHeroes: {fileID: 1267152366}
 --- !u!114 &687033366
 MonoBehaviour:
   m_ObjectHideFlags: 0
