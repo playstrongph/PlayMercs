@@ -81,9 +81,9 @@
      <Compile Include="Assets\Scripts\IHeroTargetCollider.cs" />
      <Compile Include="Assets\Scripts\IHeroVisual.cs" />
      <Compile Include="Assets\Scripts\IHeroesList.cs" />
-     <Compile Include="Assets\Scripts\IInitializePlayerHeroesVisual.cs" />
+     <Compile Include="Assets\Scripts\IInitializePlayerHeroes.cs" />
      <Compile Include="Assets\Scripts\IInitializePlayersVisual.cs" />
-     <Compile Include="Assets\Scripts\IInitializeTeamHeroesVisual.cs" />
+     <Compile Include="Assets\Scripts\IInitializeTeamHeroes.cs" />
      <Compile Include="Assets\Scripts\IPlayer.cs" />
      <Compile Include="Assets\Scripts\IShowHeroPreview.cs" />
      <Compile Include="Assets\Scripts\IShowSkillPreview.cs" />
@@ -98,9 +98,9 @@
      <Compile Include="Assets\Scripts\IStatusEffectPreviewVisual.cs" />
      <Compile Include="Assets\Scripts\IStatusEffectVisual.cs" />
      <Compile Include="Assets\Scripts\ITargetNodes.cs" />
-     <Compile Include="Assets\Scripts\InitializePlayerHeroesVisual.cs" />
+     <Compile Include="Assets\Scripts\InitializePlayerHeroes.cs" />
      <Compile Include="Assets\Scripts\InitializePlayersVisual.cs" />
-     <Compile Include="Assets\Scripts\InitializeTeamHeroesVisual.cs" />
+     <Compile Include="Assets\Scripts\InitializeTeamHeroes.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceAttribute.cs" />
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceDrawer.cs" />

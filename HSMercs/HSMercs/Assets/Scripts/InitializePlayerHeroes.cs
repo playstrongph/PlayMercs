@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using SOAssets;
 using UnityEngine;
 
-public class InitializePlayerHeroesVisual : MonoBehaviour, IInitializePlayerHeroesVisual
+public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
 {
    #region VARIABLES
    
@@ -31,7 +31,21 @@ public class InitializePlayerHeroesVisual : MonoBehaviour, IInitializePlayerHero
 
       for (int i = 0; i < teamHeroesAsset.HeroCount; i++)
       {
-         var herObject = Instantiate(heroPrefab, heroesParent);
+         //var herObject = Instantiate(heroPrefab, heroesParent);
+      }   
+      
+      
+   }
+   
+   public void StartAction(ITeamHeroesAsset teamHeroesAsset, GameObject heroPrefab, IHeroesList heroesList)
+   {
+
+      for (int i = 0; i < teamHeroesAsset.HeroCount; i++)
+      {
+         var herObject = Instantiate(heroPrefab, heroesList.ThisGameObject.transform);
+         var hero = herObject.GetComponent<IHero>();
+         
+         heroesList.HeroesList.Add(hero);
       }   
       
       

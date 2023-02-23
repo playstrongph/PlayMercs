@@ -20,7 +20,7 @@ public class Player : MonoBehaviour, IPlayer
 
    public IBattleSceneManager BattleSceneManager { get; set; }
 
-   public IInitializePlayerHeroesVisual InitializePlayerHeroesVisual { get; private set; }
+   public IInitializePlayerHeroes InitializePlayerHeroes { get; private set; }
 
 
    #endregion
@@ -29,7 +29,7 @@ public class Player : MonoBehaviour, IPlayer
 
    private void Awake()
    {
-      InitializePlayerHeroesVisual = GetComponent<IInitializePlayerHeroesVisual>();
+      InitializePlayerHeroes = GetComponent<IInitializePlayerHeroes>();
    }
 
    #endregion

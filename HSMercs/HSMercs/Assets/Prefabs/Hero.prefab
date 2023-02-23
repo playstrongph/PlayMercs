@@ -4248,7 +4248,6 @@ MonoBehaviour:
   heroSkillPreview1: {fileID: 806312311056826469}
   heroSkillPreview2: {fileID: 2157965527842443839}
   heroSkillPreview3: {fileID: 2157965528147470018}
-  showHeroPreview: {fileID: 487313486}
   statusEffectPreviewTransform: {fileID: 7704541171689559492}
 --- !u!223 &7496268452072806541
 Canvas:
@@ -4264,12 +4263,12 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
-  m_OverrideSorting: 0
+  m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: -1567186081
-  m_SortingOrder: 0
+  m_SortingLayerID: -1913335363
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &487313486
 MonoBehaviour:

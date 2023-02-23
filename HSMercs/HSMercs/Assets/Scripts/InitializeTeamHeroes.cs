@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InitializeTeamHeroesVisual : MonoBehaviour, IInitializeTeamHeroesVisual
+public class InitializeTeamHeroes : MonoBehaviour, IInitializeTeamHeroes
 {
    #region VARIABLES
 
@@ -31,12 +31,16 @@ public class InitializeTeamHeroesVisual : MonoBehaviour, IInitializeTeamHeroesVi
       var enemyHeroesAsset = _battleSceneManager.BattleSceneSettings.EnemyTeamHeroes;
 
       var allyHeroesParent = _battleSceneManager.MainPlayer.AliveHeroes.ThisGameObject.transform;
-      
       var enemyHeroesParent = _battleSceneManager.EnemyPlayer.AliveHeroes.ThisGameObject.transform;
       
-     _battleSceneManager.MainPlayer.InitializePlayerHeroesVisual.StartAction(allyHeroesAsset,heroPrefab,allyHeroesParent);
+      var allyHeroesList = _battleSceneManager.MainPlayer.AliveHeroes;
+      var enemyHeroesList = _battleSceneManager.EnemyPlayer.AliveHeroes;
+      
+     //_battleSceneManager.MainPlayer.InitializePlayerHeroes.StartAction(allyHeroesAsset,heroPrefab,allyHeroesParent);
+     //_battleSceneManager.EnemyPlayer.InitializePlayerHeroes.StartAction(enemyHeroesAsset,heroPrefab,enemyHeroesParent);
      
-     _battleSceneManager.EnemyPlayer.InitializePlayerHeroesVisual.StartAction(enemyHeroesAsset,heroPrefab,enemyHeroesParent);
+     _battleSceneManager.MainPlayer.InitializePlayerHeroes.StartAction(allyHeroesAsset,heroPrefab,allyHeroesList);
+     _battleSceneManager.EnemyPlayer.InitializePlayerHeroes.StartAction(enemyHeroesAsset,heroPrefab,enemyHeroesList);
 
    }
 

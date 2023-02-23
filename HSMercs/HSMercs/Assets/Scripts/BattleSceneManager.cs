@@ -24,7 +24,7 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    public IBattleSceneSettingsAsset BattleSceneSettings { get=>battleSceneSettings as IBattleSceneSettingsAsset; private set => battleSceneSettings = value as Object;}
    public GameObject ThisGameObject => this.gameObject;
 
-   public IInitializeTeamHeroesVisual InitializeTeamHeroesVisual { get; private set; }
+   public IInitializeTeamHeroes InitializeTeamHeroes { get; private set; }
 
    public IPlayer MainPlayer { get; set; }
    public IPlayer EnemyPlayer { get; set; }
@@ -36,14 +36,14 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    private void Awake()
    {
       _initializePlayersVisual = GetComponent<IInitializePlayersVisual>();
-      InitializeTeamHeroesVisual = GetComponent<IInitializeTeamHeroesVisual>();
+      InitializeTeamHeroes = GetComponent<IInitializeTeamHeroes>();
    }
 
    private void Start()
    {
       _initializePlayersVisual.StartAction();
       
-      InitializeTeamHeroesVisual.StartAction();
+      InitializeTeamHeroes.StartAction();
 
    }
 
