@@ -37,4 +37,10 @@ public interface IHeroPreview
     /// Reference to hero status effects preview transform
     /// </summary>
     Transform StatusEffectPreviewTransform { get; }
+    
+    
+    /// <summary>
+    /// HeroPreview's Transform
+    /// </summary>
+    Transform ThisTransform { get; }
 }

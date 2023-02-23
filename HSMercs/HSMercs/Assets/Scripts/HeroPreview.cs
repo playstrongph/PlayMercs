@@ -75,10 +75,16 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
     
     public Transform StatusEffectPreviewTransform { get => statusEffectPreviewTransform; set => statusEffectPreviewTransform = value; }
 
+    /// <summary>
+    /// Hero Preview's Transform
+    /// </summary>
+    public Transform ThisTransform { get; private set; }
+
     #endregion
 
     private void Awake()
     {
         ShowHeroPreview = GetComponent<IShowHeroPreview>();
+        ThisTransform = this.gameObject.transform;
     }
 }

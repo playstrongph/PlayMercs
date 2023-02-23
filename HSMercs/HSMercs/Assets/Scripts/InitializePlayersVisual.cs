@@ -43,6 +43,7 @@ public class InitializePlayersVisual : MonoBehaviour, IInitializePlayersVisual
       var mainPlayerGameObject = Instantiate(playerPrefab, playerParentTransform);
       var mainPlayer = mainPlayerGameObject.GetComponent<IPlayer>();
       mainPlayerGameObject.name = "Main Player";
+      mainPlayer.BattleSceneManager = _battleSceneManager;
       
       
       mainPlayerGameObject.transform.position = alliesPosition;
@@ -52,10 +53,13 @@ public class InitializePlayersVisual : MonoBehaviour, IInitializePlayersVisual
       var enemyPlayer = enemyPlayerGameObject.GetComponent<IPlayer>();
       enemyPlayerGameObject.name = "Enemy Player";
       enemyPlayerGameObject.transform.position = enemiesPosition;
+      enemyPlayer.BattleSceneManager = _battleSceneManager;
       
       //Set References
       _battleSceneManager.MainPlayer = mainPlayer;
       _battleSceneManager.EnemyPlayer = enemyPlayer;
+      
+      
 
    }
 
