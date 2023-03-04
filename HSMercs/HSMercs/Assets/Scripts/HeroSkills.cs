@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillsPanel : MonoBehaviour, ISkillsPanel
+public class HeroSkills : MonoBehaviour, IHeroSkills
 {
 
     #region VARIABLES
@@ -14,7 +14,7 @@ public class SkillsPanel : MonoBehaviour, ISkillsPanel
 
     #region PROPERTIES
 
-    public ISkillsPanelVisual SkillsPanelVisual { get; private set; }
+    public IHeroSkillsVisual HeroSkillsVisual { get; private set; }
 
 
     #endregion
@@ -24,7 +24,7 @@ public class SkillsPanel : MonoBehaviour, ISkillsPanel
 
     private void Awake()
     {
-        SkillsPanelVisual = GetComponent<ISkillsPanelVisual>();
+        HeroSkillsVisual = GetComponent<IHeroSkillsVisual>();
     }
 
     #endregion

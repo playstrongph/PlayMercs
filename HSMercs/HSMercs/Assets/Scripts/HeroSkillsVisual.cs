@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class SkillsPanelVisual : MonoBehaviour, ISkillsPanelVisual
+public class HeroSkillsVisual : MonoBehaviour, IHeroSkillsVisual
 {
   #region VARIABLES
 

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public interface ISkillsPanelVisual
+public interface IHeroSkillsVisual
 {
     ISkillPanelVisual ThreeSkillPanel { get; }
     ISkillPanelVisual FourSkillPanel { get; }
