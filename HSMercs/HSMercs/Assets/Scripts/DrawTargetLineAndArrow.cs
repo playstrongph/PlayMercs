@@ -44,7 +44,11 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
         SkillTargetCollider.TargetNodes.HideArrowNodes();
         
         HideTargetCrossHair();
+        
+        HideArrow();
+        
         SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOff();
+        
     }
 
     

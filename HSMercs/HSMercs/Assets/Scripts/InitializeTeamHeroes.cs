@@ -29,17 +29,10 @@ public class InitializeTeamHeroes : MonoBehaviour, IInitializeTeamHeroes
 
       var allyHeroesAsset = _battleSceneManager.BattleSceneSettings.AllyTeamHeroes;
       var enemyHeroesAsset = _battleSceneManager.BattleSceneSettings.EnemyTeamHeroes;
-
-      var allyHeroesParent = _battleSceneManager.MainPlayer.AliveHeroes.ThisGameObject.transform;
-      var enemyHeroesParent = _battleSceneManager.EnemyPlayer.AliveHeroes.ThisGameObject.transform;
-      
       var allyHeroesList = _battleSceneManager.MainPlayer.AliveHeroes;
       var enemyHeroesList = _battleSceneManager.EnemyPlayer.AliveHeroes;
-      
-     //_battleSceneManager.MainPlayer.InitializePlayerHeroes.StartAction(allyHeroesAsset,heroPrefab,allyHeroesParent);
-     //_battleSceneManager.EnemyPlayer.InitializePlayerHeroes.StartAction(enemyHeroesAsset,heroPrefab,enemyHeroesParent);
-     
-     _battleSceneManager.MainPlayer.InitializePlayerHeroes.StartAction(allyHeroesAsset,heroPrefab,allyHeroesList);
+
+      _battleSceneManager.MainPlayer.InitializePlayerHeroes.StartAction(allyHeroesAsset,heroPrefab,allyHeroesList);
      _battleSceneManager.EnemyPlayer.InitializePlayerHeroes.StartAction(enemyHeroesAsset,heroPrefab,enemyHeroesList);
 
    }
