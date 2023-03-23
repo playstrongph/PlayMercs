@@ -7,4 +7,6 @@ public interface ISkillPanelVisual
     Image BluePanel { get; }
     Image RedPanel { get; }
     Transform SkillGridTransform { get; }
+    
+    Canvas SkillPanelCanvas { get; }
 }

@@ -2,19 +2,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public class HeroSkills : MonoBehaviour, IHeroSkills
 {
 
     #region VARIABLES
-
     
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelVisual))] private Object skillPanelVisual;
 
     #endregion
 
     #region PROPERTIES
-
-    public IHeroSkillsVisual HeroSkillsVisual { get; private set; }
+    
+    
+    public ISkillPanelVisual SkillPanelVisual { get=> skillPanelVisual as ISkillPanelVisual; private set => skillPanelVisual = value as Object;}
 
 
     #endregion
@@ -24,7 +26,7 @@ public class HeroSkills : MonoBehaviour, IHeroSkills
 
     private void Awake()
     {
-        HeroSkillsVisual = GetComponent<IHeroSkillsVisual>();
+        
     }
 
     #endregion

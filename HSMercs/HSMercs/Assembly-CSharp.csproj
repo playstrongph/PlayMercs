@@ -69,7 +69,6 @@
      <Compile Include="Assets\Scripts\HeroPreview.cs" />
      <Compile Include="Assets\Scripts\HeroSkillPreview.cs" />
      <Compile Include="Assets\Scripts\HeroSkills.cs" />
-     <Compile Include="Assets\Scripts\HeroSkillsVisual.cs" />
      <Compile Include="Assets\Scripts\HeroTargetCollider.cs" />
      <Compile Include="Assets\Scripts\HeroVisual.cs" />
      <Compile Include="Assets\Scripts\IBattleSceneManager.cs" />
@@ -81,7 +80,6 @@
      <Compile Include="Assets\Scripts\IHeroPreview.cs" />
      <Compile Include="Assets\Scripts\IHeroSkillPreview.cs" />
      <Compile Include="Assets\Scripts\IHeroSkills.cs" />
-     <Compile Include="Assets\Scripts\IHeroSkillsVisual.cs" />
      <Compile Include="Assets\Scripts\IHeroTargetCollider.cs" />
      <Compile Include="Assets\Scripts\IHeroVisual.cs" />
      <Compile Include="Assets\Scripts\IHeroesList.cs" />
