@@ -26,20 +26,20 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
       _player = GetComponent<IPlayer>();
    }
 
-   public void StartAction(ITeamHeroesAsset teamHeroesAsset, GameObject heroPrefab, IHeroesList heroesList)
+   public void StartAction(ITeamHeroesAsset teamHeroesAsset, GameObject heroPrefab, IHeroes heroes)
    {
       for (int i = 0; i < teamHeroesAsset.HeroCount; i++)
       {
-         var herObject = Instantiate(heroPrefab, heroesList.ThisGameObject.transform);
+         var herObject = Instantiate(heroPrefab, heroes.ThisTransform);
          var hero = herObject.GetComponent<IHero>();
          
          //Add to heroes list
-         heroesList.HeroesList.Add(hero);
+         heroes.AliveHeroes.ThisList.Add(hero);
       }
       
       //TO BE OBSOLETED
       //Need a coroutine here since using a method doesn't put it in its proper position
-      StartCoroutine(SetHeroPreviewPosition(heroesList));
+      StartCoroutine(SetHeroPreviewPosition(heroes.AliveHeroes));
    }
    
    /// <summary>
@@ -66,7 +66,7 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
    {
       var battleSceneManagerTransform = _player.BattleSceneManager.ThisGameObject.transform;
       
-      foreach (var hero in heroesList.HeroesList)
+      foreach (var hero in heroesList.ThisList)
       {
          var heroPreviewTransform = hero.HeroVisual.HeroPreview.ThisTransform;
          
@@ -88,13 +88,13 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
    {
       
       //TO BE CHANGED
-      foreach (var hero in heroesList.HeroesList)
+      foreach (var hero in heroesList.ThisList)
       {
          var heroPreviewTransform = hero.HeroVisual.HeroPreview.ThisTransform;
          
          //heroPreviewTransform.SetParent(hero.HeroTransform.transform);
          
-         heroPreviewTransform.SetParent(_player.HeroPreviews);
+         heroPreviewTransform.SetParent(_player.HeroPreviewsTransform);
       }
       
       yield return null;

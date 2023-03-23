@@ -72,6 +72,7 @@
      <Compile Include="Assets\Scripts\HeroTargetCollider.cs" />
      <Compile Include="Assets\Scripts\HeroVisual.cs" />
      <Compile Include="Assets\Scripts\Heroes.cs" />
+     <Compile Include="Assets\Scripts\HeroesList.cs" />
      <Compile Include="Assets\Scripts\IBattleSceneManager.cs" />
      <Compile Include="Assets\Scripts\IDraggable.cs" />
      <Compile Include="Assets\Scripts\IDrawTargetLineAndArrow.cs" />
@@ -83,6 +84,7 @@
      <Compile Include="Assets\Scripts\IHeroSkills.cs" />
      <Compile Include="Assets\Scripts\IHeroTargetCollider.cs" />
      <Compile Include="Assets\Scripts\IHeroVisual.cs" />
+     <Compile Include="Assets\Scripts\IHeroes.cs" />
      <Compile Include="Assets\Scripts\IHeroesList.cs" />
      <Compile Include="Assets\Scripts\IInitializePlayerHeroes.cs" />
      <Compile Include="Assets\Scripts\IInitializePlayersVisual.cs" />

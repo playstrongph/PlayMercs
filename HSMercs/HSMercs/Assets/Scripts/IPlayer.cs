@@ -4,11 +4,12 @@ public interface IPlayer
 {
     IBattleSceneManager BattleSceneManager { get; set; }
 
-    IHeroesList AliveHeroes { get; }
+    //IHeroesList AliveHeroes { get; }
 
     IInitializePlayerHeroes InitializePlayerHeroes { get; }
 
-    Transform HeroPreviews { get; }
+    IHeroes Heroes { get; }
+    Transform HeroPreviewsTransform { get; }
 
 
 }
