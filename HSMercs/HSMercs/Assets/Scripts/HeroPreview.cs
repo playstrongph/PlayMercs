@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Object = UnityEngine.Object;
 
 public class HeroPreview : MonoBehaviour, IHeroPreview
@@ -12,14 +13,20 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
     [RequireInterfaceAttribute.RequireInterface(typeof(IHeroGraphicPreview))]
     [SerializeField] private Object heroGraphicPreview;
     
-    [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillPreview))]
-    [SerializeField] private Object heroSkillPreview1;
     
     [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillPreview))]
-    [SerializeField] private Object heroSkillPreview2;
-
+    [SerializeField] private Object heroSkill1Preview;
+    
+    
     [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillPreview))]
-    [SerializeField] private Object heroSkillPreview3;
+    [SerializeField] private Object heroSkill2Preview;
+
+    
+    [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillPreview))]
+    [SerializeField] private Object heroSkill3Preview;
+    
+    [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillPreview))]
+    [SerializeField] private Object heroSkill4Preview;
 
     [SerializeField] private Transform statusEffectPreviewTransform;
 
@@ -44,28 +51,37 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
     /// <summary>
     /// Reference to skill 1 preview graphics
     /// </summary>
-    public IHeroSkillPreview HeroSkillPreview1
+    public IHeroSkillPreview HeroSkill1Preview
     {
-        get => heroSkillPreview1 as IHeroSkillPreview;
-        private set => heroSkillPreview1 = value as Object;
+        get => heroSkill1Preview as IHeroSkillPreview;
+        private set => heroSkill1Preview = value as Object;
     }
     
     /// <summary>
     /// Reference to skill 2 preview graphics
     /// </summary>
-    public IHeroSkillPreview HeroSkillPreview2
+    public IHeroSkillPreview HeroSkill2Preview
     {
-        get => heroSkillPreview2 as IHeroSkillPreview;
-        private set => heroSkillPreview2 = value as Object;
+        get => heroSkill2Preview as IHeroSkillPreview;
+        private set => heroSkill2Preview = value as Object;
     }
     
     /// <summary>
     /// Reference to skill 3 preview graphics
     /// </summary>
-    public IHeroSkillPreview HeroSkillPreview3
+    public IHeroSkillPreview HeroSkill3Preview
     {
-        get => heroSkillPreview3 as IHeroSkillPreview;
-        private set => heroSkillPreview3 = value as Object;
+        get => heroSkill3Preview as IHeroSkillPreview;
+        private set => heroSkill3Preview = value as Object;
+    }
+    
+    /// <summary>
+    /// Reference to skill 4 preview graphics
+    /// </summary>
+    public IHeroSkillPreview HeroSkill4Preview
+    {
+        get => heroSkill4Preview as IHeroSkillPreview;
+        private set => heroSkill4Preview = value as Object;
     }
     
     /// <summary>
