@@ -37,6 +37,7 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
          heroesList.HeroesList.Add(hero);
       }
       
+      //TO BE OBSOLETED
       //Need a coroutine here since using a method doesn't put it in its proper position
       StartCoroutine(SetHeroPreviewPosition(heroesList));
    }
@@ -50,11 +51,17 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
    {
       yield return StartCoroutine(CenterHeroPreviewPosition(heroesList));
       
-      yield return StartCoroutine(ParentBackToHero(heroesList));
+      yield return StartCoroutine(SetParentToHeroPreviews(heroesList));
       
       yield return null;
    }
-
+   
+   
+   /// <summary>
+   /// To be Obsoleted
+   /// </summary>
+   /// <param name="heroesList"></param>
+   /// <returns></returns>
    private IEnumerator CenterHeroPreviewPosition(IHeroesList heroesList)
    {
       var battleSceneManagerTransform = _player.BattleSceneManager.ThisGameObject.transform;
@@ -72,13 +79,22 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
       yield return null;
    }
    
-   private IEnumerator ParentBackToHero(IHeroesList heroesList)
+   /// <summary>
+   /// To be removed
+   /// </summary>
+   /// <param name="heroesList"></param>
+   /// <returns></returns>
+   private IEnumerator SetParentToHeroPreviews(IHeroesList heroesList)
    {
+      
+      //TO BE CHANGED
       foreach (var hero in heroesList.HeroesList)
       {
          var heroPreviewTransform = hero.HeroVisual.HeroPreview.ThisTransform;
          
-         heroPreviewTransform.SetParent(hero.HeroTransform.transform);
+         //heroPreviewTransform.SetParent(hero.HeroTransform.transform);
+         
+         heroPreviewTransform.SetParent(_player.HeroPreviews);
       }
       
       yield return null;

@@ -11,13 +11,26 @@ public class HeroSkills : MonoBehaviour, IHeroSkills
     
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelVisual))] private Object skillPanelVisual;
 
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkill))]private List<Object> allHeroSkills = new List<Object>();
+
     #endregion
 
     #region PROPERTIES
-    
-    
-    public ISkillPanelVisual SkillPanelVisual { get=> skillPanelVisual as ISkillPanelVisual; private set => skillPanelVisual = value as Object;}
 
+    public ISkillPanelVisual SkillPanelVisual { get=> skillPanelVisual as ISkillPanelVisual; private set => skillPanelVisual = value as Object;}
+    public List<ISkill> AllHeroSkills
+    {
+        get
+        {
+            var allSkills = new List<ISkill>();
+            foreach (var heroSkillObject in allSkills)
+            {
+                var heroSkill = (ISkill) heroSkillObject;
+                allSkills.Add(heroSkill);
+            }
+            return allSkills;
+        }
+    }
 
     #endregion
 

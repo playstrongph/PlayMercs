@@ -9,7 +9,8 @@ public class Player : MonoBehaviour, IPlayer
    #region VARIABLES
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroesList))] private Object aliveHeroes;
-  
+
+   [SerializeField] private Transform heroPreviews;
         
 
    #endregion
@@ -21,6 +22,8 @@ public class Player : MonoBehaviour, IPlayer
    public IBattleSceneManager BattleSceneManager { get; set; }
 
    public IInitializePlayerHeroes InitializePlayerHeroes { get; private set; }
+
+   public Transform HeroPreviews { get => heroPreviews; private set => heroPreviews = value; }
 
 
    #endregion

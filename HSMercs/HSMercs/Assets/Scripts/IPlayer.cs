@@ -8,5 +8,7 @@ public interface IPlayer
 
     IInitializePlayerHeroes InitializePlayerHeroes { get; }
 
+    Transform HeroPreviews { get; }
+
 
 }

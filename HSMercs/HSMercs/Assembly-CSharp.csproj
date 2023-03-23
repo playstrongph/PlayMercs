@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\HeroSkills.cs" />
      <Compile Include="Assets\Scripts\HeroTargetCollider.cs" />
      <Compile Include="Assets\Scripts\HeroVisual.cs" />
+     <Compile Include="Assets\Scripts\Heroes.cs" />
      <Compile Include="Assets\Scripts\IBattleSceneManager.cs" />
      <Compile Include="Assets\Scripts\IDraggable.cs" />
      <Compile Include="Assets\Scripts\IDrawTargetLineAndArrow.cs" />
