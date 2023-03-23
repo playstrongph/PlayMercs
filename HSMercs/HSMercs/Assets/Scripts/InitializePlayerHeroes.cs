@@ -34,7 +34,7 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
          var hero = herObject.GetComponent<IHero>();
          
          //Add to heroes list
-         heroes.AliveHeroes.ThisList.Add(hero);
+         heroes.AliveHeroes.AddHero(hero);
       }
       
       //TO BE OBSOLETED
@@ -66,7 +66,7 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
    {
       var battleSceneManagerTransform = _player.BattleSceneManager.ThisGameObject.transform;
       
-      foreach (var hero in heroesList.ThisList)
+      foreach (var hero in heroesList.AliveHeroes)
       {
          var heroPreviewTransform = hero.HeroVisual.HeroPreview.ThisTransform;
          
@@ -88,7 +88,7 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
    {
       
       //TO BE CHANGED
-      foreach (var hero in heroesList.ThisList)
+      foreach (var hero in heroesList.AliveHeroes)
       {
          var heroPreviewTransform = hero.HeroVisual.HeroPreview.ThisTransform;
          
