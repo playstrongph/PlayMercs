@@ -2,7 +2,9 @@
 
 public interface IHeroes
 {
-    IHeroesList AliveHeroes { get; }
+    //IAliveHeroes AliveHeroes { get; }
+
+    IAliveHeroes AliveHeroes { get; }
 
     Transform ThisTransform { get; }
 }

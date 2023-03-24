@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class HeroesList : MonoBehaviour, IHeroesList
+public abstract class HeroesList : MonoBehaviour
 {
    #region VARIABLES
    
@@ -16,7 +16,7 @@ public abstract class HeroesList : MonoBehaviour, IHeroesList
    #region PROPERTIES
    //public List<IHero> ThisList { get; private set; }
 
-   public List<IHero> AliveHeroes { get; private set; }
+   public List<IHero> AliveHeroesList { get; private set; }
 
 
    #endregion
@@ -27,17 +27,7 @@ public abstract class HeroesList : MonoBehaviour, IHeroesList
    {
       //ThisList = new List<IHero>();
       
-      AliveHeroes = new List<IHero>();
-   }
-
-   public virtual void AddHero(IHero hero)
-   {
-      
-   }
-   
-   public virtual void RemoveHero(IHero hero)
-   {
-      
+      AliveHeroesList = new List<IHero>();
    }
 
 

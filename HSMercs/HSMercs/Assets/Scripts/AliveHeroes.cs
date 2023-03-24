@@ -4,7 +4,7 @@ using UnityEngine;
 using Object = UnityEngine.Object;
 
 
-public class AliveHeroes : HeroesList
+public class AliveHeroes : HeroesList, IAliveHeroes
 {
    #region VARIABLES
 
@@ -20,16 +20,16 @@ public class AliveHeroes : HeroesList
 
    #region METHODS
 
-   public override void AddHero(IHero hero)
+   public void AddHero(IHero hero)
    {
-      AliveHeroes.Add(hero);
+      AliveHeroesList.Add(hero);
       
       aliveHeroes.Add(hero as Object);
    }
    
-   public override void RemoveHero(IHero hero)
+   public void RemoveHero(IHero hero)
    {
-      AliveHeroes.Remove(hero);
+      AliveHeroesList.Remove(hero);
 
       aliveHeroes.Remove(hero as Object);
 

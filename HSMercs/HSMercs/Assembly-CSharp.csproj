@@ -73,6 +73,7 @@
      <Compile Include="Assets\Scripts\HeroVisual.cs" />
      <Compile Include="Assets\Scripts\Heroes.cs" />
      <Compile Include="Assets\Scripts\HeroesList.cs" />
+     <Compile Include="Assets\Scripts\IAliveHeroes.cs" />
      <Compile Include="Assets\Scripts\IBattleSceneManager.cs" />
      <Compile Include="Assets\Scripts\IDraggable.cs" />
      <Compile Include="Assets\Scripts\IDrawTargetLineAndArrow.cs" />

@@ -35,23 +35,25 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
          
          //Add to heroes list
          heroes.AliveHeroes.AddHero(hero);
+
+         
       }
       
       //TO BE OBSOLETED
       //Need a coroutine here since using a method doesn't put it in its proper position
-      StartCoroutine(SetHeroPreviewPosition(heroes.AliveHeroes));
+      StartCoroutine(SetHeroPreviewPosition(heroes));
    }
    
    /// <summary>
    /// Set the hero previews into the correct world space position
    /// </summary>
-   /// <param name="heroesList"></param>
+   /// <param name="heroes"></param>
    /// <returns></returns>
-   private IEnumerator SetHeroPreviewPosition(IHeroesList heroesList)
+   private IEnumerator SetHeroPreviewPosition(IHeroes heroes)
    {
-      yield return StartCoroutine(CenterHeroPreviewPosition(heroesList));
+      yield return StartCoroutine(CenterHeroPreviewPosition(heroes.AliveHeroes));
       
-      yield return StartCoroutine(SetParentToHeroPreviews(heroesList));
+      yield return StartCoroutine(SetParentToHeroPreviews(heroes.AliveHeroes));
       
       yield return null;
    }
@@ -60,13 +62,13 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
    /// <summary>
    /// To be Obsoleted
    /// </summary>
-   /// <param name="heroesList"></param>
+   /// <param name="aliveHeroes"></param>
    /// <returns></returns>
-   private IEnumerator CenterHeroPreviewPosition(IHeroesList heroesList)
+   private IEnumerator CenterHeroPreviewPosition(IAliveHeroes aliveHeroes)
    {
       var battleSceneManagerTransform = _player.BattleSceneManager.ThisGameObject.transform;
       
-      foreach (var hero in heroesList.AliveHeroes)
+      foreach (var hero in aliveHeroes.AliveHeroesList)
       {
          var heroPreviewTransform = hero.HeroVisual.HeroPreview.ThisTransform;
          
@@ -82,13 +84,13 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
    /// <summary>
    /// To be removed
    /// </summary>
-   /// <param name="heroesList"></param>
+   /// <param name="aliveHeroes"></param>
    /// <returns></returns>
-   private IEnumerator SetParentToHeroPreviews(IHeroesList heroesList)
+   private IEnumerator SetParentToHeroPreviews(IAliveHeroes aliveHeroes)
    {
       
       //TO BE CHANGED
-      foreach (var hero in heroesList.AliveHeroes)
+      foreach (var hero in aliveHeroes.AliveHeroesList)
       {
          var heroPreviewTransform = hero.HeroVisual.HeroPreview.ThisTransform;
          

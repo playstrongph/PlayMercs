@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,19 +7,21 @@ public class Heroes : MonoBehaviour, IHeroes
 {
    #region VARIABLES
    
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroesList))]private Object aliveHeroes;
-   
+   //[SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IAliveHeroes))]private Object aliveHeroes;
+
+  
    
    #endregion
 
    #region PROPERTIES
-   
-   
-   public IHeroesList AliveHeroes
+
+   public IAliveHeroes AliveHeroes { get; private set; }
+
+   /*public IAliveHeroes AliveHeroes
    {
-      get => aliveHeroes as IHeroesList;
+      get => aliveHeroes as IAliveHeroes;
       private set => aliveHeroes = value as Object;
-   }
+   }*/
 
    public Transform ThisTransform
    {
@@ -30,7 +33,10 @@ public class Heroes : MonoBehaviour, IHeroes
 
    #region METHODS
 
-
+   private void Awake()
+   {
+      AliveHeroes = GetComponent<IAliveHeroes>();
+   }
 
    #endregion
 }
