@@ -107,7 +107,9 @@
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceAttribute.cs" />
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceDrawer.cs" />
      <Compile Include="Assets\Scripts\SOAssets\BattleSceneSettingsAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\HeroAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\IBattleSceneSettingsAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\IHeroAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ITeamHeroesAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\TeamHeroesAsset.cs" />
      <Compile Include="Assets\Scripts\ScenePrefabs.cs" />
