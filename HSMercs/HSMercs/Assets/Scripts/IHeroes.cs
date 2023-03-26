@@ -4,7 +4,7 @@ public interface IHeroes
 {
     //IAliveHeroes AliveHeroes { get; }
 
-    IAliveHeroes AliveHeroes { get; }
+    IHeroStatusLists HeroStatusLists { get; }
 
     Transform ThisTransform { get; }
 }

@@ -34,7 +34,7 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
          var hero = herObject.GetComponent<IHero>();
          
          //Add to heroes list
-         heroes.AliveHeroes.AddHero(hero);
+         heroes.HeroStatusLists.AddToAliveHeroList(hero);
 
          
       }
@@ -51,9 +51,9 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
    /// <returns></returns>
    private IEnumerator SetHeroPreviewPosition(IHeroes heroes)
    {
-      yield return StartCoroutine(CenterHeroPreviewPosition(heroes.AliveHeroes));
+      yield return StartCoroutine(CenterHeroPreviewPosition(heroes.HeroStatusLists));
       
-      yield return StartCoroutine(SetParentToHeroPreviews(heroes.AliveHeroes));
+      yield return StartCoroutine(SetParentToHeroPreviews(heroes.HeroStatusLists));
       
       yield return null;
    }
@@ -62,13 +62,13 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
    /// <summary>
    /// To be Obsoleted
    /// </summary>
-   /// <param name="aliveHeroes"></param>
+   /// <param name="heroStatusLists"></param>
    /// <returns></returns>
-   private IEnumerator CenterHeroPreviewPosition(IAliveHeroes aliveHeroes)
+   private IEnumerator CenterHeroPreviewPosition(IHeroStatusLists heroStatusLists)
    {
       var battleSceneManagerTransform = _player.BattleSceneManager.ThisGameObject.transform;
       
-      foreach (var hero in aliveHeroes.AliveHeroesList)
+      foreach (var hero in heroStatusLists.GetAliveHeroList())
       {
          var heroPreviewTransform = hero.HeroVisual.HeroPreview.ThisTransform;
          
@@ -84,13 +84,13 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
    /// <summary>
    /// To be removed
    /// </summary>
-   /// <param name="aliveHeroes"></param>
+   /// <param name="heroStatusLists"></param>
    /// <returns></returns>
-   private IEnumerator SetParentToHeroPreviews(IAliveHeroes aliveHeroes)
+   private IEnumerator SetParentToHeroPreviews(IHeroStatusLists heroStatusLists)
    {
       
       //TO BE CHANGED
-      foreach (var hero in aliveHeroes.AliveHeroesList)
+      foreach (var hero in heroStatusLists.GetAliveHeroList())
       {
          var heroPreviewTransform = hero.HeroVisual.HeroPreview.ThisTransform;
          

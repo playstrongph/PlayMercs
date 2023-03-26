@@ -15,7 +15,7 @@ public class Heroes : MonoBehaviour, IHeroes
 
    #region PROPERTIES
 
-   public IAliveHeroes AliveHeroes { get; private set; }
+   public IHeroStatusLists HeroStatusLists { get; private set; }
 
    /*public IAliveHeroes AliveHeroes
    {
@@ -35,7 +35,7 @@ public class Heroes : MonoBehaviour, IHeroes
 
    private void Awake()
    {
-      AliveHeroes = GetComponent<IAliveHeroes>();
+      HeroStatusLists = GetComponent<IHeroStatusLists>();
    }
 
    #endregion
