@@ -12,6 +12,7 @@ public class HeroSkills : MonoBehaviour, IHeroSkills
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelVisual))] private Object skillPanelVisual;
 
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkill))]private List<Object> allHeroSkills = new List<Object>();
+    
 
     #endregion
 
@@ -39,7 +40,16 @@ public class HeroSkills : MonoBehaviour, IHeroSkills
 
     private void Awake()
     {
-        
+        RenameThisGameObjectInRunTime();
+    }
+    
+    
+    /// <summary>
+    /// Changes the game object name to 'HeroSkills' in RunTime
+    /// </summary>
+    private void RenameThisGameObjectInRunTime()
+    {
+        this.gameObject.name = this.GetType().Name;
     }
 
     #endregion
