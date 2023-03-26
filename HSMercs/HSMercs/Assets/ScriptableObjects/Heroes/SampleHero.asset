@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b84fc24cc83fb474291039fa36390b3e, type: 3}
+  m_Name: SampleHero
+  m_EditorClassIdentifier: 
+  heroName: SampleHero
+  heroClass: Thief
+  heroLevel: 0
+  heroStars: 0
+  heroCp: 0
+  heroSprite: {fileID: 0}
+  health: 0
+  attack: 0
+  defense: 0
+  speed: 0
+  focusPoints: 0
+  criticalHitChance: 0
+  criticalHitDamage: 0
+  effectiveness: 0
+  effectResistance: 0
+  dualAttackChance: 0
