@@ -36,7 +36,8 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
          //Add to heroes list
          heroes.HeroStatusLists.AddToAliveHeroList(hero);
 
-         
+         //Load Hero Stats and Attributes
+         //Load Hero previews
       }
       
       //TO BE OBSOLETED

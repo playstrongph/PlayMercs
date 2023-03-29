@@ -110,7 +110,9 @@
      <Compile Include="Assets\Scripts\SOAssets\HeroAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\IBattleSceneSettingsAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\IHeroAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\ISkillAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ITeamHeroesAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\SkillAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\TeamHeroesAsset.cs" />
      <Compile Include="Assets\Scripts\ScenePrefabs.cs" />
      <Compile Include="Assets\Scripts\ShowHeroPreview.cs" />

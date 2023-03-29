@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace SOAssets
 {
@@ -20,5 +21,8 @@ namespace SOAssets
         int Effectiveness { get; }
         int EffectResistance { get; }
         int DualAttackChance { get; }
+        int HitChance { get; }
+
+        List<ISkillAsset> SkillAssets { get; }
     }
 }

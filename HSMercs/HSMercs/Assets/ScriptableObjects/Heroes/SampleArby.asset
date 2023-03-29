@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b84fc24cc83fb474291039fa36390b3e, type: 3}
-  m_Name: SampleHero
+  m_Name: SampleArby
   m_EditorClassIdentifier: 
-  heroName: SampleHero
+  heroName: SampleArby
   heroClass: Thief
   heroLevel: 60
   heroStars: 6
   heroCp: 9999
-  heroSprite: {fileID: 0}
+  heroSprite: {fileID: 4326882273387473174, guid: c513ca01f465d14468305c71205e135d,
+    type: 3}
   health: 99
   attack: 99
   defense: 99
@@ -28,3 +29,8 @@ MonoBehaviour:
   effectiveness: 0
   effectResistance: 0
   dualAttackChance: 5
+  hitChance: 100
+  skillAssets:
+  - {fileID: 11400000, guid: d9cfb499780be3e47896bc56b57c151d, type: 2}
+  - {fileID: 11400000, guid: d9cfb499780be3e47896bc56b57c151d, type: 2}
+  - {fileID: 11400000, guid: d9cfb499780be3e47896bc56b57c151d, type: 2}

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace SOAssets
 {
@@ -14,24 +15,28 @@ namespace SOAssets
       [SerializeField] private int heroLevel;
       [SerializeField] private int heroStars;
       [SerializeField] private int heroCp;
-
       [SerializeField] private Sprite heroSprite;
 
-      [Header("Hero Stats")] 
+      [Header("Base Hero Stats")] 
       [SerializeField] private int health;
       [SerializeField] private int attack;
       [SerializeField] private int defense;
       [SerializeField] private int speed;
-      [SerializeField] private int focusPoints;
+      [SerializeField] private int focusPoints = 0;
       
       
-      [SerializeField] private int criticalHitChance;
-      [SerializeField] private int criticalHitDamage;
-      [SerializeField] private int effectiveness;
-      [SerializeField] private int effectResistance;
-      [SerializeField] private int dualAttackChance;
+      [SerializeField] private int criticalHitChance = 50;
+      [SerializeField] private int criticalHitDamage = 150;
+      [SerializeField] private int effectiveness = 0;
+      [SerializeField] private int effectResistance = 0;
+      [SerializeField] private int dualAttackChance = 5;
+      [SerializeField] private int hitChance = 100;
+
+      [Header("Hero Skill Assets")] 
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillAsset))] 
+      private List<ScriptableObject> skillAssets = new List<ScriptableObject>();
       
-      //TODO - HeroSkills
+     
       
       
       
@@ -60,9 +65,22 @@ namespace SOAssets
       public int Effectiveness { get => effectiveness; private set => effectiveness = value; }
       public int EffectResistance { get => effectResistance; private set => effectResistance = value; }
       public int DualAttackChance { get => dualAttackChance; private set => dualAttackChance = value; }
+      public int HitChance { get => hitChance; private set => hitChance = value; }
       
       
-      //TODO - HeroSkills
+      //HERO SKILLS
+      public List<ISkillAsset> SkillAssets
+      {
+         get
+         {
+            var heroSkillAssetsList = new List<ISkillAsset>();
+            foreach (var skillAsset in skillAssets)
+            {
+               heroSkillAssetsList.Add(skillAsset as ISkillAsset);
+            }
+            return heroSkillAssetsList;
+         }
+      }
 
       #endregion
         
