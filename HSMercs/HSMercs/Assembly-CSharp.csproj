@@ -59,28 +59,34 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AddComponentExample.cs" />
+     <Compile Include="Assets\Scripts\BaseHeroStats.cs" />
      <Compile Include="Assets\Scripts\BattleSceneManager.cs" />
      <Compile Include="Assets\Scripts\Draggable.cs" />
      <Compile Include="Assets\Scripts\DrawTargetLineAndArrow.cs" />
      <Compile Include="Assets\Scripts\Hero.cs" />
      <Compile Include="Assets\Scripts\HeroGraphicPreview.cs" />
      <Compile Include="Assets\Scripts\HeroGraphics.cs" />
+     <Compile Include="Assets\Scripts\HeroInformation.cs" />
      <Compile Include="Assets\Scripts\HeroPreview.cs" />
      <Compile Include="Assets\Scripts\HeroSkillPreview.cs" />
      <Compile Include="Assets\Scripts\HeroSkills.cs" />
+     <Compile Include="Assets\Scripts\HeroStats.cs" />
      <Compile Include="Assets\Scripts\HeroStatusLists.cs" />
      <Compile Include="Assets\Scripts\HeroTargetCollider.cs" />
      <Compile Include="Assets\Scripts\HeroVisual.cs" />
      <Compile Include="Assets\Scripts\Heroes.cs" />
+     <Compile Include="Assets\Scripts\IBaseHeroStats.cs" />
      <Compile Include="Assets\Scripts\IBattleSceneManager.cs" />
      <Compile Include="Assets\Scripts\IDraggable.cs" />
      <Compile Include="Assets\Scripts\IDrawTargetLineAndArrow.cs" />
      <Compile Include="Assets\Scripts\IHero.cs" />
      <Compile Include="Assets\Scripts\IHeroGraphicPreview.cs" />
      <Compile Include="Assets\Scripts\IHeroGraphics.cs" />
+     <Compile Include="Assets\Scripts\IHeroInformation.cs" />
      <Compile Include="Assets\Scripts\IHeroPreview.cs" />
      <Compile Include="Assets\Scripts\IHeroSkillPreview.cs" />
      <Compile Include="Assets\Scripts\IHeroSkills.cs" />
+     <Compile Include="Assets\Scripts\IHeroStats.cs" />
      <Compile Include="Assets\Scripts\IHeroStatusLists.cs" />
      <Compile Include="Assets\Scripts\IHeroTargetCollider.cs" />
      <Compile Include="Assets\Scripts\IHeroVisual.cs" />

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b84fc24cc83fb474291039fa36390b3e, type: 3}
-  m_Name: SampleArby
+  m_Name: zzSampleArby
   m_EditorClassIdentifier: 
-  heroName: SampleArby
-  heroClass: Thief
+  heroName: Sample Merc
+  heroClass: Caster Fighter Protector
   heroLevel: 60
   heroStars: 6
   heroCp: 9999

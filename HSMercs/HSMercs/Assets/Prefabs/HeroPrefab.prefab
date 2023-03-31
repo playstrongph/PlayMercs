@@ -1296,8 +1296,11 @@ GameObject:
   - component: {fileID: 3661642155146651833}
   - component: {fileID: 681513901236084606}
   - component: {fileID: 3661642155146651834}
+  - component: {fileID: 728714645}
+  - component: {fileID: 1486563308202474854}
+  - component: {fileID: 8857448957194158563}
   m_Layer: 0
-  m_Name: Hero
+  m_Name: HeroPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1354,6 +1357,70 @@ MonoBehaviour:
   heroGraphic: {fileID: 3661642155084178791}
   heroPreview: {fileID: 3661642154285043021}
   heroStatusEffectsTransform: {fileID: 2514256090859642798}
+--- !u!114 &728714645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3661642155146651832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b55f99b4b8f2028478b6351e88a3245a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heroName: 
+  heroClass: 
+  heroLevel: 0
+  heroStars: 0
+  heroCp: 0
+  heroSprite: {fileID: 0}
+--- !u!114 &1486563308202474854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3661642155146651832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd2c2ec439ba4342910b2ab75e165ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  attack: 0
+  defense: 0
+  speed: 0
+  focusPoints: 0
+  criticalHitChance: 50
+  criticalHitDamage: 150
+  effectiveness: 0
+  effectResistance: 0
+  dualAttackChance: 5
+  hitChance: 100
+--- !u!114 &8857448957194158563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3661642155146651832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61e47833718952e4e970f96cf8ddc5aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  attack: 0
+  defense: 0
+  speed: 0
+  focusPoints: 0
+  criticalHitChance: 50
+  criticalHitDamage: 150
+  effectiveness: 0
+  effectResistance: 0
+  dualAttackChance: 5
+  hitChance: 100
 --- !u!1 &3661642155197304551
 GameObject:
   m_ObjectHideFlags: 0
