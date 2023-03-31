@@ -37,14 +37,22 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
          heroes.HeroStatusLists.AddToAliveHeroList(hero);
 
          //Load Hero Stats and Attributes
-         //Load Hero previews
+         
+         
+         //Load Hero and Skill previews
       }
       
-      //TO BE OBSOLETED
+      //TO BE OBSOLETED ?
       //Need a coroutine here since using a method doesn't put it in its proper position
       StartCoroutine(SetHeroPreviewPosition(heroes));
    }
-   
+
+   private void LoadHeroStatsAndInformation()
+   {
+      
+   }
+
+
    /// <summary>
    /// Set the hero previews into the correct world space position
    /// </summary>
@@ -61,7 +69,7 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
    
    
    /// <summary>
-   /// To be Obsoleted
+   /// Center the hero preview position on the board
    /// </summary>
    /// <param name="heroStatusLists"></param>
    /// <returns></returns>
@@ -83,19 +91,15 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
    }
    
    /// <summary>
-   /// To be removed
+   /// Set the parent of hero previews to the parent transform
    /// </summary>
    /// <param name="heroStatusLists"></param>
    /// <returns></returns>
    private IEnumerator SetParentToHeroPreviews(IHeroStatusLists heroStatusLists)
    {
-      
-      //TO BE CHANGED
       foreach (var hero in heroStatusLists.GetAliveHeroList())
       {
          var heroPreviewTransform = hero.HeroVisual.HeroPreview.ThisTransform;
-         
-         //heroPreviewTransform.SetParent(hero.HeroTransform.transform);
          
          heroPreviewTransform.SetParent(_player.HeroPreviewsTransform);
       }

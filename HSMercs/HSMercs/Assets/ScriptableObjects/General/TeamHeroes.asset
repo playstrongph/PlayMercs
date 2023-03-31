@@ -13,3 +13,8 @@ MonoBehaviour:
   m_Name: TeamHeroes
   m_EditorClassIdentifier: 
   heroCount: 4
+  heroAssets:
+  - {fileID: 11400000, guid: 443405fe221ef2146b46f00c16f81374, type: 2}
+  - {fileID: 11400000, guid: 443405fe221ef2146b46f00c16f81374, type: 2}
+  - {fileID: 11400000, guid: 443405fe221ef2146b46f00c16f81374, type: 2}
+  - {fileID: 11400000, guid: 443405fe221ef2146b46f00c16f81374, type: 2}
