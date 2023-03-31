@@ -28,7 +28,7 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
 
    public void StartAction(ITeamHeroesAsset teamHeroesAsset, GameObject heroPrefab, IHeroes heroes)
    {
-      for (int i = 0; i < teamHeroesAsset.HeroCount; i++)
+      /*for (int i = 0; i < teamHeroesAsset.HeroCount; i++)
       {
          var herObject = Instantiate(heroPrefab, heroes.ThisTransform);
          var hero = herObject.GetComponent<IHero>();
@@ -39,7 +39,20 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
          //Load Hero Stats and Attributes
          
          
+         
          //Load Hero and Skill previews
+      }*/
+
+      foreach (var heroAsset in teamHeroesAsset.HeroAssets)
+      {
+         var herObject = Instantiate(heroPrefab, heroes.ThisTransform);
+         var hero = herObject.GetComponent<IHero>();
+         
+         //Add to heroes list
+         heroes.HeroStatusLists.AddToAliveHeroList(hero);
+         
+         LoadHeroStatsAndInformation(heroAsset,hero);
+         
       }
       
       //TO BE OBSOLETED ?
@@ -47,9 +60,45 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
       StartCoroutine(SetHeroPreviewPosition(heroes));
    }
 
-   private void LoadHeroStatsAndInformation()
+   private void LoadHeroStatsAndInformation(IHeroAsset heroAsset, IHero hero)
    {
+      //Hero Information
+      hero.GameObjectName.name = heroAsset.HeroName;
+      hero.HeroInformation.HeroName = heroAsset.HeroName;
+      hero.HeroInformation.HeroLevel = heroAsset.HeroLevel;
+      hero.HeroInformation.HeroStars = heroAsset.HeroStars;
+      hero.HeroInformation.HeroCp = heroAsset.HeroCp;
+      hero.HeroInformation.HeroSprite = heroAsset.HeroSprite;
+      //TODO: Replace with Scriptable Object later
+      hero.HeroInformation.HeroClass = heroAsset.HeroClass;
+     
       
+      //Hero Stats
+      hero.HeroStats.Health = heroAsset.Health;
+      hero.HeroStats.Attack = heroAsset.Attack;
+      hero.HeroStats.Defense = heroAsset.Defense;
+      hero.HeroStats.Speed = heroAsset.Speed;
+      hero.HeroStats.FocusPoints = heroAsset.FocusPoints;
+      hero.HeroStats.CriticalHitChance = heroAsset.CriticalHitChance;
+      hero.HeroStats.CriticalHitDamage = heroAsset.CriticalHitDamage;
+      hero.HeroStats.Effectiveness = heroAsset.Effectiveness;
+      hero.HeroStats.EffectResistance = heroAsset.EffectResistance;
+      hero.HeroStats.DualAttackChance = heroAsset.DualAttackChance;
+      hero.HeroStats.HitChance = heroAsset.HitChance;
+      
+      //Base Hero Stats
+      hero.BaseHeroStats.Health = heroAsset.Health;
+      hero.BaseHeroStats.Attack = heroAsset.Attack;
+      hero.BaseHeroStats.Defense = heroAsset.Defense;
+      hero.BaseHeroStats.Speed = heroAsset.Speed;
+      hero.BaseHeroStats.FocusPoints = heroAsset.FocusPoints;
+      hero.BaseHeroStats.CriticalHitChance = heroAsset.CriticalHitChance;
+      hero.BaseHeroStats.CriticalHitDamage = heroAsset.CriticalHitDamage;
+      hero.BaseHeroStats.Effectiveness = heroAsset.Effectiveness;
+      hero.BaseHeroStats.EffectResistance = heroAsset.EffectResistance;
+      hero.BaseHeroStats.DualAttackChance = heroAsset.DualAttackChance;
+      hero.BaseHeroStats.HitChance = heroAsset.HitChance;
+
    }
 
 

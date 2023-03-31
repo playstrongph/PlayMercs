@@ -1,14 +1,14 @@
 ﻿public interface IHeroStats
 {
-    int Health { get; }
-    int Attack { get; }
-    int Defense { get; }
-    int Speed { get; }
-    int FocusPoints { get; }
-    int CriticalHitChance { get; }
-    int CriticalHitDamage { get; }
-    int Effectiveness { get; }
-    int EffectResistance { get; }
-    int DualAttackChance { get; }
-    int HitChance { get; }
+    int Health { get; set; }
+    int Attack { get; set;}
+    int Defense { get; set;}
+    int Speed { get; set;}
+    int FocusPoints { get; set;}
+    int CriticalHitChance { get; set;}
+    int CriticalHitDamage { get; set;}
+    int Effectiveness { get; set;}
+    int EffectResistance { get; set;}
+    int DualAttackChance { get; set;}
+    int HitChance { get; set;}
 }

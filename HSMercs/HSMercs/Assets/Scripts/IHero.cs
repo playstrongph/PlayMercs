@@ -3,6 +3,11 @@
 public interface IHero
 {
     IHeroVisual HeroVisual { get; }
+    Transform HeroTransform { get;  }
+    IHeroInformation HeroInformation { get;  }
+    IBaseHeroStats BaseHeroStats { get;  }
+    IHeroStats HeroStats { get;  }
 
-     Transform HeroTransform { get; }
+    GameObject GameObjectName { get; }
+
 }

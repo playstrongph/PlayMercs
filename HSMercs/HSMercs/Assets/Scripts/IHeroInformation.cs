@@ -2,10 +2,10 @@
 
 public interface IHeroInformation
 {
-    string HeroName { get; }
-    string HeroClass { get; }
-    Sprite HeroSprite { get; }
-    int HeroLevel { get; }
-    int HeroStars { get; }
-    int HeroCp { get; }
+    string HeroName { get; set; }
+    string HeroClass { get; set; }
+    Sprite HeroSprite { get; set; }
+    int HeroLevel { get; set; }
+    int HeroStars { get; set; }
+    int HeroCp { get; set; }
 }

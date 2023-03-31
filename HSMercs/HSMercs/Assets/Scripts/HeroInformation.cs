@@ -20,12 +20,12 @@ public class HeroInformation : MonoBehaviour, IHeroInformation
    #region PROPERTIES
    
    //HERO INFORMATION
-   public string HeroName { get => heroName; private set => heroName = value; }  
-   public string HeroClass { get => heroClass; private set => heroClass = value; }
-   public Sprite HeroSprite { get => heroSprite; private set => heroSprite = value; }
-   public int HeroLevel { get => heroLevel; private set => heroLevel = value; }
-   public int HeroStars { get => heroStars; private set => heroStars = value; }
-   public int HeroCp { get => heroCp; private set => heroCp = value; }
+   public string HeroName { get => heroName; set => heroName = value; }  
+   public string HeroClass { get => heroClass; set => heroClass = value; }
+   public Sprite HeroSprite { get => heroSprite; set => heroSprite = value; }
+   public int HeroLevel { get => heroLevel; set => heroLevel = value; }
+   public int HeroStars { get => heroStars; set => heroStars = value; }
+   public int HeroCp { get => heroCp; set => heroCp = value; }
 
    #endregion
         
