@@ -15,6 +15,7 @@ namespace SOAssets
         int Attack { get; }
         int Defense { get; }
         int Speed { get; }
+        int Armor { get; }
         int FocusPoints { get; }
         int CriticalHitChance { get; }
         int CriticalHitDamage { get; }

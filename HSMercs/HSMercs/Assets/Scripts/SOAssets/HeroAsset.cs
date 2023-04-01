@@ -22,6 +22,7 @@ namespace SOAssets
       [SerializeField] private int attack;
       [SerializeField] private int defense;
       [SerializeField] private int speed;
+      [SerializeField] private int armor = 0;
       [SerializeField] private int focusPoints = 0;
       
       
@@ -57,6 +58,7 @@ namespace SOAssets
       public int Attack { get => attack; private set => attack = value; }
       public int Defense { get => defense; private set => defense = value; }
       public int Speed { get => speed; private set => speed = value; }
+      public int Armor { get => armor; private set => armor = value; }
       public int FocusPoints { get => focusPoints; private set => focusPoints = value; }
       
       

@@ -4,6 +4,7 @@
     int Attack { get; set;}
     int Defense { get; set;}
     int Speed { get; set;}
+    int Armor { get; set;}
     int FocusPoints { get; set;}
     int CriticalHitChance { get; set;}
     int CriticalHitDamage { get; set;}

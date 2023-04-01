@@ -28,21 +28,6 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
 
    public void StartAction(ITeamHeroesAsset teamHeroesAsset, GameObject heroPrefab, IHeroes heroes)
    {
-      /*for (int i = 0; i < teamHeroesAsset.HeroCount; i++)
-      {
-         var herObject = Instantiate(heroPrefab, heroes.ThisTransform);
-         var hero = herObject.GetComponent<IHero>();
-         
-         //Add to heroes list
-         heroes.HeroStatusLists.AddToAliveHeroList(hero);
-
-         //Load Hero Stats and Attributes
-         
-         
-         
-         //Load Hero and Skill previews
-      }*/
-
       foreach (var heroAsset in teamHeroesAsset.HeroAssets)
       {
          var herObject = Instantiate(heroPrefab, heroes.ThisTransform);
@@ -56,7 +41,6 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
          
          //load hero visuals image and texts
          LoadHeroVisuals(hero);
-         
       }
       
       //TO BE OBSOLETED ?
@@ -82,6 +66,7 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
       hero.HeroStats.Attack = heroAsset.Attack;
       hero.HeroStats.Defense = heroAsset.Defense;
       hero.HeroStats.Speed = heroAsset.Speed;
+      hero.HeroStats.Armor = heroAsset.Armor;
       hero.HeroStats.FocusPoints = heroAsset.FocusPoints;
       hero.HeroStats.CriticalHitChance = heroAsset.CriticalHitChance;
       hero.HeroStats.CriticalHitDamage = heroAsset.CriticalHitDamage;
@@ -108,17 +93,21 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
    private void LoadHeroVisuals(IHero hero)
    {
       var baseAttack = hero.BaseHeroStats.Attack;
+      var baseHealth = hero.BaseHeroStats.Health;
+      var armor = hero.HeroStats.Armor;
+      
       
       //Load Hero Image
       hero.HeroVisual.HeroGraphics.SetHeroImage.SetValue();
       
       //Load Health Text
-    
+      hero.HeroVisual.HeroGraphics.SetHeroHealthText.SetValue(baseHealth);
       
       //Load Attack Text
       hero.HeroVisual.HeroGraphics.SetHeroAttackText.SetValue(baseAttack);
       
       //Load Armor Text
+      hero.HeroVisual.HeroGraphics.SetHeroArmorText.SetValue(armor);
    }
 
    /// <summary>

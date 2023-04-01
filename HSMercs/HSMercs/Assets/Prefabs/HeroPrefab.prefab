@@ -867,7 +867,7 @@ GameObject:
   - component: {fileID: 3661642154635177684}
   - component: {fileID: 3661642154635177683}
   m_Layer: 8
-  m_Name: Image
+  m_Name: ArmorImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1170,6 +1170,8 @@ GameObject:
   - component: {fileID: 3661642155084178788}
   - component: {fileID: 7684151832637762051}
   - component: {fileID: 1647719408}
+  - component: {fileID: 4551678732198406025}
+  - component: {fileID: 4865135976525831854}
   m_Layer: 8
   m_Name: HeroGraphics
   m_TagString: Untagged
@@ -1312,6 +1314,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeb39da38b3ebf7478cdc54b3f4ce59e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4551678732198406025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3661642155084178786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6423cfb9f1d45a144acf09468e863669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4865135976525831854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3661642155084178786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca17cdf480ba4d24c9b1fdcb54a8978c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3661642155146651832
 GameObject:
   m_ObjectHideFlags: 0
@@ -1418,6 +1444,7 @@ MonoBehaviour:
   attack: 0
   defense: 0
   speed: 0
+  armor: 0
   focusPoints: 0
   criticalHitChance: 50
   criticalHitDamage: 150

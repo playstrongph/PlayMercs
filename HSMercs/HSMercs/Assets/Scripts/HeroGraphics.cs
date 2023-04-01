@@ -36,6 +36,7 @@ public class HeroGraphics : MonoBehaviour, IHeroGraphics
     [SerializeField]private Image blueHeroGraphic;
     [SerializeField]private Image armorGraphic;
     [SerializeField]private Image targetCrossHairGraphic;
+    
 
     /// <summary>
     /// Hero preview texts
@@ -159,6 +160,7 @@ public class HeroGraphics : MonoBehaviour, IHeroGraphics
     #endregion
 
     public ISetHeroAttackText SetHeroAttackText => GetComponent<ISetHeroAttackText>();
-
     public ISetHeroImage SetHeroImage => GetComponent<ISetHeroImage>();
+    public ISetHeroArmorText SetHeroArmorText => GetComponent<ISetHeroArmorText>();
+    public ISetHeroHealthText SetHeroHealthText => GetComponent<ISetHeroHealthText>();
 }

@@ -61,14 +61,14 @@ public interface IHeroGraphics
     /// Health Text Graphic
     /// </summary>
     TextMeshProUGUI HealthText { get; set; }
-
     /// <summary>
     /// Armor Text Graphic
     /// </summary>
     TextMeshProUGUI ArmorText { get; set; }
-
     ISetHeroAttackText SetHeroAttackText { get; }
-
     ISetHeroImage SetHeroImage { get; }
+    ISetHeroArmorText SetHeroArmorText { get; }
+
+    ISetHeroHealthText SetHeroHealthText { get; }
 
 }
