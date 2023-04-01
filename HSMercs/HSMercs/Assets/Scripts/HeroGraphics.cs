@@ -9,6 +9,10 @@ public class HeroGraphics : MonoBehaviour, IHeroGraphics
 
     #region VARIABLES
 
+    [Header("HERO REFERENCE")] 
+    [RequireInterfaceAttribute.RequireInterface(typeof(IHero))][SerializeField] private Object hero = null;
+    
+    
     /// <summary>
     /// The hero Preview Canvas
     /// </summary>
@@ -43,8 +47,10 @@ public class HeroGraphics : MonoBehaviour, IHeroGraphics
     
     #endregion
 
-    #region SERIALIZED VARIABLE PROPERTIES
-
+    #region PROPERTIES
+    
+    public IHero Hero => hero as IHero;
+    
     /// <summary>
     /// Hero Graphic Canvas
     /// </summary>
@@ -152,5 +158,10 @@ public class HeroGraphics : MonoBehaviour, IHeroGraphics
 
     #endregion
 
+    public ISetHeroAttackText SetHeroAttackText
+    {
+        get => GetComponent<ISetHeroAttackText>();
+        private set => value = GetComponent<ISetHeroAttackText>();
+    }
 
 }

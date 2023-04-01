@@ -4,6 +4,12 @@ using UnityEngine.UI;
 
 public interface IHeroGraphics
 {
+    
+    /// <summary>
+    /// Hero Reference
+    /// </summary>
+    IHero Hero { get; }
+
     /// <summary>
     /// Hero Graphic Canvas
     /// </summary>
@@ -60,4 +66,6 @@ public interface IHeroGraphics
     /// Armor Text Graphic
     /// </summary>
     TextMeshProUGUI ArmorText { get; set; }
+
+    ISetHeroAttackText SetHeroAttackText { get; }
 }

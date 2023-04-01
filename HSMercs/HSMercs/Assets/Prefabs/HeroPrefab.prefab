@@ -1168,6 +1168,7 @@ GameObject:
   - component: {fileID: 3661642155084178790}
   - component: {fileID: 3661642155084178789}
   - component: {fileID: 3661642155084178788}
+  - component: {fileID: 7684151832637762051}
   m_Layer: 8
   m_Name: HeroGraphics
   m_TagString: Untagged
@@ -1213,6 +1214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ceefa4732155c044b027ae2b8d30ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hero: {fileID: 681513901236084606}
   heroGraphicCanvas: {fileID: 3661642155084178790}
   greenFrame: {fileID: 3661642155912928140}
   redFrame: {fileID: 3661642154264253961}
@@ -1285,6 +1287,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7684151832637762051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3661642155084178786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ab0eedccb0edd4fa06ca46c8f92b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3661642155146651832
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,8 +19,8 @@ MonoBehaviour:
   heroCp: 9999
   heroSprite: {fileID: 4326882273387473174, guid: c513ca01f465d14468305c71205e135d,
     type: 3}
-  health: 99
-  attack: 99
+  health: 67
+  attack: 8
   defense: 99
   speed: 99
   focusPoints: 99

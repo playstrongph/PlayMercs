@@ -51,7 +51,11 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
          //Add to heroes list
          heroes.HeroStatusLists.AddToAliveHeroList(hero);
          
+         //Load logic stats and information
          LoadHeroStatsAndInformation(heroAsset,hero);
+         
+         //load hero visuals image and texts
+         LoadHeroVisuals(hero);
          
       }
       
@@ -101,6 +105,20 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
 
    }
 
+   private void LoadHeroVisuals(IHero hero)
+   {
+      var baseAttack = hero.BaseHeroStats.Attack;
+      
+      //Load Hero Image
+      
+      //Load Health Text
+      hero.HeroVisual.HeroGraphics.SetHeroAttackText.SetValue(baseAttack);
+      
+      //Load Attack Text
+      
+      
+      //Load Armor Text
+   }
 
    /// <summary>
    /// Set the hero previews into the correct world space position
