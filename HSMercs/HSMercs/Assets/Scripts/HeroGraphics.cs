@@ -158,10 +158,7 @@ public class HeroGraphics : MonoBehaviour, IHeroGraphics
 
     #endregion
 
-    public ISetHeroAttackText SetHeroAttackText
-    {
-        get => GetComponent<ISetHeroAttackText>();
-        private set => value = GetComponent<ISetHeroAttackText>();
-    }
+    public ISetHeroAttackText SetHeroAttackText => GetComponent<ISetHeroAttackText>();
 
+    public ISetHeroImage SetHeroImage => GetComponent<ISetHeroImage>();
 }

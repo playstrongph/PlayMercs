@@ -96,6 +96,7 @@
      <Compile Include="Assets\Scripts\IInitializeTeamHeroes.cs" />
      <Compile Include="Assets\Scripts\IPlayer.cs" />
      <Compile Include="Assets\Scripts\ISetHeroAttackText.cs" />
+     <Compile Include="Assets\Scripts\ISetHeroImage.cs" />
      <Compile Include="Assets\Scripts\IShowHeroPreview.cs" />
      <Compile Include="Assets\Scripts\IShowSkillPreview.cs" />
      <Compile Include="Assets\Scripts\ISkill.cs" />
@@ -123,6 +124,7 @@
      <Compile Include="Assets\Scripts\SOAssets\TeamHeroesAsset.cs" />
      <Compile Include="Assets\Scripts\ScenePrefabs.cs" />
      <Compile Include="Assets\Scripts\SetHeroAttackText.cs" />
+     <Compile Include="Assets\Scripts\SetHeroImage.cs" />
      <Compile Include="Assets\Scripts\ShowHeroPreview.cs" />
      <Compile Include="Assets\Scripts\ShowSkillPreview.cs" />
      <Compile Include="Assets\Scripts\Skill.cs" />

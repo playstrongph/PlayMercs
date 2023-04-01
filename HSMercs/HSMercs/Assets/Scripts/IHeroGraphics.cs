@@ -68,4 +68,7 @@ public interface IHeroGraphics
     TextMeshProUGUI ArmorText { get; set; }
 
     ISetHeroAttackText SetHeroAttackText { get; }
+
+    ISetHeroImage SetHeroImage { get; }
+
 }

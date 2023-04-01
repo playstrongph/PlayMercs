@@ -110,12 +110,13 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
       var baseAttack = hero.BaseHeroStats.Attack;
       
       //Load Hero Image
+      hero.HeroVisual.HeroGraphics.SetHeroImage.SetValue();
       
       //Load Health Text
-      hero.HeroVisual.HeroGraphics.SetHeroAttackText.SetValue(baseAttack);
+    
       
       //Load Attack Text
-      
+      hero.HeroVisual.HeroGraphics.SetHeroAttackText.SetValue(baseAttack);
       
       //Load Armor Text
    }
