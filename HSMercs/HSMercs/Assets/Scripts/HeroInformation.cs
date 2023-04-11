@@ -9,11 +9,12 @@ public class HeroInformation : MonoBehaviour, IHeroInformation
    [Header("Hero Information")]
    
    [SerializeField] private string heroName;
-   [SerializeField] private string heroClass;
+   [SerializeField] private string heroClassText;
    [SerializeField] private int heroLevel;
    [SerializeField] private int heroStars;
    [SerializeField] private int heroCp;
    [SerializeField] private Sprite heroSprite;
+   
 
    #endregion
         
@@ -21,7 +22,7 @@ public class HeroInformation : MonoBehaviour, IHeroInformation
    
    //HERO INFORMATION
    public string HeroName { get => heroName; set => heroName = value; }  
-   public string HeroClass { get => heroClass; set => heroClass = value; }
+   public string HeroClassText { get => heroClassText; set => heroClassText = value; }
    public Sprite HeroSprite { get => heroSprite; set => heroSprite = value; }
    public int HeroLevel { get => heroLevel; set => heroLevel = value; }
    public int HeroStars { get => heroStars; set => heroStars = value; }

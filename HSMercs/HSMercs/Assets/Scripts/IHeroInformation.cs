@@ -3,7 +3,7 @@
 public interface IHeroInformation
 {
     string HeroName { get; set; }
-    string HeroClass { get; set; }
+    string HeroClassText { get; set; }
     Sprite HeroSprite { get; set; }
     int HeroLevel { get; set; }
     int HeroStars { get; set; }
