@@ -11,11 +11,13 @@ namespace SOAssets
       
       [Header("Hero Information")]
       [SerializeField] private string heroName;
-      [SerializeField] private string heroClass;
+      [SerializeField] private string heroClassText;
       [SerializeField] private int heroLevel;
       [SerializeField] private int heroStars;
       [SerializeField] private int heroCp;
       [SerializeField] private Sprite heroSprite;
+
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroClassAsset))] private ScriptableObject heroClass = null;
 
       [Header("Base Hero Stats")] 
       [SerializeField] private int health;
@@ -47,7 +49,8 @@ namespace SOAssets
 
       //HERO INFORMATION
       public string HeroName { get => heroName; private set => heroName = value; }  
-      public string HeroClass { get => heroClass; private set => heroClass = value; }
+      public string HeroClassText { get => heroClassText; private set => heroClassText = value; }
+      public IHeroClassAsset HeroClass => heroClass as IHeroClassAsset;
       public Sprite HeroSprite { get => heroSprite; private set => heroSprite = value; }
       public int HeroLevel { get => heroLevel; private set => heroLevel = value; }
       public int HeroStars { get => heroStars; private set => heroStars = value; }

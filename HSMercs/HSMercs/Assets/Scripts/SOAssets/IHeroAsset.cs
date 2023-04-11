@@ -6,7 +6,8 @@ namespace SOAssets
     public interface IHeroAsset
     {
         string HeroName { get; }
-        string HeroClass { get; }
+        string HeroClassText { get; }
+        IHeroClassAsset HeroClass { get; }
         int HeroLevel { get; }
         int HeroStars { get; }
         int HeroCp { get; }

@@ -61,7 +61,7 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
       hero.HeroInformation.HeroCp = heroAsset.HeroCp;
       hero.HeroInformation.HeroSprite = heroAsset.HeroSprite;
       //TODO: Replace with Scriptable Object later
-      hero.HeroInformation.HeroClass = heroAsset.HeroClass;
+      hero.HeroInformation.HeroClass = heroAsset.HeroClassText;
      
       
       //Hero Stats

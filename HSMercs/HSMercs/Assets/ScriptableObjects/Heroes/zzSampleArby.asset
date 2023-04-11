@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: zzSampleArby
   m_EditorClassIdentifier: 
   heroName: Sample Merc
-  heroClass: Caster Fighter Protector
+  heroClassText: 
   heroLevel: 60
   heroStars: 6
   heroCp: 9999
   heroSprite: {fileID: 4326882273387473174, guid: c513ca01f465d14468305c71205e135d,
     type: 3}
+  heroClass: {fileID: 11400000, guid: 5666ffc2ba94da44cb4d2584f078aeab, type: 2}
   health: 67
   attack: 8
   defense: 99
