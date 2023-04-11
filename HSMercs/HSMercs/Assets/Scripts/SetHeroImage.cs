@@ -18,12 +18,15 @@ public class SetHeroImage : MonoBehaviour, ISetHeroImage
       
       var heroImage = _heroGraphics.Hero.HeroInformation.HeroSprite;
       
-      //Temp - need to UsedHeroGraphic property in HeroGraphics class that is determined by the hero class
+      //Hero Graphics
       _heroGraphics.GreenHeroGraphic.sprite = heroImage;
       _heroGraphics.RedHeroGraphic.sprite = heroImage;
       _heroGraphics.BlueHeroGraphic.sprite = heroImage;
-
-
+      
+      //Hero Preview
+      _heroGraphics.Hero.HeroVisual.HeroPreview.HeroGraphicPreview.GreenHeroGraphic.sprite = heroImage;
+      _heroGraphics.Hero.HeroVisual.HeroPreview.HeroGraphicPreview.RedHeroGraphic.sprite = heroImage;
+      _heroGraphics.Hero.HeroVisual.HeroPreview.HeroGraphicPreview.BlueHeroGraphic.sprite = heroImage;
    }     
 
    #endregion
