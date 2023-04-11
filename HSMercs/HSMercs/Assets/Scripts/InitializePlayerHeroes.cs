@@ -41,6 +41,9 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
          
          //load hero visuals image and texts
          LoadHeroVisuals(hero);
+         
+         //TODO
+         //LoadHeroPreviewVisuals
       }
       
       //TO BE OBSOLETED ?
