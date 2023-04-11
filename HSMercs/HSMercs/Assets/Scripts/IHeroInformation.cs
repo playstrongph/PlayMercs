@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using SOAssets;
+using UnityEngine;
 
 public interface IHeroInformation
 {
@@ -8,4 +9,5 @@ public interface IHeroInformation
     int HeroLevel { get; set; }
     int HeroStars { get; set; }
     int HeroCp { get; set; }
+    IHeroClassAsset HeroClass { get; set; }
 }

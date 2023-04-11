@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d31d417b864daa4fa0232de9fabb71d, type: 3}
-  m_Name: TeamHeroes
+  m_Name: EnemyHeroes
   m_EditorClassIdentifier: 
   heroCount: 4
   heroAssets:
-  - {fileID: 11400000, guid: 443405fe221ef2146b46f00c16f81374, type: 2}
-  - {fileID: 11400000, guid: 443405fe221ef2146b46f00c16f81374, type: 2}
-  - {fileID: 11400000, guid: 443405fe221ef2146b46f00c16f81374, type: 2}
-  - {fileID: 11400000, guid: 443405fe221ef2146b46f00c16f81374, type: 2}
+  - {fileID: 11400000, guid: 752fe35594d25ee48b5d5300ea80be01, type: 2}
+  - {fileID: 11400000, guid: bff3b54305f275040a408a77caa88802, type: 2}
+  - {fileID: 11400000, guid: 752fe35594d25ee48b5d5300ea80be01, type: 2}
+  - {fileID: 11400000, guid: bff3b54305f275040a408a77caa88802, type: 2}

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b84fc24cc83fb474291039fa36390b3e, type: 3}
+  m_Name: CasterCerise
+  m_EditorClassIdentifier: 
+  heroName: CasterCerise
+  heroClassText: 
+  heroLevel: 60
+  heroStars: 6
+  heroCp: 9999
+  heroSprite: {fileID: -1807008145433730001, guid: b656a36996a16674dae5693d96dd177f,
+    type: 3}
+  heroClass: {fileID: 11400000, guid: 5666ffc2ba94da44cb4d2584f078aeab, type: 2}
+  health: 67
+  attack: 8
+  defense: 99
+  speed: 99
+  armor: 56
+  focusPoints: 99
+  criticalHitChance: 15
+  criticalHitDamage: 150
+  effectiveness: 0
+  effectResistance: 0
+  dualAttackChance: 5
+  hitChance: 100
+  skillAssets:
+  - {fileID: 11400000, guid: d9cfb499780be3e47896bc56b57c151d, type: 2}
+  - {fileID: 11400000, guid: d9cfb499780be3e47896bc56b57c151d, type: 2}
+  - {fileID: 11400000, guid: d9cfb499780be3e47896bc56b57c151d, type: 2}

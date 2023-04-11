@@ -21,4 +21,4 @@ MonoBehaviour:
   playerPrefab: {fileID: 8058846799119040704, guid: c5c7138d0cca77a4087c3f815541a23e,
     type: 3}
   allyTeamHeroes: {fileID: 11400000, guid: 42568677ef1050347852989fdffd0e7c, type: 2}
-  enemyTeamHeroes: {fileID: 11400000, guid: 42568677ef1050347852989fdffd0e7c, type: 2}
+  enemyTeamHeroes: {fileID: 11400000, guid: 061bfa95ee4b39248967364f066747a2, type: 2}

@@ -31,7 +31,7 @@ namespace SOAssets
     public GameObject PlayerPrefab { get=> playerPrefab; private set => playerPrefab = value;}
 
     public ITeamHeroesAsset AllyTeamHeroes { get => allyTeamHeroes as ITeamHeroesAsset; private set => allyTeamHeroes = value as ScriptableObject; }
-    public ITeamHeroesAsset EnemyTeamHeroes { get => allyTeamHeroes as ITeamHeroesAsset; private set => enemyTeamHeroes = value as ScriptableObject; }
+    public ITeamHeroesAsset EnemyTeamHeroes { get => enemyTeamHeroes as ITeamHeroesAsset; private set => enemyTeamHeroes = value as ScriptableObject; }
 
 
     #endregion

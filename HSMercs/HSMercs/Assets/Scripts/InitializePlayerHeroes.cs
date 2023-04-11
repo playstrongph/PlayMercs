@@ -63,11 +63,10 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
       
       //TODO: Replace with Scriptable Object later
       hero.HeroInformation.HeroClassText = heroAsset.HeroClassText;
-     
-      //TEST
-     heroAsset.HeroClass.SetClassColor(hero.HeroVisual.HeroGraphics);
-      
-      
+
+      hero.HeroInformation.HeroClass = Instantiate(heroAsset.HeroClass as ScriptableObject) as IHeroClassAsset;
+      hero.HeroInformation.HeroClass?.SetClassColor(hero.HeroVisual.HeroGraphics);
+
       //Hero Stats
       hero.HeroStats.Health = heroAsset.Health;
       hero.HeroStats.Attack = heroAsset.Attack;

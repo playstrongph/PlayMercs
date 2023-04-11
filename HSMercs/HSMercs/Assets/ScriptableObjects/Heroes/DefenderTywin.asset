@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b84fc24cc83fb474291039fa36390b3e, type: 3}
-  m_Name: zzSampleArby
+  m_Name: DefenderTywin
   m_EditorClassIdentifier: 
-  heroName: Sample Merc
+  heroName: DefenderTywin
   heroClassText: 
   heroLevel: 60
   heroStars: 6
   heroCp: 9999
-  heroSprite: {fileID: 4326882273387473174, guid: c513ca01f465d14468305c71205e135d,
+  heroSprite: {fileID: -3220098531062584719, guid: e2752790f7b18dd4e88062e87e546513,
     type: 3}
   heroClass: {fileID: 11400000, guid: b34998c47602e5c4381ccb7474924e15, type: 2}
-  health: 67
-  attack: 8
+  health: 50
+  attack: 12
   defense: 99
   speed: 99
-  armor: 12
+  armor: 125
   focusPoints: 99
   criticalHitChance: 15
   criticalHitDamage: 150
