@@ -6,15 +6,21 @@ using UnityEngine;
 public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
 {
     #region VARIABLES
-
-    [SerializeField] private Canvas heroPreviewCanvas = new Canvas();
+    
     [SerializeField] private float displayDelay = 0.5f;
 
+    private IHeroPreview _heroPreview;
+    
     private bool _enablePreview = false;
 
     #endregion
 
     #region METHODS
+
+    private void Awake()
+    {
+        _heroPreview = GetComponent<IHeroPreview>();
+    }
 
     /// <summary>
     /// Shows Hero Preview
@@ -39,7 +45,8 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
     public void TurnOff()
     {
         _enablePreview = false;
-        heroPreviewCanvas.enabled = false;
+        
+        _heroPreview.HeroPreviewCanvas.enabled = false;
     }
     
     /// <summary>
@@ -47,7 +54,8 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
     /// </summary>
     public void TurnOffMouseExit()
     {
-        heroPreviewCanvas.enabled = false;
+        
+        _heroPreview.HeroPreviewCanvas.enabled = false;
     }
 
     /// <summary>
@@ -59,7 +67,8 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
         yield return new WaitForSeconds(displayDelay);
         if (_enablePreview)
         {
-            heroPreviewCanvas.enabled = true;
+            _heroPreview.HeroPreviewCanvas.enabled = true;
+
         }
     }
 

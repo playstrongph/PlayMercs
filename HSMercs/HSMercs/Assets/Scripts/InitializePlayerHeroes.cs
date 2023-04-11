@@ -42,8 +42,7 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
          //load hero visuals image and texts
          LoadHeroVisuals(hero);
          
-         //TODO
-         //LoadHeroPreviewVisuals
+       
       }
       
       //TO BE OBSOLETED ?
@@ -114,6 +113,8 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
       
       //Load Armor Text
       hero.HeroVisual.HeroGraphics.SetHeroArmorText.SetValue(armor);
+      
+      
    }
 
    /// <summary>

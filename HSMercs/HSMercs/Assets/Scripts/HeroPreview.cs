@@ -7,6 +7,8 @@ using Object = UnityEngine.Object;
 
 public class HeroPreview : MonoBehaviour, IHeroPreview
 {
+    
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHero))]private Object hero = null;
 
     [SerializeField] private Canvas heroPreviewCanvas;
     
@@ -30,9 +32,17 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
 
     [SerializeField] private Transform statusEffectPreviewTransform;
 
+    
+
    
 
     #region Variable Properties
+    
+    /// <summary>
+    /// Set Hero Reference
+    /// </summary>
+    public IHero Hero => hero as IHero;
+    
     
     /// <summary>
     /// Reference to the hero preview canvas

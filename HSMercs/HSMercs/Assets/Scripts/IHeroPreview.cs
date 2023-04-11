@@ -4,6 +4,11 @@ public interface IHeroPreview
 {
     
     /// <summary>
+    /// Hero Reference
+    /// </summary>
+    IHero Hero { get; }
+
+    /// <summary>
     /// Reference to the hero preview canvas
     /// </summary>
     Canvas HeroPreviewCanvas { get; }

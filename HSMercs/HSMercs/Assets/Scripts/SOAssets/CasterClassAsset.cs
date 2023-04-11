@@ -35,6 +35,16 @@ namespace SOAssets
          heroGraphics.GreenHeroGraphic.enabled = false;
          heroGraphics.RedHeroGraphic.enabled = false;
          heroGraphics.BlueHeroGraphic.enabled = true;
+         
+         //HERO PREVIEW
+         
+         heroGraphics.Hero.HeroVisual.HeroPreview.HeroGraphicPreview.GreenFrame.enabled = false;
+         heroGraphics.Hero.HeroVisual.HeroPreview.HeroGraphicPreview.RedFrame.enabled = false;
+         heroGraphics.Hero.HeroVisual.HeroPreview.HeroGraphicPreview.BlueFrame.enabled = true;
+         
+         heroGraphics.Hero.HeroVisual.HeroPreview.HeroGraphicPreview.GreenHeroGraphic.enabled = false;
+         heroGraphics.Hero.HeroVisual.HeroPreview.HeroGraphicPreview.RedHeroGraphic.enabled = false;
+         heroGraphics.Hero.HeroVisual.HeroPreview.HeroGraphicPreview.BlueHeroGraphic.enabled = true;
       }
 
 
