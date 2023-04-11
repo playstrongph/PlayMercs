@@ -67,7 +67,17 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
         yield return new WaitForSeconds(displayDelay);
         if (_enablePreview)
         {
+            var hero = _heroPreview.Hero;
+            
             _heroPreview.HeroPreviewCanvas.enabled = true;
+
+            _heroPreview.HeroGraphicPreview.PreviewAttackText.text = hero.HeroStats.Attack.ToString();
+            _heroPreview.HeroGraphicPreview.PreviewHealthText.text = hero.HeroStats.Health.ToString();
+            _heroPreview.HeroGraphicPreview.PreviewNameText.text = hero.HeroInformation.HeroName;
+            
+            //TODO Class Name
+            _heroPreview.HeroGraphicPreview.PreviewRaceText.text = hero.HeroInformation.HeroClass.ClassName;
+
 
         }
     }

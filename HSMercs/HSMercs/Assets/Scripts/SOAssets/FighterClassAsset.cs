@@ -14,12 +14,11 @@ namespace SOAssets
    {
       #region VARIABLES
 
-
       #endregion
         
       #region PROPERTIES
 
-     
+      public override string ClassName { get; } = "Fighter";
 
       #endregion
         

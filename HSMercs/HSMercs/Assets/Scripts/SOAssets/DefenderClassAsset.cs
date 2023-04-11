@@ -19,7 +19,7 @@ namespace SOAssets
         
       #region PROPERTIES
 
-     
+      public override string ClassName { get; } = "Defender";
 
       #endregion
         

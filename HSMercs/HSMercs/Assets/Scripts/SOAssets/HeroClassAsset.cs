@@ -18,7 +18,8 @@ namespace SOAssets
         
       #region PROPERTIES
 
-     
+      public virtual string ClassName { get; } = "Hero Class";
+
 
       #endregion
         
