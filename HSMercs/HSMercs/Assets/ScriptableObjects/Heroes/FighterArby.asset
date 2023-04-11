@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b84fc24cc83fb474291039fa36390b3e, type: 3}
   m_Name: FighterArby
   m_EditorClassIdentifier: 
-  heroName: FighterArby
+  heroName: ARBY
   heroClassText: 
   heroLevel: 60
   heroStars: 6
