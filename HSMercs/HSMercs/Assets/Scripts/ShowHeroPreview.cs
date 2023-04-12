@@ -73,13 +73,41 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
 
             _heroPreview.HeroGraphicPreview.PreviewAttackText.text = hero.HeroStats.Attack.ToString();
             _heroPreview.HeroGraphicPreview.PreviewHealthText.text = hero.HeroStats.Health.ToString();
+            
+            //_heroPreview.HeroGraphicPreview.PreviewArmorText.text = hero.HeroStats.Armor.ToString();
+            
+            
             _heroPreview.HeroGraphicPreview.PreviewNameText.text = hero.HeroInformation.HeroName;
             
-            //TODO Class Name
+            //TODO: Change to Race
             _heroPreview.HeroGraphicPreview.PreviewRaceText.text = hero.HeroInformation.HeroClass.ClassName;
+            
+            PreviewArmorDisplay(hero);
 
 
         }
+    }
+
+    private void PreviewArmorDisplay(IHero hero)
+    {
+        var heroPreview = hero.HeroVisual.HeroPreview;
+        var armor = hero.HeroStats.Armor;
+        
+        heroPreview.HeroGraphicPreview.PreviewArmorText.text = hero.HeroStats.Armor.ToString();
+
+        if (armor > 0)
+        {
+            heroPreview.HeroGraphicPreview.ArmorImage.enabled = true;
+            heroPreview.HeroGraphicPreview.PreviewArmorText.enabled = true;
+        }
+        else
+        {
+            heroPreview.HeroGraphicPreview.ArmorImage.enabled = false;
+            heroPreview.HeroGraphicPreview.PreviewArmorText.enabled = false;
+        }
+
+
+
     }
 
     #endregion
