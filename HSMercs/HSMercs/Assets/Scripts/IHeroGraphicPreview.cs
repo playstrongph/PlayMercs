@@ -18,6 +18,11 @@ public interface IHeroGraphicPreview
     /// Caster Preview Frame
     /// </summary>
     Image BlueFrame { get; set; }
+    
+    /// <summary>
+    /// Armor Image
+    /// </summary>
+    Image ArmorImage { get; set; }
 
     /// <summary>
     /// Fighter Preview Hero Graphic
@@ -53,4 +58,9 @@ public interface IHeroGraphicPreview
     /// Hero health text that appears in hero preview
     /// </summary>
     TextMeshProUGUI PreviewHealthText { get; set; }
+    
+    /// <summary>
+    /// preview armor text
+    /// </summary>
+    TextMeshProUGUI PreviewArmorText { get; set; }
 }

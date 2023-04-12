@@ -16,6 +16,7 @@ public class HeroGraphicPreview : MonoBehaviour, IHeroGraphicPreview
     [SerializeField] private Image greenFrame;
     [SerializeField]private Image redFrame;
     [SerializeField]private Image blueFrame;
+    [SerializeField]private Image armorImage;
     
     /// <summary>
     /// All the hero graphic images for fighter, tank, and caster
@@ -33,6 +34,7 @@ public class HeroGraphicPreview : MonoBehaviour, IHeroGraphicPreview
     [SerializeField] private TextMeshProUGUI previewRaceText;
     [SerializeField] private TextMeshProUGUI previewAttackText;
     [SerializeField] private TextMeshProUGUI previewHealthText;
+    [SerializeField] private TextMeshProUGUI previewArmorText;
         
     #endregion
     
@@ -63,6 +65,15 @@ public class HeroGraphicPreview : MonoBehaviour, IHeroGraphicPreview
     {
         get => blueFrame;
         set => blueFrame = value;
+    }
+    
+    /// <summary>
+    /// Armor Image
+    /// </summary>
+    public Image ArmorImage
+    {
+        get => armorImage;
+        set => armorImage = value;
     }
     
     /// <summary>
@@ -129,6 +140,15 @@ public class HeroGraphicPreview : MonoBehaviour, IHeroGraphicPreview
     {
         get => previewHealthText;
         set => previewHealthText = value;
+    }
+    
+    /// <summary>
+    /// Hero preview armor text
+    /// </summary>
+    public TextMeshProUGUI PreviewArmorText
+    {
+        get => previewArmorText;
+        set => previewArmorText = value;
     }
 
 
