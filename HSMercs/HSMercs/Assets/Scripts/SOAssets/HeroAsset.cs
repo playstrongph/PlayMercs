@@ -11,7 +11,6 @@ namespace SOAssets
       
       [Header("Hero Information")]
       [SerializeField] private string heroName;
-      //[SerializeField] private string heroClassText;
       [SerializeField] private int heroLevel;
       [SerializeField] private int heroStars;
       [SerializeField] private int heroCp;

@@ -59,9 +59,6 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
       hero.HeroInformation.HeroStars = heroAsset.HeroStars;
       hero.HeroInformation.HeroCp = heroAsset.HeroCp;
       hero.HeroInformation.HeroSprite = heroAsset.HeroSprite;
-      
-      //TODO: Replace with Scriptable Object later
-      //hero.HeroInformation.HeroClassText = heroAsset.HeroClassText;
 
       hero.HeroInformation.HeroClass = Instantiate(heroAsset.HeroClass as ScriptableObject) as IHeroClassAsset;
       hero.HeroInformation.HeroClass?.SetClassColor(hero.HeroVisual.HeroGraphics);

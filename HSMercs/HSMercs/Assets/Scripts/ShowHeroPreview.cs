@@ -79,8 +79,6 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
             _heroPreview.HeroGraphicPreview.PreviewRaceText.text = hero.HeroInformation.HeroClass.ClassName;
             
             PreviewArmorDisplay(hero);
-
-
         }
     }
 
@@ -101,8 +99,6 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
             heroPreview.HeroGraphicPreview.ArmorImage.enabled = false;
             heroPreview.HeroGraphicPreview.PreviewArmorText.enabled = false;
         }
-
-
 
     }
 
