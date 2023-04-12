@@ -11,7 +11,7 @@ namespace SOAssets
       
       [Header("Hero Information")]
       [SerializeField] private string heroName;
-      [SerializeField] private string heroClassText;
+      //[SerializeField] private string heroClassText;
       [SerializeField] private int heroLevel;
       [SerializeField] private int heroStars;
       [SerializeField] private int heroCp;
@@ -49,7 +49,7 @@ namespace SOAssets
 
       //HERO INFORMATION
       public string HeroName { get => heroName; private set => heroName = value; }  
-      public string HeroClassText { get => heroClassText; private set => heroClassText = value; }
+      //public string HeroClassText { get => heroClassText; private set => heroClassText = value; }
       public IHeroClassAsset HeroClass => heroClass as IHeroClassAsset;
       public Sprite HeroSprite { get => heroSprite; private set => heroSprite = value; }
       public int HeroLevel { get => heroLevel; private set => heroLevel = value; }
