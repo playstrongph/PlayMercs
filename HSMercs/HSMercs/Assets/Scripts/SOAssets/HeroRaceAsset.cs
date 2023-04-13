@@ -29,10 +29,7 @@ namespace SOAssets
       public virtual void SetHeroRace(IHero hero)
       {
           var raceName = hero.HeroVisual.HeroPreview.HeroGraphicPreview.PreviewRaceText;
-
           raceName.text = RaceName;
-          
-          Debug.Log("RName: " +raceName);
       }
 
 

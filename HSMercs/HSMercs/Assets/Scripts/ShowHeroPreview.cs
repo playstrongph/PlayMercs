@@ -74,12 +74,7 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
             _heroPreview.HeroGraphicPreview.PreviewAttackText.text = hero.HeroStats.Attack.ToString();
             _heroPreview.HeroGraphicPreview.PreviewHealthText.text = hero.HeroStats.Health.ToString();
             _heroPreview.HeroGraphicPreview.PreviewNameText.text = hero.HeroInformation.HeroName;
-            
-            //TODO: Change to Race
-            //_heroPreview.HeroGraphicPreview.PreviewRaceText.text = hero.HeroInformation.HeroClass.ClassName;
-            
-            hero.HeroInformation.HeroRace?.SetHeroRace(hero);
-            
+
             PreviewArmorDisplay(hero);
         }
     }

@@ -5576,8 +5576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e3331319afc57644b3a28e61ce04226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillGraphics: {fileID: 2730891896810422780}
-  skillPreviewVisual: {fileID: 2730891898175501987}
+  skillGraphics: {fileID: 2730891897914488737}
+  skillPreviewVisual: {fileID: 2730891897490484205}
 --- !u!1 &2730891898577343734
 GameObject:
   m_ObjectHideFlags: 0
@@ -6242,7 +6242,7 @@ GameObject:
   - component: {fileID: 8371472194099130725}
   - component: {fileID: 8371472194099130721}
   m_Layer: 0
-  m_Name: ThreeHeroSkills
+  m_Name: HeroSkills3Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6908,8 +6908,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e3331319afc57644b3a28e61ce04226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillGraphics: {fileID: 2730891896810422780}
-  skillPreviewVisual: {fileID: 2730891898175501987}
+  skillGraphics: {fileID: 8532153896375543955}
+  skillPreviewVisual: {fileID: 2441647674902411149}
 --- !u!1 &8532153895498339501
 GameObject:
   m_ObjectHideFlags: 0

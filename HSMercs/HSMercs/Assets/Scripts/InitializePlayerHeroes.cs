@@ -60,16 +60,9 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
       hero.HeroInformation.HeroCp = heroAsset.HeroCp;
       hero.HeroInformation.HeroSprite = heroAsset.HeroSprite;
       
-      //Set Hero Class
       hero.HeroInformation.HeroClass = Instantiate(heroAsset.HeroClass as ScriptableObject) as IHeroClassAsset;
-      
-      hero.HeroInformation.HeroClass?.SetClassColor(hero.HeroVisual.HeroGraphics);
-         
-      //Set Hero Race
       hero.HeroInformation.HeroRace = Instantiate(heroAsset.HeroRace as ScriptableObject) as IHeroRaceAsset;
       
-      
-
       //Hero Stats
       hero.HeroStats.Health = heroAsset.Health;
       hero.HeroStats.Attack = heroAsset.Attack;
@@ -118,9 +111,11 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
       //Load Armor Text
       hero.HeroVisual.HeroGraphics.SetHeroArmorText.SetValue(armor);
       
+      //Hero Class Visuals
+      hero.HeroInformation.HeroClass.SetClassColor(hero.HeroVisual.HeroGraphics);
       
-      
-      
+      //Hero Race Visuals
+      hero.HeroInformation.HeroRace.SetHeroRace(hero);
    }
 
    /// <summary>

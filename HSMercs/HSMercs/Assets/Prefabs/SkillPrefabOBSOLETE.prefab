@@ -182,7 +182,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16.4
+  m_fontSize: 14
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 113213072441124815}
   - component: {fileID: 113213072441124813}
   m_Layer: 0
-  m_Name: Skill
+  m_Name: SkillPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1575,7 +1575,6 @@ MonoBehaviour:
   skillNameText: {fileID: 786818595292995540}
   skillDescriptionText: {fileID: 786818594055714349}
   skillElementText: {fileID: 786818594020019487}
-  showSkillPreview: {fileID: 6965639893107821195}
 --- !u!114 &6965639893107821195
 MonoBehaviour:
   m_ObjectHideFlags: 0
