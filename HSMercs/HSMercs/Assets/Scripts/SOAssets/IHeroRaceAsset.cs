@@ -3,6 +3,6 @@
     public interface IHeroRaceAsset
     {
         string RaceName { get; }
-        void SetPreviewRace(IHeroPreview heroPreview);
+        void SetHeroRace(IHero hero);
     }
 }

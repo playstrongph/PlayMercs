@@ -7,6 +7,7 @@ namespace SOAssets
     {
         string HeroName { get; }
         IHeroClassAsset HeroClass { get; }
+        IHeroRaceAsset HeroRace { get; }
         int HeroLevel { get; }
         int HeroStars { get; }
         int HeroCp { get; }

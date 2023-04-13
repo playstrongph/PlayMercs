@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: DefenderTywin
   m_EditorClassIdentifier: 
   heroName: TYWIN
-  heroClassText: 
   heroLevel: 60
   heroStars: 6
   heroCp: 9999
   heroSprite: {fileID: -3220098531062584719, guid: e2752790f7b18dd4e88062e87e546513,
     type: 3}
   heroClass: {fileID: 11400000, guid: b34998c47602e5c4381ccb7474924e15, type: 2}
+  heroRace: {fileID: 11400000, guid: eaec542355fdf4847bbf31bb7a10b0f2, type: 2}
   health: 50
   attack: 12
   defense: 99

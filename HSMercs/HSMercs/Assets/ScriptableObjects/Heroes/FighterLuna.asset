@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: FighterLuna
   m_EditorClassIdentifier: 
   heroName: LUNA
-  heroClassText: 
   heroLevel: 60
   heroStars: 6
   heroCp: 9999
   heroSprite: {fileID: -293913937357786450, guid: ccf4ec48ed96c124088e8a0b1fe6a562,
     type: 3}
   heroClass: {fileID: 11400000, guid: 224db866e524cd945be9e523c8ff57cb, type: 2}
+  heroRace: {fileID: 11400000, guid: 531159132bc0d9d499664ceba837a443, type: 2}
   health: 88
   attack: 5
   defense: 99

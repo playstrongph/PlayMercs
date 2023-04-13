@@ -1690,6 +1690,7 @@ MonoBehaviour:
   heroCp: 0
   heroSprite: {fileID: 0}
   heroClass: {fileID: 0}
+  heroRace: {fileID: 0}
 --- !u!114 &1486563308202474854
 MonoBehaviour:
   m_ObjectHideFlags: 0

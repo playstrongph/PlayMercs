@@ -25,10 +25,12 @@ namespace SOAssets
       /// <summary>
       /// Set text of Hero Race in the hero preview
       /// </summary>
-      /// <param name="heroPreview"></param>
-      public virtual void SetPreviewRace(IHeroPreview heroPreview)
+      /// <param name="hero"></param>
+      public virtual void SetHeroRace(IHero hero)
       {
-          heroPreview.HeroGraphicPreview.PreviewRaceText.text = RaceName;
+          
+          
+          hero.HeroVisual.HeroPreview.HeroGraphicPreview.PreviewRaceText.text = RaceName;
       }
 
 

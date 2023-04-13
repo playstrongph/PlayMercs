@@ -119,10 +119,12 @@
      <Compile Include="Assets\Scripts\SOAssets\BattleSceneSettingsAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\CasterClassAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\DefenderClassAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\DruidRaceAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\FighterClassAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\HeroAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\HeroClassAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\HeroRaceAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\HumanRaceAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\IBattleSceneSettingsAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\IHeroAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\IHeroClassAsset.cs" />
@@ -131,6 +133,7 @@
      <Compile Include="Assets\Scripts\SOAssets\ITeamHeroesAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\OrcRaceAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\TaurenRaceAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\TeamHeroesAsset.cs" />
      <Compile Include="Assets\Scripts\ScenePrefabs.cs" />
      <Compile Include="Assets\Scripts\SetHeroArmorText.cs" />

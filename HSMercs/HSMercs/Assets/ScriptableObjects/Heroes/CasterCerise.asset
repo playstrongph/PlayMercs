@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: CasterCerise
   m_EditorClassIdentifier: 
   heroName: CERISE
-  heroClassText: 
   heroLevel: 60
   heroStars: 6
   heroCp: 9999
   heroSprite: {fileID: -1807008145433730001, guid: b656a36996a16674dae5693d96dd177f,
     type: 3}
   heroClass: {fileID: 11400000, guid: 5666ffc2ba94da44cb4d2584f078aeab, type: 2}
+  heroRace: {fileID: 11400000, guid: 531159132bc0d9d499664ceba837a443, type: 2}
   health: 67
   attack: 8
   defense: 99
