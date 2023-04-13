@@ -62,11 +62,12 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
       
       //Set Hero Class
       hero.HeroInformation.HeroClass = Instantiate(heroAsset.HeroClass as ScriptableObject) as IHeroClassAsset;
+      
       hero.HeroInformation.HeroClass?.SetClassColor(hero.HeroVisual.HeroGraphics);
          
       //Set Hero Race
       hero.HeroInformation.HeroRace = Instantiate(heroAsset.HeroRace as ScriptableObject) as IHeroRaceAsset;
-      hero.HeroInformation.HeroRace?.SetHeroRace(hero);
+      
       
 
       //Hero Stats
@@ -116,6 +117,8 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
       
       //Load Armor Text
       hero.HeroVisual.HeroGraphics.SetHeroArmorText.SetValue(armor);
+      
+      
       
       
    }

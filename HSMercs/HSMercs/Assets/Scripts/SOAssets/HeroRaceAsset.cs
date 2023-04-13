@@ -28,9 +28,11 @@ namespace SOAssets
       /// <param name="hero"></param>
       public virtual void SetHeroRace(IHero hero)
       {
+          var raceName = hero.HeroVisual.HeroPreview.HeroGraphicPreview.PreviewRaceText;
+
+          raceName.text = RaceName;
           
-          
-          hero.HeroVisual.HeroPreview.HeroGraphicPreview.PreviewRaceText.text = RaceName;
+          Debug.Log("RName: " +raceName);
       }
 
 

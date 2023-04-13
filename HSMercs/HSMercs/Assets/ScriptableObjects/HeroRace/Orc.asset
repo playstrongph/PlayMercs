@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2399bf6a23290f4fa6136ab899017cf, type: 3}
-  m_Name: OrcRace
+  m_Name: Orc
   m_EditorClassIdentifier: 

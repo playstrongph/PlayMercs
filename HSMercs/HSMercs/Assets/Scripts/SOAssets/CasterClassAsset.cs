@@ -27,7 +27,6 @@ namespace SOAssets
 
       public override void SetClassColor(IHeroGraphics heroGraphics)
       {
-         
          heroGraphics.GreenFrame.enabled = false;
          heroGraphics.RedFrame.enabled = false;
          heroGraphics.BlueFrame.enabled = true;
