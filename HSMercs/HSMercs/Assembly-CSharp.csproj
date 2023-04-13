@@ -122,9 +122,11 @@
      <Compile Include="Assets\Scripts\SOAssets\FighterClassAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\HeroAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\HeroClassAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\HeroRaceAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\IBattleSceneSettingsAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\IHeroAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\IHeroClassAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\IHeroRaceAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ISkillAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ITeamHeroesAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillAsset.cs" />
