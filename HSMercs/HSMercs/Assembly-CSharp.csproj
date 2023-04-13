@@ -102,6 +102,7 @@
      <Compile Include="Assets\Scripts\IShowHeroPreview.cs" />
      <Compile Include="Assets\Scripts\IShowSkillPreview.cs" />
      <Compile Include="Assets\Scripts\ISkill.cs" />
+     <Compile Include="Assets\Scripts\ISkillAttributes.cs" />
      <Compile Include="Assets\Scripts\ISkillGraphics.cs" />
      <Compile Include="Assets\Scripts\ISkillPanelVisual.cs" />
      <Compile Include="Assets\Scripts\ISkillPreviewVisual.cs" />
@@ -121,6 +122,7 @@
      <Compile Include="Assets\Scripts\SOAssets\DefenderClassAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\DruidRaceAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\FighterClassAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\FrostSkillElementAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\HeroAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\HeroClassAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\HeroRaceAsset.cs" />
@@ -130,9 +132,11 @@
      <Compile Include="Assets\Scripts\SOAssets\IHeroClassAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\IHeroRaceAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ISkillAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\ISkillElementAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ITeamHeroesAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\OrcRaceAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\SkillElementAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\TaurenRaceAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\TeamHeroesAsset.cs" />
      <Compile Include="Assets\Scripts\ScenePrefabs.cs" />
@@ -143,6 +147,7 @@
      <Compile Include="Assets\Scripts\ShowHeroPreview.cs" />
      <Compile Include="Assets\Scripts\ShowSkillPreview.cs" />
      <Compile Include="Assets\Scripts\Skill.cs" />
+     <Compile Include="Assets\Scripts\SkillAttributes.cs" />
      <Compile Include="Assets\Scripts\SkillGraphics.cs" />
      <Compile Include="Assets\Scripts\SkillPanelVisual.cs" />
      <Compile Include="Assets\Scripts\SkillPreviewVisual.cs" />
