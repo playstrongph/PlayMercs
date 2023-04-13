@@ -16,6 +16,7 @@ public class HeroInformation : MonoBehaviour, IHeroInformation
    [SerializeField] private int heroCp;
    [SerializeField] private Sprite heroSprite;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroClassAsset))] private ScriptableObject heroClass = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroRaceAsset))] private ScriptableObject heroRace = null;
 
    #endregion
         
@@ -29,6 +30,7 @@ public class HeroInformation : MonoBehaviour, IHeroInformation
    public int HeroStars { get => heroStars; set => heroStars = value; }
    public int HeroCp { get => heroCp; set => heroCp = value; }
    public IHeroClassAsset HeroClass { get => heroClass as IHeroClassAsset; set => heroClass = value as ScriptableObject; }
+   public IHeroRaceAsset HeroRace { get => heroClass as IHeroRaceAsset; set => heroRace = value as ScriptableObject; }
 
    
    #endregion
