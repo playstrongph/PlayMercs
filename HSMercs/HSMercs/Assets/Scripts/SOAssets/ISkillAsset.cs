@@ -7,7 +7,10 @@ namespace SOAssets
         string SkillName { get; }
         string SkillDescription { get; }
         Sprite SkillIcon { get; }
-        int BaseCooldownCost { get; }
-        int FightingSpiritCost { get; }
+        int SkillCooldown { get; }
+        int FightingSpirit { get; }
+        int SkillSpeed { get; }
+        ISkillElementAsset SkillElement { get; }
+
     }
 }

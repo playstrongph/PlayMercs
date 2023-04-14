@@ -19,6 +19,7 @@ public class SkillAttributes : MonoBehaviour, ISkillAttributes
    [Header("Skill Stats")] 
    [SerializeField] private int skillCooldown;
    [SerializeField] private int skillSpeed;
+   [SerializeField] private int fightingSpirit = 0;
    
    [Header("Base Skill Stats")]
    [SerializeField] private int baseSkillCooldown;
@@ -37,6 +38,8 @@ public class SkillAttributes : MonoBehaviour, ISkillAttributes
    public string Description => description;
    public int SkillCooldown { get => skillCooldown; set => skillCooldown = value; }
    public int SkillSpeed { get => skillSpeed; set => skillSpeed = value; }
+   
+   public int FightingSpirit { get => fightingSpirit; set => fightingSpirit = value; }
    public int BaseSkillCooldown { get => baseSkillCooldown; set => baseSkillCooldown = value; }
    public int BaseSkillSpeed { get => baseSkillSpeed; set => baseSkillSpeed = value; }
 
