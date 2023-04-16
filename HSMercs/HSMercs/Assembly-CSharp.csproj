@@ -134,6 +134,7 @@
      <Compile Include="Assets\Scripts\SOAssets\ISkillAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ISkillElementAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ITeamHeroesAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\NoSkillElementAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\OrcRaceAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillElementAsset.cs" />

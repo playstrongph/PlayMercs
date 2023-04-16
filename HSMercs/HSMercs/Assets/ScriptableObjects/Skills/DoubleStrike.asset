@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 752c4d7ea14777d46a60bfe0bdbcab9c, type: 3}
-  m_Name: zzNewSkill
+  m_Name: DoubleStrike
   m_EditorClassIdentifier: 
   skillName: Double Strike
   skillDescription: Attack an enemy.  If it was damaged this turn, gain +5 Attack

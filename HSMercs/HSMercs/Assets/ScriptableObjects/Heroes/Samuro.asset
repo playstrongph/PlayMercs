@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b84fc24cc83fb474291039fa36390b3e, type: 3}
-  m_Name: FighterLuna
+  m_Name: Samuro
   m_EditorClassIdentifier: 
-  heroName: LUNA
+  heroName: SAMURO
   heroLevel: 60
-  heroStars: 6
+  heroStars: 3
   heroCp: 9999
-  heroSprite: {fileID: -293913937357786450, guid: ccf4ec48ed96c124088e8a0b1fe6a562,
+  heroSprite: {fileID: -3542922669990823581, guid: a4ae8faf975fe5d43b022b780bd63c26,
     type: 3}
   heroClass: {fileID: 11400000, guid: 224db866e524cd945be9e523c8ff57cb, type: 2}
   heroRace: {fileID: 11400000, guid: 531159132bc0d9d499664ceba837a443, type: 2}
-  health: 88
-  attack: 5
+  health: 71
+  attack: 11
   defense: 99
-  speed: 99
-  armor: 9
+  speed: 3
+  armor: 5
   focusPoints: 99
   criticalHitChance: 15
   criticalHitDamage: 150
@@ -33,6 +33,6 @@ MonoBehaviour:
   dualAttackChance: 5
   hitChance: 100
   skillAssets:
-  - {fileID: 11400000, guid: d9cfb499780be3e47896bc56b57c151d, type: 2}
+  - {fileID: 11400000, guid: bba05c522fa5aaa4fa813dbc2e0d329b, type: 2}
   - {fileID: 11400000, guid: d9cfb499780be3e47896bc56b57c151d, type: 2}
   - {fileID: 11400000, guid: d9cfb499780be3e47896bc56b57c151d, type: 2}
