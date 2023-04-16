@@ -10,7 +10,8 @@ public class HeroSkills : MonoBehaviour, IHeroSkills
 
     #region VARIABLES
     
-    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelVisual))] private Object skillPanelVisual;
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelVisual))] private Object threeSkillPanelVisual;
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelVisual))] private Object fourSkillPanelVisual;
 
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkill))]private List<Object> allHeroSkills = new List<Object>();
     
@@ -19,7 +20,9 @@ public class HeroSkills : MonoBehaviour, IHeroSkills
 
     #region PROPERTIES
 
-    public ISkillPanelVisual SkillPanelVisual { get=> skillPanelVisual as ISkillPanelVisual; private set => skillPanelVisual = value as Object;}
+    public ISkillPanelVisual ThreeSkillPanelVisual { get=> threeSkillPanelVisual as ISkillPanelVisual; private set => threeSkillPanelVisual = value as Object;}
+    
+    public ISkillPanelVisual FourSkillPanelVisual { get=> fourSkillPanelVisual as ISkillPanelVisual; private set => fourSkillPanelVisual = value as Object;}
     public List<ISkill> AllHeroSkills
     {
         get

@@ -118,6 +118,11 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
       hero.HeroInformation.HeroRace.SetHeroRace(hero);
    }
 
+   private void LoadHeroPreviewVisuals(IHero hero)
+   {
+      //var heroSkills = hero.
+   }
+
    /// <summary>
    /// Set the hero previews into the correct world space position
    /// </summary>
@@ -173,6 +178,8 @@ public class InitializePlayerHeroes : MonoBehaviour, IInitializePlayerHeroes
       
       yield return null;
    }
+   
+   
 
 
    #endregion

@@ -1,4 +1,4 @@
 ﻿public interface IHeroSkills
 {
-    ISkillPanelVisual SkillPanelVisual { get; }
+    ISkillPanelVisual ThreeSkillPanelVisual { get; }
 }
