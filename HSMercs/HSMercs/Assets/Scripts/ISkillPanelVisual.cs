@@ -9,4 +9,6 @@ public interface ISkillPanelVisual
     Transform SkillGridTransform { get; }
     
     Canvas SkillPanelCanvas { get; }
+
+    GameObject ThisGameObject { get; }
 }

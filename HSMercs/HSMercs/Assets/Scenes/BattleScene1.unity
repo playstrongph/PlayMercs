@@ -418,7 +418,7 @@ MonoBehaviour:
   greenPanel: {fileID: 1890728345}
   bluePanel: {fileID: 613654076}
   redPanel: {fileID: 1313201182}
-  skillGridTransform: {fileID: 0}
+  skillGridTransform: {fileID: 167367135}
 --- !u!1 &267214821
 GameObject:
   m_ObjectHideFlags: 0
@@ -4085,7 +4085,7 @@ MonoBehaviour:
   greenPanel: {fileID: 7168059724887262423}
   bluePanel: {fileID: 7168059724553444143}
   redPanel: {fileID: 7168059723375392464}
-  skillGridTransform: {fileID: 767368844891115609}
+  skillGridTransform: {fileID: 7168059724020298327}
 --- !u!114 &767368844891115606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7336,10 +7336,10 @@ RectTransform:
   m_Father: {fileID: 7714595775515795791}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.015289307, y: 0.037872314}
-  m_SizeDelta: {x: 399.6222, y: 399.6764}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.0756073, y: 0.06036377}
+  m_SizeDelta: {x: -0.07417536, y: 0.024895668}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &7168059724553444140
 RectTransform:
