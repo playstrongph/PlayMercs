@@ -30,6 +30,36 @@ Transform:
   m_Father: {fileID: 8058846799119040711}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1641794801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1641794802}
+  m_Layer: 0
+  m_Name: HeroSkills
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1641794802
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641794801}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8058846799119040711}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8058846799119040704
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,7 +72,7 @@ GameObject:
   - component: {fileID: 8301682907897004436}
   - component: {fileID: 687033366}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,6 +91,7 @@ Transform:
   m_Children:
   - {fileID: 8058846799579564180}
   - {fileID: 287769663}
+  - {fileID: 1641794802}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -164,7 +195,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b843a7d16f76f9b46b482906ac45e32a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aliveHeroes: {fileID: 1267152366}
 --- !u!114 &1267152366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,3 +207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14c4786988141984cbdb43edd165ea97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aliveHeroes: []
+  deadHeroes: []
+  extinctHeroes: []

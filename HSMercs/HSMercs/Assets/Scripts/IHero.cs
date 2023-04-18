@@ -8,6 +8,8 @@ public interface IHero
     IBaseHeroStats BaseHeroStats { get;  }
     IHeroStats HeroStats { get;  }
 
+    IHeroSkills HeroSkills { get; set; }
+
     GameObject GameObjectName { get; }
 
 }

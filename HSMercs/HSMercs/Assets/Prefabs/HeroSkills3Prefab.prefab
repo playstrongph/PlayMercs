@@ -230,6 +230,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c2f1d0e49ef8645978fc5bed001209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillName: 
+  description: 
+  skillCooldown: 0
+  skillSpeed: 0
+  fightingSpirit: 0
+  baseSkillCooldown: 0
+  baseSkillSpeed: 0
+  skillSprite: {fileID: 0}
+  skillElement: {fileID: 0}
 --- !u!1 &2730891896558748663
 GameObject:
   m_ObjectHideFlags: 0
@@ -5604,6 +5613,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c2f1d0e49ef8645978fc5bed001209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillName: 
+  description: 
+  skillCooldown: 0
+  skillSpeed: 0
+  fightingSpirit: 0
+  baseSkillCooldown: 0
+  baseSkillSpeed: 0
+  skillSprite: {fileID: 0}
+  skillElement: {fileID: 0}
 --- !u!1 &2730891898577343734
 GameObject:
   m_ObjectHideFlags: 0
@@ -6306,10 +6324,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ea005c324fdd645847006eaa93c856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillPanelVisual: {fileID: 6892372861730590949}
+  threeSkillPanelVisual: {fileID: 0}
+  fourSkillPanelVisual: {fileID: 0}
   allHeroSkills:
-  - {fileID: 8532153895471140245}
-  - {fileID: 2730891898550319840}
+  - {fileID: 8426580720651509563, guid: 561a03065548d004d889efc7186eb233, type: 3}
+  - {fileID: 8426580719697644798, guid: 561a03065548d004d889efc7186eb233, type: 3}
   - {fileID: 2730891896487935321}
 --- !u!1 &8532153894486964921
 GameObject:
@@ -6949,6 +6968,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c2f1d0e49ef8645978fc5bed001209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillName: 
+  description: 
+  skillCooldown: 0
+  skillSpeed: 0
+  fightingSpirit: 0
+  baseSkillCooldown: 0
+  baseSkillSpeed: 0
+  skillSprite: {fileID: 0}
+  skillElement: {fileID: 0}
 --- !u!1 &8532153895498339501
 GameObject:
   m_ObjectHideFlags: 0

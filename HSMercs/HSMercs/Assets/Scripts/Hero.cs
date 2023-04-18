@@ -10,6 +10,10 @@ public class Hero : MonoBehaviour, IHero
 
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroVisual))]
     private Object heroVisual;
+    
+    [Header("SET RUNTIME")]
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkills))]
+    private Object heroSkills;
 
     #endregion
 
@@ -21,8 +25,10 @@ public class Hero : MonoBehaviour, IHero
     public IHeroInformation HeroInformation { get;  private set; }
     public IBaseHeroStats BaseHeroStats { get;  private set; }
     public IHeroStats HeroStats { get;  private set; }
-
     public GameObject GameObjectName { get => this.gameObject; private set => value = this.gameObject; }
+    
+    
+    public IHeroSkills HeroSkills { get=> heroSkills as IHeroSkills; set => heroSkills = value as Object; }
 
 
     #endregion

@@ -11,5 +11,7 @@ public interface IPlayer
     IHeroes Heroes { get; }
     Transform HeroPreviewsTransform { get; }
 
+    Transform HeroSkillsTransform { get; }
+
 
 }

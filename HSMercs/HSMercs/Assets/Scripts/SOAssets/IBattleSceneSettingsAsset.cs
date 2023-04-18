@@ -6,7 +6,7 @@ namespace SOAssets
     {
         GameObject HeroPrefab { get; }
         GameObject SkillPrefab { get; }
-        GameObject SkillsPanelPrefab { get; }
+        GameObject HeroSkillsPrefab { get; }
         GameObject PlayerPrefab { get; }
 
         ITeamHeroesAsset AllyTeamHeroes { get; }

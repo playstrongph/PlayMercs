@@ -5321,6 +5321,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c2f1d0e49ef8645978fc5bed001209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillName: 
+  description: 
+  skillCooldown: 0
+  skillSpeed: 0
+  fightingSpirit: 0
+  baseSkillCooldown: 0
+  baseSkillSpeed: 0
+  skillSprite: {fileID: 0}
+  skillElement: {fileID: 0}
 --- !u!1 &8426580719440675544
 GameObject:
   m_ObjectHideFlags: 0
@@ -6331,6 +6340,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c2f1d0e49ef8645978fc5bed001209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillName: 
+  description: 
+  skillCooldown: 0
+  skillSpeed: 0
+  fightingSpirit: 0
+  baseSkillCooldown: 0
+  baseSkillSpeed: 0
+  skillSprite: {fileID: 0}
+  skillElement: {fileID: 0}
 --- !u!1 &8426580719730824914
 GameObject:
   m_ObjectHideFlags: 0
@@ -11185,7 +11203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ea005c324fdd645847006eaa93c856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillPanelVisual: {fileID: 8426580720344958346}
+  threeSkillPanelVisual: {fileID: 0}
+  fourSkillPanelVisual: {fileID: 0}
   allHeroSkills:
   - {fileID: 8426580720651509563}
   - {fileID: 8426580719697644798}
@@ -11723,6 +11742,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c2f1d0e49ef8645978fc5bed001209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillName: 
+  description: 
+  skillCooldown: 0
+  skillSpeed: 0
+  fightingSpirit: 0
+  baseSkillCooldown: 0
+  baseSkillSpeed: 0
+  skillSprite: {fileID: 0}
+  skillElement: {fileID: 0}
 --- !u!1 &8426580720652801546
 GameObject:
   m_ObjectHideFlags: 0
@@ -11937,6 +11965,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c2f1d0e49ef8645978fc5bed001209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skillName: 
+  description: 
+  skillCooldown: 0
+  skillSpeed: 0
+  fightingSpirit: 0
+  baseSkillCooldown: 0
+  baseSkillSpeed: 0
+  skillSprite: {fileID: 0}
+  skillElement: {fileID: 0}
 --- !u!1 &8426580720687558839
 GameObject:
   m_ObjectHideFlags: 0

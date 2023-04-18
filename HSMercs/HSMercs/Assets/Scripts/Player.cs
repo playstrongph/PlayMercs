@@ -15,7 +15,7 @@ public class Player : MonoBehaviour, IPlayer
    
    [SerializeField] private Transform heroPreviewsTransform;
    
-   
+   [SerializeField] private Transform heroSkillsTransform;
         
 
    #endregion
@@ -30,6 +30,8 @@ public class Player : MonoBehaviour, IPlayer
    
    public IHeroes Heroes { get => heroes as IHeroes; private set => heroes = value as Object; }
    public Transform HeroPreviewsTransform { get => heroPreviewsTransform; private set => heroPreviewsTransform = value; }
+   
+   public Transform HeroSkillsTransform { get => heroSkillsTransform; private set => heroSkillsTransform = value; }
 
 
    #endregion
