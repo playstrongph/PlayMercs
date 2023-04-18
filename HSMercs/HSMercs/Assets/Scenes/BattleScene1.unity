@@ -332,7 +332,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1074176549}
-  - {fileID: 3082715459705639240}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -434,6 +433,7 @@ RectTransform:
   - {fileID: 1355051158}
   - {fileID: 1366354107}
   - {fileID: 209029681}
+  - {fileID: 3082715459705639240}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -835,36 +835,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bdb6e3c9f8f141449535801dcf3a8af, type: 3}
---- !u!1 &1641794801
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1641794802}
-  m_Layer: 0
-  m_Name: HeroPreviews (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1641794802
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641794801}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 209029681}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &3082715459705639240 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6205730959413901223, guid: 688541b2d663c35468ffc30e992bee7c,
@@ -1000,7 +970,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 715097480}
+    m_TransformParent: {fileID: 798711185}
     m_Modifications:
     - target: {fileID: 564160793466223651, guid: 688541b2d663c35468ffc30e992bee7c,
         type: 3}
@@ -1097,6 +1067,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeroSkillsPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 6205730959413901216, guid: 688541b2d663c35468ffc30e992bee7c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6205730959413901223, guid: 688541b2d663c35468ffc30e992bee7c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1135,7 +1110,7 @@ PrefabInstance:
     - target: {fileID: 6205730959413901223, guid: 688541b2d663c35468ffc30e992bee7c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6205730959413901223, guid: 688541b2d663c35468ffc30e992bee7c,
         type: 3}

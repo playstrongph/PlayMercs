@@ -37,6 +37,8 @@ public class HeroSkills : MonoBehaviour, IHeroSkills
         }
     }
 
+    public GameObject ThisGameObject => this.gameObject;
+
     #endregion
 
 
