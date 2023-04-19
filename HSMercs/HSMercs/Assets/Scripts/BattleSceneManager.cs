@@ -43,12 +43,7 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    private void Start()
    {
-
       StartCoroutine(StartAllCoroutines());
-
-      //_initializePlayers.StartAction();
-      //InitializeTeamHeroes.StartAction();
-
    }
 
    private IEnumerator StartAllCoroutines()
