@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InitializeTeamHeroes : MonoBehaviour, IInitializeTeamHeroes
+public class InitializeTeams : MonoBehaviour, IInitializeTeams
 {
    #region VARIABLES
 
