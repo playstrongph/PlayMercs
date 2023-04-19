@@ -3,8 +3,8 @@ using UnityEngine;
 
 public interface ISkillAttributes
 {
-    string SkillName { get; }
-    string Description { get; }
+    string SkillName { get; set; }
+    string Description { get; set; }
     int SkillCooldown { get; set; }
     int SkillSpeed { get; set; }
     int BaseSkillCooldown { get; set; }

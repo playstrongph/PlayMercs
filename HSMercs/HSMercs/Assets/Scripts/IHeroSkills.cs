@@ -1,8 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public interface IHeroSkills
 {
-    ISkillPanelVisual ThreeSkillPanelVisual { get; }
+    ISkillPanelVisual ThreeSkillPanel { get; }
+
+    ISkillPanelVisual FourSkillPanel { get; }
+    List<ISkill> AllHeroSkills { get; }
 
     GameObject ThisGameObject { get; }
 }

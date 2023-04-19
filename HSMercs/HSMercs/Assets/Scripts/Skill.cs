@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 
 /// <summary>
@@ -17,6 +19,20 @@ public class Skill : MonoBehaviour, ISkill
     #region PROPERTIES
 
     public ISkillVisual SkillVisual { get=> skillVisual as ISkillVisual; private set => skillVisual = value as Object; }
+
+    public ISkillAttributes SkillAttributes { get; private set; }
+
+    public GameObject ThisGameObject { get; set; } 
+
+    #endregion
+
+    #region METHODS
+
+    private void Awake()
+    {
+        SkillAttributes = GetComponent<ISkillAttributes>();
+        ThisGameObject = gameObject;
+    }
 
     #endregion
     

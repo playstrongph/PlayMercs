@@ -34,8 +34,8 @@ public class SkillAttributes : MonoBehaviour, ISkillAttributes
 
    #region PROPERTIES
 
-   public string SkillName => skillName;
-   public string Description => description;
+   public string SkillName { get => skillName; set => skillName = value; }
+   public string Description { get => description; set => description = value; }
    public int SkillCooldown { get => skillCooldown; set => skillCooldown = value; }
    public int SkillSpeed { get => skillSpeed; set => skillSpeed = value; }
    

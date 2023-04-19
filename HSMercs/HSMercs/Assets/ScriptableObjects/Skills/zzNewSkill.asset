@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 752c4d7ea14777d46a60bfe0bdbcab9c, type: 3}
   m_Name: zzNewSkill
   m_EditorClassIdentifier: 
-  skillName: Double Strike
-  skillDescription: Attack an enemy.  If it was damaged this turn, gain +5 Attack
-    and Attack it again.
+  skillName: NewSkill
+  skillDescription: Test NewSkill
   skillCooldown: 0
   skillSpeed: 4
   fightingSpirit: 0

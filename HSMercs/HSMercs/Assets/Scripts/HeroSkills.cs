@@ -10,8 +10,8 @@ public class HeroSkills : MonoBehaviour, IHeroSkills
 
     #region VARIABLES
     
-    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelVisual))] private Object threeSkillPanelVisual;
-    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelVisual))] private Object fourSkillPanelVisual;
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelVisual))] private Object threeSkillPanel;
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelVisual))] private Object fourSkillPanel;
 
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkill))]private List<Object> allHeroSkills = new List<Object>();
     
@@ -20,15 +20,14 @@ public class HeroSkills : MonoBehaviour, IHeroSkills
 
     #region PROPERTIES
 
-    public ISkillPanelVisual ThreeSkillPanelVisual { get=> threeSkillPanelVisual as ISkillPanelVisual; private set => threeSkillPanelVisual = value as Object;}
-    
-    public ISkillPanelVisual FourSkillPanelVisual { get=> fourSkillPanelVisual as ISkillPanelVisual; private set => fourSkillPanelVisual = value as Object;}
+    public ISkillPanelVisual ThreeSkillPanel { get=> threeSkillPanel as ISkillPanelVisual; private set => threeSkillPanel = value as Object;}
+    public ISkillPanelVisual FourSkillPanel { get=> fourSkillPanel as ISkillPanelVisual; private set => fourSkillPanel = value as Object;}
     public List<ISkill> AllHeroSkills
     {
         get
         {
             var allSkills = new List<ISkill>();
-            foreach (var heroSkillObject in allSkills)
+            foreach (var heroSkillObject in allHeroSkills)
             {
                 var heroSkill = (ISkill) heroSkillObject;
                 allSkills.Add(heroSkill);
