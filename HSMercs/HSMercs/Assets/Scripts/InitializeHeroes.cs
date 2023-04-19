@@ -41,6 +41,8 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
          LoadHeroVisuals(hero);
          
          //TODO: Initialize Hero Skills
+         InitializeSkills(hero);
+         
       }
       
       //TO BE OBSOLETED ?
@@ -178,8 +180,17 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
       
       yield return null;
    }
-   
-   
+
+   private void InitializeSkills(IHero hero)
+   {
+      var heroSkillsPrefab = _player.BattleSceneManager.BattleSceneSettings.HeroSkillsPrefab;
+
+      var heroSkills = Instantiate(heroSkillsPrefab, _player.BattleSceneManager.ThisGameObject.transform);
+      heroSkills.transform.SetParent(_player.HeroSkillsTransform);
+
+
+
+   }
 
 
    #endregion
