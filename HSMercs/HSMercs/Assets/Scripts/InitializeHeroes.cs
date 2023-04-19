@@ -55,9 +55,11 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
       hero.HeroInformation.HeroStars = heroAsset.HeroStars;
       hero.HeroInformation.HeroCp = heroAsset.HeroCp;
       hero.HeroInformation.HeroSprite = heroAsset.HeroSprite;
-      
       hero.HeroInformation.HeroClass = Instantiate(heroAsset.HeroClass as ScriptableObject) as IHeroClassAsset;
       hero.HeroInformation.HeroRace = Instantiate(heroAsset.HeroRace as ScriptableObject) as IHeroRaceAsset;
+      //HeroAsset Reference
+      hero.HeroInformation.HeroAsset = Instantiate(heroAsset as ScriptableObject) as IHeroAsset;
+      
       
       //Hero Stats
       hero.HeroStats.Health = heroAsset.Health;
@@ -85,6 +87,9 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
       hero.BaseHeroStats.EffectResistance = heroAsset.EffectResistance;
       hero.BaseHeroStats.DualAttackChance = heroAsset.DualAttackChance;
       hero.BaseHeroStats.HitChance = heroAsset.HitChance;
+      
+      
+      
 
    }
 

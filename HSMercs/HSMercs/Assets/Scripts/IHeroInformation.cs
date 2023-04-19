@@ -11,4 +11,6 @@ public interface IHeroInformation
     int HeroCp { get; set; }
     IHeroClassAsset HeroClass { get; set; }
     IHeroRaceAsset HeroRace { get; set; }
+    
+    IHeroAsset HeroAsset { get; set; }
 }

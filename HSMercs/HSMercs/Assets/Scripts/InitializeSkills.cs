@@ -21,10 +21,23 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
    public void StartAction(IHero hero, IPlayer player)
    {
       var heroSkillsPrefab = player.BattleSceneManager.BattleSceneSettings.HeroSkillsPrefab;
+      var heroSkillsGameObject = Instantiate(heroSkillsPrefab, player.BattleSceneManager.ThisGameObject.transform);
+      var heroSkills = heroSkillsGameObject.GetComponent<IHeroSkills>();
+      
+      //Create Hero Skills GameObject
+      heroSkillsGameObject.transform.SetParent(player.HeroSkillsTransform);
+      heroSkillsGameObject.name = hero.HeroInformation.HeroName + "Skills";
+      
+      //Set Hero Reference to its skills
+      hero.HeroSkills = heroSkills ;
+   }
 
-      var heroSkills = Instantiate(heroSkillsPrefab, player.BattleSceneManager.ThisGameObject.transform);
-      heroSkills.transform.SetParent(player.HeroSkillsTransform);
-   }     
+   private void LoadSkillsInformation(IHero hero, IHeroSkills heroSkills)
+   {
+      
+      
+   }
+
 
    #endregion
 }
