@@ -11,7 +11,7 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneSettingsAsset))] private Object battleSceneSettings;
 
-   private IInitializePlayersVisual _initializePlayersVisual;
+   private IInitializePlayers _initializePlayers;
    
    
    
@@ -35,19 +35,43 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    private void Awake()
    {
-      _initializePlayersVisual = GetComponent<IInitializePlayersVisual>();
+      _initializePlayers = GetComponent<IInitializePlayers>();
       InitializeTeamHeroes = GetComponent<IInitializeTeamHeroes>();
    }
 
    private void Start()
    {
-      _initializePlayersVisual.StartAction();
-      
-      InitializeTeamHeroes.StartAction();
+
+      StartCoroutine(StartAllCoroutines());
+
+      //_initializePlayers.StartAction();
+      //InitializeTeamHeroes.StartAction();
 
    }
 
+   private IEnumerator StartAllCoroutines()
+   {
+      yield return StartCoroutine(InitializePlayers());
+      yield return StartCoroutine(InitializeTeams());
+      
+      yield return null;
+   }
+
+
+
+   private IEnumerator InitializePlayers()
+   {
+      _initializePlayers.StartAction();
+      yield return null;
+   }
    
+   private IEnumerator InitializeTeams()
+   {
+      InitializeTeamHeroes.StartAction();
+      yield return null;
+   }
+
+
 
    #endregion
 }

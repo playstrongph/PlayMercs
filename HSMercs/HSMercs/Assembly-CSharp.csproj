@@ -92,7 +92,7 @@
      <Compile Include="Assets\Scripts\IHeroVisual.cs" />
      <Compile Include="Assets\Scripts\IHeroes.cs" />
      <Compile Include="Assets\Scripts\IInitializePlayerHeroes.cs" />
-     <Compile Include="Assets\Scripts\IInitializePlayersVisual.cs" />
+     <Compile Include="Assets\Scripts\IInitializePlayers.cs" />
      <Compile Include="Assets\Scripts\IInitializeTeamHeroes.cs" />
      <Compile Include="Assets\Scripts\IPlayer.cs" />
      <Compile Include="Assets\Scripts\ISetHeroArmorText.cs" />
@@ -112,7 +112,7 @@
      <Compile Include="Assets\Scripts\IStatusEffectVisual.cs" />
      <Compile Include="Assets\Scripts\ITargetNodes.cs" />
      <Compile Include="Assets\Scripts\InitializePlayerHeroes.cs" />
-     <Compile Include="Assets\Scripts\InitializePlayersVisual.cs" />
+     <Compile Include="Assets\Scripts\InitializePlayers.cs" />
      <Compile Include="Assets\Scripts\InitializeTeamHeroes.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceAttribute.cs" />
