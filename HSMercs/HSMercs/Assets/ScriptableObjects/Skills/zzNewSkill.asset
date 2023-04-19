@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: NewSkill
   skillDescription: Test NewSkill
-  skillCooldown: 0
+  skillCooldown: 5
   skillSpeed: 4
   fightingSpirit: 0
-  skillSprite: {fileID: -6420971277452434971, guid: e9bfdccb24453cc4e9569fd60f1764f9,
+  skillSprite: {fileID: -5709384847532787934, guid: 4491d9b10a6665c418123e32b4faa48f,
     type: 3}
   skillElement: {fileID: 11400000, guid: 9aff07a286ac2e74882ae8c0046cb5a3, type: 2}
