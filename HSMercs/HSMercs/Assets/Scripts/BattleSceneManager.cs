@@ -25,9 +25,13 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    public GameObject ThisGameObject => this.gameObject;
 
    public IInitializeTeams InitializeTeams { get; private set; }
+   
+   public IInitializeHeroes InitializeHeroes { get; private set; }
 
    public IPlayer MainPlayer { get; set; }
    public IPlayer EnemyPlayer { get; set; }
+   
+
 
    #endregion
 
@@ -37,6 +41,7 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    {
       _initializePlayers = GetComponent<IInitializePlayers>();
       InitializeTeams = GetComponent<IInitializeTeams>();
+      InitializeHeroes = GetComponent<IInitializeHeroes>();
    }
 
    private void Start()
@@ -52,7 +57,10 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    private IEnumerator StartAllCoroutines()
    {
       yield return StartCoroutine(InitializePlayers());
-      yield return StartCoroutine(InitializeAllTeams());
+      
+      //yield return StartCoroutine(InitializeAllTeams());
+      
+      yield return StartCoroutine(InitializeAllHeroes());
       
       yield return null;
    }
@@ -68,6 +76,22 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    private IEnumerator InitializeAllTeams()
    {
       InitializeTeams.StartAction();
+      yield return null;
+   }
+
+   private IEnumerator InitializeAllHeroes()
+   {
+      var heroPrefab = BattleSceneSettings.HeroPrefab;
+      var allyHeroesAsset = BattleSceneSettings.AllyTeamHeroes;
+      var enemyHeroesAsset = BattleSceneSettings.EnemyTeamHeroes;
+      var allyHeroes = MainPlayer.Heroes;
+      var enemyHeroes = EnemyPlayer.Heroes;
+      var mainPlayer = MainPlayer;
+      var enemyPlayer = EnemyPlayer;
+      
+      InitializeHeroes.StartAction(allyHeroesAsset,heroPrefab,allyHeroes,mainPlayer);
+      InitializeHeroes.StartAction(enemyHeroesAsset,heroPrefab,enemyHeroes,enemyPlayer);
+      
       yield return null;
    }
 
