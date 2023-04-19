@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 56331960320557930}
   - component: {fileID: 56331960320557927}
   - component: {fileID: 56331960320557924}
-  - component: {fileID: 56331960320557926}
   - component: {fileID: 715097479}
   m_Layer: 0
   m_Name: BattleSceneManager
@@ -90,18 +89,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alliesPosition: {x: 0, y: -90, z: 0}
   enemiesPosition: {x: 0, y: 90, z: 0}
---- !u!114 &56331960320557926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56331960320557931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6c9404345fd2224c8deb27d8e449e53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &715097479
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,11 +11,6 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IBattleSceneSettingsAsset))] private Object battleSceneSettings;
 
-   private IInitializePlayers _initializePlayers;
-   
-   
-   
-   
 
    #endregion
 
@@ -23,10 +18,9 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    public IBattleSceneSettingsAsset BattleSceneSettings { get=>battleSceneSettings as IBattleSceneSettingsAsset; private set => battleSceneSettings = value as Object;}
    public GameObject ThisGameObject => this.gameObject;
-
-   public IInitializeTeams InitializeTeams { get; private set; }
-   
    public IInitializeHeroes InitializeHeroes { get; private set; }
+   
+   public IInitializePlayers InitializePlayers { get; private set; }
 
    public IPlayer MainPlayer { get; set; }
    public IPlayer EnemyPlayer { get; set; }
@@ -39,8 +33,7 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    private void Awake()
    {
-      _initializePlayers = GetComponent<IInitializePlayers>();
-      InitializeTeams = GetComponent<IInitializeTeams>();
+      InitializePlayers = GetComponent<IInitializePlayers>();
       InitializeHeroes = GetComponent<IInitializeHeroes>();
    }
 
@@ -56,7 +49,7 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    private IEnumerator StartAllCoroutines()
    {
-      yield return StartCoroutine(InitializePlayers());
+      yield return StartCoroutine(InitializeAllPlayers());
       
       //yield return StartCoroutine(InitializeAllTeams());
       
@@ -67,15 +60,9 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
 
 
-   private IEnumerator InitializePlayers()
+   private IEnumerator InitializeAllPlayers()
    {
-      _initializePlayers.StartAction();
-      yield return null;
-   }
-   
-   private IEnumerator InitializeAllTeams()
-   {
-      InitializeTeams.StartAction();
+      InitializePlayers.StartAction();
       yield return null;
    }
 
