@@ -26,8 +26,6 @@ public class Player : MonoBehaviour, IPlayer
 
    public IBattleSceneManager BattleSceneManager { get; set; }
 
-   public IInitializePlayerHeroes InitializePlayerHeroes { get; private set; }
-   
    public IHeroes Heroes { get => heroes as IHeroes; private set => heroes = value as Object; }
    public Transform HeroPreviewsTransform { get => heroPreviewsTransform; private set => heroPreviewsTransform = value; }
    
@@ -38,10 +36,7 @@ public class Player : MonoBehaviour, IPlayer
         
    #region METHODS
 
-   private void Awake()
-   {
-      InitializePlayerHeroes = GetComponent<IInitializePlayerHeroes>();
-   }
+   
 
    #endregion
    

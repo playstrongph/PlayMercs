@@ -70,7 +70,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8058846799119040711}
   - component: {fileID: 8301682907897004436}
-  - component: {fileID: 687033366}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -109,18 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroes: {fileID: 42992947343399991}
   heroPreviewsTransform: {fileID: 287769663}
---- !u!114 &687033366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8058846799119040704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2638ad617d412b949b5c6e68bd4f3fd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  heroSkillsTransform: {fileID: 1641794802}
 --- !u!1 &8058846799579564181
 GameObject:
   m_ObjectHideFlags: 0
