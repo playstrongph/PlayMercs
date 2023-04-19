@@ -18,9 +18,12 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    public IBattleSceneSettingsAsset BattleSceneSettings { get=>battleSceneSettings as IBattleSceneSettingsAsset; private set => battleSceneSettings = value as Object;}
    public GameObject ThisGameObject => this.gameObject;
-   public IInitializeHeroes InitializeHeroes { get; private set; }
    
-   public IInitializePlayers InitializePlayers { get; private set; }
+   private IInitializeHeroes _initializeHeroes;
+
+   private IInitializePlayers _initializePlayers;
+
+   private IInitializeSkills _initializeSkills;
 
    public IPlayer MainPlayer { get; set; }
    public IPlayer EnemyPlayer { get; set; }
@@ -33,8 +36,9 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    private void Awake()
    {
-      InitializePlayers = GetComponent<IInitializePlayers>();
-      InitializeHeroes = GetComponent<IInitializeHeroes>();
+      _initializePlayers = GetComponent<IInitializePlayers>();
+      _initializeHeroes = GetComponent<IInitializeHeroes>();
+      _initializeSkills = GetComponent<IInitializeSkills>();
    }
 
    private void Start()
@@ -51,9 +55,9 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    {
       yield return StartCoroutine(InitializeAllPlayers());
       
-      //yield return StartCoroutine(InitializeAllTeams());
-      
       yield return StartCoroutine(InitializeAllHeroes());
+
+      yield return StartCoroutine(InitializeAllSkills());
       
       yield return null;
    }
@@ -62,7 +66,7 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    private IEnumerator InitializeAllPlayers()
    {
-      InitializePlayers.StartAction();
+      _initializePlayers.StartAction();
       yield return null;
    }
 
@@ -76,8 +80,27 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
       var mainPlayer = MainPlayer;
       var enemyPlayer = EnemyPlayer;
       
-      InitializeHeroes.StartAction(allyHeroesAsset,heroPrefab,allyHeroes,mainPlayer);
-      InitializeHeroes.StartAction(enemyHeroesAsset,heroPrefab,enemyHeroes,enemyPlayer);
+      _initializeHeroes.StartAction(allyHeroesAsset,heroPrefab,allyHeroes,mainPlayer);
+      _initializeHeroes.StartAction(enemyHeroesAsset,heroPrefab,enemyHeroes,enemyPlayer);
+      
+      yield return null;
+   }
+
+   private IEnumerator InitializeAllSkills()
+   {
+      var allyHeroes = MainPlayer.Heroes;
+      var enemyHeroes = EnemyPlayer.Heroes;
+      
+
+      foreach (var enemyHero in enemyHeroes.HeroStatusLists.GetAliveHeroList())
+      {
+         _initializeSkills.StartAction(enemyHero, EnemyPlayer);
+      }
+
+      foreach (var allyHero in allyHeroes.HeroStatusLists.GetAliveHeroList())
+      {
+         _initializeSkills.StartAction(allyHero,MainPlayer);
+      }
       
       yield return null;
    }
