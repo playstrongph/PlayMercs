@@ -20,4 +20,4 @@ MonoBehaviour:
   fightingSpirit: 0
   skillSprite: {fileID: -6420971277452434971, guid: e9bfdccb24453cc4e9569fd60f1764f9,
     type: 3}
-  skillElement: {fileID: 11400000, guid: 9aff07a286ac2e74882ae8c0046cb5a3, type: 2}
+  skillElement: {fileID: 11400000, guid: dc330572ecca8464db5e95551bcef5fd, type: 2}

@@ -2,7 +2,7 @@
 {
     public interface ISkillElementAsset
     {
-        string SkillElement { get; }
+        string ElementName { get; }
 
         /// <summary>
         /// Set text of Hero Race in the hero preview

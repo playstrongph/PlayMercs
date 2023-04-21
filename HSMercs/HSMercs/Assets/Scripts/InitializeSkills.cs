@@ -87,7 +87,14 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       skill.SkillVisual.SkillGraphics.SkillReadyText.text = skill.SkillAttributes.SkillCooldown.ToString();
 
       //Skill Preview
-
+      skill.SkillVisual.SkillPreviewVisual.PreviewImage.sprite = skillAsset.SkillIcon;
+      skill.SkillVisual.SkillPreviewVisual.SpeedText.text = skillAsset.SkillSpeed.ToString();
+      skill.SkillVisual.SkillPreviewVisual.CooldownText.text = skillAsset.SkillCooldown.ToString();
+      skill.SkillVisual.SkillPreviewVisual.SkillNameText.text = skillAsset.SkillName;
+      skill.SkillVisual.SkillPreviewVisual.SkillDescriptionText.text = skillAsset.SkillDescription;
+      skill.SkillVisual.SkillPreviewVisual.SkillElementText.text = skillAsset.SkillElement.ElementName;
+      
+    
    }
 
 

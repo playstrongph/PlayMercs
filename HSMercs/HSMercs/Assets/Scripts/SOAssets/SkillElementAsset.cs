@@ -15,7 +15,7 @@ namespace SOAssets
         
       #region PROPERTIES
 
-      public virtual string SkillElement { get; } = "Skill Element";
+      public virtual string ElementName { get; } = "Skill Element";
 
 
       #endregion

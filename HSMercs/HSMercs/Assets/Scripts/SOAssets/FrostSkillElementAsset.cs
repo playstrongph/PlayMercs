@@ -16,7 +16,7 @@ namespace SOAssets
         
       #region PROPERTIES
 
-      public override string SkillElement { get; } = "Frost";
+      public override string ElementName { get; } = "Frost";
 
 
       #endregion
