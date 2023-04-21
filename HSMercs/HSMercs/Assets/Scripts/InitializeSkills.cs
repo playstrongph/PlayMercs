@@ -49,11 +49,13 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
          {
             var skillAsset = skillAssets[index];
             var skill = heroSkills.AllHeroSkills[index];
+            
+            Debug.Log("Skill Index: " +index);
 
             LoadSkillAttributes(skillAsset,skill);
             
             //TODO: Load Skill Visuals
-            LoadSkillVisuals(skillAsset,skill);
+            //LoadSkillVisuals(skillAsset,skill);
             
             //TODO: Load Hero Preview Skill Visuals
       
@@ -74,6 +76,12 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       skill.SkillAttributes.FightingSpirit = skillAsset.FightingSpirit;
       skill.SkillAttributes.SkillSprite = skillAsset.SkillIcon;
       skill.SkillAttributes.SkillElement = skillAsset.SkillElement;
+      
+      //TEST
+      skill.SkillVisual.SkillGraphics.SkillReadyGraphic.sprite = skillAsset.SkillIcon;
+      skill.SkillVisual.SkillGraphics.SkillNotReadyGraphic.sprite = skillAsset.SkillIcon;
+      skill.SkillVisual.SkillGraphics.PassiveSkillGraphic.sprite = skillAsset.SkillIcon;
+      skill.SkillVisual.SkillGraphics.SkillReadyText.text = skill.SkillAttributes.SkillCooldown.ToString();
    }
 
    private void LoadSkillVisuals(ISkillAsset skillAsset,ISkill skill)

@@ -2409,8 +2409,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e3331319afc57644b3a28e61ce04226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillGraphics: {fileID: 6078190668712848977}
-  skillPreviewVisual: {fileID: 274762911055065423}
+  skillGraphics: {fileID: 564160792765378915}
+  skillPreviewVisual: {fileID: 564160794531294511}
 --- !u!114 &2464136359554852338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3674,8 +3674,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e3331319afc57644b3a28e61ce04226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillGraphics: {fileID: 6078190668712848977}
-  skillPreviewVisual: {fileID: 274762911055065423}
+  skillGraphics: {fileID: 564160793867978558}
+  skillPreviewVisual: {fileID: 564160793577975905}
 --- !u!114 &2464136360246136422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9825,8 +9825,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e3331319afc57644b3a28e61ce04226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillGraphics: {fileID: 6078190668712848977}
-  skillPreviewVisual: {fileID: 274762911055065423}
+  skillGraphics: {fileID: 8995709415595340403}
+  skillPreviewVisual: {fileID: 8995709414321944433}
 --- !u!114 &8995709414423564666
 MonoBehaviour:
   m_ObjectHideFlags: 0
