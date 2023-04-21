@@ -39,8 +39,9 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
    private void UpdateSkills(IHero hero, IHeroSkills heroSkills)
    {
       var skillAssets = hero.HeroInformation.HeroAsset.SkillAssets;
-
-      if (skillAssets.Count < 4)
+      
+      //Three Skill Panel
+      if (skillAssets.Count <= 3)
       {
          //Debug.Log("AllHeroSkills: " +heroSkills.AllHeroSkills.Count);
          
@@ -49,13 +50,11 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
          {
             var skillAsset = skillAssets[index];
             var skill = heroSkills.AllHeroSkills[index];
-            
-            Debug.Log("Skill Index: " +index);
 
             LoadSkillAttributes(skillAsset,skill);
             
             //TODO: Load Skill Visuals
-            //LoadSkillVisuals(skillAsset,skill);
+            LoadSkillVisuals(skillAsset,skill);
             
             //TODO: Load Hero Preview Skill Visuals
       
@@ -66,7 +65,6 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
    private void LoadSkillAttributes(ISkillAsset skillAsset, ISkill skill)
    {
       skill.ThisGameObject.name = skillAsset.SkillName;
-      
       skill.SkillAttributes.SkillName = skillAsset.SkillName;
       skill.SkillAttributes.Description = skillAsset.SkillDescription;
       skill.SkillAttributes.SkillCooldown = skillAsset.SkillCooldown;
@@ -76,12 +74,7 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       skill.SkillAttributes.FightingSpirit = skillAsset.FightingSpirit;
       skill.SkillAttributes.SkillSprite = skillAsset.SkillIcon;
       skill.SkillAttributes.SkillElement = skillAsset.SkillElement;
-      
-      //TEST
-      skill.SkillVisual.SkillGraphics.SkillReadyGraphic.sprite = skillAsset.SkillIcon;
-      skill.SkillVisual.SkillGraphics.SkillNotReadyGraphic.sprite = skillAsset.SkillIcon;
-      skill.SkillVisual.SkillGraphics.PassiveSkillGraphic.sprite = skillAsset.SkillIcon;
-      skill.SkillVisual.SkillGraphics.SkillReadyText.text = skill.SkillAttributes.SkillCooldown.ToString();
+
    }
 
    private void LoadSkillVisuals(ISkillAsset skillAsset,ISkill skill)
@@ -94,12 +87,6 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       skill.SkillVisual.SkillGraphics.SkillReadyText.text = skill.SkillAttributes.SkillCooldown.ToString();
 
       //Skill Preview
-
-
-
-
-
-
 
    }
 

@@ -16,7 +16,7 @@ MonoBehaviour:
     type: 3}
   skillPrefab: {fileID: 113213072441124812, guid: 7e88120a6696d29499c8499dfdcdd39e,
     type: 3}
-  heroSkillsPrefab: {fileID: 6205730959413901216, guid: 688541b2d663c35468ffc30e992bee7c,
+  heroSkillsPrefab: {fileID: 5999021463609932944, guid: 688541b2d663c35468ffc30e992bee7c,
     type: 3}
   playerPrefab: {fileID: 8058846799119040704, guid: c5c7138d0cca77a4087c3f815541a23e,
     type: 3}
