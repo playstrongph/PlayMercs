@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public interface IHeroPreview
 {
@@ -17,6 +18,11 @@ public interface IHeroPreview
     /// Reference to hero preview graphics
     /// </summary>
     IHeroGraphicPreview HeroGraphicPreview { get; }
+
+    /// <summary>
+    /// HeroSkillPreview list
+    /// </summary>
+    List<IHeroSkillPreview> HeroSkillPreviews { get; }
 
     /// <summary>
     /// Reference to skill 1 preview graphics

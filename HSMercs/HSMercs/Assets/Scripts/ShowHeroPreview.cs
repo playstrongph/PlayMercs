@@ -76,6 +76,9 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
             _heroPreview.HeroGraphicPreview.PreviewNameText.text = hero.HeroInformation.HeroName;
 
             PreviewArmorDisplay(hero);
+            
+            //TEST
+            UpdateHeroSkillPreview(hero);
         }
     }
 
@@ -97,6 +100,38 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
             heroPreview.HeroGraphicPreview.PreviewArmorText.enabled = false;
         }
 
+    }
+    
+    
+    /// <summary>
+    /// Update Hero Skill Previews with the lastest information and visuals
+    /// </summary>
+    private void UpdateHeroSkillPreview(IHero hero)
+    {
+
+        var allHeroSkills = hero.HeroSkills.AllHeroSkills;
+        var heroSkillPreviews = hero.HeroVisual.HeroPreview.HeroSkillPreviews;
+        //This indicates the actual number of skills the hero has
+        var skillAssetsCount = hero.HeroInformation.HeroAsset.SkillAssets.Count;
+        
+        
+        //Use skillAssetCount here as it is the ACTUAL skill count the hero has
+        //However, the skillAsset information is NOT the latest info on the status of the skill
+        //Take the skill information from skill attributes
+        for (int i = 0; i < skillAssetsCount; i++)
+        {
+            var skillPreview = heroSkillPreviews[i];
+            var heroSkill = allHeroSkills[i];
+
+            skillPreview.SkillImage.sprite = heroSkill.SkillVisual.SkillGraphics.SkillReadyGraphic.sprite;
+
+            skillPreview.HeroPreviewSkillCooldown.text = heroSkill.SkillAttributes.SkillCooldown.ToString();
+            skillPreview.HeroPreviewSkillDescription.text = heroSkill.SkillAttributes.Description;
+            skillPreview.HeroPreviewSkillElement.text = heroSkill.SkillAttributes.SkillElement.ElementName;
+            skillPreview.HeroPreviewSkillName.text = heroSkill.SkillAttributes.SkillName;
+            skillPreview.HeroPreviewSkillSpeed.text = heroSkill.SkillAttributes.SkillSpeed.ToString();
+        }
+        
     }
 
     #endregion

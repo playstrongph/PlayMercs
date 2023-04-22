@@ -814,6 +814,11 @@ MonoBehaviour:
   hero: {fileID: 681513901236084606}
   heroPreviewCanvas: {fileID: 3661642154285043020}
   heroGraphicPreview: {fileID: 5517027367563142094}
+  heroSkillPreviews:
+  - {fileID: 5517027368856030611}
+  - {fileID: 5517027368950620942}
+  - {fileID: 5517027368019036828}
+  - {fileID: 5517027367746249843}
   heroSkill1Preview: {fileID: 5517027368856030611}
   heroSkill2Preview: {fileID: 5517027368950620942}
   heroSkill3Preview: {fileID: 5517027368019036828}
@@ -1657,6 +1662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroVisual: {fileID: 3661642155146651834}
+  heroSkills: {fileID: 0}
 --- !u!114 &3661642155146651834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1691,6 +1697,7 @@ MonoBehaviour:
   heroSprite: {fileID: 0}
   heroClass: {fileID: 0}
   heroRace: {fileID: 0}
+  heroAsset: {fileID: 0}
 --- !u!114 &1486563308202474854
 MonoBehaviour:
   m_ObjectHideFlags: 0

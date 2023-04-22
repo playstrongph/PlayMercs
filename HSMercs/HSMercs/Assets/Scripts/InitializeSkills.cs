@@ -97,6 +97,11 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
     
    }
 
+   private void LoadHeroSkillPreviewVisuals(IHero hero, ISkill skill, ISkillAsset skillAsset)
+   {
+      
+   }
+
 
    #endregion
 }

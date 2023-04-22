@@ -17,6 +17,9 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
     
     
     [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillPreview))]
+    [SerializeField] private List<Object> heroSkillPreviews = new List<Object>();
+    
+    [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillPreview))]
     [SerializeField] private Object heroSkill1Preview;
     
     
@@ -57,7 +60,22 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
         get => heroGraphicPreview as IHeroGraphicPreview;
         private set => heroGraphicPreview = value as Object;
     }
-    
+
+    public List<IHeroSkillPreview> HeroSkillPreviews
+    {
+        get
+        {
+            var heroSkillPreviewList = new List<IHeroSkillPreview>();
+            foreach (var heroSkillPreview in heroSkillPreviews)
+            {
+                heroSkillPreviewList.Add(heroSkillPreview as IHeroSkillPreview);
+            }
+
+            return heroSkillPreviewList;
+        }
+    }
+
+
     /// <summary>
     /// Reference to skill 1 preview graphics
     /// </summary>
