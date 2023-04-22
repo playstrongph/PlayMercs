@@ -1414,6 +1414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8583b3cd609c14c8866b379a2b757e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skill: {fileID: 5999021464831014821}
   previewCanvas: {fileID: 5999021464152597202}
   redFrame: {fileID: 5999021464104467105}
   greenFrame: {fileID: 5999021463841123357}
@@ -3496,7 +3497,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5999021463609932944}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4899,6 +4900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8583b3cd609c14c8866b379a2b757e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skill: {fileID: 5999021464924303538}
   previewCanvas: {fileID: 5999021464867106560}
   redFrame: {fileID: 5999021463471422373}
   greenFrame: {fileID: 5999021464711123171}
@@ -5171,6 +5173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8583b3cd609c14c8866b379a2b757e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skill: {fileID: 5999021464729893979}
   previewCanvas: {fileID: 5999021464390923062}
   redFrame: {fileID: 5999021464043186945}
   greenFrame: {fileID: 5999021464073232912}
@@ -7966,6 +7969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8583b3cd609c14c8866b379a2b757e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skill: {fileID: 5999021463406912926}
   previewCanvas: {fileID: 5999021464755493545}
   redFrame: {fileID: 5999021463664437438}
   greenFrame: {fileID: 5999021463644958235}

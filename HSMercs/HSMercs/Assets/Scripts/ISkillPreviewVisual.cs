@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public interface ISkillPreviewVisual
 {
+    ISkill Skill { get; }
     Image RedFrame { get; }
     Image GreenFrame { get; }
     Image BlueFrame { get; }

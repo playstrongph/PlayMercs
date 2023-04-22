@@ -12,12 +12,22 @@ public class ShowSkillPreview : MonoBehaviour, IShowSkillPreview
     [SerializeField] private Canvas skillPreviewCanvas = new Canvas();
     [SerializeField] private float displayDelay = 0.5f;
     private bool _enablePreview = false;
+
+    private ISkill _skill;
     
     #endregion
 
     #region PROPERTIES
 
     #endregion
+
+
+    #region METHODS
+
+    private void Awake()
+    {
+        _skill = GetComponent<ISkillPreviewVisual>().Skill;
+    }
 
     /// <summary>
     /// Can only turn on if within distance difference between the mouse location and the skill location
@@ -44,8 +54,23 @@ public class ShowSkillPreview : MonoBehaviour, IShowSkillPreview
         if (_enablePreview)
         {
             skillPreviewCanvas.enabled = true;
+            
+            UpdateSkillPreviewInformation();
         }
     }
+    
+    /// <summary>
+    /// Updates the skill preview information to the latest values
+    /// </summary>
+    private void UpdateSkillPreviewInformation()
+    {
+        var skillPreview = _skill.SkillVisual.SkillPreviewVisual;
 
+        skillPreview.CooldownText.text = _skill.SkillAttributes.SkillCooldown.ToString();
+        skillPreview.SpeedText.text = _skill.SkillAttributes.SkillSpeed.ToString();
+
+    }
+
+    #endregion
 
 }

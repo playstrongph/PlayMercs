@@ -9,6 +9,9 @@ using Object = UnityEngine.Object;
 public class SkillPreviewVisual : MonoBehaviour, ISkillPreviewVisual
 {
     #region VARIALBES
+    
+    
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkill))]private Object skill = null;
 
     [SerializeField] private Canvas previewCanvas;
     
@@ -32,6 +35,10 @@ public class SkillPreviewVisual : MonoBehaviour, ISkillPreviewVisual
     #endregion
 
     #region PROPERTIES
+
+    public ISkill Skill { get=> skill as ISkill; private set => skill = value as Object; }
+
+    public Canvas PreviewCanvas { get => previewCanvas; private set => previewCanvas = value; }
     
     public Image RedFrame { get => redFrame; private set => redFrame = value; }
     public Image GreenFrame { get => greenFrame; private set => greenFrame = value; }
@@ -45,7 +52,12 @@ public class SkillPreviewVisual : MonoBehaviour, ISkillPreviewVisual
     public TextMeshProUGUI SkillNameText { get => skillNameText; private set => skillNameText = value; }
     public TextMeshProUGUI SkillDescriptionText { get => skillDescriptionText; private set => skillDescriptionText = value; }
     public TextMeshProUGUI SkillElementText { get => skillElementText; private set => skillElementText = value; }
-    public Canvas PreviewCanvas { get => previewCanvas; private set => previewCanvas = value; }
+    
+    
+    
+    
+    
+    
 
     public IShowSkillPreview ShowSkillPreview { get; private set; }
 
