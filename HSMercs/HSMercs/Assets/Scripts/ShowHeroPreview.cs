@@ -123,12 +123,7 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
             var skillPreview = heroSkillPreviews[i];
             var heroSkill = allHeroSkills[i];
 
-            skillPreview.SkillImage.sprite = heroSkill.SkillVisual.SkillGraphics.SkillReadyGraphic.sprite;
-
             skillPreview.HeroPreviewSkillCooldown.text = heroSkill.SkillAttributes.SkillCooldown.ToString();
-            skillPreview.HeroPreviewSkillDescription.text = heroSkill.SkillAttributes.Description;
-            skillPreview.HeroPreviewSkillElement.text = heroSkill.SkillAttributes.SkillElement.ElementName;
-            skillPreview.HeroPreviewSkillName.text = heroSkill.SkillAttributes.SkillName;
             skillPreview.HeroPreviewSkillSpeed.text = heroSkill.SkillAttributes.SkillSpeed.ToString();
         }
         

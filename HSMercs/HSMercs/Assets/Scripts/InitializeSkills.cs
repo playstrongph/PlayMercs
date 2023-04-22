@@ -50,14 +50,17 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
          {
             var skillAsset = skillAssets[index];
             var skill = heroSkills.AllHeroSkills[index];
+            var skillPreview = hero.HeroVisual.HeroPreview.HeroSkillPreviews[index];
+            
 
             LoadSkillAttributes(skillAsset,skill);
             
-            //TODO: Load Skill Visuals
+            //Load Skill Visuals
             LoadSkillVisuals(skillAsset,skill);
             
-            //TODO: Load Hero Preview Skill Visuals
-      
+            //Load Hero Preview Skill Visuals
+            LoadHeroSkillPreviewVisuals(skillPreview, skill);
+
          }
       }
    }
@@ -94,12 +97,15 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       skill.SkillVisual.SkillPreviewVisual.SkillDescriptionText.text = skillAsset.SkillDescription;
       skill.SkillVisual.SkillPreviewVisual.SkillElementText.text = skillAsset.SkillElement.ElementName;
       
-    
+      
    }
 
-   private void LoadHeroSkillPreviewVisuals(IHero hero, ISkill skill, ISkillAsset skillAsset)
+   private void LoadHeroSkillPreviewVisuals(IHeroSkillPreview skillPreview, ISkill heroSkill)
    {
-      
+      skillPreview.SkillImage.sprite = heroSkill.SkillVisual.SkillGraphics.SkillReadyGraphic.sprite;
+      skillPreview.HeroPreviewSkillDescription.text = heroSkill.SkillAttributes.Description;
+      skillPreview.HeroPreviewSkillElement.text = heroSkill.SkillAttributes.SkillElement.ElementName;
+      skillPreview.HeroPreviewSkillName.text = heroSkill.SkillAttributes.SkillName;
    }
 
 
