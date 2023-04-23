@@ -22,7 +22,7 @@ public class Skill : MonoBehaviour, ISkill
 
     public ISkillAttributes SkillAttributes { get; private set; }
 
-    public GameObject ThisGameObject { get; set; }
+    public GameObject ThisGameObject => gameObject;
     
     /// <summary>
     /// Skill's reference to its hero
@@ -36,7 +36,6 @@ public class Skill : MonoBehaviour, ISkill
     private void Awake()
     {
         SkillAttributes = GetComponent<ISkillAttributes>();
-        ThisGameObject = gameObject;
     }
 
     #endregion

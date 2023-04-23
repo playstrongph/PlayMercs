@@ -27,7 +27,7 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       var heroSkillsGameObject = Instantiate(heroSkillsPrefab, player.BattleSceneManager.ThisGameObject.transform);
       var heroSkills = heroSkillsGameObject.GetComponent<IHeroSkills>();
       
-      //TODO: Set the HeroSkillPreview, Skill Panel, and Hero Skill GameObject to either 3 or 4 skill configuration
+      
       
       //Set Hero Reference to its skills
       hero.HeroSkills = heroSkills;
@@ -36,8 +36,31 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       heroSkillsGameObject.name = hero.HeroInformation.HeroName + "Skills";
       
       hero.HeroInformation.HeroClass.SetSkillPanelClassColor(hero);
+      
+      //TODO: Set the HeroSkillPreview, Skill Panel, and Hero Skill GameObject to either 3 or 4 skill configuration
 
+      UpdateSkillNumberConfiguration(hero);
+      
       UpdateSkills(hero,hero.HeroSkills);
+      
+      
+   }
+
+
+   private void UpdateSkillNumberConfiguration(IHero hero)
+   {
+      var heroSkillsCount = hero.HeroInformation.HeroAsset.SkillAssets.Count;
+      var fourSkillsCount = 4;
+
+      if (heroSkillsCount == fourSkillsCount)
+      {
+         var skillPreview = hero.HeroVisual.HeroPreview.HeroSkillPreviews[fourSkillsCount-1];
+         skillPreview.ThisTransform.gameObject.SetActive(true);
+         
+         hero.HeroSkills.ThreeSkillPanel.ThisGameObject.SetActive(false);
+         hero.HeroSkills.FourSkillPanel.ThisGameObject.SetActive(true);
+      }
+
    }
 
    private void UpdateSkills(IHero hero, IHeroSkills heroSkills)
@@ -53,6 +76,9 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
             
             //Set the skills hero reference
             skill.Hero = hero;
+            
+            //Specifically for fourth skill, set the skill game object to true
+            skill.ThisGameObject.SetActive(true);
             
 
             LoadSkillAttributes(skillAsset,skill);

@@ -18,20 +18,6 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
     
     [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillPreview))]
     [SerializeField] private List<Object> heroSkillPreviews = new List<Object>();
-    
-    [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillPreview))]
-    [SerializeField] private Object heroSkill1Preview;
-    
-    
-    [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillPreview))]
-    [SerializeField] private Object heroSkill2Preview;
-
-    
-    [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillPreview))]
-    [SerializeField] private Object heroSkill3Preview;
-    
-    [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkillPreview))]
-    [SerializeField] private Object heroSkill4Preview;
 
     [SerializeField] private Transform statusEffectPreviewTransform;
 
@@ -75,43 +61,6 @@ public class HeroPreview : MonoBehaviour, IHeroPreview
         }
     }
 
-
-    /// <summary>
-    /// Reference to skill 1 preview graphics
-    /// </summary>
-    public IHeroSkillPreview HeroSkill1Preview
-    {
-        get => heroSkill1Preview as IHeroSkillPreview;
-        private set => heroSkill1Preview = value as Object;
-    }
-    
-    /// <summary>
-    /// Reference to skill 2 preview graphics
-    /// </summary>
-    public IHeroSkillPreview HeroSkill2Preview
-    {
-        get => heroSkill2Preview as IHeroSkillPreview;
-        private set => heroSkill2Preview = value as Object;
-    }
-    
-    /// <summary>
-    /// Reference to skill 3 preview graphics
-    /// </summary>
-    public IHeroSkillPreview HeroSkill3Preview
-    {
-        get => heroSkill3Preview as IHeroSkillPreview;
-        private set => heroSkill3Preview = value as Object;
-    }
-    
-    /// <summary>
-    /// Reference to skill 4 preview graphics
-    /// </summary>
-    public IHeroSkillPreview HeroSkill4Preview
-    {
-        get => heroSkill4Preview as IHeroSkillPreview;
-        private set => heroSkill4Preview = value as Object;
-    }
-    
     /// <summary>
     /// Reference to Show Hero Preview
     /// </summary>

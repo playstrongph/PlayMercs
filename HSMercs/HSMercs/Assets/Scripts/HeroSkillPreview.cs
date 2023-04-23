@@ -133,5 +133,5 @@ public class HeroSkillPreview : MonoBehaviour, IHeroSkillPreview
         set => heroPreviewSkillCooldown = value;
     }
     
-    
+    public Transform ThisTransform => transform;
 }

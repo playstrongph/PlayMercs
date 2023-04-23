@@ -1,4 +1,5 @@
 ﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public interface IHeroSkillPreview
@@ -57,4 +58,6 @@ public interface IHeroSkillPreview
     /// Hero preview skill cooldown text
     /// </summary>
     TextMeshProUGUI HeroPreviewSkillCooldown { get; set; }
+
+    Transform ThisTransform { get; }
 }
