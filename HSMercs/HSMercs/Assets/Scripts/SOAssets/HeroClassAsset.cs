@@ -39,6 +39,17 @@ namespace SOAssets
 
       public virtual void SetSkillPanelClassColor(IHero hero)
       {
+         hero.HeroSkills.ThreeSkillPanel.BluePanel.enabled = false;
+         hero.HeroSkills.ThreeSkillPanel.RedPanel.enabled = false;
+         hero.HeroSkills.ThreeSkillPanel.GreenPanel.enabled = false;
+         
+         hero.HeroSkills.FourSkillPanel.BluePanel.enabled = false;
+         hero.HeroSkills.FourSkillPanel.RedPanel.enabled = false;
+         hero.HeroSkills.FourSkillPanel.GreenPanel.enabled = false;
+      }
+
+      public virtual void SetSkillPreviewFrameColor(ISkill skill)
+      {
          
       }
 

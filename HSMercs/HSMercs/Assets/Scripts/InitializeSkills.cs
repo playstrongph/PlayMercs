@@ -98,6 +98,9 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       skill.SkillVisual.SkillPreviewVisual.SkillNameText.text = skillAsset.SkillName;
       skill.SkillVisual.SkillPreviewVisual.SkillDescriptionText.text = skillAsset.SkillDescription;
       skill.SkillVisual.SkillPreviewVisual.SkillElementText.text = skillAsset.SkillElement.ElementName;
+      
+      //Set Skill Preview Frame Color
+      skill.Hero.HeroInformation.HeroClass.SetSkillPreviewFrameColor(skill);
    }
 
    private void LoadHeroSkillPreviewVisuals(IHeroSkillPreview skillPreview, ISkill heroSkill)
@@ -106,6 +109,8 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       skillPreview.HeroPreviewSkillDescription.text = heroSkill.SkillAttributes.Description;
       skillPreview.HeroPreviewSkillElement.text = heroSkill.SkillAttributes.SkillElement.ElementName;
       skillPreview.HeroPreviewSkillName.text = heroSkill.SkillAttributes.SkillName;
+      
+      
    }
 
 
