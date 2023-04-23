@@ -27,6 +27,8 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       var heroSkillsGameObject = Instantiate(heroSkillsPrefab, player.BattleSceneManager.ThisGameObject.transform);
       var heroSkills = heroSkillsGameObject.GetComponent<IHeroSkills>();
       
+      //TODO: Set the HeroSkillPreview, Skill Panel, and Hero Skill GameObject to either 3 or 4 skill configuration
+      
       //Set Hero Reference to its skills
       hero.HeroSkills = heroSkills;
 
@@ -42,9 +44,7 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
    {
       var skillAssets = hero.HeroInformation.HeroAsset.SkillAssets;
       
-      //Three Skill Panel
-      if (skillAssets.Count <= 3)
-      {
+      
          for (var index = 0; index < skillAssets.Count; index++)
          {
             var skillAsset = skillAssets[index];
@@ -64,7 +64,7 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
             LoadHeroSkillPreviewVisuals(skillPreview, skill);
 
          }
-      }
+      
    }
 
    private void LoadSkillAttributes(ISkillAsset skillAsset, ISkill skill)
@@ -110,8 +110,8 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       skillPreview.HeroPreviewSkillElement.text = heroSkill.SkillAttributes.SkillElement.ElementName;
       skillPreview.HeroPreviewSkillName.text = heroSkill.SkillAttributes.SkillName;
       
-      
-      heroSkill.Hero.HeroInformation.HeroClass.SetHeroPreviewSkillFrameColor(heroSkill);
+      heroSkill.Hero.HeroInformation.HeroClass.SetHeroSkillPreviewColors(skillPreview);
+
    }
 
 

@@ -10,6 +10,6 @@
 
         void SetSkillPreviewFrameColor(ISkill skill);
 
-        void SetHeroPreviewSkillFrameColor(ISkill skill);
+        void SetHeroSkillPreviewColors(IHeroSkillPreview heroSkillPreview);
     }
 }

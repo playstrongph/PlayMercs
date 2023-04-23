@@ -53,7 +53,7 @@ namespace SOAssets
          
       }
       
-      public virtual void SetHeroPreviewSkillFrameColor(ISkill skill)
+      public virtual void SetHeroSkillPreviewColors(IHeroSkillPreview heroSkillPreview)
       {
          
       }
