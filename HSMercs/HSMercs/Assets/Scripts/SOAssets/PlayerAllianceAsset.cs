@@ -18,6 +18,8 @@ namespace SOAssets
          // Note: Only for Ally player and its heroes.  No skill panel display for enemy player and ally heroes
       }
 
+   
+
 
    }
 }

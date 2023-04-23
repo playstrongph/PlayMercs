@@ -67,8 +67,6 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
     /// <returns></returns>
     private IEnumerator ShowPreview()
     {
-        //TODO: Show Hero Preview for Enemy Heroes Only?
-        
         yield return new WaitForSeconds(displayDelay);
         
         if (_enablePreview)
