@@ -20,7 +20,7 @@ namespace SOAssets
     [Header("SCRIPTABLE OBJECT ASSETS")]
     [SerializeField]  [RequireInterfaceAttribute.RequireInterface(typeof(ITeamHeroesAsset))] private ScriptableObject allyTeamHeroes; 
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ITeamHeroesAsset))]private ScriptableObject enemyTeamHeroes;
-    
+
     #endregion
 
     #region PROPERTIES

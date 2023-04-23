@@ -19,7 +19,12 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
    #endregion
         
    #region METHODS
-
+   
+   /// <summary>
+   /// Called inside a for loop in Initialize Heroes
+   /// </summary>
+   /// <param name="hero"></param>
+   /// <param name="player"></param>
    public void StartAction(IHero hero, IPlayer player)
    {
       //Create Hero Skills GameObject and set its correct colors
@@ -44,7 +49,8 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       //Loads the skill information and visuals
       UpdateSkills(hero);
       
-      
+      //Hide hero skills after initialization
+      heroSkills.ThisGameObject.SetActive(false);
    }
 
 
@@ -140,6 +146,8 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       heroSkill.Hero.HeroInformation.HeroClass.SetHeroSkillPreviewColors(heroSkillPreview);
 
    }
+
+   
 
 
    #endregion

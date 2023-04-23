@@ -20,6 +20,9 @@ public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
     private void OnMouseDown()
     {
       Hero.HeroVisual.HeroPreview.ShowHeroPreview.TurnOn();
+      
+      //TODO: 1)Turn Off Currently Selected Hero SKills  2) Display Selected Hero Skills, and 3) Set As Selected hero Skill   
+      
     }
         
     private void OnMouseUp()

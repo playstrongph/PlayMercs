@@ -117,10 +117,12 @@
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceAttribute.cs" />
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceDrawer.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\AllyPlayerAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\BattleSceneSettingsAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\CasterClassAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\DefenderClassAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\DruidRaceAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\EnemyPlayerAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\FighterClassAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\FrostSkillElementAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\HeroAsset.cs" />
@@ -131,11 +133,13 @@
      <Compile Include="Assets\Scripts\SOAssets\IHeroAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\IHeroClassAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\IHeroRaceAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\IPlayerAllianceAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ISkillAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ISkillElementAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ITeamHeroesAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\NoSkillElementAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\OrcRaceAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\PlayerAllianceAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillElementAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\TaurenRaceAsset.cs" />

@@ -4,7 +4,7 @@ namespace SOAssets
 {
     public interface ITeamHeroesAsset
     {
-        int HeroCount { get; }
+        IPlayerAllianceAsset PlayerAllianceAsset { get; }
 
         List<IHeroAsset> HeroAssets { get;}
     }

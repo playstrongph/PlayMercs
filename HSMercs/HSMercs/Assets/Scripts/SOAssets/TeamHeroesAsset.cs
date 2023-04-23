@@ -7,16 +7,17 @@ namespace SOAssets
    public class TeamHeroesAsset : ScriptableObject, ITeamHeroesAsset
    {
       #region VARIABLES
-
-      //TEMP Script
-      [SerializeField] private int heroCount = 4;
-
+      
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAllianceAsset))] private ScriptableObject playerAllianceAsset = null;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroAsset))] private List<ScriptableObject> heroAssets = new List<ScriptableObject>();
+      
 
       #endregion
 
       #region PROPERTIES
 
+      public IPlayerAllianceAsset PlayerAllianceAsset => playerAllianceAsset as IPlayerAllianceAsset;
+      
       public List<IHeroAsset> HeroAssets
       {
          get
@@ -29,8 +30,6 @@ namespace SOAssets
             return iHeroAssetList;
          }
       }
-
-      public int HeroCount => heroCount;
 
       #endregion
 
