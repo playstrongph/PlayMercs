@@ -73,6 +73,16 @@ namespace SOAssets
          skillPreviewVisual.GreenFrame.enabled = false;
       }
       
+      public override void SetHeroPreviewSkillFrameColor(ISkill skill)
+      {
+         var previewVisual = skill.SkillVisual.SkillPreviewVisual;
+         
+         previewVisual.BlueFrame.enabled = true;
+         previewVisual.RedFrame.enabled = false;
+         previewVisual.GreenFrame.enabled = false;
+      }
+      
+      
 
       #endregion
    }

@@ -111,6 +111,7 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       skillPreview.HeroPreviewSkillName.text = heroSkill.SkillAttributes.SkillName;
       
       
+      heroSkill.Hero.HeroInformation.HeroClass.SetHeroPreviewSkillFrameColor(heroSkill);
    }
 
 

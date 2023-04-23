@@ -9,7 +9,7 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
    #region VARIABLES
    
   
-   private IPlayer _player;
+   //private IPlayer _player;
 
    #endregion
         
@@ -24,7 +24,7 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
    public void StartAction(ITeamHeroesAsset teamHeroesAsset, GameObject heroPrefab, IHeroes heroes, IPlayer player)
    {
       //Set the player
-      _player = player;
+      //_player = player;
       
       foreach (var heroAsset in teamHeroesAsset.HeroAssets)
       {
@@ -43,7 +43,7 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
       
       //TO BE OBSOLETED ?
       //Need a coroutine here since using a method doesn't put it in its proper position
-      StartCoroutine(SetHeroPreviewPosition(heroes));
+      StartCoroutine(SetHeroPreviewPosition(heroes,player));
    }
 
    private void LoadHeroStatsAndInformation(IHeroAsset heroAsset, IHero hero)
@@ -124,12 +124,13 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
    /// Set the hero previews into the correct world space position
    /// </summary>
    /// <param name="heroes"></param>
+   ///  <param name="player"></param>
    /// <returns></returns>
-   private IEnumerator SetHeroPreviewPosition(IHeroes heroes)
+   private IEnumerator SetHeroPreviewPosition(IHeroes heroes,IPlayer player)
    {
-      yield return StartCoroutine(CenterHeroPreviewPosition(heroes.HeroStatusLists));
+      yield return StartCoroutine(CenterHeroPreviewPosition(heroes.HeroStatusLists,player));
       
-      yield return StartCoroutine(SetParentToHeroPreviews(heroes.HeroStatusLists));
+      yield return StartCoroutine(SetParentToHeroPreviews(heroes.HeroStatusLists,player));
       
       
       
@@ -140,11 +141,12 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
    /// <summary>
    /// Center the hero preview position on the board
    /// </summary>
-   /// <param name="heroStatusLists"></param>  
+   /// <param name="heroStatusLists"></param>
+   /// <param name="player"></param>
    /// <returns></returns>
-   private IEnumerator CenterHeroPreviewPosition(IHeroStatusLists heroStatusLists)
+   private IEnumerator CenterHeroPreviewPosition(IHeroStatusLists heroStatusLists, IPlayer player)
    {
-      var battleSceneManagerTransform = _player.BattleSceneManager.ThisGameObject.transform;
+      var battleSceneManagerTransform = player.BattleSceneManager.ThisGameObject.transform;
       
       foreach (var hero in heroStatusLists.GetAliveHeroList())
       {
@@ -164,15 +166,16 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
    /// <summary>
    /// Set the parent of hero previews to the parent transform
    /// </summary>
-   /// <param name="heroStatusLists"></param> 
+   /// <param name="heroStatusLists"></param>
+   /// <param name="player"></param>
    /// <returns></returns>
-   private IEnumerator SetParentToHeroPreviews(IHeroStatusLists heroStatusLists)
+   private IEnumerator SetParentToHeroPreviews(IHeroStatusLists heroStatusLists, IPlayer player)
    {
       foreach (var hero in heroStatusLists.GetAliveHeroList())
       {
          var heroPreviewTransform = hero.HeroVisual.HeroPreview.ThisTransform;
          
-         heroPreviewTransform.SetParent(_player.HeroPreviewsTransform);
+         heroPreviewTransform.SetParent(player.HeroPreviewsTransform);
       }
       
       yield return null;
