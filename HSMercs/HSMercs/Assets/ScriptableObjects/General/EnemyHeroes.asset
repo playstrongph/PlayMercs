@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: EnemyHeroes
   m_EditorClassIdentifier: 
   heroCount: 4
-  heroAssets: []
+  heroAssets:
+  - {fileID: 11400000, guid: bff3b54305f275040a408a77caa88802, type: 2}
+  - {fileID: 11400000, guid: bff3b54305f275040a408a77caa88802, type: 2}
+  - {fileID: 11400000, guid: bff3b54305f275040a408a77caa88802, type: 2}

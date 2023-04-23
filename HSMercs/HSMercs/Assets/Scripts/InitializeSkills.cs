@@ -26,44 +26,42 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       var heroSkillsPrefab = player.BattleSceneManager.BattleSceneSettings.HeroSkillsPrefab;
       var heroSkillsGameObject = Instantiate(heroSkillsPrefab, player.BattleSceneManager.ThisGameObject.transform);
       var heroSkills = heroSkillsGameObject.GetComponent<IHeroSkills>();
-      
-      
-      
+
+
       //Set Hero Reference to its skills
       hero.HeroSkills = heroSkills;
-
+      
+      //Set the correct parent game object and name for the hero skills
       heroSkillsGameObject.transform.SetParent(player.HeroSkillsTransform);
       heroSkillsGameObject.name = hero.HeroInformation.HeroName + "Skills";
       
+      //Set the skill panel color based on hero class
       hero.HeroInformation.HeroClass.SetSkillPanelClassColor(hero);
-      
-      //TODO: Set the HeroSkillPreview, Skill Panel, and Hero Skill GameObject to either 3 or 4 skill configuration
 
-      UpdateSkillNumberConfiguration(hero);
+      //Configuration for either 3 or 4 skills
+      UpdateSkillCountConfiguration(hero);
       
-      UpdateSkills(hero,hero.HeroSkills);
+      //Loads the skill information and visuals
+      UpdateSkills(hero);
       
       
    }
 
 
-   private void UpdateSkillNumberConfiguration(IHero hero)
+   private void UpdateSkillCountConfiguration(IHero hero)
    {
       var heroSkillsCount = hero.HeroInformation.HeroAsset.SkillAssets.Count;
-      var fourSkillsCount = 4;
+      var standardSkillCount = 3;
 
-      if (heroSkillsCount == fourSkillsCount)
+      if (heroSkillsCount > standardSkillCount)
       {
-         var skillPreview = hero.HeroVisual.HeroPreview.HeroSkillPreviews[fourSkillsCount-1];
-         skillPreview.ThisTransform.gameObject.SetActive(true);
-         
          hero.HeroSkills.ThreeSkillPanel.ThisGameObject.SetActive(false);
          hero.HeroSkills.FourSkillPanel.ThisGameObject.SetActive(true);
       }
 
    }
 
-   private void UpdateSkills(IHero hero, IHeroSkills heroSkills)
+   private void UpdateSkills(IHero hero)
    {
       var skillAssets = hero.HeroInformation.HeroAsset.SkillAssets;
       
@@ -71,23 +69,24 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
          for (var index = 0; index < skillAssets.Count; index++)
          {
             var skillAsset = skillAssets[index];
-            var skill = heroSkills.AllHeroSkills[index];
-            var skillPreview = hero.HeroVisual.HeroPreview.HeroSkillPreviews[index];
+            var skill = hero.HeroSkills.AllHeroSkills[index];
+            var heroSkillPreview = hero.HeroVisual.HeroPreview.HeroSkillPreviews[index];
             
-            //Set the skills hero reference
+            //Set each skill's hero caster reference
             skill.Hero = hero;
             
-            //Specifically for fourth skill, set the skill game object to true
+            //Sets the skill and skill preview's game object tor true; specifically the 4th skill (when there are 4 skills)
             skill.ThisGameObject.SetActive(true);
+            heroSkillPreview.ThisTransform.gameObject.SetActive(true);
             
-
+            //loads the skill information
             LoadSkillAttributes(skillAsset,skill);
             
             //Load Skill Visuals
             LoadSkillVisuals(skillAsset,skill);
             
             //Load Hero Preview Skill Visuals
-            LoadHeroSkillPreviewVisuals(skillPreview, skill);
+            LoadHeroSkillPreviewVisuals(heroSkillPreview, skill);
 
          }
       
@@ -129,14 +128,16 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       skill.Hero.HeroInformation.HeroClass.SetSkillPreviewFrameColor(skill);
    }
 
-   private void LoadHeroSkillPreviewVisuals(IHeroSkillPreview skillPreview, ISkill heroSkill)
+   private void LoadHeroSkillPreviewVisuals(IHeroSkillPreview heroSkillPreview, ISkill heroSkill)
    {
-      skillPreview.SkillImage.sprite = heroSkill.SkillVisual.SkillGraphics.SkillReadyGraphic.sprite;
-      skillPreview.HeroPreviewSkillDescription.text = heroSkill.SkillAttributes.Description;
-      skillPreview.HeroPreviewSkillElement.text = heroSkill.SkillAttributes.SkillElement.ElementName;
-      skillPreview.HeroPreviewSkillName.text = heroSkill.SkillAttributes.SkillName;
       
-      heroSkill.Hero.HeroInformation.HeroClass.SetHeroSkillPreviewColors(skillPreview);
+      
+      heroSkillPreview.SkillImage.sprite = heroSkill.SkillVisual.SkillGraphics.SkillReadyGraphic.sprite;
+      heroSkillPreview.HeroPreviewSkillDescription.text = heroSkill.SkillAttributes.Description;
+      heroSkillPreview.HeroPreviewSkillElement.text = heroSkill.SkillAttributes.SkillElement.ElementName;
+      heroSkillPreview.HeroPreviewSkillName.text = heroSkill.SkillAttributes.SkillName;
+      
+      heroSkill.Hero.HeroInformation.HeroClass.SetHeroSkillPreviewColors(heroSkillPreview);
 
    }
 
