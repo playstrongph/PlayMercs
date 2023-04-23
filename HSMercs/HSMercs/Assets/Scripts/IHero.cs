@@ -11,5 +11,7 @@ public interface IHero
     IHeroSkills HeroSkills { get; set; }
 
     GameObject GameObjectName { get; }
+    
+    IPlayer Player { get; set; }
 
 }

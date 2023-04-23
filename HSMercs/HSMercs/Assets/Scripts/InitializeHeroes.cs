@@ -34,6 +34,9 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
          //Add to heroes list
          heroes.HeroStatusLists.AddToAliveHeroList(hero);
          
+         //Set Player Reference
+         hero.Player = player;
+         
          //Load logic stats and information
          LoadHeroStatsAndInformation(heroAsset,hero,player);
          

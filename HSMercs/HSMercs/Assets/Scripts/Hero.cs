@@ -26,9 +26,9 @@ public class Hero : MonoBehaviour, IHero
     public IBaseHeroStats BaseHeroStats { get;  private set; }
     public IHeroStats HeroStats { get;  private set; }
     public GameObject GameObjectName { get => this.gameObject; private set => value = this.gameObject; }
-    
-    
     public IHeroSkills HeroSkills { get=> heroSkills as IHeroSkills; set => heroSkills = value as Object; }
+
+    public IPlayer Player { get; set; }
 
 
     #endregion

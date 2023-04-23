@@ -28,7 +28,11 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
     public void TurnOn()
     {
         _enablePreview = true;
+        
         StartCoroutine(ShowPreview());
+        
+        //TODO: Update Hero Skills Display
+        UpdateSkillsDisplay();
     }
     
     /// <summary>
@@ -45,8 +49,8 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
     public void TurnOff()
     {
         _enablePreview = false;
-        
         _heroPreview.HeroPreviewCanvas.enabled = false;
+        StopCoroutine(ShowPreview());
     }
     
     /// <summary>
@@ -54,7 +58,6 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
     /// </summary>
     public void TurnOffMouseExit()
     {
-        
         _heroPreview.HeroPreviewCanvas.enabled = false;
     }
 
@@ -65,6 +68,7 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
     private IEnumerator ShowPreview()
     {
         yield return new WaitForSeconds(displayDelay);
+        
         if (_enablePreview)
         {
             var hero = _heroPreview.Hero;
@@ -81,6 +85,22 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
             UpdateHeroSkillPreview(hero);
         }
     }
+    
+    /// <summary>
+    /// Updates the hero skills on display after a hero is selected
+    /// </summary>
+    private void UpdateSkillsDisplay()
+    {
+        var hero = _heroPreview.Hero;
+        var heroSkills = _heroPreview.Hero.HeroSkills;
+        var player = _heroPreview.Hero.Player;
+        var heroAlliance = _heroPreview.Hero.HeroInformation.PlayerAlliance;
+        
+        heroAlliance.UpdateHeroSkillsOnDisplay(heroSkills,player);
+
+    }
+
+
 
     private void PreviewArmorDisplay(IHero hero)
     {

@@ -20,6 +20,8 @@ public class Player : MonoBehaviour, IPlayer
    
    [Header("SET IN RUNTIME")]
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAllianceAsset))] private ScriptableObject playerAllianceAsset = null;
+
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkills))] private Object heroSkillsOnDisplay = null;
         
 
    #endregion
@@ -36,6 +38,7 @@ public class Player : MonoBehaviour, IPlayer
    public Transform HeroSkillsTransform { get => heroSkillsTransform; private set => heroSkillsTransform = value; }
 
    public IPlayerAllianceAsset PlayerAllianceAsset { get => playerAllianceAsset as IPlayerAllianceAsset; set => playerAllianceAsset = value as ScriptableObject; }
+   public IHeroSkills HeroSkillsOnDisplay { get => heroSkillsOnDisplay as IHeroSkills; set => heroSkillsOnDisplay = value as Object; }
 
    #endregion
         

@@ -819,10 +819,6 @@ MonoBehaviour:
   - {fileID: 5517027368950620942}
   - {fileID: 5517027368019036828}
   - {fileID: 5517027367746249843}
-  heroSkill1Preview: {fileID: 5517027368856030611}
-  heroSkill2Preview: {fileID: 5517027368950620942}
-  heroSkill3Preview: {fileID: 5517027368019036828}
-  heroSkill4Preview: {fileID: 5517027367746249843}
   statusEffectPreviewTransform: {fileID: 3473642225268178949}
 --- !u!223 &3661642154285043020
 Canvas:
@@ -857,7 +853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c322111d4d9cf14a89d42098f24900b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayDelay: 0.5
+  displayDelay: 0.75
 --- !u!114 &3661642154285043019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1697,6 +1693,7 @@ MonoBehaviour:
   heroSprite: {fileID: 0}
   heroClass: {fileID: 0}
   heroRace: {fileID: 0}
+  playerAlliance: {fileID: 0}
   heroAsset: {fileID: 0}
 --- !u!114 &1486563308202474854
 MonoBehaviour:
