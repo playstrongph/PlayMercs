@@ -87,10 +87,6 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
       hero.BaseHeroStats.EffectResistance = heroAsset.EffectResistance;
       hero.BaseHeroStats.DualAttackChance = heroAsset.DualAttackChance;
       hero.BaseHeroStats.HitChance = heroAsset.HitChance;
-      
-      
-      
-
    }
 
    private void LoadHeroVisuals(IHero hero)

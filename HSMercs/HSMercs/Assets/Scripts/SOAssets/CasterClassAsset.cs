@@ -50,20 +50,22 @@ namespace SOAssets
          heroGraphics.Hero.HeroVisual.HeroPreview.HeroGraphicPreview.RedHeroGraphic.enabled = false;
          heroGraphics.Hero.HeroVisual.HeroPreview.HeroGraphicPreview.BlueHeroGraphic.enabled = true;
 
-         heroGraphics.Hero.HeroSkills.ThreeSkillPanel.BluePanel.enabled = true;
-         heroGraphics.Hero.HeroSkills.ThreeSkillPanel.RedPanel.enabled = false;
-         heroGraphics.Hero.HeroSkills.ThreeSkillPanel.GreenPanel.enabled = false;
-         
-         /*heroGraphics.Hero.HeroSkills.FourSkillPanel.BluePanel.enabled = true;
-         heroGraphics.Hero.HeroSkills.FourSkillPanel.RedPanel.enabled = false;
-         heroGraphics.Hero.HeroSkills.FourSkillPanel.GreenPanel.enabled = false;*/
-
-         //var heroSkills = heroGraphics.Hero.HeroSkills.AllHeroSkills;
+        
 
       }
       
      
-
+      public override void SetSkillPanelClassColor(IHero hero)
+      {
+         hero.HeroSkills.ThreeSkillPanel.BluePanel.enabled = true;
+         hero.HeroSkills.ThreeSkillPanel.RedPanel.enabled = false;
+         hero.HeroSkills.ThreeSkillPanel.GreenPanel.enabled = false;
+         
+         hero.HeroSkills.FourSkillPanel.BluePanel.enabled = true;
+         hero.HeroSkills.FourSkillPanel.RedPanel.enabled = false;
+         hero.HeroSkills.FourSkillPanel.GreenPanel.enabled = false;
+      }
+      
 
       #endregion
    }

@@ -22,17 +22,19 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
 
    public void StartAction(IHero hero, IPlayer player)
    {
+      //Create Hero Skills GameObject and set its correct colors
       var heroSkillsPrefab = player.BattleSceneManager.BattleSceneSettings.HeroSkillsPrefab;
       var heroSkillsGameObject = Instantiate(heroSkillsPrefab, player.BattleSceneManager.ThisGameObject.transform);
       var heroSkills = heroSkillsGameObject.GetComponent<IHeroSkills>();
       
-      //Create Hero Skills GameObject
+      //Set Hero Reference to its skills
+      hero.HeroSkills = heroSkills;
+
       heroSkillsGameObject.transform.SetParent(player.HeroSkillsTransform);
       heroSkillsGameObject.name = hero.HeroInformation.HeroName + "Skills";
       
-      //Set Hero Reference to its skills
-      hero.HeroSkills = heroSkills ;
-      
+      hero.HeroInformation.HeroClass.SetSkillPanelClassColor(hero);
+
       UpdateSkills(hero,hero.HeroSkills);
    }
 
@@ -43,14 +45,14 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       //Three Skill Panel
       if (skillAssets.Count <= 3)
       {
-         //Debug.Log("AllHeroSkills: " +heroSkills.AllHeroSkills.Count);
-         
-         
          for (var index = 0; index < skillAssets.Count; index++)
          {
             var skillAsset = skillAssets[index];
             var skill = heroSkills.AllHeroSkills[index];
             var skillPreview = hero.HeroVisual.HeroPreview.HeroSkillPreviews[index];
+            
+            //Set the skills hero reference
+            skill.Hero = hero;
             
 
             LoadSkillAttributes(skillAsset,skill);
@@ -96,8 +98,6 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       skill.SkillVisual.SkillPreviewVisual.SkillNameText.text = skillAsset.SkillName;
       skill.SkillVisual.SkillPreviewVisual.SkillDescriptionText.text = skillAsset.SkillDescription;
       skill.SkillVisual.SkillPreviewVisual.SkillElementText.text = skillAsset.SkillElement.ElementName;
-      
-      
    }
 
    private void LoadHeroSkillPreviewVisuals(IHeroSkillPreview skillPreview, ISkill heroSkill)

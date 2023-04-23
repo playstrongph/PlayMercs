@@ -5,5 +5,7 @@
         
         string ClassName { get;}
         void SetClassColor(IHeroGraphics heroGraphics);
+
+        void SetSkillPanelClassColor(IHero hero);
     }
 }

@@ -37,6 +37,11 @@ namespace SOAssets
          heroGraphics.BlueHeroGraphic.enabled = false;
       }
 
+      public virtual void SetSkillPanelClassColor(IHero hero)
+      {
+         
+      }
+
 
       #endregion
    }

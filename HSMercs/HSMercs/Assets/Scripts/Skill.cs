@@ -22,7 +22,12 @@ public class Skill : MonoBehaviour, ISkill
 
     public ISkillAttributes SkillAttributes { get; private set; }
 
-    public GameObject ThisGameObject { get; set; } 
+    public GameObject ThisGameObject { get; set; }
+    
+    /// <summary>
+    /// Skill's reference to its hero
+    /// </summary>
+    public IHero Hero { get; set; }
 
     #endregion
 
