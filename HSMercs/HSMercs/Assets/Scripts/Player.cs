@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using SOAssets;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Object = UnityEngine.Object;
@@ -16,6 +17,9 @@ public class Player : MonoBehaviour, IPlayer
    [SerializeField] private Transform heroPreviewsTransform;
    
    [SerializeField] private Transform heroSkillsTransform;
+   
+   [Header("SET IN RUNTIME")]
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAllianceAsset))] private ScriptableObject playerAllianceAsset = null;
         
 
    #endregion
@@ -31,6 +35,7 @@ public class Player : MonoBehaviour, IPlayer
    
    public Transform HeroSkillsTransform { get => heroSkillsTransform; private set => heroSkillsTransform = value; }
 
+   public IPlayerAllianceAsset PlayerAllianceAsset { get => playerAllianceAsset as IPlayerAllianceAsset; set => playerAllianceAsset = value as ScriptableObject; }
 
    #endregion
         

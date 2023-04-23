@@ -1,3 +1,4 @@
+using SOAssets;
 using UnityEngine;
 
 public interface IPlayer
@@ -8,6 +9,8 @@ public interface IPlayer
     Transform HeroPreviewsTransform { get; }
 
     Transform HeroSkillsTransform { get; }
+
+    IPlayerAllianceAsset PlayerAllianceAsset { get; set; }
 
 
 }

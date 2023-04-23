@@ -62,6 +62,7 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    private IEnumerator InitializeAllPlayers()
    {
       _initializePlayers.StartAction();
+
       yield return null;
    }
 
@@ -74,6 +75,10 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
       var enemyHeroes = EnemyPlayer.Heroes;
       var mainPlayer = MainPlayer;
       var enemyPlayer = EnemyPlayer;
+
+      //Can be placed in initialize all players but is safer here
+      MainPlayer.PlayerAllianceAsset = allyHeroesAsset.PlayerAllianceAsset;
+      EnemyPlayer.PlayerAllianceAsset = enemyHeroesAsset.PlayerAllianceAsset;
       
       _initializeHeroes.StartAction(allyHeroesAsset,heroPrefab,allyHeroes,mainPlayer);
       _initializeHeroes.StartAction(enemyHeroesAsset,heroPrefab,enemyHeroes,enemyPlayer);

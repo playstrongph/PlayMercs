@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d31d417b864daa4fa0232de9fabb71d, type: 3}
   m_Name: EnemyHeroes
   m_EditorClassIdentifier: 
-  heroCount: 4
+  playerAllianceAsset: {fileID: 11400000, guid: 648da32d949687d45b1aa9c9034a2cd5,
+    type: 2}
   heroAssets:
   - {fileID: 11400000, guid: bff3b54305f275040a408a77caa88802, type: 2}
   - {fileID: 11400000, guid: bff3b54305f275040a408a77caa88802, type: 2}

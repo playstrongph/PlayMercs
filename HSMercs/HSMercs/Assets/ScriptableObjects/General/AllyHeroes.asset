@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d31d417b864daa4fa0232de9fabb71d, type: 3}
   m_Name: AllyHeroes
   m_EditorClassIdentifier: 
-  heroCount: 4
+  playerAllianceAsset: {fileID: 11400000, guid: 86864ef920645944cb02329bea54b6cf,
+    type: 2}
   heroAssets:
   - {fileID: 11400000, guid: 06aa3daa179d73e4191c98cd3cf62ed0, type: 2}
   - {fileID: 11400000, guid: 443405fe221ef2146b46f00c16f81374, type: 2}

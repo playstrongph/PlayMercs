@@ -35,7 +35,7 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
          heroes.HeroStatusLists.AddToAliveHeroList(hero);
          
          //Load logic stats and information
-         LoadHeroStatsAndInformation(heroAsset,hero);
+         LoadHeroStatsAndInformation(heroAsset,hero,player);
          
          //load hero visuals image and texts
          LoadHeroVisuals(hero);
@@ -46,7 +46,7 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
       StartCoroutine(SetHeroPreviewPosition(heroes,player));
    }
 
-   private void LoadHeroStatsAndInformation(IHeroAsset heroAsset, IHero hero)
+   private void LoadHeroStatsAndInformation(IHeroAsset heroAsset, IHero hero,IPlayer player)
    {
       //Hero Information
       hero.GameObjectName.name = heroAsset.HeroName;
@@ -59,6 +59,7 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
       hero.HeroInformation.HeroRace = Instantiate(heroAsset.HeroRace as ScriptableObject) as IHeroRaceAsset;
       //HeroAsset Reference
       hero.HeroInformation.HeroAsset = Instantiate(heroAsset as ScriptableObject) as IHeroAsset;
+      hero.HeroInformation.PlayerAlliance = player.PlayerAllianceAsset;
       
       
       //Hero Stats
