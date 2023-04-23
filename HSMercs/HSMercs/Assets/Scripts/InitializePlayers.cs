@@ -58,8 +58,12 @@ public class InitializePlayers : MonoBehaviour, IInitializePlayers
       //Set References
       _battleSceneManager.MainPlayer = mainPlayer;
       _battleSceneManager.EnemyPlayer = enemyPlayer;
-      
-      
+
+      _battleSceneManager.MainPlayer.OtherPlayer = enemyPlayer;
+      _battleSceneManager.EnemyPlayer.OtherPlayer = mainPlayer;
+
+
+
 
    }
 

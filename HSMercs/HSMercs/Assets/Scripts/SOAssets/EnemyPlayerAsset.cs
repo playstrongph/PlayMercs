@@ -8,7 +8,11 @@ namespace SOAssets
    public class EnemyPlayerAsset : PlayerAllianceAsset
    {
      
-      
+      public override void UpdateHeroSkillsOnDisplay(IHeroSkills newHeroSkills, IPlayer player)
+      {
+         // 1) Disable the current hero skills on display
+         player.HeroSkillsOnDisplay?.ThisGameObject.SetActive(false);
+      }
       
       
    }

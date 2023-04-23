@@ -28,8 +28,6 @@ public class Player : MonoBehaviour, IPlayer
         
    #region PROPERTIES
 
-   //public IHeroesList AliveHeroes { get=> aliveHeroes as IHeroesList; private set => aliveHeroes = value as Object;}
-
    public IBattleSceneManager BattleSceneManager { get; set; }
 
    public IHeroes Heroes { get => heroes as IHeroes; private set => heroes = value as Object; }
@@ -39,6 +37,11 @@ public class Player : MonoBehaviour, IPlayer
 
    public IPlayerAllianceAsset PlayerAllianceAsset { get => playerAllianceAsset as IPlayerAllianceAsset; set => playerAllianceAsset = value as ScriptableObject; }
    public IHeroSkills HeroSkillsOnDisplay { get => heroSkillsOnDisplay as IHeroSkills; set => heroSkillsOnDisplay = value as Object; }
+
+   /// <summary>
+   /// For the ally player, this is the enemy player; for the enemy player, this is the ally player
+   /// </summary>
+   public IPlayer OtherPlayer { get; set; }
 
    #endregion
         

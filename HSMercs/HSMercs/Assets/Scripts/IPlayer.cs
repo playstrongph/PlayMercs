@@ -13,6 +13,8 @@ public interface IPlayer
     IPlayerAllianceAsset PlayerAllianceAsset { get; set; }
 
     IHeroSkills HeroSkillsOnDisplay { get; set; }
+    
+    IPlayer OtherPlayer { get; set; }
 
 
 }
