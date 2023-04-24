@@ -95,7 +95,8 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
             LoadHeroSkillPreviewVisuals(heroSkillPreview, skill);
             
             //TODO: Apply Skill Type Visual Configuration
-            
+            LoadSkillTypeVisuals(skill);
+
             //TODO: Apply Skill Readiness Visual Configuration
 
          }
@@ -114,7 +115,6 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       skill.SkillAttributes.FightingSpirit = skillAsset.FightingSpirit;
       skill.SkillAttributes.SkillSprite = skillAsset.SkillIcon;
       skill.SkillAttributes.SkillElement = skillAsset.SkillElement;
-
       skill.SkillAttributes.SkillType = skillAsset.SkillType;
       skill.SkillAttributes.SkillReadiness = skillAsset.SkillReadiness;
 
@@ -157,10 +157,10 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
    
    private void LoadSkillTypeVisuals(ISkill skill)
    {
-      //TODO: Passive - no cooldown text, no speed icon, no glow
-      //BASIC: - no speed icon, no cooldown text, always with green glow
-      //Active - Ready: Green glow, speed, no cooldown icon and text
-      //Active - Not Ready: Half icon, with cooldown icon and text, no glow
+      //Note: 2 permission checks:  SkillType first, followed by Skill Readiness
+      
+      //Skill Type Visuals need to check for skill readiness status first
+      skill.SkillAttributes.SkillType.LoadSkillTypeVisuals(skill);
       
    }
 

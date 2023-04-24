@@ -22,6 +22,7 @@ namespace SOAssets
       public override void LoadSkillTypeVisuals(ISkill skill)
       {
          //TODO: SkillReadiness Effect
+         skill.SkillAttributes.SkillReadiness.LoadSkillReadinessVisuals(skill);
 
       }
 

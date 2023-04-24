@@ -32,6 +32,8 @@ namespace SOAssets
          skillGraphics.SkillReadyFrame.enabled = false;
          skillGraphics.SkillReadyGraphic.enabled = false;
          skillGraphics.SkillReadyText.enabled = false;
+         
+         //TODO - Disable Draggable
       }
 
       #endregion
