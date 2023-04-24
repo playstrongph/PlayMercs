@@ -93,6 +93,10 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
             
             //Load Hero Preview Skill Visuals
             LoadHeroSkillPreviewVisuals(heroSkillPreview, skill);
+            
+            //TODO: Apply Skill Type Visual Configuration
+            
+            //TODO: Apply Skill Readiness Visual Configuration
 
          }
       
@@ -146,8 +150,18 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       heroSkill.Hero.HeroInformation.HeroClass.SetHeroSkillPreviewColors(heroSkillPreview);
 
    }
-
    
+   
+   private void LoadSkillTypeVisuals(ISkill skill)
+   {
+      //TODO: Passive - no cooldown text, no speed icon, no glow
+      //BASIC: - no speed icon, no cooldown text, always with green glow
+      //Active - Ready: Green glow, speed, no cooldown icon and text
+      //Active - Not Ready: Half icon, with cooldown icon and text, no glow
+      
+   }
+
+
 
 
    #endregion
