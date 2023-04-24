@@ -11,6 +11,8 @@ namespace SOAssets
         int FightingSpirit { get; }
         int SkillSpeed { get; }
         ISkillElementAsset SkillElement { get; }
+        ISkillTypeAsset SkillType { get; }
+        ISkillReadinessAsset SkillReadiness { get; }
 
     }
 }

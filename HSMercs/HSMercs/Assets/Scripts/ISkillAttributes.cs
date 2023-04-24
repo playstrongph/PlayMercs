@@ -13,4 +13,6 @@ public interface ISkillAttributes
     int FightingSpirit { get; set; }
     Sprite SkillSprite { get; set; }
     ISkillElementAsset SkillElement { get; set; }
+    ISkillTypeAsset SkillType { get; set; }
+    ISkillReadinessAsset SkillReadiness { get; set; }
 }

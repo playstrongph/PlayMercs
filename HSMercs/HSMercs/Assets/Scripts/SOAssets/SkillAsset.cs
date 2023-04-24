@@ -25,6 +25,8 @@ namespace SOAssets
       [Header("Objects and Assets")]
       [SerializeField] private Sprite skillSprite = null;
       [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillElementAsset))] private ScriptableObject skillElement = null;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTypeAsset))] private ScriptableObject skillType = null;
+      [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillReadinessAsset))] private ScriptableObject skillReadiness = null;
 
       #endregion
 
@@ -41,6 +43,8 @@ namespace SOAssets
       public int FightingSpirit => fightingSpirit;
       
       public ISkillElementAsset SkillElement => skillElement as ISkillElementAsset;
+      public ISkillTypeAsset SkillType => skillType as ISkillTypeAsset;
+      public ISkillReadinessAsset SkillReadiness => skillReadiness as ISkillReadinessAsset;
 
       #endregion
 

@@ -115,6 +115,9 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       skill.SkillAttributes.SkillSprite = skillAsset.SkillIcon;
       skill.SkillAttributes.SkillElement = skillAsset.SkillElement;
 
+      skill.SkillAttributes.SkillType = skillAsset.SkillType;
+      skill.SkillAttributes.SkillReadiness = skillAsset.SkillReadiness;
+
    }
 
    private void LoadSkillVisuals(ISkillAsset skillAsset,ISkill skill)
