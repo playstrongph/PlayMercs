@@ -2718,7 +2718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillGraphics: {fileID: 5999021464528106859}
-  skillPreviewVisual: {fileID: 5999021463900631787}
+  skillPreviewVisual: {fileID: 5999021464334427168}
 --- !u!114 &5999021463406912913
 MonoBehaviour:
   m_ObjectHideFlags: 0

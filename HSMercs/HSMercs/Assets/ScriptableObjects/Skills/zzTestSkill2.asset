@@ -23,4 +23,4 @@ MonoBehaviour:
     type: 3}
   skillElement: {fileID: 11400000, guid: 9aff07a286ac2e74882ae8c0046cb5a3, type: 2}
   skillType: {fileID: 11400000, guid: 577bbc32534a1f5489cf9d63fe36bb07, type: 2}
-  skillReadiness: {fileID: 11400000, guid: a24ac98961248504a9278c84ef795b6b, type: 2}
+  skillReadiness: {fileID: 11400000, guid: 461954722327d8349b0a265745077933, type: 2}
