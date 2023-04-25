@@ -126,8 +126,12 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       skill.SkillVisual.SkillGraphics.SkillReadyGraphic.sprite = skillAsset.SkillIcon;
       skill.SkillVisual.SkillGraphics.SkillNotReadyGraphic.sprite = skillAsset.SkillIcon;
       skill.SkillVisual.SkillGraphics.PassiveSkillGraphic.sprite = skillAsset.SkillIcon;
-
+      
+      //This is the skill speed
       skill.SkillVisual.SkillGraphics.SkillReadyText.text = skill.SkillAttributes.SkillSpeed.ToString();
+      
+      //This is the skill cooldown
+      skill.SkillVisual.SkillGraphics.SkillNotReadyText.text = skill.SkillAttributes.SkillCooldown.ToString();
 
       //Skill Preview
       skill.SkillVisual.SkillPreviewVisual.PreviewImage.sprite = skillAsset.SkillIcon;
