@@ -10678,7 +10678,7 @@ MonoBehaviour:
   skillElement: {fileID: 0}
   skillType: {fileID: 0}
   skillReadiness: {fileID: 0}
-  skillEnableStatus: {fileID: 11400000, guid: ef6e1b3ab0ed13e44ad32b3790e737ab, type: 2}
+  skillEnableStatus: {fileID: 11400000, guid: 86e95ae905e935448a7c35a0b727e9b2, type: 2}
 --- !u!1 &5999021464749634279
 GameObject:
   m_ObjectHideFlags: 0
