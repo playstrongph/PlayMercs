@@ -2704,7 +2704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b493d7e3c05b145bfc667028482558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillVisual: {fileID: 5999021464729893977}
+  skillVisual: {fileID: 5999021463406912912}
 --- !u!114 &5999021463406912912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2717,7 +2717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e3331319afc57644b3a28e61ce04226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillGraphics: {fileID: 5999021462955449634}
+  skillGraphics: {fileID: 5999021464528106859}
   skillPreviewVisual: {fileID: 5999021463900631787}
 --- !u!114 &5999021463406912913
 MonoBehaviour:
@@ -10678,7 +10678,7 @@ MonoBehaviour:
   skillElement: {fileID: 0}
   skillType: {fileID: 0}
   skillReadiness: {fileID: 0}
-  skillEnableStatus: {fileID: 11400000, guid: 86e95ae905e935448a7c35a0b727e9b2, type: 2}
+  skillEnableStatus: {fileID: 11400000, guid: ef6e1b3ab0ed13e44ad32b3790e737ab, type: 2}
 --- !u!1 &5999021464749634279
 GameObject:
   m_ObjectHideFlags: 0
