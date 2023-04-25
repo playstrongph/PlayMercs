@@ -15,4 +15,6 @@ public interface IHeroInformation
     IPlayerAllianceAsset PlayerAlliance { get; set; }
 
     IHeroAsset HeroAsset { get; set; }
+
+    ISkillEnableAsset SkillEnableAsset { get; set; }
 }

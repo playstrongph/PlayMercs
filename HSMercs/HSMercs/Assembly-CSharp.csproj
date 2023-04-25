@@ -137,6 +137,7 @@
      <Compile Include="Assets\Scripts\SOAssets\IPlayerAllianceAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ISkillAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ISkillElementAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\ISkillEnableAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ISkillReadinessAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ISkillTypeAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ITeamHeroesAsset.cs" />
@@ -144,7 +145,10 @@
      <Compile Include="Assets\Scripts\SOAssets\OrcRaceAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\PlayerAllianceAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\SkillDisabledAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillElementAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\SkillEnableAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\SkillEnabledAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillNotReadyAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillReadinessAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillReadyAsset.cs" />

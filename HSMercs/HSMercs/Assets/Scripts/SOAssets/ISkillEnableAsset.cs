@@ -2,10 +2,8 @@
 
 namespace SOAssets
 {
-    public interface ISkillReadinessAsset
+    public interface ISkillEnableAsset
     {
-        void LoadSkillReadinessVisuals(ISkill skill);
-
         void EnableTargetVisuals(Transform transform, ISkillTargetCollider skillTargetCollider);
     }
 }

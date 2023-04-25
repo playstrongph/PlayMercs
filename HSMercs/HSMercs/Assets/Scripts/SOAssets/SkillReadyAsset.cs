@@ -35,6 +35,17 @@ namespace SOAssets
          skillGraphics.SkillNotReadyGraphic.enabled = false;
          skillGraphics.SkillNotReadyText.enabled = false;
       }
+      
+      /// <summary>
+      /// Enable skill targeting when skill is NOT disabled and skill is ready
+      /// </summary>
+      /// <param name="transform"></param>
+      /// <param name="skillTargetCollider"></param>
+      public override void EnableTargetVisuals(Transform transform, ISkillTargetCollider skillTargetCollider)
+      {
+         var skill = skillTargetCollider.Skill;
+         skill.SkillAttributes.SkillEnableStatus.EnableTargetVisuals(transform,skillTargetCollider);
+      }
 
       #endregion
    }

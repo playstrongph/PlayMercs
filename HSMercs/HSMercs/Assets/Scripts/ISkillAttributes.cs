@@ -15,4 +15,7 @@ public interface ISkillAttributes
     ISkillElementAsset SkillElement { get; set; }
     ISkillTypeAsset SkillType { get; set; }
     ISkillReadinessAsset SkillReadiness { get; set; }
+    
+    //Set as Enabled by Default
+    ISkillEnableAsset SkillEnableStatus { get; set; }
 }

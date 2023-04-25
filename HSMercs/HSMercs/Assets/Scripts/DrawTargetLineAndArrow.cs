@@ -26,10 +26,18 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
     /// </summary>
     public void EnableTargetVisuals()
     {
+        //TODO: Check Skill Readiness and Skill Enabled first
+        
         //Resets local position to zero
-        transform.localPosition = Vector3.zero;
+        //transform.localPosition = Vector3.zero;
         //SkillTargetCollider.TargetArrow.SetActive(true);
-        SkillTargetCollider.Draggable.EnableDraggable();
+        //SkillTargetCollider.Draggable.EnableDraggable();
+        
+        //TEST
+        //TODO: Call Skill Readiness
+        //Enables Target visuals when skill is ready and skill is enabled
+        SkillTargetCollider.Skill.SkillAttributes.SkillReadiness.EnableTargetVisuals(transform,SkillTargetCollider);
+        
     }
     
     /// <summary>
