@@ -55,20 +55,21 @@ public class ShowSkillPreview : MonoBehaviour, IShowSkillPreview
         {
             skillPreviewCanvas.enabled = true;
             
-            UpdateSkillPreviewInformation();
+            UpdateSkillPreviewVisualsInformation();
         }
     }
     
     /// <summary>
     /// Updates the skill preview information to the latest values
+    /// TODO: Transfer this to skill graphics as a component
     /// </summary>
-    private void UpdateSkillPreviewInformation()
+    private void UpdateSkillPreviewVisualsInformation()
     {
         var skillPreview = _skill.SkillVisual.SkillPreviewVisual;
 
         skillPreview.CooldownText.text = _skill.SkillAttributes.SkillCooldown.ToString();
         skillPreview.SpeedText.text = _skill.SkillAttributes.SkillSpeed.ToString();
-
+        skillPreview.SkillDescriptionText.text = _skill.SkillAttributes.Description;
     }
 
     #endregion

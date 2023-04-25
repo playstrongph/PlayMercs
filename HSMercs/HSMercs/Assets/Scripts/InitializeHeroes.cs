@@ -119,11 +119,6 @@ public class InitializeHeroes : MonoBehaviour, IInitializeHeroes
       hero.HeroInformation.HeroRace.SetHeroRace(hero);
    }
 
-   private void LoadHeroPreviewVisuals(IHero hero)
-   {
-      //var heroSkills = hero.
-   }
-
    /// <summary>
    /// Set the hero previews into the correct world space position
    /// </summary>

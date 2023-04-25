@@ -13,5 +13,7 @@ public interface IHeroVisual
     /// </summary>
     IHeroPreview HeroPreview { get; }
 
-   
+    void UpdateAllHeroVisuals();
+
+
 }
