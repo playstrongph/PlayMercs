@@ -15,8 +15,8 @@ MonoBehaviour:
   skillName: Double Strike
   skillDescription: Attack an enemy.  If it was damaged this turn, gain +5 Attack
     and Attack it again.
-  skillCooldown: 3
-  skillSpeed: 4
+  skillCooldown: 124
+  skillSpeed: 456
   fightingSpirit: 0
   skillSprite: {fileID: -6420971277452434971, guid: e9bfdccb24453cc4e9569fd60f1764f9,
     type: 3}
