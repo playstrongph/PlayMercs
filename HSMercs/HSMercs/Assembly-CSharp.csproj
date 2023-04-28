@@ -114,6 +114,7 @@
      <Compile Include="Assets\Scripts\InitializeHeroes.cs" />
      <Compile Include="Assets\Scripts\InitializePlayers.cs" />
      <Compile Include="Assets\Scripts\InitializeSkills.cs" />
+     <Compile Include="Assets\Scripts\ManualSelectTarget.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceAttribute.cs" />
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceDrawer.cs" />

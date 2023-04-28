@@ -587,6 +587,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 798711185}
     m_Modifications:
+    - target: {fileID: 3661642154264253959, guid: 1bdb6e3c9f8f141449535801dcf3a8af,
+        type: 3}
+      propertyPath: m_Name
+      value: RedFrame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661642154753952406, guid: 1bdb6e3c9f8f141449535801dcf3a8af,
+        type: 3}
+      propertyPath: m_Name
+      value: BlueFrame
+      objectReference: {fileID: 0}
     - target: {fileID: 3661642155146651832, guid: 1bdb6e3c9f8f141449535801dcf3a8af,
         type: 3}
       propertyPath: m_Name
@@ -697,6 +707,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3661642155912928138, guid: 1bdb6e3c9f8f141449535801dcf3a8af,
+        type: 3}
+      propertyPath: m_Name
+      value: GreenFrame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330207906511490791, guid: 1bdb6e3c9f8f141449535801dcf3a8af,
+        type: 3}
+      propertyPath: m_Name
+      value: BlackFrame
+      objectReference: {fileID: 0}
     - target: {fileID: 5517027367563142095, guid: 1bdb6e3c9f8f141449535801dcf3a8af,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -816,6 +836,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906013711460873077, guid: 1bdb6e3c9f8f141449535801dcf3a8af,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bdb6e3c9f8f141449535801dcf3a8af, type: 3}
