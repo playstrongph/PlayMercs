@@ -15,6 +15,12 @@ public interface IHeroGraphics
     /// </summary>
     Canvas HeroGraphicCanvas { get; set; }
 
+    Image GreenGlow { get; set; }
+    
+    Image RedGlow { get; set; }
+    
+    Image YellowGlow { get; set; }
+
     /// <summary>
     /// Fighter Preview Frame
     /// </summary>

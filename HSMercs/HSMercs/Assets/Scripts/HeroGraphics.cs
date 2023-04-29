@@ -27,6 +27,11 @@ public class HeroGraphics : MonoBehaviour, IHeroGraphics
     [SerializeField]private Image redFrame;
     [SerializeField]private Image blueFrame;
     
+    [Header("HERO GLOWS")] 
+    [SerializeField] private Image greenGlow;
+    [SerializeField]private Image redGlow;
+    [SerializeField]private Image yellowGlow;
+    
     /// <summary>
     /// All the hero graphic images for fighter, tank, and caster
     /// </summary>
@@ -55,112 +60,80 @@ public class HeroGraphics : MonoBehaviour, IHeroGraphics
     /// <summary>
     /// Hero Graphic Canvas
     /// </summary>
-    public Canvas HeroGraphicCanvas
-    {
-        get => heroGraphicCanvas;
-        set => heroGraphicCanvas = value;
-    }
+    public Canvas HeroGraphicCanvas { get => heroGraphicCanvas; set => heroGraphicCanvas = value; }
     
+    /// <summary>
+    /// Green Frame Glow
+    /// </summary>
+    public Image GreenGlow { get => greenGlow; set => greenGlow = value; }
+    
+    /// <summary>
+    /// Red Frame Glow
+    /// </summary>
+    public Image RedGlow { get => redGlow; set => redGlow = value; }
+    
+    /// <summary>
+    /// Yellow Frame Glow
+    /// </summary>
+    public Image YellowGlow { get => yellowGlow; set => yellowGlow = value; }
+
     /// <summary>
     /// Tank Preview Frame
     /// </summary>
-    public Image RedFrame
-    {
-        get => redFrame;
-        set => redFrame = value;
-    }
+    public Image RedFrame { get => redFrame; set => redFrame = value; }
     
     /// <summary>
     /// Fighter Preview Frame
     /// </summary>
-    public Image GreenFrame
-    {
-        get => greenFrame;
-        set => greenFrame = value;
-    }
+    public Image GreenFrame { get => greenFrame; set => greenFrame = value; }
     
     /// <summary>
     /// Caster Preview Frame
     /// </summary>
-    public Image BlueFrame
-    {
-        get => blueFrame;
-        set => blueFrame = value;
-    }
+    public Image BlueFrame { get => blueFrame; set => blueFrame = value; }
     
     /// <summary>
     /// Tank Hero Graphic
     /// </summary>
-    public Image RedHeroGraphic
-    {
-        get => redHeroGraphic;
-        set => redHeroGraphic = value;
-    }
+    public Image RedHeroGraphic { get => redHeroGraphic; set => redHeroGraphic = value; }
     
     /// <summary>
     /// Fighter Hero Graphic
     /// </summary>
-    public Image GreenHeroGraphic
-    {
-        get => greenHeroGraphic;
-        set => greenHeroGraphic = value;
-    }
+    public Image GreenHeroGraphic { get => greenHeroGraphic; set => greenHeroGraphic = value; }
     
     /// <summary>
     /// Caster Hero Graphic
     /// </summary>
-    public Image BlueHeroGraphic
-    {
-        get => blueHeroGraphic;
-        set => blueHeroGraphic = value;
-    }
+    public Image BlueHeroGraphic { get => blueHeroGraphic; set => blueHeroGraphic = value; }
     
     /// <summary>
     /// Armor Graphic
     /// </summary>
-    public Image ArmorGraphic
-    {
-        get => armorGraphic;
-        set => armorGraphic = value;
-    }
+    public Image ArmorGraphic { get => armorGraphic; set => armorGraphic = value; }
     
-    public Image TargetCrossHairGraphic
-    {
-        get => targetCrossHairGraphic;
-        set => targetCrossHairGraphic = value;
-    }
+    public Image TargetCrossHairGraphic { get => targetCrossHairGraphic; set => targetCrossHairGraphic = value; }
     
     /// <summary>
     /// Attack Text Graphic
     /// </summary>
-    public TextMeshProUGUI AttackText
-    {
-        get => attackText;
-        set => attackText = value;
-    }
+    public TextMeshProUGUI AttackText { get => attackText; set => attackText = value; }
     
     /// <summary>
     /// Health Text Graphic
     /// </summary>
-    public TextMeshProUGUI HealthText
-    {
-        get => healthText;
-        set => healthText = value;
-    }
+    public TextMeshProUGUI HealthText { get => healthText; set => healthText = value; }
     
     /// <summary>
     /// Armor Text Graphic
     /// </summary>
-    public TextMeshProUGUI ArmorText
-    {
-        get => armorText;
-        set => armorText = value;
-    }
-
-    #endregion
-
+    public TextMeshProUGUI ArmorText { get => armorText; set => armorText = value; }
+    
     public ISetHeroAttackText SetHeroAttackText => GetComponent<ISetHeroAttackText>();
     public ISetHeroImage SetHeroImage => GetComponent<ISetHeroImage>();
     public ISetHeroArmorText SetHeroArmorText => GetComponent<ISetHeroArmorText>();
     public ISetHeroHealthText SetHeroHealthText => GetComponent<ISetHeroHealthText>();
+    
+    
+    #endregion
 }
