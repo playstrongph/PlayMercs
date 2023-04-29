@@ -30,6 +30,7 @@ public class SkillAttributes : MonoBehaviour, ISkillAttributes
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillElementAsset))] private ScriptableObject skillElement = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTypeAsset))] private ScriptableObject skillType = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetAsset))] private ScriptableObject skillTarget = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillReadinessAsset))] private ScriptableObject skillReadiness = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillEnableAsset))] private ScriptableObject skillEnableStatus = null;
    
@@ -49,6 +50,7 @@ public class SkillAttributes : MonoBehaviour, ISkillAttributes
    public Sprite SkillSprite { get => skillSprite; set => skillSprite = value; }
    public ISkillElementAsset SkillElement { get => skillElement as ISkillElementAsset; set=> skillElement = value as ScriptableObject;}
    public ISkillTypeAsset SkillType { get => skillType as ISkillTypeAsset; set=> skillType = value as ScriptableObject;}
+   public ISkillTargetAsset SkillTarget { get => skillTarget as ISkillTargetAsset; set=> skillTarget = value as ScriptableObject;}
    public ISkillReadinessAsset SkillReadiness { get => skillReadiness as ISkillReadinessAsset; set=> skillReadiness = value as ScriptableObject;}
    
    public ISkillEnableAsset SkillEnableStatus { get => skillEnableStatus as ISkillEnableAsset; set=> skillEnableStatus = value as ScriptableObject;}

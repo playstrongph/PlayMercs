@@ -14,6 +14,7 @@ public interface ISkillAttributes
     Sprite SkillSprite { get; set; }
     ISkillElementAsset SkillElement { get; set; }
     ISkillTypeAsset SkillType { get; set; }
+    ISkillTargetAsset SkillTarget { get; set; }
     ISkillReadinessAsset SkillReadiness { get; set; }
     
     //Set as Enabled by Default

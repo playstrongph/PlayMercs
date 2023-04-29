@@ -23,6 +23,8 @@ public class ManualSelectTarget : MonoBehaviour
    #endregion
         
    #region PROPERTIES
+   
+   
 
    private IHero ValidTarget
    {
@@ -45,6 +47,9 @@ public class ManualSelectTarget : MonoBehaviour
             
       //ray traverses all layers
       var layerMask = ~0;
+      
+      //TODO:
+      
             
       //Same to RayCastAll but with no additional garbage
       int hitsCount = Physics.RaycastNonAlloc(ray, mResults, Mathf.Infinity,layerMask);

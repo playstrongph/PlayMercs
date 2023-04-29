@@ -12,6 +12,7 @@ namespace SOAssets
         int SkillSpeed { get; }
         ISkillElementAsset SkillElement { get; }
         ISkillTypeAsset SkillType { get; }
+        ISkillTargetAsset SkillTarget { get; }
         ISkillReadinessAsset SkillReadiness { get; }
 
     }

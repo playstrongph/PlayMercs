@@ -140,6 +140,7 @@
      <Compile Include="Assets\Scripts\SOAssets\ISkillElementAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ISkillEnableAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ISkillReadinessAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\ISkillTargetAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ISkillTypeAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ITeamHeroesAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\NoSkillElementAsset.cs" />
@@ -153,6 +154,8 @@
      <Compile Include="Assets\Scripts\SOAssets\SkillNotReadyAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillReadinessAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillReadyAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\SkillTargetAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\SkillTargetEnemiesAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillTypeAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\TaurenRaceAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\TeamHeroesAsset.cs" />

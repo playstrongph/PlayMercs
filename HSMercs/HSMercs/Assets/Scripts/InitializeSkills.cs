@@ -118,6 +118,8 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       skill.SkillAttributes.SkillType = skillAsset.SkillType;
       skill.SkillAttributes.SkillReadiness = skillAsset.SkillReadiness;
 
+      skill.SkillAttributes.SkillTarget = skillAsset.SkillTarget;
+
    }
 
    private void LoadSkillVisuals(ISkillAsset skillAsset,ISkill skill)
