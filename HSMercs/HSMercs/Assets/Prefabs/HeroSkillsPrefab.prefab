@@ -1101,6 +1101,7 @@ GameObject:
   - component: {fileID: 5999021463094233301}
   - component: {fileID: 5999021463094233298}
   - component: {fileID: 1213663992}
+  - component: {fileID: 6933843289291623316}
   m_Layer: 0
   m_Name: SkillTargetCollider
   m_TagString: Untagged
@@ -1215,7 +1216,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c49e4c8076cfae24f94cd8fee29cc08b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  validTarget: {fileID: 0}
+  selectedTarget: {fileID: 0}
+--- !u!114 &6933843289291623316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5999021463094233296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f63cb036fd0bc4046adabc46c80b5378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5999021463101055800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,6 +2768,7 @@ MonoBehaviour:
   skillSprite: {fileID: 0}
   skillElement: {fileID: 0}
   skillType: {fileID: 0}
+  skillTarget: {fileID: 0}
   skillReadiness: {fileID: 0}
   skillEnableStatus: {fileID: 11400000, guid: ef6e1b3ab0ed13e44ad32b3790e737ab, type: 2}
 --- !u!1 &5999021463435668874
@@ -8375,6 +8389,7 @@ GameObject:
   - component: {fileID: 5999021464392462175}
   - component: {fileID: 5999021464392462172}
   - component: {fileID: 1699760764}
+  - component: {fileID: 1911728205942588891}
   m_Layer: 0
   m_Name: SkillTargetCollider
   m_TagString: Untagged
@@ -8450,7 +8465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skill: {fileID: 5999021464729893979}
   targetArrow: {fileID: 5999021463101055800}
-  targetNodes: {fileID: 5999021463101055802}
+  targetNodes: {fileID: 5999021464924866168}
   targetCanvas: {fileID: 5999021464392462160}
 --- !u!114 &5999021464392462175
 MonoBehaviour:
@@ -8489,7 +8504,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c49e4c8076cfae24f94cd8fee29cc08b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  validTarget: {fileID: 0}
+  selectedTarget: {fileID: 0}
+--- !u!114 &1911728205942588891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5999021464392462170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f63cb036fd0bc4046adabc46c80b5378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5999021464409443596
 GameObject:
   m_ObjectHideFlags: 0
@@ -9205,6 +9232,7 @@ GameObject:
   - component: {fileID: 5999021464502628830}
   - component: {fileID: 5999021464502628831}
   - component: {fileID: 1357451532}
+  - component: {fileID: 4068190593537954461}
   m_Layer: 0
   m_Name: SkillTargetCollider
   m_TagString: Untagged
@@ -9280,7 +9308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skill: {fileID: 5999021464924303538}
   targetArrow: {fileID: 5999021462954169837}
-  targetNodes: {fileID: 5999021462954169839}
+  targetNodes: {fileID: 5999021464924866168}
   targetCanvas: {fileID: 5999021464502628819}
 --- !u!114 &5999021464502628830
 MonoBehaviour:
@@ -9319,7 +9347,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c49e4c8076cfae24f94cd8fee29cc08b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  validTarget: {fileID: 0}
+  selectedTarget: {fileID: 0}
+--- !u!114 &4068190593537954461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5999021464502628829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f63cb036fd0bc4046adabc46c80b5378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5999021464528106836
 GameObject:
   m_ObjectHideFlags: 0
@@ -9461,6 +9501,7 @@ GameObject:
   - component: {fileID: 5999021464544800384}
   - component: {fileID: 5999021464544800385}
   - component: {fileID: 1356562362}
+  - component: {fileID: 6955202631946737002}
   m_Layer: 0
   m_Name: SkillTargetCollider
   m_TagString: Untagged
@@ -9575,7 +9616,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c49e4c8076cfae24f94cd8fee29cc08b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  validTarget: {fileID: 0}
+  selectedTarget: {fileID: 0}
+--- !u!114 &6955202631946737002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5999021464544800399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f63cb036fd0bc4046adabc46c80b5378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5999021464567402240
 GameObject:
   m_ObjectHideFlags: 0
@@ -10733,6 +10786,7 @@ MonoBehaviour:
   skillSprite: {fileID: 0}
   skillElement: {fileID: 0}
   skillType: {fileID: 0}
+  skillTarget: {fileID: 0}
   skillReadiness: {fileID: 0}
   skillEnableStatus: {fileID: 11400000, guid: ef6e1b3ab0ed13e44ad32b3790e737ab, type: 2}
 --- !u!1 &5999021464749634279
@@ -11219,6 +11273,7 @@ MonoBehaviour:
   skillSprite: {fileID: 0}
   skillElement: {fileID: 0}
   skillType: {fileID: 0}
+  skillTarget: {fileID: 0}
   skillReadiness: {fileID: 0}
   skillEnableStatus: {fileID: 11400000, guid: ef6e1b3ab0ed13e44ad32b3790e737ab, type: 2}
 --- !u!1 &5999021464840086828
@@ -11916,6 +11971,7 @@ MonoBehaviour:
   skillSprite: {fileID: 0}
   skillElement: {fileID: 0}
   skillType: {fileID: 0}
+  skillTarget: {fileID: 0}
   skillReadiness: {fileID: 0}
   skillEnableStatus: {fileID: 11400000, guid: ef6e1b3ab0ed13e44ad32b3790e737ab, type: 2}
 --- !u!1 &5999021464924662592

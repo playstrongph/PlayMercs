@@ -20,6 +20,11 @@ namespace SOAssets
         
       #region METHODS
       
+      /// <summary>
+      /// The hero referred to here is the skill's caster hero
+      /// </summary>
+      /// <param name="hero"></param>
+      /// <returns></returns>
       public override List<IHero> HeroTargets(IHero hero)
       {
          return new List<IHero>(hero.Player.OtherPlayer.Heroes.HeroStatusLists.GetAliveHeroList());

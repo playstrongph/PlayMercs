@@ -172,6 +172,7 @@
      <Compile Include="Assets\Scripts\SkillPanelVisual.cs" />
      <Compile Include="Assets\Scripts\SkillPreviewVisual.cs" />
      <Compile Include="Assets\Scripts\SkillTargetCollider.cs" />
+     <Compile Include="Assets\Scripts\SkillTargets.cs" />
      <Compile Include="Assets\Scripts\SkillVisual.cs" />
      <Compile Include="Assets\Scripts\StatusEffectPreviewVisual.cs" />
      <Compile Include="Assets\Scripts\StatusEffectVisual.cs" />
