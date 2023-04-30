@@ -75,6 +75,16 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
          {
             var targetHeroCollider = mResults[i].transform.GetComponent<IHeroTargetCollider>();
 
+            foreach (var hero in validTargets)
+            {
+               Debug.Log("validTargetHeroes: " +hero.HeroInformation.HeroName);
+            }
+            
+            if(targetHeroCollider.Hero != null)
+               Debug.Log("Hero Name: " +targetHeroCollider.Hero.HeroInformation.HeroName);
+            
+            
+
             //check if hero is included in the valid targets.  Set hero to targetHero or Null;
             SelectedTarget = validTargets.Contains(targetHeroCollider.Hero) ? targetHeroCollider.Hero : null;
          }

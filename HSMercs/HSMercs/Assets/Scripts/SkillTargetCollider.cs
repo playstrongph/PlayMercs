@@ -45,8 +45,6 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
         Draggable = GetComponent<IDraggable>();
         SkillTargets = GetComponent<ISkillTargets>();
         ManualSelectTarget = GetComponent<IManualSelectTarget>();
-
-        //GetSkillTargets = GetComponent<IGetSkillTargets>();
     }
     
     private void OnMouseDown()
