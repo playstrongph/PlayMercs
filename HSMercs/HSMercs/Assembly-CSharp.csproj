@@ -94,6 +94,7 @@
      <Compile Include="Assets\Scripts\IInitializeHeroes.cs" />
      <Compile Include="Assets\Scripts\IInitializePlayers.cs" />
      <Compile Include="Assets\Scripts\IInitializeSkills.cs" />
+     <Compile Include="Assets\Scripts\IManualSelectTarget.cs" />
      <Compile Include="Assets\Scripts\IPlayer.cs" />
      <Compile Include="Assets\Scripts\ISetHeroArmorText.cs" />
      <Compile Include="Assets\Scripts\ISetHeroAttackText.cs" />

@@ -25,6 +25,8 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
 
     public ISkillTargets SkillTargets { get; set; }
 
+    private IManualSelectTarget ManualSelectTarget { get; set; }
+
     //GameObject used because both Transform and Image components are utilized
     public GameObject TargetArrow { get => targetArrow; private set => targetArrow = value;}
     public ITargetNodes TargetNodes { get => targetNodes as ITargetNodes; private set => targetNodes = value as Object;}
@@ -42,6 +44,7 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
         DrawTargetLineAndArrow = GetComponent<IDrawTargetLineAndArrow>();
         Draggable = GetComponent<IDraggable>();
         SkillTargets = GetComponent<ISkillTargets>();
+        ManualSelectTarget = GetComponent<IManualSelectTarget>();
 
         //GetSkillTargets = GetComponent<IGetSkillTargets>();
     }
@@ -63,7 +66,10 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
         //Hide Valid Targets Glow
         SkillTargets.HideValidTargetsGlow();
         
-        
+        //Select Target Hero From Valid Targets
+        ManualSelectTarget.SetValidTargetHero();
+
+
     }
     
 }

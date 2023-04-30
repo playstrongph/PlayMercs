@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-public class ManualSelectTarget : MonoBehaviour
+public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
 {
    #region VARIABLES
 
@@ -46,7 +46,7 @@ public class ManualSelectTarget : MonoBehaviour
       SkillTargetCollider = GetComponent<ISkillTargetCollider>();
    }
 
-   private void SetValidTargetHero()
+   public void SetValidTargetHero()
    {
       // ReSharper disable once PossibleNullReferenceException
       var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -77,6 +77,10 @@ public class ManualSelectTarget : MonoBehaviour
 
             //check if hero is included in the valid targets.  Set hero to targetHero or Null;
             SelectedTarget = validTargets.Contains(targetHeroCollider.Hero) ? targetHeroCollider.Hero : null;
+         }
+         else
+         {
+            SelectedTarget = null;
          }
 
       }
