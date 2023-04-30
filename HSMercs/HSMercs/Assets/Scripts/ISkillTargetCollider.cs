@@ -13,4 +13,6 @@ public interface ISkillTargetCollider
     IDrawTargetLineAndArrow DrawTargetLineAndArrow { get;}
 
     IDraggable Draggable { get; }
+    
+    ISkillTargets SkillTargets { get; set; }
 }

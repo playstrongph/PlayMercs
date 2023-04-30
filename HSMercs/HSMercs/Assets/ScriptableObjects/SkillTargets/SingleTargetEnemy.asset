@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 124cfe6322eaa074696067ff60de861e, type: 3}
-  m_Name: SkillTargetEnemies
+  m_Name: SingleTargetEnemy
   m_EditorClassIdentifier: 

@@ -22,7 +22,9 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     #region PROPERTIES
     
     public ISkill Skill { get => skill as ISkill; private set => skill = value as Object;}
-    
+
+    public ISkillTargets SkillTargets { get; set; }
+
     //GameObject used because both Transform and Image components are utilized
     public GameObject TargetArrow { get => targetArrow; private set => targetArrow = value;}
     public ITargetNodes TargetNodes { get => targetNodes as ITargetNodes; private set => targetNodes = value as Object;}
@@ -39,17 +41,29 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
         //DisplaySkillPreview = GetComponent<IDisplaySkillPreview>();
         DrawTargetLineAndArrow = GetComponent<IDrawTargetLineAndArrow>();
         Draggable = GetComponent<IDraggable>();
+        SkillTargets = GetComponent<ISkillTargets>();
+
         //GetSkillTargets = GetComponent<IGetSkillTargets>();
     }
     
     private void OnMouseDown()
     {
+        //Show Targeting Visuals
         DrawTargetLineAndArrow.EnableTargetVisuals();
+        
+        //Show Valid Targets Glow
+        SkillTargets.ShowValidTargetsGlow();
     }
         
     private void OnMouseUp()
     {
+        //Hide Targeting Visuals
         DrawTargetLineAndArrow.DisableTargetVisuals();
+        
+        //Hide Valid Targets Glow
+        SkillTargets.HideValidTargetsGlow();
+        
+        
     }
     
 }

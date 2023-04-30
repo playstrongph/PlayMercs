@@ -107,6 +107,7 @@
      <Compile Include="Assets\Scripts\ISkillPanelVisual.cs" />
      <Compile Include="Assets\Scripts\ISkillPreviewVisual.cs" />
      <Compile Include="Assets\Scripts\ISkillTargetCollider.cs" />
+     <Compile Include="Assets\Scripts\ISkillTargets.cs" />
      <Compile Include="Assets\Scripts\ISkillVisual.cs" />
      <Compile Include="Assets\Scripts\IStatusEffectPreviewVisual.cs" />
      <Compile Include="Assets\Scripts\IStatusEffectVisual.cs" />
@@ -146,6 +147,7 @@
      <Compile Include="Assets\Scripts\SOAssets\NoSkillElementAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\OrcRaceAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\PlayerAllianceAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\SingleTargetEnemy.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillDisabledAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillElementAsset.cs" />
@@ -155,7 +157,6 @@
      <Compile Include="Assets\Scripts\SOAssets\SkillReadinessAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillReadyAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillTargetAsset.cs" />
-     <Compile Include="Assets\Scripts\SOAssets\SkillTargetEnemiesAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SkillTypeAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\TaurenRaceAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\TeamHeroesAsset.cs" />

@@ -29,20 +29,22 @@ namespace SOAssets
          return new List<IHero>();
       }
       
-      public virtual void ShowHeroGlow(IHero hero)
+      /// <summary>
+      /// Glow color is dependent on enemy type: Ally or Enemy
+      /// </summary>
+      public virtual void ShowTargetsGlow(IHero hero)
       {
-         //Ally Glow
-         //Enemy Glow
-         //No Glow
+         
       }
       
-      public virtual void HideHeroGlow(IHero hero)
+      /// <summary>
+      /// Glow to be hidden is dependent on glow color that was shown
+      /// </summary>
+      public virtual void HideTargetsGlow(IHero hero)
       {
-         //Ally Glow
-         //Enemy Glow
-         //No Glow
+         
       }
-      
+
       /// <summary>
       /// Resolve special circumstances in targeting
       /// </summary>
@@ -51,10 +53,6 @@ namespace SOAssets
       {
          //Example: Stealth and Taunt
       }
-
-
-
-
 
       #endregion
    }

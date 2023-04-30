@@ -7,7 +7,7 @@ using Object = UnityEngine.Object;
 /// <summary>
 /// Class is created because there shall be 2 types of targeting: Manual and Auto Select Target 
 /// </summary>
-public class SkillTargets : MonoBehaviour
+public class SkillTargets : MonoBehaviour, ISkillTargets
 {
    #region VARIABLES
 
@@ -47,15 +47,51 @@ public class SkillTargets : MonoBehaviour
    public List<IHero> GetValidTargets()
    {
       var skill = SkillTargetCollider.Skill;
+      var validHeroTargets = skill.SkillAttributes.SkillTarget.GetHeroTargets(skill.CasterHero);
+
+      validTargets.Clear();
       
-      return skill.SkillAttributes.SkillTarget.GetHeroTargets(skill.CasterHero);
+      foreach (var hero in validHeroTargets)
+      {
+         validTargets.Add(hero as Object);
+      }
+
+      //Note: validHeroTargets can be returned directly - ValidTargets setup so you can see valid targets in the SkillTargetCollider Component in the inspector
+      return ValidTargets;
 
       //Note: Special circumstances in targeting are resolved in SkillTarget.HeroTargets
    }
-   
-   
 
+   /// <summary>
+   /// Called by SkillTargetCollider On Mouse Down
+   /// Color of glow determined by skill Target Type
+   /// </summary>
+   public void ShowValidTargetsGlow()
+   {
+      var heroes = GetValidTargets();
+      var skill = SkillTargetCollider.Skill;
 
+      foreach (var hero in heroes)
+      {
+         skill.SkillAttributes.SkillTarget.ShowTargetsGlow(hero);
+      }
+      
+   }
+   
+   /// <summary>
+   /// Called by SkillTargetCollider On Mouse Down
+   /// Color of glow determined by skill Target Type
+   /// </summary>
+   public void HideValidTargetsGlow()
+   {
+      var heroes = GetValidTargets();
+      var skill = SkillTargetCollider.Skill;
+      
+      foreach (var hero in heroes)
+      {
+         skill.SkillAttributes.SkillTarget.HideTargetsGlow(hero);
+      }
+   }
 
    #endregion
 }

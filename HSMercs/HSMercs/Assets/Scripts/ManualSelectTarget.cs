@@ -58,7 +58,10 @@ public class ManualSelectTarget : MonoBehaviour
       var layerMask = ~0;
       
       //TODO: more checks if the hero is a valid target should be done here
-      var validTargets = SkillTargetCollider.Skill.SkillAttributes.SkillTarget.GetHeroTargets(SkillTargetCollider.Skill.CasterHero);
+      //TODO: Replace with skilltargetcollider.skilltargets.GetValidTargets
+      //var validTargets = SkillTargetCollider.Skill.SkillAttributes.SkillTarget.GetHeroTargets(SkillTargetCollider.Skill.CasterHero);
+
+      var validTargets = SkillTargetCollider.SkillTargets.GetValidTargets(); 
             
       //Same to RayCastAll but with no additional garbage
       int hitsCount = Physics.RaycastNonAlloc(ray, mResults, Mathf.Infinity,layerMask);
