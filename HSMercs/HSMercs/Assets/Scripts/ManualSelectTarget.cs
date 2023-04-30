@@ -52,7 +52,7 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
       //Store at most 5 ray cast hits
-      var mResults = new RaycastHit[5];
+      var mResults = new RaycastHit[2];
             
       //ray traverses all layers
       var layerMask = ~0;
@@ -74,24 +74,8 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
          if (mResults[i].transform.GetComponent<IHeroTargetCollider>() != null)
          {
             var targetHeroCollider = mResults[i].transform.GetComponent<IHeroTargetCollider>();
-            
-
-            foreach (var hero in validTargets)
-            {
-               Debug.Log("validTargetHeroes: " +hero.HeroInformation.HeroName);
-            }
-            
-            if(targetHeroCollider.Hero != null)
-               Debug.Log("Hero Name: " +targetHeroCollider.Hero.HeroInformation.HeroName);
-
-            //check if hero is included in the valid targets.  Set hero to targetHero or Null;
             SelectedTarget = validTargets.Contains(targetHeroCollider.Hero) ? targetHeroCollider.Hero : null;
          }
-         else
-         {
-            SelectedTarget = null;
-         }
-
       }
    }     
 
