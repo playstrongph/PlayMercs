@@ -19,7 +19,7 @@ namespace SOAssets
         
       #region METHODS
       
-      public virtual List<IHero> HeroTargets(IHero hero)
+      public virtual List<IHero> GetHeroTargets(IHero hero)
       {
          //Ally heroes
          //All Other ally heroes
@@ -43,8 +43,18 @@ namespace SOAssets
          //No Glow
       }
       
-      
-        
+      /// <summary>
+      /// Resolve special circumstances in targeting
+      /// </summary>
+      /// <param name="hero"></param>
+      public virtual void ResolveSpecialTargets(IHero hero)
+      {
+         //Example: Stealth and Taunt
+      }
+
+
+
+
 
       #endregion
    }

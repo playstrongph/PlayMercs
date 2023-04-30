@@ -27,7 +27,7 @@ public class Skill : MonoBehaviour, ISkill
     /// <summary>
     /// Skill's reference to its hero
     /// </summary>
-    public IHero Hero { get; set; }
+    public IHero CasterHero { get; set; }
 
     #endregion
 

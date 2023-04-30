@@ -6,7 +6,7 @@ public interface ISkill
     ISkillAttributes SkillAttributes { get; }
     GameObject ThisGameObject { get;}
     
-    IHero Hero { get; set; }
+    IHero CasterHero { get; set; }
 
 
 }

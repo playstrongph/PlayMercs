@@ -79,7 +79,7 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
             var heroSkillPreview = hero.HeroVisual.HeroPreview.HeroSkillPreviews[index];
             
             //Set each skill's hero caster reference
-            skill.Hero = hero;
+            skill.CasterHero = hero;
             
             //Sets the skill and skill preview's game object tor true; specifically the 4th skill (when there are 4 skills)
             skill.ThisGameObject.SetActive(true);
@@ -144,7 +144,7 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       skill.SkillVisual.SkillPreviewVisual.SkillElementText.text = skillAsset.SkillElement.ElementName;
       
       //Set Skill Preview Frame Color
-      skill.Hero.HeroInformation.HeroClass.SetSkillPreviewFrameColor(skill);
+      skill.CasterHero.HeroInformation.HeroClass.SetSkillPreviewFrameColor(skill);
    }
 
    private void LoadHeroSkillPreviewVisuals(IHeroSkillPreview heroSkillPreview, ISkill heroSkill)
@@ -156,7 +156,7 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       heroSkillPreview.HeroPreviewSkillElement.text = heroSkill.SkillAttributes.SkillElement.ElementName;
       heroSkillPreview.HeroPreviewSkillName.text = heroSkill.SkillAttributes.SkillName;
       
-      heroSkill.Hero.HeroInformation.HeroClass.SetHeroSkillPreviewColors(heroSkillPreview);
+      heroSkill.CasterHero.HeroInformation.HeroClass.SetHeroSkillPreviewColors(heroSkillPreview);
 
    }
    

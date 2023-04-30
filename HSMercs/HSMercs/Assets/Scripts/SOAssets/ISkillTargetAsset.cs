@@ -4,8 +4,10 @@ namespace SOAssets
 {
     public interface ISkillTargetAsset
     {
-        List<IHero> HeroTargets(IHero hero);
+        List<IHero> GetHeroTargets(IHero hero);
         void ShowHeroGlow(IHero hero);
         void HideHeroGlow(IHero hero);
+
+        void ResolveSpecialTargets(IHero hero);
     }
 }

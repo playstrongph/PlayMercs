@@ -25,7 +25,7 @@ namespace SOAssets
       /// </summary>
       /// <param name="hero"></param>
       /// <returns></returns>
-      public override List<IHero> HeroTargets(IHero hero)
+      public override List<IHero> GetHeroTargets(IHero hero)
       {
          return new List<IHero>(hero.Player.OtherPlayer.Heroes.HeroStatusLists.GetAliveHeroList());
       }
