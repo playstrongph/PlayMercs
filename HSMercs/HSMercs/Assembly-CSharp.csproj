@@ -122,6 +122,7 @@
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceDrawer.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ActiveSkillAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\AllyPlayerAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\BasicSkillAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\BattleSceneSettingsAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\CasterClassAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\DefenderClassAsset.cs" />

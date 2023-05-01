@@ -34,6 +34,15 @@ namespace SOAssets
          //skill.SkillAttributes.SkillEnableStatus.EnableTargetVisuals(transform,skillTargetCollider);
 
       }
+      
+      /// <summary>
+      /// Used in verifying if skill is ready and enabled
+      /// </summary>
+      /// <param name="skill"></param>
+      public virtual void SetValidTargetHero(ISkill skill)
+      {
+         
+      }
 
       #endregion
    }

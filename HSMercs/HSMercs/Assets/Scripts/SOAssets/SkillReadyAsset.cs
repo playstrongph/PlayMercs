@@ -44,7 +44,19 @@ namespace SOAssets
       public override void EnableTargetVisuals(Transform transform, ISkillTargetCollider skillTargetCollider)
       {
          var skill = skillTargetCollider.Skill;
+         
          skill.SkillAttributes.SkillEnableStatus.EnableTargetVisuals(transform,skillTargetCollider);
+      }
+      
+      
+      /// <summary>
+      /// Skill should be ready and enabled before setting the target valid hero
+      /// </summary>
+      /// <param name="skill"></param>
+      public override void SetValidTargetHero(ISkill skill)
+      {
+         //Check if skill is enabled
+         skill.SkillAttributes.SkillEnableStatus.SetValidTargetHero(skill);
       }
 
       #endregion

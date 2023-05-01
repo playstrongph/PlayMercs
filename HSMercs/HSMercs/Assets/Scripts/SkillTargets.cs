@@ -68,6 +68,9 @@ public class SkillTargets : MonoBehaviour, ISkillTargets
    /// </summary>
    public void ShowValidTargetsGlow()
    {
+      
+      //TODO: Should pass by Skill Readiness and Skill Enabled Status
+      
       var heroes = GetValidTargets();
       var skill = SkillTargetCollider.Skill;
 

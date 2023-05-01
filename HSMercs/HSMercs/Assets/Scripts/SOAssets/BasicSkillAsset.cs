@@ -2,8 +2,8 @@
 
 namespace SOAssets
 {
-   [CreateAssetMenu(fileName = "ActiveSkill", menuName = "Assets/SkillType/ActiveSkill")]
-   public class ActiveSkillAsset : SkillTypeAsset
+   [CreateAssetMenu(fileName = "BasicSkill", menuName = "Assets/SkillType/BasicSkill")]
+   public class BasicSkillAsset : SkillTypeAsset
    {
       #region VARIABLES
 
@@ -21,19 +21,23 @@ namespace SOAssets
 
       public override void LoadSkillTypeVisuals(ISkill skill)
       {
-         //TODO: SkillReadiness Effect
          skill.SkillAttributes.SkillReadiness.LoadSkillReadinessVisuals(skill);
-
+         
+         //Note: Technically speaking, basic skills are ALWAYS ACTIVE and READY
+         //The status checking above is not really required
       }
       
       
       /// <summary>
-      /// Set valid target hero for active/basic skills.  Checks skill readiness
+      /// Sets the valid target hero
       /// </summary>
       /// <param name="skill"></param>
       public override void SetValidTargetHero(ISkill skill)
       {
          skill.SkillAttributes.SkillReadiness.SetValidTargetHero(skill);
+         
+         //Note: Technically speaking, basic skills are ALWAYS ACTIVE and READY 
+         //The status checking above is not really required
       }
 
       #endregion

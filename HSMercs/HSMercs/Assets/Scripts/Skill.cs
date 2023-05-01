@@ -14,11 +14,15 @@ public class Skill : MonoBehaviour, ISkill
     
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillVisual))] private Object skillVisual;
     
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillTargetCollider))] private Object skillTargetCollider;
+    
     #endregion
 
     #region PROPERTIES
 
     public ISkillVisual SkillVisual { get=> skillVisual as ISkillVisual; private set => skillVisual = value as Object; }
+    
+    public ISkillTargetCollider SkillTargetCollider { get=> skillTargetCollider as ISkillTargetCollider; private set => skillTargetCollider = value as Object; }
 
     public ISkillAttributes SkillAttributes { get; private set; }
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,6 +27,9 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
     /// </summary>
     public void EnableTargetVisuals()
     {
+        
+        //TODO: Should check skill state - if Ready and is enabled
+        
         //Show Skill Preview
         SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOn();
         
@@ -51,6 +55,8 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
         
         SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOff();
         
+        SkillTargetCollider.SkillTargets.HideValidTargetsGlow();
+        
     }
 
     
@@ -69,9 +75,12 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
 
         if (intDifference > distanceLimit)  //if there is some distance between skill position and mouse position
         {
-            ShowArrow(notNormalized,direction); 
+            ShowArrow(notNormalized,direction);
+            
             SkillTargetCollider.TargetNodes.ShowArrowNodes();
+            
             ShowTargetCrossHair();
+            
             SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOff();
         }
         else  //if there is NO distance between skill position and mouse position
@@ -133,15 +142,19 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
             if (mResults[i].transform.GetComponent<IHeroTargetCollider>() != null)
             {
                 var heroGameObject = mResults[i];
+                var heroTarget = heroGameObject.transform.GetComponent<IHeroTargetCollider>().Hero;
+                var validHeroTargets = SkillTargetCollider.SkillTargets.GetValidTargets();
                 
-                //TEMP - Valid Target Checking to be introduced either here or in calling function
+                //Check if the targeted hero is part of the valid targets before displaying the crosshair
+                if (validHeroTargets.Contains(heroTarget))
+                {
+                    //Display cross hair
+                    SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = true;
                 
-                //Display cross hair
-                SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = true;
-                
-                //Set cross hair position to position of target hero
-                SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.transform.position =
-                    heroGameObject.transform.position;
+                    //Set cross hair position to position of target hero
+                    SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.transform.position =
+                        heroGameObject.transform.position;
+                }
             }
         }
     }

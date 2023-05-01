@@ -25,7 +25,7 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
 
     public ISkillTargets SkillTargets { get; set; }
 
-    private IManualSelectTarget ManualSelectTarget { get; set; }
+    public IManualSelectTarget ManualSelectTarget { get; private set; }
 
     //GameObject used because both Transform and Image components are utilized
     public GameObject TargetArrow { get => targetArrow; private set => targetArrow = value;}
@@ -49,24 +49,18 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     
     private void OnMouseDown()
     {
-        //Show Targeting Visuals
+        //Will Show skill preview - but will check for skill readiness and enabled status before enabling other
+        //visuals
         DrawTargetLineAndArrow.EnableTargetVisuals();
-        
-        //Show Valid Targets Glow
-        SkillTargets.ShowValidTargetsGlow();
     }
         
     private void OnMouseUp()
     {
         //Hide Targeting Visuals
         DrawTargetLineAndArrow.DisableTargetVisuals();
-        
-        //Hide Valid Targets Glow
-        SkillTargets.HideValidTargetsGlow();
-        
-        //Select Target Hero From Valid Targets
-        ManualSelectTarget.SetValidTargetHero();
 
+        //Check if skill is Active or Basic, Skill Ready, Skill Enabled -> this hierarchy
+        Skill.SkillAttributes.SkillType.SetValidTargetHero(Skill);
 
     }
     

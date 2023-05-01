@@ -23,6 +23,19 @@ namespace SOAssets
          
         
       }
+      
+      
+      /// <summary>
+      /// Verification that skill is enabled before setting the valid target hero
+      /// after mouse up in manual/auto select target scripts
+      /// </summary>
+      /// <param name="skill"></param>
+      public virtual void SetValidTargetHero(ISkill skill)
+      {
+         
+      }
+      
+      
 
       #endregion
    }

@@ -1229,6 +1229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63cb036fd0bc4046adabc46c80b5378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  validTargets: []
 --- !u!1 &5999021463101055800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2732,6 +2733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillVisual: {fileID: 5999021463406912912}
+  skillTargetCollider: {fileID: 5999021464544800387}
 --- !u!114 &5999021463406912912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8517,6 +8519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63cb036fd0bc4046adabc46c80b5378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  validTargets: []
 --- !u!1 &5999021464409443596
 GameObject:
   m_ObjectHideFlags: 0
@@ -9360,6 +9363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63cb036fd0bc4046adabc46c80b5378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  validTargets: []
 --- !u!1 &5999021464528106836
 GameObject:
   m_ObjectHideFlags: 0
@@ -9629,6 +9633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f63cb036fd0bc4046adabc46c80b5378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  validTargets: []
 --- !u!1 &5999021464567402240
 GameObject:
   m_ObjectHideFlags: 0
@@ -10750,6 +10755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillVisual: {fileID: 5999021464729893977}
+  skillTargetCollider: {fileID: 5999021464392462174}
 --- !u!114 &5999021464729893977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11237,6 +11243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillVisual: {fileID: 5999021464831014820}
+  skillTargetCollider: {fileID: 5999021463094233300}
 --- !u!114 &5999021464831014820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11935,6 +11942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillVisual: {fileID: 5999021464924303540}
+  skillTargetCollider: {fileID: 5999021464502628817}
 --- !u!114 &5999021464924303540
 MonoBehaviour:
   m_ObjectHideFlags: 0

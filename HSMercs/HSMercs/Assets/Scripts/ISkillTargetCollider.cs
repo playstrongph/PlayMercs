@@ -15,4 +15,6 @@ public interface ISkillTargetCollider
     IDraggable Draggable { get; }
     
     ISkillTargets SkillTargets { get; set; }
+
+    IManualSelectTarget ManualSelectTarget { get; }
 }

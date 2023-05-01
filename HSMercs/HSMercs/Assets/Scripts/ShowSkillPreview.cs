@@ -36,6 +36,7 @@ public class ShowSkillPreview : MonoBehaviour, IShowSkillPreview
     public void TurnOn()
     {
         _enablePreview = true;
+        
         StartCoroutine(ShowPreview());
     }
 

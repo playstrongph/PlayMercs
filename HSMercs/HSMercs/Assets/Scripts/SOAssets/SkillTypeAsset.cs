@@ -22,6 +22,13 @@ namespace SOAssets
       {
          
       }
+      
+      public virtual void SetValidTargetHero(ISkill skill)
+      {
+         
+      }
+      
+      
 
       #endregion
    }

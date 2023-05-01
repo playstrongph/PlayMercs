@@ -8,5 +8,7 @@ public interface ISkill
     
     IHero CasterHero { get; set; }
 
+    ISkillTargetCollider SkillTargetCollider { get; }
+
 
 }
