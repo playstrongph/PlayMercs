@@ -69,13 +69,39 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
 
       for (int i = 0; i < hitsCount; i++)
       {
+         
          if (mResults[i].transform.GetComponent<IHeroTargetCollider>() != null)
          {
             var targetHeroCollider = mResults[i].transform.GetComponent<IHeroTargetCollider>();
+            
             SelectedTarget = validTargets.Contains(targetHeroCollider.Hero) ? targetHeroCollider.Hero : null;
+            
+            //If there is a valid selected target
+            if (validTargets.Contains(targetHeroCollider.Hero))
+            {
+               SelectedTarget = targetHeroCollider.Hero;
+               
+               HideHeroSkillsOnDisplay();
+            }
+            else
+               SelectedTarget = null;
          }
       }
-   }     
+   }
+   
+   
+   /// <summary>
+   /// Hide Skills On display after a valid target is selected
+   /// </summary>
+   private void HideHeroSkillsOnDisplay()
+   {
+      var casterPlayer = SkillTargetCollider.Skill.CasterHero.Player;
+      var otherPlayer = SkillTargetCollider.Skill.CasterHero.Player.OtherPlayer;
+      
+      casterPlayer.HeroSkillsOnDisplay?.ThisGameObject.SetActive(false);
+      otherPlayer.HeroSkillsOnDisplay?.ThisGameObject.SetActive(false);
+      
+   }
 
    #endregion
 }

@@ -32,13 +32,12 @@ public class GameBoard : MonoBehaviour, IGameBoard
       BoardCollider = GetComponent<BoxCollider>();
       ThisGameObject = this.gameObject;
    }
-
+   
+   /// <summary>
+   /// This utilizes the box collider
+   /// </summary>
    private void OnMouseDown()
    {
-      Debug.Log("Board Collider On Mouse Down");
-      
-      //Debug.Log("Ally Player Name: " +AllyPlayer);
-      
       AllyPlayer.HeroSkillsOnDisplay?.ThisGameObject.SetActive(false);
       EnemyPlayer.HeroSkillsOnDisplay?.ThisGameObject.SetActive(false);
    }
