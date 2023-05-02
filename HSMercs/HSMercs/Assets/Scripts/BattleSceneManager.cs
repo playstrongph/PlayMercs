@@ -115,12 +115,12 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    {
       var gameBoardPrefab = BattleSceneSettings.GameBoardPrefab;
       var gameBoardObject = Instantiate(gameBoardPrefab, this.transform);
-      var gameBoard = gameBoardPrefab.GetComponent<IGameBoard>();
+      var gameBoard = gameBoardObject.GetComponent<IGameBoard>();
 
       gameBoardObject.name = gameBoard.BoardName;
       
       //Set Reference
-      GameBoard = gameBoardPrefab.GetComponent<IGameBoard>();
+      GameBoard = gameBoard;
       
       yield return null;
    }

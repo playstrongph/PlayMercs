@@ -37,8 +37,9 @@ public class GameBoard : MonoBehaviour, IGameBoard
    {
       Debug.Log("Board Collider On Mouse Down");
       
-      AllyPlayer.HeroSkillsOnDisplay?.ThisGameObject.SetActive(false);
+      //Debug.Log("Ally Player Name: " +AllyPlayer);
       
+      AllyPlayer.HeroSkillsOnDisplay?.ThisGameObject.SetActive(false);
       EnemyPlayer.HeroSkillsOnDisplay?.ThisGameObject.SetActive(false);
    }
 
