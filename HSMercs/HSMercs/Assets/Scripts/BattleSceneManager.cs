@@ -27,7 +27,9 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    public IPlayer MainPlayer { get; set; }
    public IPlayer EnemyPlayer { get; set; }
-   
+
+   public IGameBoard GameBoard { get; private set; }
+
 
 
    #endregion
@@ -48,6 +50,10 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    private IEnumerator StartAllCoroutines()
    {
+      
+      //TEST
+      yield return StartCoroutine(InitializeGameBoard());
+      
       yield return StartCoroutine(InitializeAllPlayers());
       
       yield return StartCoroutine(InitializeAllHeroes());
@@ -101,6 +107,20 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
       {
          _initializeSkills.StartAction(allyHero,MainPlayer);
       }
+      
+      yield return null;
+   }
+
+   private IEnumerator InitializeGameBoard()
+   {
+      var gameBoardPrefab = BattleSceneSettings.GameBoardPrefab;
+      var gameBoardObject = Instantiate(gameBoardPrefab, this.transform);
+      var gameBoard = gameBoardPrefab.GetComponent<IGameBoard>();
+
+      gameBoardObject.name = gameBoard.BoardName;
+      
+      //Set Reference
+      GameBoard = gameBoardPrefab.GetComponent<IGameBoard>();
       
       yield return null;
    }

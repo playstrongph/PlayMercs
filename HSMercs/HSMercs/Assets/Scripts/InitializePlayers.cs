@@ -62,6 +62,8 @@ public class InitializePlayers : MonoBehaviour, IInitializePlayers
       _battleSceneManager.MainPlayer.OtherPlayer = enemyPlayer;
       _battleSceneManager.EnemyPlayer.OtherPlayer = mainPlayer;
 
+      _battleSceneManager.GameBoard.AllyPlayer = mainPlayer;
+      _battleSceneManager.GameBoard.EnemyPlayer = enemyPlayer;
 
 
 

@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\BattleSceneManager.cs" />
      <Compile Include="Assets\Scripts\Draggable.cs" />
      <Compile Include="Assets\Scripts\DrawTargetLineAndArrow.cs" />
+     <Compile Include="Assets\Scripts\GameBoard.cs" />
      <Compile Include="Assets\Scripts\Hero.cs" />
      <Compile Include="Assets\Scripts\HeroGraphicPreview.cs" />
      <Compile Include="Assets\Scripts\HeroGraphics.cs" />
@@ -79,6 +80,7 @@
      <Compile Include="Assets\Scripts\IBattleSceneManager.cs" />
      <Compile Include="Assets\Scripts\IDraggable.cs" />
      <Compile Include="Assets\Scripts\IDrawTargetLineAndArrow.cs" />
+     <Compile Include="Assets\Scripts\IGameBoard.cs" />
      <Compile Include="Assets\Scripts\IHero.cs" />
      <Compile Include="Assets\Scripts\IHeroGraphicPreview.cs" />
      <Compile Include="Assets\Scripts\IHeroGraphics.cs" />

@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heroPrefab: {fileID: 8851571768592783740, guid: b759fd36557406c43ac8625c7a2370ff,
     type: 3}
-  skillPrefab: {fileID: 113213072441124812, guid: 7e88120a6696d29499c8499dfdcdd39e,
-    type: 3}
   heroSkillsPrefab: {fileID: 5999021463609932944, guid: 688541b2d663c35468ffc30e992bee7c,
     type: 3}
   playerPrefab: {fileID: 8058846799119040704, guid: c5c7138d0cca77a4087c3f815541a23e,
+    type: 3}
+  gameBoardPrefab: {fileID: 4725815384894953042, guid: bb7555f22b260fe4db9f0ecc9470dd3a,
     type: 3}
   allyTeamHeroes: {fileID: 11400000, guid: 42568677ef1050347852989fdffd0e7c, type: 2}
   enemyTeamHeroes: {fileID: 11400000, guid: 061bfa95ee4b39248967364f066747a2, type: 2}

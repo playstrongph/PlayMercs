@@ -8,5 +8,7 @@ public interface IBattleSceneManager
     
      IPlayer MainPlayer { get; set; }
      IPlayer EnemyPlayer { get; set; }
-     
+
+     IGameBoard GameBoard { get; }
+
 }
