@@ -20,12 +20,12 @@ public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
     private void OnMouseDown()
     {
       Hero.HeroVisual.HeroPreview.ShowHeroPreview.TurnOn();
-      
-      //TODO: Update Hero Visuals as well
-      //TODO: Update Hero Skills Visual as well
-      
-      //TEST
+
       Hero.HeroVisual.UpdateAllHeroVisuals();
+      
+      Hero.HeroSkills.HeroSkillsVisual.UpdateSkillsDisplay();
+      
+      
     }
         
     private void OnMouseUp()

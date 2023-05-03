@@ -16,14 +16,15 @@ namespace SOAssets
       public override void UpdateHeroSkillsOnDisplay(IHeroSkills newHeroSkills, IPlayer player)
       {
          // 1) Disable the current hero skills on display
-         player.HeroSkillsOnDisplay?.ThisGameObject.SetActive(false);
+         player.HeroSkillsOnDisplay?.HeroSkillsVisual.HideSkillsDisplay();
+        
 
          // 2) Replace the current hero skills on display
          player.HeroSkillsOnDisplay = newHeroSkills;
          player.OtherPlayer.HeroSkillsOnDisplay = newHeroSkills;
 
          // 3) Enable the current hero skills on display
-         player.HeroSkillsOnDisplay.ThisGameObject.SetActive(true);
+         player.HeroSkillsOnDisplay?.HeroSkillsVisual.ShowSkillsDisplay();
          
          // Note: Only for Ally players
       }

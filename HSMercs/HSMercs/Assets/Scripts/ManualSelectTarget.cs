@@ -143,8 +143,8 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       var casterPlayer = SkillTargetCollider.Skill.CasterHero.Player;
       var otherPlayer = SkillTargetCollider.Skill.CasterHero.Player.OtherPlayer;
       
-      casterPlayer.HeroSkillsOnDisplay?.ThisGameObject.SetActive(false);
-      otherPlayer.HeroSkillsOnDisplay?.ThisGameObject.SetActive(false);
+      casterPlayer.HeroSkillsOnDisplay?.HeroSkillsVisual.HideSkillsDisplay();
+      otherPlayer.HeroSkillsOnDisplay?.HeroSkillsVisual.HideSkillsDisplay();
    }
 
    /// <summary>

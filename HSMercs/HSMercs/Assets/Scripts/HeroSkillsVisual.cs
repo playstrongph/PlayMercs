@@ -38,12 +38,12 @@ public class HeroSkillsVisual : MonoBehaviour, IHeroSkillsVisual
 
    public void HideSkillsDisplay()
    {
-      
+      HeroSkills.ThisGameObject.SetActive(false);
    }
 
    public void ShowSkillsDisplay()
    {
-      
+      HeroSkills.ThisGameObject.SetActive(true);
    }
 
 

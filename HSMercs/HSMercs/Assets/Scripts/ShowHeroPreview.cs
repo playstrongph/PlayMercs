@@ -30,9 +30,6 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
         _enablePreview = true;
         
         StartCoroutine(ShowPreview());
-        
-        //TODO: Update Hero Skills Display - This should be in its own separate class!
-        UpdateSkillsDisplay();
     }
     
     /// <summary>
@@ -84,21 +81,6 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
             UpdateHeroSkillPreview(hero);
         }
     }
-    
-    /// <summary>
-    /// Updates the hero skills on display after a hero is selected
-    /// </summary>
-    private void UpdateSkillsDisplay()
-    {
-        var hero = _heroPreview.Hero;
-        var heroSkills = _heroPreview.Hero.HeroSkills;
-        var player = _heroPreview.Hero.Player;
-        var heroAlliance = _heroPreview.Hero.HeroInformation.PlayerAlliance;
-        
-        heroAlliance.UpdateHeroSkillsOnDisplay(heroSkills,player);
-    }
-
-
 
     private void PreviewArmorDisplay(IHero hero)
     {

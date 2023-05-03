@@ -51,7 +51,8 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       UpdateSkills(hero);
       
       //Hide hero skills after initialization
-      heroSkills.ThisGameObject.SetActive(false);
+      heroSkills.HeroSkillsVisual.HideSkillsDisplay();
+      
    }
 
 
