@@ -10,15 +10,25 @@ public class HeroSkills : MonoBehaviour, IHeroSkills
 
     #region VARIABLES
     
+    [Header("SKILL ON QUEUE")]
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkill))] private Object selectedSkill = null;
+    
+    [Header("COMPONENTS")]
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelVisual))] private Object threeSkillPanel;
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelVisual))] private Object fourSkillPanel;
 
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkill))]private List<Object> allHeroSkills = new List<Object>();
     
+    
 
     #endregion
 
     #region PROPERTIES
+    
+    /// <summary>
+    /// Current skill selected for execution
+    /// </summary>
+    public ISkill SelectedSkill { get=> selectedSkill as ISkill; set => selectedSkill = value as Object; }
 
     public ISkillPanelVisual ThreeSkillPanel { get=> threeSkillPanel as ISkillPanelVisual; private set => threeSkillPanel = value as Object;}
     public ISkillPanelVisual FourSkillPanel { get=> fourSkillPanel as ISkillPanelVisual; private set => fourSkillPanel = value as Object;}

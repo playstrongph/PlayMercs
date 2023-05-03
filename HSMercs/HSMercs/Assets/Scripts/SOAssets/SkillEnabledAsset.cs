@@ -40,6 +40,8 @@ namespace SOAssets
       public override void SetValidTargetHero(ISkill skill)
       {
          skill.SkillTargetCollider.ManualSelectTarget.SetValidTargetHero();
+         
+         //TODO: Cancel selected skill (by clicking it again)
       }
 
       #endregion

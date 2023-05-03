@@ -61,6 +61,16 @@ public class SkillTargets : MonoBehaviour, ISkillTargets
 
       //Note: Special circumstances in targeting are resolved in SkillTarget.HeroTargets
    }
+   
+   
+   /// <summary>
+   /// Clear valid Targets List
+   /// </summary>
+   public void ClearValidTargets()
+   {
+      validTargets.Clear();
+      ValidTargets.Clear();
+   }
 
    /// <summary>
    /// Called by SkillTargetCollider On Mouse Down

@@ -9,4 +9,6 @@ public interface IHeroSkills
     List<ISkill> AllHeroSkills { get; }
 
     GameObject ThisGameObject { get; }
+    
+    ISkill SelectedSkill { get; set; }
 }

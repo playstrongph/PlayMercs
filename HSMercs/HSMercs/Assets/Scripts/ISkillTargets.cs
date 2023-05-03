@@ -15,4 +15,10 @@ public interface ISkillTargets
     /// Color of glow determined by skill Target Type
     /// </summary>
     void HideValidTargetsGlow();
+
+    /// <summary>
+    /// Clear the list of valid targets
+    /// </summary>
+    void ClearValidTargets();
+    
 }

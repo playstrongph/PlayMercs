@@ -48,11 +48,52 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
 
    public void SetValidTargetHero()
    {
+      //Returns a valid target or null if there's none
+      GetSelectedTarget();
+      
+      //If there's a valid target
+      if (SelectedTarget != null)
+      {
+         HideHeroSkillsOnDisplay();
+
+         SetSelectedSkill();
+      }
+   }
+   
+   /// <summary>
+   /// TEST
+   ///  Cancels the selected skill if it's clicked again
+   ///  Is this better to implement as an SO Enum? 
+   /// </summary>
+   public void CancelSelectedSkill()
+   {
+      var currentSkill = SkillTargetCollider.Skill;
+      var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
+
+      if (selectedSkill == currentSkill)
+      {
+         //NULL both selected target and selected skill
+         SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill = null;
+         SelectedTarget = null;
+         
+         SkillTargetCollider.DrawTargetLineAndArrow.DisableTargetVisuals();
+         
+         HideHeroSkillsOnDisplay();
+      }
+   }
+
+
+   /// <summary>
+   /// Get Selected target from valid targets
+   /// Returns null if there is no valid target
+   /// </summary>
+   private void GetSelectedTarget()
+   {
       // ReSharper disable once PossibleNullReferenceException
       var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
       //Store at most 5 ray cast hits
-      var mResults = new RaycastHit[2];
+      var mResults = new RaycastHit[5];
             
       //ray traverses all layers
       var layerMask = ~0;
@@ -66,6 +107,7 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
             
       //Update the latest targeted hero to null
       SelectedTarget = null;
+      SkillTargetCollider.SkillTargets.ClearValidTargets();
 
       for (int i = 0; i < hitsCount; i++)
       {
@@ -80,13 +122,10 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
             if (validTargets.Contains(targetHeroCollider.Hero))
             {
                SelectedTarget = targetHeroCollider.Hero;
-               
-               HideHeroSkillsOnDisplay();
+               //HideHeroSkillsOnDisplay();
             }
-            else
-               SelectedTarget = null;
          }
-      }
+      } // raycast for loop
    }
    
    
@@ -101,6 +140,17 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       casterPlayer.HeroSkillsOnDisplay?.ThisGameObject.SetActive(false);
       otherPlayer.HeroSkillsOnDisplay?.ThisGameObject.SetActive(false);
       
+   }
+   
+   
+   /// <summary>
+   /// Sets the selected skill as the skill on queue if 
+   /// </summary>
+   private void SetSelectedSkill()
+   {
+      var skill = SkillTargetCollider.Skill;
+
+      skill.CasterHero.HeroSkills.SelectedSkill = skill;
    }
 
    #endregion
