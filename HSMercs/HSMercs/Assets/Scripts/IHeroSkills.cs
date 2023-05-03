@@ -11,4 +11,5 @@ public interface IHeroSkills
     GameObject ThisGameObject { get; }
     
     ISkill SelectedSkill { get; set; }
+    IHero SelectedTarget { get; set; }
 }

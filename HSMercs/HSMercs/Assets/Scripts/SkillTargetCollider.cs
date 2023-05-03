@@ -51,10 +51,10 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     {
         //Will Show skill preview - but will check for skill readiness and enabled status before enabling other
         //visuals
-        DrawTargetLineAndArrow.EnableTargetVisuals();
+        //DrawTargetLineAndArrow.EnableTargetVisuals();
         
         //TEST
-        ManualSelectTarget.CancelSelectedSkill();
+        ManualSelectTarget.UpdateSelectedSkillAndTarget();
     }
         
     private void OnMouseUp()

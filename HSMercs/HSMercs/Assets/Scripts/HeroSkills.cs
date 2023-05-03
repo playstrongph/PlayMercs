@@ -12,6 +12,7 @@ public class HeroSkills : MonoBehaviour, IHeroSkills
     
     [Header("SKILL ON QUEUE")]
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkill))] private Object selectedSkill = null;
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHero))] private Object selectedTarget = null;
     
     [Header("COMPONENTS")]
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelVisual))] private Object threeSkillPanel;
@@ -29,6 +30,8 @@ public class HeroSkills : MonoBehaviour, IHeroSkills
     /// Current skill selected for execution
     /// </summary>
     public ISkill SelectedSkill { get=> selectedSkill as ISkill; set => selectedSkill = value as Object; }
+    
+    public IHero SelectedTarget { get=> selectedTarget as IHero; set => selectedTarget = value as Object; }
 
     public ISkillPanelVisual ThreeSkillPanel { get=> threeSkillPanel as ISkillPanelVisual; private set => threeSkillPanel = value as Object;}
     public ISkillPanelVisual FourSkillPanel { get=> fourSkillPanel as ISkillPanelVisual; private set => fourSkillPanel = value as Object;}

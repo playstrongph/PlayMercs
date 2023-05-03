@@ -5,5 +5,5 @@
     /// <summary>
     /// TEST
     /// </summary>
-    void CancelSelectedSkill();
+    void UpdateSelectedSkillAndTarget();
 }

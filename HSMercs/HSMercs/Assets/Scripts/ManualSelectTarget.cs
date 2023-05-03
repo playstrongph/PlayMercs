@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using Object = UnityEngine.Object;
 
 public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
@@ -56,30 +57,35 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       {
          HideHeroSkillsOnDisplay();
 
-         SetSelectedSkill();
+         SetSelectedSkillAndTarget();
       }
    }
    
    /// <summary>
-   /// TEST
-   ///  Cancels the selected skill if it's clicked again
-   ///  Is this better to implement as an SO Enum? 
+   /// Updates the latest skill and target;  Cancels the skill if selected previously
    /// </summary>
-   public void CancelSelectedSkill()
+   public void UpdateSelectedSkillAndTarget()
    {
       var currentSkill = SkillTargetCollider.Skill;
       var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
-
+      
+      //If there's already a previously selected skill, cancel the selected skill and target
       if (selectedSkill == currentSkill)
       {
          //NULL both selected target and selected skill
          SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill = null;
+         SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedTarget = null;
          SelectedTarget = null;
          
          SkillTargetCollider.DrawTargetLineAndArrow.DisableTargetVisuals();
+
+         //StartCoroutine(CancelSkillVisuals());
          
          HideHeroSkillsOnDisplay();
-      }
+         //ShowHeroSkillsOnDisplay();
+         
+      }else
+         SkillTargetCollider.DrawTargetLineAndArrow.EnableTargetVisuals();
    }
 
 
@@ -142,15 +148,53 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       
    }
    
-   
    /// <summary>
-   /// Sets the selected skill as the skill on queue if 
+   /// Hide Skills On display after a valid target is selected
    /// </summary>
-   private void SetSelectedSkill()
+   private void ShowHeroSkillsOnDisplay()
+   {
+      var casterPlayer = SkillTargetCollider.Skill.CasterHero.Player;
+      var otherPlayer = SkillTargetCollider.Skill.CasterHero.Player.OtherPlayer;
+      
+      casterPlayer.HeroSkillsOnDisplay?.ThisGameObject.SetActive(true);
+      otherPlayer.HeroSkillsOnDisplay?.ThisGameObject.SetActive(true);
+      
+   }
+   
+   //TEST
+   private IEnumerator HideHeroSkillsOnDisplayCoroutine()
+   {
+      HideHeroSkillsOnDisplay();
+      yield return null;
+   }
+   
+   //TEST
+   private IEnumerator ShowHeroSkillsOnDisplayCoroutine()
+   {
+      ShowHeroSkillsOnDisplay();
+      yield return null;
+   }
+   
+   //TEST
+   private IEnumerator CancelSkillVisuals()
+   {
+      var delay = 0.5f;
+      yield return StartCoroutine(HideHeroSkillsOnDisplayCoroutine());
+      yield return new WaitForSeconds(delay);
+      yield return StartCoroutine(ShowHeroSkillsOnDisplayCoroutine());
+
+   }
+
+
+   /// <summary>
+   /// Sets the selected skill and target  
+   /// </summary>
+   private void SetSelectedSkillAndTarget()
    {
       var skill = SkillTargetCollider.Skill;
 
       skill.CasterHero.HeroSkills.SelectedSkill = skill;
+      skill.CasterHero.HeroSkills.SelectedTarget = SelectedTarget;
    }
 
    #endregion
