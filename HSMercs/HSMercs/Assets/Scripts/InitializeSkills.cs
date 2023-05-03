@@ -33,8 +33,9 @@ public class InitializeSkills : MonoBehaviour, IInitializeSkills
       var heroSkills = heroSkillsGameObject.GetComponent<IHeroSkills>();
 
 
-      //Set Hero Reference to its skills
+      //Set Hero Reference to its skills and vice versa
       hero.HeroSkills = heroSkills;
+      hero.HeroSkills.CasterHero = hero;
       
       //Set the correct parent game object and name for the hero skills
       heroSkillsGameObject.transform.SetParent(player.HeroSkillsTransform);

@@ -12,4 +12,10 @@ public interface IHeroSkills
     
     ISkill SelectedSkill { get; set; }
     IHero SelectedTarget { get; set; }
+
+    Canvas SkillsCanvas { get; }
+    
+    IHero CasterHero { get; set; }
+    
+    IHeroSkillsVisual HeroSkillsVisual { get; set; }
 }

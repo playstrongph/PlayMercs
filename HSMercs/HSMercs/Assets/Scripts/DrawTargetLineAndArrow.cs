@@ -28,8 +28,6 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
     public void EnableTargetVisuals()
     {
         
-        //TODO: Should check skill state - if Ready and is enabled
-        
         //Show Skill Preview
         SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOn();
         

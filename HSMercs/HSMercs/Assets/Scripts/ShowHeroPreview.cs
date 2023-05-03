@@ -31,7 +31,7 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
         
         StartCoroutine(ShowPreview());
         
-        //TODO: Update Hero Skills Display
+        //TODO: Update Hero Skills Display - This should be in its own separate class!
         UpdateSkillsDisplay();
     }
     
@@ -96,7 +96,6 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
         var heroAlliance = _heroPreview.Hero.HeroInformation.PlayerAlliance;
         
         heroAlliance.UpdateHeroSkillsOnDisplay(heroSkills,player);
-
     }
 
 

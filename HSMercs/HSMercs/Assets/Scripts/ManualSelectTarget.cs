@@ -79,13 +79,13 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
          
          SkillTargetCollider.DrawTargetLineAndArrow.DisableTargetVisuals();
 
-         //StartCoroutine(CancelSkillVisuals());
-         
          HideHeroSkillsOnDisplay();
-         //ShowHeroSkillsOnDisplay();
+         
+         //TODO: Find next available hero 
          
       }else
          SkillTargetCollider.DrawTargetLineAndArrow.EnableTargetVisuals();
+      
    }
 
 
@@ -145,46 +145,7 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       
       casterPlayer.HeroSkillsOnDisplay?.ThisGameObject.SetActive(false);
       otherPlayer.HeroSkillsOnDisplay?.ThisGameObject.SetActive(false);
-      
    }
-   
-   /// <summary>
-   /// Hide Skills On display after a valid target is selected
-   /// </summary>
-   private void ShowHeroSkillsOnDisplay()
-   {
-      var casterPlayer = SkillTargetCollider.Skill.CasterHero.Player;
-      var otherPlayer = SkillTargetCollider.Skill.CasterHero.Player.OtherPlayer;
-      
-      casterPlayer.HeroSkillsOnDisplay?.ThisGameObject.SetActive(true);
-      otherPlayer.HeroSkillsOnDisplay?.ThisGameObject.SetActive(true);
-      
-   }
-   
-   //TEST
-   private IEnumerator HideHeroSkillsOnDisplayCoroutine()
-   {
-      HideHeroSkillsOnDisplay();
-      yield return null;
-   }
-   
-   //TEST
-   private IEnumerator ShowHeroSkillsOnDisplayCoroutine()
-   {
-      ShowHeroSkillsOnDisplay();
-      yield return null;
-   }
-   
-   //TEST
-   private IEnumerator CancelSkillVisuals()
-   {
-      var delay = 0.5f;
-      yield return StartCoroutine(HideHeroSkillsOnDisplayCoroutine());
-      yield return new WaitForSeconds(delay);
-      yield return StartCoroutine(ShowHeroSkillsOnDisplayCoroutine());
-
-   }
-
 
    /// <summary>
    /// Sets the selected skill and target  
@@ -196,6 +157,10 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       skill.CasterHero.HeroSkills.SelectedSkill = skill;
       skill.CasterHero.HeroSkills.SelectedTarget = SelectedTarget;
    }
+
+   #endregion
+
+   #region TEST
 
    #endregion
 }

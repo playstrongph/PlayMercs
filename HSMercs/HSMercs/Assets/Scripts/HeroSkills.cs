@@ -19,6 +19,8 @@ public class HeroSkills : MonoBehaviour, IHeroSkills
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPanelVisual))] private Object fourSkillPanel;
 
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkill))]private List<Object> allHeroSkills = new List<Object>();
+
+    [SerializeField] private Canvas skillsCanvas = null;
     
     
 
@@ -51,6 +53,12 @@ public class HeroSkills : MonoBehaviour, IHeroSkills
 
     public GameObject ThisGameObject => this.gameObject;
 
+    public Canvas SkillsCanvas => skillsCanvas;
+
+    public IHero CasterHero { get; set; }
+
+    public IHeroSkillsVisual HeroSkillsVisual { get; set; }
+
     #endregion
 
 
@@ -59,6 +67,7 @@ public class HeroSkills : MonoBehaviour, IHeroSkills
     private void Awake()
     {
         RenameThisGameObjectInRunTime();
+        HeroSkillsVisual = GetComponent<IHeroSkillsVisual>();
     }
     
     

@@ -3516,6 +3516,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8757477469637817729}
   - component: {fileID: 5999021463609932947}
+  - component: {fileID: 1445943440}
   m_Layer: 0
   m_Name: HeroSkillsPrefab
   m_TagString: Untagged
@@ -3555,6 +3556,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ea005c324fdd645847006eaa93c856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedSkill: {fileID: 0}
+  selectedTarget: {fileID: 0}
   threeSkillPanel: {fileID: 5999021464484665489}
   fourSkillPanel: {fileID: 5999021464947049150}
   allHeroSkills:
@@ -3562,6 +3565,19 @@ MonoBehaviour:
   - {fileID: 5999021463406912926}
   - {fileID: 5999021464729893979}
   - {fileID: 5999021464831014821}
+  skillsCanvas: {fileID: 5999021462922504809}
+--- !u!114 &1445943440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5999021463609932944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8433385b8496d0a4f8132939696e5406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5999021463632435320
 GameObject:
   m_ObjectHideFlags: 0
