@@ -7,4 +7,6 @@
 
     void HideSkillsDisplay();
     void ShowSkillsDisplay();
+
+    void ShowSkillAndHeroTarget();
 }

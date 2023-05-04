@@ -6,4 +6,8 @@
 
     void DisableTargetVisuals();
 
+    //TEST
+    void ShowCrossHairAtTargetHero(IHero hero);
+    void ShowArrowAtTargetHero(IHero targetHero);
+
 }

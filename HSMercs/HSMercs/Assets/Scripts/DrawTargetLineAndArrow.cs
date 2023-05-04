@@ -165,6 +165,50 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
     
     #endregion
 
+    #region TEST
+    
+    
+    /// <summary>
+    /// Shows the cross hair at target hero
+    /// </summary>
+    /// <param name="hero"></param>
+    public void ShowCrossHairAtTargetHero(IHero hero)
+    {
+        var heroTransform = hero.HeroTransform;
+
+        SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = true;
+        
+        SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.transform.position =
+            heroTransform.position;
+    }
+    
+    public void ShowArrowAtTargetHero(IHero targetHero)
+    {
+        var targetHeroTransform = targetHero.HeroTransform;
+        var position = targetHeroTransform.position;
+        var notNormalizedTarget = position - transform.parent.position;
+        
+        //var notNormalizedTarget = transform.parent.position - targetHeroTransform.position;
+        
+        var directionTarget = notNormalizedTarget.normalized;
+        
+            
+        var rotZ = Mathf.Atan2(notNormalizedTarget.y, notNormalizedTarget.x) * Mathf.Rad2Deg;
+        
+        //SkillTargetCollider.TargetArrow.SetActive(true);
+
+        SkillTargetCollider.TargetArrow.GetComponent<Image>().enabled = true;
+        
+        //SkillTargetCollider.TargetArrow.transform.position = transform.position - 15f * directionTarget;
+        SkillTargetCollider.TargetArrow.transform.position = position - 15f * directionTarget;
+        
+        SkillTargetCollider.TargetArrow.transform.rotation = Quaternion.Euler(0f,0f,rotZ-90);
+    }
+
+    
+
+    #endregion
+        
 
 
 }

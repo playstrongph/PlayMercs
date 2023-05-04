@@ -25,6 +25,9 @@ public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
       
       Hero.HeroSkills.HeroSkillsVisual.UpdateSkillsDisplay();
       
+      //TEST
+      Hero.HeroSkills.HeroSkillsVisual.ShowSkillAndHeroTarget();
+      
       
     }
         

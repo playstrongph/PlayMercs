@@ -86,6 +86,9 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       }else
          SkillTargetCollider.DrawTargetLineAndArrow.EnableTargetVisuals();
       
+      //TEST
+      selectedSkill?.SkillTargetCollider.DrawTargetLineAndArrow.DisableTargetVisuals();
+
    }
 
 

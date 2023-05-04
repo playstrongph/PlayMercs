@@ -45,7 +45,23 @@ public class HeroSkillsVisual : MonoBehaviour, IHeroSkillsVisual
    {
       HeroSkills.ThisGameObject.SetActive(true);
    }
+   #endregion
 
+   #region TEST
+
+   public void ShowSkillAndHeroTarget()
+   {
+      if (HeroSkills.SelectedTarget != null)
+      {
+         HeroSkills.SelectedSkill.SkillTargetCollider.DrawTargetLineAndArrow.ShowArrowAtTargetHero(HeroSkills
+            .SelectedTarget);
+         
+         HeroSkills.SelectedSkill.SkillTargetCollider.DrawTargetLineAndArrow.ShowCrossHairAtTargetHero(HeroSkills
+            .SelectedTarget);
+         
+         HeroSkills.SelectedSkill.SkillTargetCollider.TargetNodes.ShowNodesAtTargetHero(HeroSkills.SelectedTarget);
+      }
+   }
 
    #endregion
 }
