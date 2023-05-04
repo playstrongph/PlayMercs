@@ -86,8 +86,10 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       }else
          SkillTargetCollider.DrawTargetLineAndArrow.EnableTargetVisuals();
       
-      //TEST
-      selectedSkill?.SkillTargetCollider.DrawTargetLineAndArrow.DisableTargetVisuals();
+      //TEST: Disable target visuals of selected skill and target
+      //TODO: This should be based on skill Type - for active and basic skills only
+      selectedSkill?.SkillAttributes.SkillType.DisableTargetVisuals(selectedSkill);
+
 
    }
 

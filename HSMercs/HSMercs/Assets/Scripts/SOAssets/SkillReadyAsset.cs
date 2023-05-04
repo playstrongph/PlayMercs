@@ -58,6 +58,11 @@ namespace SOAssets
          //Check if skill is enabled
          skill.SkillAttributes.SkillEnableStatus.SetValidTargetHero(skill);
       }
+      
+      public override void DisableTargetVisuals(ISkill skill)
+      {
+         skill.SkillAttributes.SkillEnableStatus.DisableTargetVisuals(skill);
+      }
 
       #endregion
    }

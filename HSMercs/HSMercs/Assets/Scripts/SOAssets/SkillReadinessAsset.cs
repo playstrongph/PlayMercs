@@ -43,6 +43,12 @@ namespace SOAssets
       {
          
       }
+      
+      public virtual void DisableTargetVisuals(ISkill skill)
+      {
+         
+      }
+      
 
       #endregion
    }

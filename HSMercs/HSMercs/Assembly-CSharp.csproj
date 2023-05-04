@@ -152,6 +152,7 @@
      <Compile Include="Assets\Scripts\SOAssets\ITeamHeroesAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\NoSkillElementAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\OrcRaceAsset.cs" />
+     <Compile Include="Assets\Scripts\SOAssets\PassiveSkillAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\PlayerAllianceAsset.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SingleTargetAlly.cs" />
      <Compile Include="Assets\Scripts\SOAssets\SingleTargetEnemy.cs" />

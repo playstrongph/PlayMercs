@@ -44,6 +44,11 @@ namespace SOAssets
          //TODO: Cancel selected skill (by clicking it again)
       }
 
+      public override void DisableTargetVisuals(ISkill skill)
+      {
+         skill.SkillTargetCollider.DrawTargetLineAndArrow.DisableTargetVisuals();
+      }
+
       #endregion
    }
 }

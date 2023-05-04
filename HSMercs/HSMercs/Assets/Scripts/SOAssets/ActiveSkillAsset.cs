@@ -35,6 +35,17 @@ namespace SOAssets
       {
          skill.SkillAttributes.SkillReadiness.SetValidTargetHero(skill);
       }
+      
+      /// <summary>
+      /// Disables the skill target visuals - node, cross hair, and arrow
+      /// </summary>
+      /// <param name="skill"></param>
+      public override void DisableTargetVisuals(ISkill skill)
+      {
+         //skill.SkillTargetCollider.DrawTargetLineAndArrow.DisableTargetVisuals();
+         
+         skill.SkillAttributes.SkillReadiness.DisableTargetVisuals(skill);
+      }
 
       #endregion
    }
