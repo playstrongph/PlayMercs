@@ -1216,7 +1216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c49e4c8076cfae24f94cd8fee29cc08b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedTarget: {fileID: 0}
+  localSkillSelectedTarget: {fileID: 0}
 --- !u!114 &6933843289291623316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5470,7 +5470,7 @@ GameObject:
   - component: {fileID: 5999021463910473198}
   - component: {fileID: 5999021463910473199}
   m_Layer: 9
-  m_Name: SkillNotReadyText
+  m_Name: SkillSpeedNotReadyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8522,7 +8522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c49e4c8076cfae24f94cd8fee29cc08b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedTarget: {fileID: 0}
+  localSkillSelectedTarget: {fileID: 0}
 --- !u!114 &1911728205942588891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8981,7 +8981,7 @@ GameObject:
   - component: {fileID: 5999021464475077950}
   - component: {fileID: 5999021464475077951}
   m_Layer: 9
-  m_Name: SkillReadyText
+  m_Name: SkillSpeedReadyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9366,7 +9366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c49e4c8076cfae24f94cd8fee29cc08b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedTarget: {fileID: 0}
+  localSkillSelectedTarget: {fileID: 0}
 --- !u!114 &4068190593537954461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9636,7 +9636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c49e4c8076cfae24f94cd8fee29cc08b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedTarget: {fileID: 0}
+  localSkillSelectedTarget: {fileID: 0}
 --- !u!114 &6955202631946737002
 MonoBehaviour:
   m_ObjectHideFlags: 0

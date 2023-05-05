@@ -27,6 +27,27 @@ namespace SOAssets
       {
          skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOn();
       }
+      
+      public override void LoadSkillTypeVisuals(ISkill skill)
+      {
+         var skillGraphics = skill.SkillVisual.SkillGraphics;
+
+
+         
+         skillGraphics.PassiveSkillFrame.enabled = true;
+         skillGraphics.PassiveSkillGraphic.enabled = true;
+         
+         //This is the skill speed
+         skillGraphics.SkillReadyText.enabled = true;
+         
+         
+         skillGraphics.SkillReadyFrame.enabled = false;
+         skillGraphics.SkillReadyGraphic.enabled = false;
+         skillGraphics.SkillNotReadyFrame.enabled = false;
+         skillGraphics.SkillNotReadyGraphic.enabled = false;
+         skillGraphics.SkillNotReadyText.enabled = false;
+
+      }
      
 
       #endregion
