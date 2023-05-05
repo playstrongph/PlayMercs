@@ -49,14 +49,19 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
 
    public void SetValidTargetHero()
    {
-      //Returns a valid target or null if there's none
+      //This is the current selected skill of the hero
+      var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
+
+      //Get A n
       GetSelectedTarget();
       
       //If there's a valid target
       if (SelectedTarget != null)
       {
+         //Disable the visuals if there's a new valid selected target and selected skill
+         selectedSkill?.SkillAttributes.SkillType.DisableTargetVisuals(selectedSkill);
+         
          HideHeroSkillsOnDisplay();
-
          SetSelectedSkillAndTarget();
       }
    }
@@ -83,14 +88,9 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
          
          //TODO: Find next available hero 
          
-      }else
+      }
+      else
          SkillTargetCollider.DrawTargetLineAndArrow.EnableTargetVisuals();
-      
-      //TEST: Disable target visuals of selected skill and target
-      //TODO: This should be based on skill Type - for active and basic skills only
-      selectedSkill?.SkillAttributes.SkillType.DisableTargetVisuals(selectedSkill);
-
-
    }
 
 
