@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 752c4d7ea14777d46a60bfe0bdbcab9c, type: 3}
-  m_Name: zzTestSkill1
+  m_Name: zzActiveSkillSample
   m_EditorClassIdentifier: 
-  skillName: zzNewSkill
-  skillDescription: Test NewSkill
-  skillCooldown: 12
-  skillSpeed: 45
+  skillName: Active Skill Sample
+  skillDescription: 'Test Skill 2
+
+'
+  skillCooldown: 9
+  skillSpeed: 12
   fightingSpirit: 0
-  skillSprite: {fileID: -5709384847532787934, guid: 4491d9b10a6665c418123e32b4faa48f,
+  skillSprite: {fileID: -3912667378497300665, guid: d6c2e4e890e3c0c489c64604a95b04f4,
     type: 3}
   skillElement: {fileID: 11400000, guid: dc330572ecca8464db5e95551bcef5fd, type: 2}
   skillType: {fileID: 11400000, guid: 577bbc32534a1f5489cf9d63fe36bb07, type: 2}
   skillTarget: {fileID: 11400000, guid: 70e32ca688fefb64b820a762eaba16e6, type: 2}
-  skillReadiness: {fileID: 11400000, guid: a24ac98961248504a9278c84ef795b6b, type: 2}
+  skillReadiness: {fileID: 11400000, guid: 461954722327d8349b0a265745077933, type: 2}

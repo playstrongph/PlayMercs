@@ -23,7 +23,7 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
 
    
    [Header("SET IN RUN TIME")]
-   [SerializeField] private Object selectedTarget = null;
+   [SerializeField] private Object localSkillSelectedTarget = null;
 
    #endregion
         
@@ -31,10 +31,10 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
 
    private ISkillTargetCollider SkillTargetCollider { get; set; }
    
-   private IHero SelectedTarget
+   private IHero LocalSkillSelectedTarget
    {
-      get => selectedTarget as IHero;
-      set => selectedTarget = value as Object;
+      get => localSkillSelectedTarget as IHero;
+      set => localSkillSelectedTarget = value as Object;
    }
 
 
@@ -52,16 +52,17 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       //This is the current selected skill of the hero
       var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
 
-      //Get A n
+      //Returns a valid target, or null if there's none for Local Skill Selected Target
       GetSelectedTarget();
       
       //If there's a valid target
-      if (SelectedTarget != null)
+      if (LocalSkillSelectedTarget != null)
       {
          //Disable the visuals if there's a new valid selected target and selected skill
          selectedSkill?.SkillAttributes.SkillType.DisableTargetVisuals(selectedSkill);
          
          HideHeroSkillsOnDisplay();
+         
          SetSelectedSkillAndTarget();
       }
    }
@@ -80,22 +81,23 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
          //NULL both selected target and selected skill
          SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill = null;
          SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedTarget = null;
-         SelectedTarget = null;
+         LocalSkillSelectedTarget = null;
          
          SkillTargetCollider.DrawTargetLineAndArrow.DisableTargetVisuals();
 
          HideHeroSkillsOnDisplay();
-         
-         //TODO: Find next available hero 
-         
       }
       else
-         SkillTargetCollider.DrawTargetLineAndArrow.EnableTargetVisuals();
+      {
+         SkillTargetCollider.DrawTargetLineAndArrow.EnableTargetVisuals();   
+      }
+
+      
    }
 
 
    /// <summary>
-   /// Get Selected target from valid targets
+   /// Gets a Local Selected target from valid targets
    /// Returns null if there is no valid target
    /// </summary>
    private void GetSelectedTarget()
@@ -117,7 +119,8 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       int hitsCount = Physics.RaycastNonAlloc(ray, mResults, Mathf.Infinity,layerMask);
             
       //Update the latest targeted hero to null
-      SelectedTarget = null;
+      LocalSkillSelectedTarget = null;
+      
       SkillTargetCollider.SkillTargets.ClearValidTargets();
 
       for (int i = 0; i < hitsCount; i++)
@@ -127,12 +130,12 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
          {
             var targetHeroCollider = mResults[i].transform.GetComponent<IHeroTargetCollider>();
             
-            SelectedTarget = validTargets.Contains(targetHeroCollider.Hero) ? targetHeroCollider.Hero : null;
+            LocalSkillSelectedTarget = validTargets.Contains(targetHeroCollider.Hero) ? targetHeroCollider.Hero : null;
             
             //If there is a valid selected target
             if (validTargets.Contains(targetHeroCollider.Hero))
             {
-               SelectedTarget = targetHeroCollider.Hero;
+               LocalSkillSelectedTarget = targetHeroCollider.Hero;
                //HideHeroSkillsOnDisplay();
             }
          }
@@ -160,7 +163,7 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       var skill = SkillTargetCollider.Skill;
 
       skill.CasterHero.HeroSkills.SelectedSkill = skill;
-      skill.CasterHero.HeroSkills.SelectedTarget = SelectedTarget;
+      skill.CasterHero.HeroSkills.SelectedTarget = LocalSkillSelectedTarget;
    }
 
    #endregion

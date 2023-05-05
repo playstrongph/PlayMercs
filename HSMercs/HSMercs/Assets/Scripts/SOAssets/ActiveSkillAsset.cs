@@ -46,6 +46,11 @@ namespace SOAssets
          
          skill.SkillAttributes.SkillReadiness.DisableTargetVisuals(skill);
       }
+      
+      public override void UpdateSelectedSkillAndTarget(ISkill skill)
+      {
+         skill.SkillTargetCollider.ManualSelectTarget.UpdateSelectedSkillAndTarget();
+      }
 
       #endregion
    }

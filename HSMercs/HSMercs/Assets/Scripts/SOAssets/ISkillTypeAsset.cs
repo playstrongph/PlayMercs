@@ -7,5 +7,7 @@
         void SetValidTargetHero(ISkill skill);
 
         void DisableTargetVisuals(ISkill skill);
+
+        void UpdateSelectedSkillAndTarget(ISkill skill);
     }
 }

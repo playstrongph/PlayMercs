@@ -34,6 +34,11 @@ namespace SOAssets
          
       }
 
+      public virtual void UpdateSelectedSkillAndTarget(ISkill skill)
+      {
+         
+      }
+
 
 
       #endregion
