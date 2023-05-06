@@ -19,6 +19,7 @@ public class SkillGraphics : MonoBehaviour, ISkillGraphics
     [SerializeField] private Image passiveSkillGraphic;
     [SerializeField] private Image targetArrow;
     [SerializeField] private Image crossHairGraphic;
+    [SerializeField] private Image skillDisabledGraphic;
 
     [Header("SKILL TEXTS")] 
     [SerializeField] private TextMeshProUGUI skillReadyText;
@@ -39,6 +40,8 @@ public class SkillGraphics : MonoBehaviour, ISkillGraphics
     public Image PassiveSkillGraphic { get => passiveSkillGraphic; private set => passiveSkillGraphic = value; }
     public Image TargetArrow { get => targetArrow; private set => targetArrow = value; }
     public Image CrossHairGraphic { get => crossHairGraphic; private set => crossHairGraphic = value; }
+    
+    public Image SkillDisabledGraphic { get => skillDisabledGraphic; private set => skillDisabledGraphic = value; }
     
     //SKILL TEXTS
     public TextMeshProUGUI SkillReadyText { get => skillReadyText; private set => skillReadyText = value; }

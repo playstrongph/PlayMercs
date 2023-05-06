@@ -16,4 +16,6 @@ public interface ISkillGraphics
     
     TextMeshProUGUI SkillReadyText { get; }
     TextMeshProUGUI SkillNotReadyText { get; }
+
+    Image SkillDisabledGraphic { get; }
 }
