@@ -109,6 +109,8 @@ MonoBehaviour:
   heroes: {fileID: 42992947343399991}
   heroPreviewsTransform: {fileID: 287769663}
   heroSkillsTransform: {fileID: 1641794802}
+  playerAllianceAsset: {fileID: 0}
+  heroSkillsOnDisplay: {fileID: 0}
 --- !u!1 &8058846799579564181
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +170,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 100, y: 100}
-  m_Spacing: {x: -25, y: 0}
+  m_Spacing: {x: -20, y: 0}
   m_Constraint: 2
   m_ConstraintCount: 1
 --- !u!114 &42992947343399991

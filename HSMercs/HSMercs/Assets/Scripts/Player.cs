@@ -22,7 +22,8 @@ public class Player : MonoBehaviour, IPlayer
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAllianceAsset))] private ScriptableObject playerAllianceAsset = null;
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkills))] private Object heroSkillsOnDisplay = null;
-        
+   
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHero))] private Object currentHeroSelected = null;
 
    #endregion
         
@@ -37,6 +38,8 @@ public class Player : MonoBehaviour, IPlayer
 
    public IPlayerAllianceAsset PlayerAllianceAsset { get => playerAllianceAsset as IPlayerAllianceAsset; set => playerAllianceAsset = value as ScriptableObject; }
    public IHeroSkills HeroSkillsOnDisplay { get => heroSkillsOnDisplay as IHeroSkills; set => heroSkillsOnDisplay = value as Object; }
+   
+   public IHero CurrentHeroSelected { get => currentHeroSelected as IHero; set => currentHeroSelected = value as Object; }
 
    /// <summary>
    /// For the ally player, this is the enemy player; for the enemy player, this is the ally player

@@ -38,7 +38,14 @@ public class HeroSkillsVisual : MonoBehaviour, IHeroSkillsVisual
 
    public void HideSkillsDisplay()
    {
+      //TEST
+      var lastSelectedHero = HeroSkills.CasterHero;
+
+      if (lastSelectedHero != null)
+         lastSelectedHero.HeroTransform.localScale = Vector3.one;
+      
       HeroSkills.ThisGameObject.SetActive(false);
+
    }
 
    public void ShowSkillsDisplay()

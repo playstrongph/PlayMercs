@@ -29,6 +29,13 @@ namespace SOAssets
          // Note: Only for Ally players
       }
       
+      public override void ScaleUpSelectedHero(IHero hero)
+      {
+         //Values tested in inspector
+         var newScale = new Vector3(1.5f, 1.5f, 1f);
+
+         hero.HeroTransform.localScale = newScale;
+      }
       
    }
 }

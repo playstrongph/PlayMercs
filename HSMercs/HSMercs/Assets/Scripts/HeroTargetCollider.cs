@@ -24,11 +24,16 @@ public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
       Hero.HeroVisual.UpdateAllHeroVisuals();
       
       Hero.HeroSkills.HeroSkillsVisual.UpdateSkillsDisplay();
-      
-      //TEST
+
       Hero.HeroSkills.HeroSkillsVisual.ShowSkillAndHeroTarget();
       
-      
+      //TEST
+      //Updates current hero selected in player
+      Hero.Player.CurrentHeroSelected = Hero;
+      Hero.Player.OtherPlayer.CurrentHeroSelected = Hero;
+
+
+
     }
         
     private void OnMouseUp()

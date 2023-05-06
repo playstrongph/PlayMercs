@@ -16,5 +16,7 @@ public interface IPlayer
     
     IPlayer OtherPlayer { get; set; }
 
+    IHero CurrentHeroSelected { get; set; }
+
 
 }

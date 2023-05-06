@@ -10,8 +10,12 @@ namespace SOAssets
      
       public override void UpdateHeroSkillsOnDisplay(IHeroSkills newHeroSkills, IPlayer player)
       {
-         // 1) Disable the current hero skills on display
+         //Disable the current hero skills on display
          player.HeroSkillsOnDisplay?.HeroSkillsVisual.HideSkillsDisplay();
+
+         //Set the HeroSkills on display to null
+         player.HeroSkillsOnDisplay = null;
+         player.OtherPlayer.HeroSkillsOnDisplay = null;
       }
       
       
