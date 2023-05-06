@@ -38,8 +38,8 @@ public class GameBoard : MonoBehaviour, IGameBoard
    /// </summary>
    private void OnMouseDown()
    {
-      AllyPlayer.HeroSkillsOnDisplay?.HeroSkillsVisual.HideSkillsDisplay();
-      EnemyPlayer.HeroSkillsOnDisplay?.HeroSkillsVisual.HideSkillsDisplay();
+      AllyPlayer.HeroSkillsOnDisplay?.HeroSkillsVisual.HideSkillsDisplayAndScaleBackHero();
+      EnemyPlayer.HeroSkillsOnDisplay?.HeroSkillsVisual.HideSkillsDisplayAndScaleBackHero();
    }
 
    #endregion

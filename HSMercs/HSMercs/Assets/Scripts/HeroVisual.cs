@@ -43,6 +43,9 @@ public class HeroVisual : MonoBehaviour, IHeroVisual
     /// </summary>
     public void UpdateAllHeroVisuals()
     {
+        //TEST
+        //ScaleUpSelectedHero();
+        
         UpdateHeroVisuals();
         
         UpdateHeroPreviewVisuals();
@@ -53,8 +56,7 @@ public class HeroVisual : MonoBehaviour, IHeroVisual
             
         UpdateHeroSkillPreview();
         
-        //TEST
-        ScaleUpSelectedHero();
+        
     }
 
     private void UpdateHeroVisuals()
@@ -64,15 +66,7 @@ public class HeroVisual : MonoBehaviour, IHeroVisual
         var attack = hero.HeroStats.Attack;
         var health = hero.HeroStats.Health;
         var armor = hero.HeroStats.Armor;
-        
-        //TEST
-        //This is the last hero selected before clicking on a new one 
-        var latestHeroSelected = hero.Player.CurrentHeroSelected;
-        
-        //TEST
-        
-        if(latestHeroSelected != null) ReturnHeroToNormalScale(latestHeroSelected);
-        
+
         //Load Health Text
         hero.HeroVisual.HeroGraphics.SetHeroHealthText.SetValue(health);
       
@@ -167,24 +161,9 @@ public class HeroVisual : MonoBehaviour, IHeroVisual
             //Skill Enabled Visuals
             heroSkill.SkillAttributes.SkillEnableStatus.SkillDisabledVisuals(heroSkill);
         }
-        
     }
     
-    /// <summary>
-    /// Scale up selected hero if the hero belongs to "Ally" player alliance
-    /// No Zoom in for enemy heroes
-    /// </summary>
-    private void ScaleUpSelectedHero()
-    {
-        var hero = HeroGraphics.Hero;
-        
-        hero.HeroInformation.PlayerAlliance.ScaleUpSelectedHero(hero);
-    }
-
-    public void ReturnHeroToNormalScale(IHero hero)
-    {
-        hero.HeroTransform.localScale = Vector3.one;
-    }
+    
 
     #endregion
     

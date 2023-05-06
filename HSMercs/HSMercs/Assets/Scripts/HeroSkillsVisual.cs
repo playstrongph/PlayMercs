@@ -35,22 +35,28 @@ public class HeroSkillsVisual : MonoBehaviour, IHeroSkillsVisual
       //only displays hero skills of ally heroes
       heroAlliance.UpdateHeroSkillsOnDisplay(HeroSkills,player);
    }
-
-   public void HideSkillsDisplay()
+   
+   /// <summary>
+   /// Hides the current skills on display and scales back hero to normal size
+   /// </summary>
+   public void HideSkillsDisplayAndScaleBackHero()
    {
-      //TEST
-      var lastSelectedHero = HeroSkills.CasterHero;
-
-      if (lastSelectedHero != null)
-         lastSelectedHero.HeroTransform.localScale = Vector3.one;
+      //Scale back hero visuals to normal size
+      HeroSkills.CasterHero.HeroTransform.localScale = Vector3.one;
       
       HeroSkills.ThisGameObject.SetActive(false);
 
    }
-
-   public void ShowSkillsDisplay()
+   
+   /// <summary>
+   /// Shows current skills of and scales up the visuals of the selected hero
+   /// </summary>
+   public void ShowSkillsDisplayAndScaleUpHero()
    {
       HeroSkills.ThisGameObject.SetActive(true);
+      
+      //Scale up selected hero of "Ally" players only
+      HeroSkills.CasterHero.HeroInformation.PlayerAlliance.ScaleUpSelectedHero(HeroSkills.CasterHero);
    }
    #endregion
 

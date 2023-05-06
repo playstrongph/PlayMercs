@@ -5,8 +5,8 @@
     /// </summary>
     void UpdateSkillsDisplay();
 
-    void HideSkillsDisplay();
-    void ShowSkillsDisplay();
+    void HideSkillsDisplayAndScaleBackHero();
+    void ShowSkillsDisplayAndScaleUpHero();
 
     void ShowSkillAndHeroTarget();
 }
