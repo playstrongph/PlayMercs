@@ -43,11 +43,10 @@ public class InitializePlayers : MonoBehaviour, IInitializePlayers
       var mainPlayerGameObject = Instantiate(playerPrefab, playerParentTransform);
       var mainPlayer = mainPlayerGameObject.GetComponent<IPlayer>();
       mainPlayerGameObject.name = "Main Player";
-      mainPlayer.BattleSceneManager = _battleSceneManager;
-      
-      
       mainPlayerGameObject.transform.position = alliesPosition;
-      
+      mainPlayer.BattleSceneManager = _battleSceneManager;
+
+
 
       var enemyPlayerGameObject = Instantiate(playerPrefab, playerParentTransform);
       var enemyPlayer = enemyPlayerGameObject.GetComponent<IPlayer>();

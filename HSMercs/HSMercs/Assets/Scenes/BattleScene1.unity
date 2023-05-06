@@ -566,6 +566,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8058846799579564267, guid: c5c7138d0cca77a4087c3f815541a23e,
+        type: 3}
+      propertyPath: m_Spacing.x
+      value: -15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5c7138d0cca77a4087c3f815541a23e, type: 3}
 --- !u!4 &1861898517 stripped
@@ -695,46 +700,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BattleSceneManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710019273803494043, guid: 83507f0c0a66af6449cbbf6dc9323afe,
-        type: 3}
-      propertyPath: m_Name
-      value: GameBoard
-      objectReference: {fileID: 0}
-    - target: {fileID: 4710019273803494043, guid: 83507f0c0a66af6449cbbf6dc9323afe,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7600766148883632931, guid: 83507f0c0a66af6449cbbf6dc9323afe,
-        type: 3}
-      propertyPath: m_Center.z
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7600766148883632931, guid: 83507f0c0a66af6449cbbf6dc9323afe,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 1335.4242
-      objectReference: {fileID: 0}
-    - target: {fileID: 7600766148883632931, guid: 83507f0c0a66af6449cbbf6dc9323afe,
-        type: 3}
-      propertyPath: m_Center.x
-      value: 29.425598
-      objectReference: {fileID: 0}
-    - target: {fileID: 7600766148883632931, guid: 83507f0c0a66af6449cbbf6dc9323afe,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 1166.1681
-      objectReference: {fileID: 0}
-    - target: {fileID: 7600766148883632931, guid: 83507f0c0a66af6449cbbf6dc9323afe,
-        type: 3}
-      propertyPath: m_Center.y
-      value: -19.078003
-      objectReference: {fileID: 0}
-    - target: {fileID: 8727866046370691404, guid: 83507f0c0a66af6449cbbf6dc9323afe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83507f0c0a66af6449cbbf6dc9323afe, type: 3}

@@ -87,8 +87,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d6a1230e769c446b1858ad7a668a87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alliesPosition: {x: 0, y: -90, z: 0}
-  enemiesPosition: {x: 0, y: 90, z: 0}
+  alliesPosition: {x: 0, y: -100, z: 0}
+  enemiesPosition: {x: 0, y: 100, z: 0}
 --- !u!114 &715097479
 MonoBehaviour:
   m_ObjectHideFlags: 0
