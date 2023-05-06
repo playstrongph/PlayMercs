@@ -39,6 +39,15 @@ namespace SOAssets
       {
          
       }
+      
+      /// <summary>
+      /// This is the "X" icon 
+      /// </summary>
+      /// <param name="skill"></param>
+      public virtual void SkillDisabledVisuals(ISkill skill)
+      {
+         skill.SkillVisual.SkillGraphics.SkillDisabledGraphic.enabled = false;
+      }
 
 
 

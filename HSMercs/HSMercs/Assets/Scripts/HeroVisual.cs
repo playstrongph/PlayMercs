@@ -149,6 +149,9 @@ public class HeroVisual : MonoBehaviour, IHeroVisual
             
             //Skill Type Visuals
             heroSkill.SkillAttributes.SkillType.LoadSkillTypeVisuals(heroSkill);
+            
+            //Skill Enabled Visuals
+            heroSkill.SkillAttributes.SkillEnableStatus.SkillDisabledVisuals(heroSkill);
         }
         
     }

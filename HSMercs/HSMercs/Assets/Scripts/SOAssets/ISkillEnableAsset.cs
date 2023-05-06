@@ -9,5 +9,7 @@ namespace SOAssets
         void SetValidTargetHero(ISkill skill);
 
         void DisableTargetVisuals(ISkill skill);
+
+        void SkillDisabledVisuals(ISkill skill);
     }
 }

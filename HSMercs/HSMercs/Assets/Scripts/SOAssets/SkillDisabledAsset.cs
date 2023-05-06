@@ -23,6 +23,15 @@ namespace SOAssets
       {
          
       }
+      
+      /// <summary>
+      /// This is the "X" icon 
+      /// </summary>
+      /// <param name="skill"></param>
+      public override void SkillDisabledVisuals(ISkill skill)
+      {
+         skill.SkillVisual.SkillGraphics.SkillDisabledGraphic.enabled = true;
+      }
 
       #endregion
    }
