@@ -49,6 +49,9 @@ namespace SOAssets
       
       public override void UpdateSelectedSkillAndTarget(ISkill skill)
       {
+         //Temporarily hides the skill target visuals of the selected skill while selecting a new target
+         skill.SkillTargetCollider.ManualSelectTarget.HideSelectedSkillTargetVisuals();
+         
          skill.SkillTargetCollider.ManualSelectTarget.UpdateSelectedSkillAndTarget();
       }
 

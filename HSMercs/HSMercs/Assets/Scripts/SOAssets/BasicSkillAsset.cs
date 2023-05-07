@@ -35,7 +35,7 @@ namespace SOAssets
       public override void SetValidTargetHero(ISkill skill)
       {
          skill.SkillAttributes.SkillReadiness.SetValidTargetHero(skill);
-         
+
          //Note: Technically speaking, basic skills are ALWAYS ACTIVE and READY 
          //The status checking above is not really required
       }
@@ -50,6 +50,9 @@ namespace SOAssets
       
       public override void UpdateSelectedSkillAndTarget(ISkill skill)
       {
+        //TEST
+        skill.SkillTargetCollider.ManualSelectTarget.HideSelectedSkillTargetVisuals();
+         
         skill.SkillTargetCollider.ManualSelectTarget.UpdateSelectedSkillAndTarget();
       }
 

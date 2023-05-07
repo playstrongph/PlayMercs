@@ -70,7 +70,8 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
          SetSelectedSkillAndTarget();
          
          //TODO: Display skills of next hero that doesn't have a selected skill
-      }
+      }else
+         RestoreSelectedSkillTargetVisuals();
    }
    
    /// <summary>
@@ -81,7 +82,8 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       var currentSkill = SkillTargetCollider.Skill;
       var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
       
-      //cancels the selected skill
+      //cancels the selected skill if it's the same as the current skill
+      //this is how a skill previously selected is cancelled
       if (selectedSkill == currentSkill)
       {
          //NULL both selected target and selected skill
@@ -93,13 +95,14 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
 
          HideHeroSkillsOnDisplay();
       }
-      else
+      else 
       {
          SkillTargetCollider.DrawTargetLineAndArrow.EnableTargetVisuals();   
       }
-
-      
    }
+   
+   
+   
 
 
    /// <summary>
@@ -176,6 +179,30 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
    #endregion
 
    #region TEST
+   
+   /// <summary>
+   /// TEST
+   /// Temporarily hides the target visuals (Line, Arrow, CrossHair) while selecting a target
+   /// </summary>
+   public void HideSelectedSkillTargetVisuals()
+   {
+      var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
+      
+      if(selectedSkill != null)
+         selectedSkill.SkillTargetCollider.DrawTargetLineAndArrow.DisableTargetVisuals();
+   }
+   
+   /// <summary>
+   /// TEST
+   /// </summary>
+   public void RestoreSelectedSkillTargetVisuals()
+   {
+      var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
+      
+      //Display the skill target visuals again
+      selectedSkill?.CasterHero.HeroSkills.HeroSkillsVisual.ShowSkillAndHeroTarget();
+   }
+
 
    #endregion
 }

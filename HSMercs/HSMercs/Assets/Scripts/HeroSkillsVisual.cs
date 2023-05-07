@@ -58,10 +58,7 @@ public class HeroSkillsVisual : MonoBehaviour, IHeroSkillsVisual
       //Scale up selected hero of "Ally" players only
       HeroSkills.CasterHero.HeroInformation.PlayerAlliance.ScaleUpSelectedHero(HeroSkills.CasterHero);
    }
-   #endregion
-
-   #region TEST
-
+   
    public void ShowSkillAndHeroTarget()
    {
       if (HeroSkills.SelectedTarget != null)
@@ -73,8 +70,16 @@ public class HeroSkillsVisual : MonoBehaviour, IHeroSkillsVisual
             .SelectedTarget);
          
          HeroSkills.SelectedSkill.SkillTargetCollider.TargetNodes.ShowNodesAtTargetHero(HeroSkills.SelectedTarget);
+
+         HeroSkills.SelectedSkill.SkillVisual.SkillGraphics.SkillCheckGraphic.enabled = true;
       }
    }
+   
+   #endregion
+
+   #region TEST
+
+  
 
    #endregion
 }

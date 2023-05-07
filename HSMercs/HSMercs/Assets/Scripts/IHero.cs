@@ -14,4 +14,6 @@ public interface IHero
     
     IPlayer Player { get; set; }
 
+    IHeroTargetCollider HeroTargetCollider { get; }
+
 }

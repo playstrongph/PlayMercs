@@ -1,11 +1,15 @@
 ﻿public interface IManualSelectTarget
 {
     void SetValidTargetHero();
-    
-    /// <summary>
-    /// TEST
-    /// </summary>
     void UpdateSelectedSkillAndTarget();
 
-  
+    #region TEST
+
+    void HideSelectedSkillTargetVisuals();
+
+    void RestoreSelectedSkillTargetVisuals();
+
+    #endregion
+
+
 }

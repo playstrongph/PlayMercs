@@ -11,6 +11,9 @@ public class Hero : MonoBehaviour, IHero
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroVisual))]
     private Object heroVisual;
     
+    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroTargetCollider))]
+    private Object heroTargetCollider = null;
+    
     [Header("SET RUNTIME")]
     [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroSkills))]
     private Object heroSkills;
@@ -29,6 +32,10 @@ public class Hero : MonoBehaviour, IHero
     public IHeroSkills HeroSkills { get=> heroSkills as IHeroSkills; set => heroSkills = value as Object; }
 
     public IPlayer Player { get; set; }
+    
+    public IHeroTargetCollider HeroTargetCollider => heroTargetCollider as IHeroTargetCollider;
+    
+    
 
 
     #endregion
