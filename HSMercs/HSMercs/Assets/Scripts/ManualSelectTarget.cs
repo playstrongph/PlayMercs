@@ -55,23 +55,26 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       //Returns a valid target, or null if there's none for Local Skill Selected Target
       GetSelectedTarget();
       
+      //TEST
+      ShowSkillAndHeroTarget();
+      
       //If there's a valid target
       if (LocalSkillSelectedTarget != null)
       {
          //Note: if there's a new valid target, then the current skill is latest selected skill
          //Displays the skill check icon of the new selected skill
          SkillTargetCollider.Skill.SkillVisual.SkillGraphics.SkillCheckGraphic.enabled = true;
-         
+
          //Disable the visuals if there's a new valid selected target and selected skill
          selectedSkill?.SkillAttributes.SkillType.DisableTargetVisuals(selectedSkill);
 
          HideHeroSkillsOnDisplay();
-         
+
          SetSelectedSkillAndTarget();
-         
-         //TODO: Display skills of next hero that doesn't have a selected skill
-      }else
-         RestoreSelectedSkillTargetVisuals();
+
+      }
+      /*else
+         ShowSkillAndHeroTarget();*/
    }
    
    /// <summary>
@@ -100,10 +103,6 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
          SkillTargetCollider.DrawTargetLineAndArrow.EnableTargetVisuals();   
       }
    }
-   
-   
-   
-
 
    /// <summary>
    /// Gets a Local Selected target from valid targets
@@ -175,14 +174,9 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       
       skill.CasterHero.HeroSkills.SelectedTarget = LocalSkillSelectedTarget;
    }
-
-   #endregion
-
-   #region TEST
    
-   /// <summary>
-   /// TEST
-   /// Temporarily hides the target visuals (Line, Arrow, CrossHair) while selecting a target
+   /// <summary> 
+   /// Hides the skill target visuals from selected skill to selected target hero
    /// </summary>
    public void HideSelectedSkillTargetVisuals()
    {
@@ -191,17 +185,32 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       if(selectedSkill != null)
          selectedSkill.SkillTargetCollider.DrawTargetLineAndArrow.DisableTargetVisuals();
    }
-   
+
    /// <summary>
-   /// TEST
+   /// Displays the skill target visuals from selected skill to selected target hero
    /// </summary>
-   public void RestoreSelectedSkillTargetVisuals()
+   public void ShowSkillAndHeroTarget()
    {
       var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
-      
-      //Display the skill target visuals again
-      selectedSkill?.CasterHero.HeroSkills.HeroSkillsVisual.ShowSkillAndHeroTarget();
+      var selectedTarget = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedTarget;
+         
+      if (selectedSkill != null)
+      {
+         selectedSkill.SkillTargetCollider.DrawTargetLineAndArrow.ShowArrowAtTargetHero(selectedTarget);
+            
+         selectedSkill.SkillTargetCollider.DrawTargetLineAndArrow.ShowCrossHairAtTargetHero(selectedTarget);
+            
+         selectedSkill.SkillTargetCollider.TargetNodes.ShowNodesAtTargetHero(selectedTarget);
+   
+         selectedSkill.SkillVisual.SkillGraphics.SkillCheckGraphic.enabled = true;
+      }
    }
+
+   #endregion
+
+   #region TEST
+   
+   
 
 
    #endregion

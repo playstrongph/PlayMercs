@@ -26,14 +26,8 @@ public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
       Hero.HeroSkills.HeroSkillsVisual.UpdateSkillsDisplay();
 
       Hero.HeroSkills.HeroSkillsVisual.ShowSkillAndHeroTarget();
-      
-      //TEST
-      //Updates current hero selected in player
-      Hero.Player.CurrentHeroSelected = Hero;
-      Hero.Player.OtherPlayer.CurrentHeroSelected = Hero;
 
-
-
+      UpdateCurrentSelectedHero();
     }
         
     private void OnMouseUp()
@@ -49,6 +43,12 @@ public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
     private void OnMouseEnter()
     {
         Hero.HeroVisual.HeroPreview.ShowHeroPreview.TurnOnMouseEnter();
+    }
+
+    private void UpdateCurrentSelectedHero()
+    {
+        Hero.Player.CurrentHeroSelected = Hero;
+        Hero.Player.OtherPlayer.CurrentHeroSelected = Hero;
     }
 
 

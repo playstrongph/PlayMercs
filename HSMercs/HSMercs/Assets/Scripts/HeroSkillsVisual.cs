@@ -63,15 +63,7 @@ public class HeroSkillsVisual : MonoBehaviour, IHeroSkillsVisual
    {
       if (HeroSkills.SelectedTarget != null)
       {
-         HeroSkills.SelectedSkill.SkillTargetCollider.DrawTargetLineAndArrow.ShowArrowAtTargetHero(HeroSkills
-            .SelectedTarget);
-         
-         HeroSkills.SelectedSkill.SkillTargetCollider.DrawTargetLineAndArrow.ShowCrossHairAtTargetHero(HeroSkills
-            .SelectedTarget);
-         
-         HeroSkills.SelectedSkill.SkillTargetCollider.TargetNodes.ShowNodesAtTargetHero(HeroSkills.SelectedTarget);
-
-         HeroSkills.SelectedSkill.SkillVisual.SkillGraphics.SkillCheckGraphic.enabled = true;
+         HeroSkills.SelectedSkill.SkillTargetCollider.ManualSelectTarget.ShowSkillAndHeroTarget();
       }
    }
    
