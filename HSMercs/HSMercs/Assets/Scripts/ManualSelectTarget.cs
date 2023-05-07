@@ -58,12 +58,18 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       //If there's a valid target
       if (LocalSkillSelectedTarget != null)
       {
+         //Note: if there's a new valid target, then the current skill is latest selected skill
+         //Displays the skill check icon of the new selected skill
+         SkillTargetCollider.Skill.SkillVisual.SkillGraphics.SkillCheckGraphic.enabled = true;
+         
          //Disable the visuals if there's a new valid selected target and selected skill
          selectedSkill?.SkillAttributes.SkillType.DisableTargetVisuals(selectedSkill);
-         
+
          HideHeroSkillsOnDisplay();
          
          SetSelectedSkillAndTarget();
+         
+         //TODO: Display skills of next hero that doesn't have a selected skill
       }
    }
    
@@ -75,7 +81,7 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       var currentSkill = SkillTargetCollider.Skill;
       var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
       
-      //If there's already a previously selected skill, cancel the selected skill and target
+      //cancels the selected skill
       if (selectedSkill == currentSkill)
       {
          //NULL both selected target and selected skill
@@ -136,7 +142,6 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
             if (validTargets.Contains(targetHeroCollider.Hero))
             {
                LocalSkillSelectedTarget = targetHeroCollider.Hero;
-               //HideHeroSkillsOnDisplay();
             }
          }
       } // raycast for loop
@@ -161,8 +166,10 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
    private void SetSelectedSkillAndTarget()
    {
       var skill = SkillTargetCollider.Skill;
-
+      
+      //Updates the hero skills selected skill
       skill.CasterHero.HeroSkills.SelectedSkill = skill;
+      
       skill.CasterHero.HeroSkills.SelectedTarget = LocalSkillSelectedTarget;
    }
 

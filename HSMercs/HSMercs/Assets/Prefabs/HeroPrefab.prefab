@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 310701388}
   m_Layer: 8
-  m_Name: HeroOrderGraphic
+  m_Name: BalloonOrderGraphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 649587939}
   - component: {fileID: 649587938}
   m_Layer: 8
-  m_Name: OrderTextGraphic
+  m_Name: BalloonTextGraphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8487,9 +8487,11 @@ MonoBehaviour:
   blueHeroGraphic: {fileID: 8851571768967761526}
   armorGraphic: {fileID: 8851571769138863895}
   targetCrossHairGraphic: {fileID: 8851571769177037590}
+  balloonGraphic: {fileID: 827203708}
   attackText: {fileID: 8851571768410829844}
   healthText: {fileID: 8851571768722284118}
   armorText: {fileID: 8851571768576737069}
+  balloonText: {fileID: 649587938}
 --- !u!223 &8851571768253912226
 Canvas:
   m_ObjectHideFlags: 0

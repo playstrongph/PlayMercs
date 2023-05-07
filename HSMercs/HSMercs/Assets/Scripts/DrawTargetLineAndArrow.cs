@@ -55,6 +55,10 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
         
         SkillTargetCollider.SkillTargets.HideValidTargetsGlow();
         
+        //TEST
+        //Disable skill check icon
+        SkillTargetCollider.Skill.SkillVisual.SkillGraphics.SkillCheckGraphic.enabled = false;
+
     }
 
     

@@ -57,6 +57,8 @@ public interface IHeroGraphics
     Image ArmorGraphic { get; set; }
 
     Image TargetCrossHairGraphic { get; set; }
+    
+    Image BalloonGraphic { get; }
 
     /// <summary>
     /// Attack Text Graphic
@@ -71,10 +73,14 @@ public interface IHeroGraphics
     /// Armor Text Graphic
     /// </summary>
     TextMeshProUGUI ArmorText { get; set; }
+    TextMeshProUGUI BalloonText { get; set; }
+    
     ISetHeroAttackText SetHeroAttackText { get; }
     ISetHeroImage SetHeroImage { get; }
     ISetHeroArmorText SetHeroArmorText { get; }
 
     ISetHeroHealthText SetHeroHealthText { get; }
+
+  
 
 }

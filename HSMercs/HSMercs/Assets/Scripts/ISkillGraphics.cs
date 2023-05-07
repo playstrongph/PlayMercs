@@ -18,4 +18,6 @@ public interface ISkillGraphics
     TextMeshProUGUI SkillNotReadyText { get; }
 
     Image SkillDisabledGraphic { get; }
+    Image SkillCheckGraphic { get; }
+
 }

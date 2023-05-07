@@ -20,7 +20,7 @@ public class SkillGraphics : MonoBehaviour, ISkillGraphics
     [SerializeField] private Image targetArrow;
     [SerializeField] private Image crossHairGraphic;
     [SerializeField] private Image skillDisabledGraphic;
-    [SerializeField] private Image skillCheckGraphic;
+    [SerializeField] private Image skillCheckGraphic = null;
 
     [Header("SKILL TEXTS")] 
     [SerializeField] private TextMeshProUGUI skillReadyText;
