@@ -98,9 +98,7 @@ public class TargetNodes : MonoBehaviour, ITargetNodes
                
            }//End of for statement
        }
-
-       #region TEST
-        
+       
        /// <summary>
        /// Draw nodes at selected target hero
        /// </summary>
@@ -155,6 +153,10 @@ public class TargetNodes : MonoBehaviour, ITargetNodes
                
            }//End of for statement
        }
+
+       #region TEST
+        
+       
 
        #endregion
 
