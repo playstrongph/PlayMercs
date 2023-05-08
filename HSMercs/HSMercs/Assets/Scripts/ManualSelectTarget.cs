@@ -9,19 +9,6 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
 {
    #region VARIABLES
 
-   /*/// <summary>
-   /// List of valid hero targets taken during
-   /// on mouse down event
-   /// </summary>
-   private List<IHero> _validTargets = new List<IHero>();*/
-        
-   /// <summary>
-   /// The intended target hero for the skill being used
-   /// reset to null when target selected is not valid
-   /// </summary>
-   //private IHero _validSkillTargetHero = null;
-
-   
    [Header("SET IN RUN TIME")]
    [SerializeField] private Object localSkillSelectedTarget = null;
 
@@ -31,6 +18,9 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
 
    private ISkillTargetCollider SkillTargetCollider { get; set; }
    
+   /// <summary>
+   /// This the hero target of this skill
+   /// </summary>
    private IHero LocalSkillSelectedTarget
    {
       get => localSkillSelectedTarget as IHero;
@@ -46,7 +36,10 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
    {
       SkillTargetCollider = GetComponent<ISkillTargetCollider>();
    }
-
+   
+   /// <summary>
+   /// Sets the valid target hero
+   /// </summary>
    public void SetValidTargetHero()
    {
       //This is the current selected skill of the hero
@@ -55,26 +48,27 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       //Returns a valid target, or null if there's none for Local Skill Selected Target
       GetSelectedTarget();
       
-      //TEST
+      //Displays the skill target visuals (nodes, arrow, cross hair) between the skill and its target hero
       ShowSkillAndHeroTarget();
       
-      //If there's a valid target
+      //If there's a valid target, disable the last selected skill visuals and display the current one
       if (LocalSkillSelectedTarget != null)
       {
          //Note: if there's a new valid target, then the current skill is latest selected skill
          //Displays the skill check icon of the new selected skill
          SkillTargetCollider.Skill.SkillVisual.SkillGraphics.SkillCheckGraphic.enabled = true;
 
-         //Disable the visuals if there's a new valid selected target and selected skill
+         //Disable the skill target visuals (nodes, arrow, cross hair) of the last selected skill
          selectedSkill?.SkillAttributes.SkillType.DisableTargetVisuals(selectedSkill);
-
-         HideHeroSkillsOnDisplay();
-
+         
+         //Hide the hero skills panel after successfully choosing a target
+         HideSkillsDisplayAndScaleBackHero();
+         
+         //This is the Hero Skills' latest selected skill and selected target
          SetSelectedSkillAndTarget();
 
       }
-      /*else
-         ShowSkillAndHeroTarget();*/
+    
    }
    
    /// <summary>
@@ -85,8 +79,8 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       var currentSkill = SkillTargetCollider.Skill;
       var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
       
-      //cancels the selected skill if it's the same as the current skill
-      //this is how a skill previously selected is cancelled
+      
+      //Cancel a previously selected skill...
       if (selectedSkill == currentSkill)
       {
          //NULL both selected target and selected skill
@@ -96,8 +90,9 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
          
          SkillTargetCollider.DrawTargetLineAndArrow.DisableTargetVisuals();
 
-         HideHeroSkillsOnDisplay();
+         HideSkillsDisplayAndScaleBackHero();
       }
+      //...or enables skill targeting visuals
       else 
       {
          SkillTargetCollider.DrawTargetLineAndArrow.EnableTargetVisuals();   
@@ -112,48 +107,38 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
    {
       // ReSharper disable once PossibleNullReferenceException
       var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
       //Store at most 5 ray cast hits
       var mResults = new RaycastHit[5];
-            
       //ray traverses all layers
       var layerMask = ~0;
-      
-      //TODO: more checks if the hero is a valid target should be done here
-      
       var validTargets = SkillTargetCollider.SkillTargets.GetValidTargets(); 
             
       //Same to RayCastAll but with no additional garbage
       int hitsCount = Physics.RaycastNonAlloc(ray, mResults, Mathf.Infinity,layerMask);
             
-      //Update the latest targeted hero to null
+      //Set the local skill selected target to null
       LocalSkillSelectedTarget = null;
-      
+      //Clear the list of valid targets
       SkillTargetCollider.SkillTargets.ClearValidTargets();
 
-      for (int i = 0; i < hitsCount; i++)
+      for (var i = 0; i < hitsCount; i++)
       {
-         
+         //If raycast finds a hero
          if (mResults[i].transform.GetComponent<IHeroTargetCollider>() != null)
          {
-            var targetHeroCollider = mResults[i].transform.GetComponent<IHeroTargetCollider>();
+            var targetHero = mResults[i].transform.GetComponent<IHeroTargetCollider>().Hero;
             
-            LocalSkillSelectedTarget = validTargets.Contains(targetHeroCollider.Hero) ? targetHeroCollider.Hero : null;
-            
-            //If there is a valid selected target
-            if (validTargets.Contains(targetHeroCollider.Hero))
-            {
-               LocalSkillSelectedTarget = targetHeroCollider.Hero;
-            }
+            //Set the local skill selected target hero to the hero found if it belongs to the list of valid targets, else set it to null
+            LocalSkillSelectedTarget = validTargets.Contains(targetHero) ?targetHero : null;
          }
-      } // raycast for loop
+      } 
    }
    
    
    /// <summary>
-   /// Hide Skills On display after a valid target is selected
+   /// Hide skills on display and scale back targeting hero to normal size after a valid target is selected
    /// </summary>
-   private void HideHeroSkillsOnDisplay()
+   private void HideSkillsDisplayAndScaleBackHero()
    {
       var casterPlayer = SkillTargetCollider.Skill.CasterHero.Player;
       var otherPlayer = SkillTargetCollider.Skill.CasterHero.Player.OtherPlayer;
@@ -163,20 +148,19 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
    }
 
    /// <summary>
-   /// Sets the selected skill and target  
+   /// Sets HeroSkills' selected skill and target to the local skill and its selected target
    /// </summary>
    private void SetSelectedSkillAndTarget()
    {
       var skill = SkillTargetCollider.Skill;
       
-      //Updates the hero skills selected skill
+      //Updates the hero skills selected skill and target to the local skill and its selected target
       skill.CasterHero.HeroSkills.SelectedSkill = skill;
-      
       skill.CasterHero.HeroSkills.SelectedTarget = LocalSkillSelectedTarget;
    }
    
    /// <summary> 
-   /// Hides the skill target visuals from selected skill to selected target hero
+   /// Hides the skill target visuals (arrow, nodes, and cross hair)
    /// </summary>
    public void HideSelectedSkillTargetVisuals()
    {
@@ -187,7 +171,7 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
    }
 
    /// <summary>
-   /// Displays the skill target visuals from selected skill to selected target hero
+   /// Displays the skill target visuals (arrow, nodes, and cross hair) from selected skill to selected target hero
    /// </summary>
    public void ShowSkillAndHeroTarget()
    {
