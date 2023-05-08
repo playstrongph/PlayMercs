@@ -26,20 +26,7 @@ public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
     /// </summary>
     private void OnMouseDown()
     {
-      //1) Show hero preview and its skills after a delay  
-      Hero.HeroVisual.HeroPreview.ShowHeroPreview.TurnOn();
-      
-      //2) Update all hero visuals - information and displayed images and text
-      Hero.HeroVisual.UpdateAllHeroVisuals();
-      
-      //3)Update the hero skills panel - information and displayed images and text
-      Hero.HeroSkills.HeroSkillsVisual.UpdateSkillsDisplay();
-      
-      //4) Show the existing hero skill and its target (if any)
-      Hero.HeroSkills.HeroSkillsVisual.ShowSkillAndHeroTarget();
-      
-      //5) Update the current hero selected (tracked by the player and the other player)
-      UpdateCurrentSelectedHero();
+       SelectHeroActions();
     }
         
     /// <summary>

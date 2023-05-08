@@ -73,7 +73,7 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
          SetSelectedSkillAndTarget();
          
          //TEST: Find next hero
-         NextHeroSkillSelect();
+         ShowNextHeroWithoutSelectedSkill();
 
       }
     
@@ -201,17 +201,20 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
    #endregion
 
    #region TEST
-
-   private void NextHeroSkillSelect()
+   
+   
+   /// <summary>
+   /// Display the next hero without a selected skill 
+   /// </summary>
+   private void ShowNextHeroWithoutSelectedSkill()
    {
-      Debug.Log("Next Hero Skill Select");
-      
       var allyHeroList = SkillTargetCollider.Skill.CasterHero.Player.BattleSceneManager.MainPlayer.Heroes.HeroStatusLists.GetAliveHeroList();
-
       var invertedAllyHeroList = new List<IHero>(allyHeroList);
       
+      //List is inverted so that the order of displaying heroes will be towards the "RIGHT" direction
       invertedAllyHeroList.Reverse();
       
+      //This is the closest hero to the "RIGHT" of the hero with a skill selected
       IHero nextHero = null;
       
       foreach (var hero in invertedAllyHeroList)
@@ -222,10 +225,9 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
             nextHero = hero;
          }
       }
-
-      nextHero?.HeroTargetCollider.SelectHeroActions();
       
-      //Debug.Log("Next Hero is: " +nextHero.HeroTargetCollider.Hero.HeroInformation.HeroName);
+      //If there's a next hero, trigger the "OnMouseDown" actions
+      nextHero?.HeroTargetCollider.SelectHeroActions();
 
    }
 
