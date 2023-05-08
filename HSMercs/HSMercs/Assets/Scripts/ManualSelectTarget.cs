@@ -59,16 +59,7 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       if (LocalSkillSelectedTarget != null)
       {
          //Note: This means skill is successfully cast
-         
-         //TEST
-         Debug.Log("Selected Skill: " +SkillTargetCollider.Skill.SkillAttributes.SkillName);
-         
-         //TEST:  Assign the this skill as teh selected hero skill
-         casterHero.HeroInformation.SelectedHeroSkill = SkillTargetCollider.Skill;
-         
-         //TEST
-         Debug.Log("Caster Hero Selected Skill: " +casterHero.HeroInformation.SelectedHeroSkill.SkillAttributes.SkillName);
-         
+
          //Displays the skill check icon of the new selected skill
          SkillTargetCollider.Skill.SkillVisual.SkillGraphics.SkillCheckGraphic.enabled = true;
 
@@ -213,6 +204,8 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
 
    private void NextHeroSkillSelect()
    {
+      Debug.Log("Next Hero Skill Select");
+      
       var allyHeroList = SkillTargetCollider.Skill.CasterHero.Player.BattleSceneManager.MainPlayer.Heroes.HeroStatusLists.GetAliveHeroList();
 
       var invertedAllyHeroList = new List<IHero>(allyHeroList);
@@ -223,7 +216,8 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       
       foreach (var hero in invertedAllyHeroList)
       {
-         if (hero.HeroInformation.SelectedHeroSkill == null)
+         var selectedSkill = hero.HeroSkills.SelectedSkill;
+         if (selectedSkill == null)
          {
             nextHero = hero;
          }

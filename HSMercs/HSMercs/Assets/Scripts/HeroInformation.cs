@@ -57,7 +57,7 @@ public class HeroInformation : MonoBehaviour, IHeroInformation
    
    public IHeroAsset HeroAsset { get => heroAsset as IHeroAsset; set => heroAsset = value as ScriptableObject; }
 
-   public ISkill SelectedHeroSkill { get; set; }
+ 
 
 
 
