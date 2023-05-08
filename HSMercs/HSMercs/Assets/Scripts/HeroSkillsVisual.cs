@@ -25,14 +25,14 @@ public class HeroSkillsVisual : MonoBehaviour, IHeroSkillsVisual
    }
    
    /// <summary>
-   /// Update the information in the hero skills display
+   /// Update all skills information and displayed visuals of the hero skills panel for ally heroes
    /// </summary>
    public void UpdateSkillsDisplay()
    {
       var player = HeroSkills.CasterHero.Player;
       var heroAlliance = HeroSkills.CasterHero.HeroInformation.PlayerAlliance;
         
-      //only displays hero skills of ally heroes
+      //Only display for ally heroes
       heroAlliance.UpdateHeroSkillsOnDisplay(HeroSkills,player);
    }
    
@@ -43,7 +43,7 @@ public class HeroSkillsVisual : MonoBehaviour, IHeroSkillsVisual
    {
       //Scale back hero visuals to normal size
       HeroSkills.CasterHero.HeroTransform.localScale = Vector3.one;
-      
+      //Hide the hero skills panel
       HeroSkills.ThisGameObject.SetActive(false);
 
    }
@@ -53,12 +53,17 @@ public class HeroSkillsVisual : MonoBehaviour, IHeroSkillsVisual
    /// </summary>
    public void ShowSkillsDisplayAndScaleUpHero()
    {
+      //Display the hero skills panel
       HeroSkills.ThisGameObject.SetActive(true);
       
       //Scale up selected hero of "Ally" players only
       HeroSkills.CasterHero.HeroInformation.PlayerAlliance.ScaleUpSelectedHero(HeroSkills.CasterHero);
    }
    
+   
+   /// <summary>
+   /// Display the hero skills and target visuals (arrow, nodes, cross hair) from the skill to the target hero
+   /// </summary>
    public void ShowSkillAndHeroTarget()
    {
       if (HeroSkills.SelectedTarget != null)

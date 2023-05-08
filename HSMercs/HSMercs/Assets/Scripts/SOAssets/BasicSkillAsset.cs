@@ -50,9 +50,7 @@ namespace SOAssets
       
       public override void UpdateSelectedSkillAndTarget(ISkill skill)
       {
-        //TEST
         skill.SkillTargetCollider.ManualSelectTarget.HideSelectedSkillTargetVisuals();
-         
         skill.SkillTargetCollider.ManualSelectTarget.UpdateSelectedSkillAndTarget();
       }
 

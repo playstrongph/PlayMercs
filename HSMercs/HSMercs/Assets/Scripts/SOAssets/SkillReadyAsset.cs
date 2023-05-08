@@ -21,8 +21,6 @@ namespace SOAssets
 
       public override void LoadSkillReadinessVisuals(ISkill skill)
       {
-         //TODO: SKill Glow, No Cooldown Icon, No Cooldown Text
-
          var skillGraphics = skill.SkillVisual.SkillGraphics;
 
          //Enable Images

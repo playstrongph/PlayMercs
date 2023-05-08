@@ -17,7 +17,6 @@ namespace SOAssets
       {
          // 1) Disable the current hero skills on display
          player.HeroSkillsOnDisplay?.HeroSkillsVisual.HideSkillsDisplayAndScaleBackHero();
-        
 
          // 2) Replace the current hero skills on display
          player.HeroSkillsOnDisplay = newHeroSkills;
@@ -25,10 +24,12 @@ namespace SOAssets
 
          // 3) Enable the current hero skills on display
          player.HeroSkillsOnDisplay?.HeroSkillsVisual.ShowSkillsDisplayAndScaleUpHero();
-         
-         // Note: Only for Ally players
       }
       
+      /// <summary>
+      /// Scale up the selected ally hero when selected by the player
+      /// </summary>
+      /// <param name="hero"></param>
       public override void ScaleUpSelectedHero(IHero hero)
       {
          //Values tested in inspector
