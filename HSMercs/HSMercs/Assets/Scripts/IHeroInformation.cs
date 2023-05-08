@@ -16,5 +16,7 @@ public interface IHeroInformation
 
     IHeroAsset HeroAsset { get; set; }
 
-    
+    ISkill SelectedHeroSkill { get; set; }
+
+
 }

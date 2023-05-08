@@ -8925,7 +8925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroVisual: {fileID: 8851571768592783742}
-  heroTargetCollider: {fileID: 0}
+  heroTargetCollider: {fileID: 6520674110450000527}
   heroSkills: {fileID: 0}
 --- !u!114 &8851571768592783742
 MonoBehaviour:
@@ -8963,7 +8963,6 @@ MonoBehaviour:
   heroRace: {fileID: 0}
   playerAlliance: {fileID: 0}
   heroAsset: {fileID: 0}
-  skillEnableAsset: {fileID: 0}
 --- !u!114 &6676174062186417314
 MonoBehaviour:
   m_ObjectHideFlags: 0

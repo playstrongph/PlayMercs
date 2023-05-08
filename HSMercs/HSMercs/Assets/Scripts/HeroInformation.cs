@@ -21,6 +21,9 @@ public class HeroInformation : MonoBehaviour, IHeroInformation
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroRaceAsset))] private ScriptableObject heroRace = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IPlayerAllianceAsset))] private ScriptableObject playerAlliance = null;
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroAsset))] private ScriptableObject heroAsset = null;
+
+   /*[Tooltip("This is the current selected hero skill")]
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkill))] private ScriptableObject selectedHeroSkill = null;*/
  
    
    
@@ -53,11 +56,11 @@ public class HeroInformation : MonoBehaviour, IHeroInformation
    public IPlayerAllianceAsset PlayerAlliance { get => playerAlliance as IPlayerAllianceAsset; set => playerAlliance = value as ScriptableObject; }
    
    public IHeroAsset HeroAsset { get => heroAsset as IHeroAsset; set => heroAsset = value as ScriptableObject; }
-  
-   
-   
 
-   
+   public ISkill SelectedHeroSkill { get; set; }
+
+
+
    #endregion
         
    #region METHODS

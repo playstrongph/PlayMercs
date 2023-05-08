@@ -44,6 +44,7 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
    {
       //This is the current selected skill of the hero
       var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
+      var casterHero = SkillTargetCollider.Skill.CasterHero;
 
       //Returns a valid target, or null if there's none for Local Skill Selected Target
       GetSelectedTarget();
@@ -51,10 +52,23 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       //Displays the skill target visuals (nodes, arrow, cross hair) between the skill and its target hero
       ShowSkillAndHeroTarget();
       
+      //TEST: set the selected skill to Null
+      //casterHero.HeroInformation.SelectedHeroSkill = null;
+      
       //If there's a valid target, disable the last selected skill visuals and display the current one
       if (LocalSkillSelectedTarget != null)
       {
-         //Note: if there's a new valid target, then the current skill is latest selected skill
+         //Note: This means skill is successfully cast
+         
+         //TEST
+         Debug.Log("Selected Skill: " +SkillTargetCollider.Skill.SkillAttributes.SkillName);
+         
+         //TEST:  Assign the this skill as teh selected hero skill
+         casterHero.HeroInformation.SelectedHeroSkill = SkillTargetCollider.Skill;
+         
+         //TEST
+         Debug.Log("Caster Hero Selected Skill: " +casterHero.HeroInformation.SelectedHeroSkill.SkillAttributes.SkillName);
+         
          //Displays the skill check icon of the new selected skill
          SkillTargetCollider.Skill.SkillVisual.SkillGraphics.SkillCheckGraphic.enabled = true;
 
@@ -66,6 +80,9 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
          
          //This is the Hero Skills' latest selected skill and selected target
          SetSelectedSkillAndTarget();
+         
+         //TEST: Find next hero
+         NextHeroSkillSelect();
 
       }
     
@@ -193,8 +210,30 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
    #endregion
 
    #region TEST
-   
-   
+
+   private void NextHeroSkillSelect()
+   {
+      var allyHeroList = SkillTargetCollider.Skill.CasterHero.Player.BattleSceneManager.MainPlayer.Heroes.HeroStatusLists.GetAliveHeroList();
+
+      var invertedAllyHeroList = new List<IHero>(allyHeroList);
+      
+      invertedAllyHeroList.Reverse();
+      
+      IHero nextHero = null;
+      
+      foreach (var hero in invertedAllyHeroList)
+      {
+         if (hero.HeroInformation.SelectedHeroSkill == null)
+         {
+            nextHero = hero;
+         }
+      }
+
+      nextHero?.HeroTargetCollider.SelectHeroActions();
+      
+      //Debug.Log("Next Hero is: " +nextHero.HeroTargetCollider.Hero.HeroInformation.HeroName);
+
+   }
 
 
    #endregion
