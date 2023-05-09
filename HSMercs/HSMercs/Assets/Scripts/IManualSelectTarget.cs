@@ -1,10 +1,7 @@
 ﻿public interface IManualSelectTarget
 {
     void SelectTarget();
-
-    void HideSelectedSkillTargetVisuals();
-
-    void ShowSkillAndHeroTarget();
+    void ShowSelectedSkillAndTargetVisuals();
     
     IHero LocalSkillSelectedTarget { get; set; }
 

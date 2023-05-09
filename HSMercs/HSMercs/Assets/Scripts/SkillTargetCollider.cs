@@ -24,6 +24,8 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     public ISkillTargeting SkillTargeting { get; private set; }
     public IDraggable Draggable { get; private set; }
 
+    public ISkillTargetDisplay SkillTargetDisplay { get; set; }
+
     #endregion
 
     private void Awake()
@@ -32,6 +34,7 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
         Draggable = GetComponent<IDraggable>();
         SkillTargets = GetComponent<ISkillTargets>();
         ManualSelectTarget = GetComponent<IManualSelectTarget>();
+        SkillTargetDisplay = GetComponent<ISkillTargetDisplay>();
     }
     
     /// <summary>

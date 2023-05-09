@@ -110,6 +110,7 @@
      <Compile Include="Assets\Scripts\ISkillPanelVisual.cs" />
      <Compile Include="Assets\Scripts\ISkillPreviewVisual.cs" />
      <Compile Include="Assets\Scripts\ISkillTargetCollider.cs" />
+     <Compile Include="Assets\Scripts\ISkillTargetDisplay.cs" />
      <Compile Include="Assets\Scripts\ISkillTargeting.cs" />
      <Compile Include="Assets\Scripts\ISkillTargets.cs" />
      <Compile Include="Assets\Scripts\ISkillVisual.cs" />
@@ -180,6 +181,7 @@
      <Compile Include="Assets\Scripts\SkillPanelVisual.cs" />
      <Compile Include="Assets\Scripts\SkillPreviewVisual.cs" />
      <Compile Include="Assets\Scripts\SkillTargetCollider.cs" />
+     <Compile Include="Assets\Scripts\SkillTargetDisplay.cs" />
      <Compile Include="Assets\Scripts\SkillTargeting.cs" />
      <Compile Include="Assets\Scripts\SkillTargets.cs" />
      <Compile Include="Assets\Scripts\SkillVisual.cs" />

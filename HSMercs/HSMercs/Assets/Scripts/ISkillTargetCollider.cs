@@ -17,4 +17,6 @@ public interface ISkillTargetCollider
     ISkillTargets SkillTargets { get; set; }
 
     IManualSelectTarget ManualSelectTarget { get; }
+    
+    ISkillTargetDisplay SkillTargetDisplay { get; set; }
 }

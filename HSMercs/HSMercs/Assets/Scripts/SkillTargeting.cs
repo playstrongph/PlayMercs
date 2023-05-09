@@ -11,11 +11,6 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
     [SerializeField] private float distanceMultiplier = 40;
     
     private ISkillTargetCollider SkillTargetCollider { get; set; }
-    
-    //TEST
-    private IManualSelectTarget ManualSelectTarget { get; set; }
-
-
 
     #region METHODS
     
@@ -47,8 +42,7 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
         //Enable skill targeting for a different skill
         else 
         {
-            //SkillTargetCollider.SkillTargeting.EnableSkillTargeting();
-            
+         
             //Enables and updates information on show skill preview
             SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOn();
         
@@ -77,9 +71,7 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
         SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOff();
         
         SkillTargetCollider.SkillTargets.HideValidTargetsGlow();
-        
-        //TEST
-        //Disable skill check icon
+
         SkillTargetCollider.Skill.SkillVisual.SkillGraphics.SkillCheckGraphic.enabled = false;
 
     }

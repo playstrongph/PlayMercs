@@ -49,7 +49,7 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       GetSelectedTarget();
       
       //Displays the skill target visuals (nodes, arrow, cross hair) between the skill and its target hero
-      ShowSkillAndHeroTarget();
+      ShowSelectedSkillAndTargetVisuals();
 
       //If there's a valid target, disable the last selected skill visuals and display the current one
       if (LocalSkillSelectedTarget != null)
@@ -134,24 +134,12 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       skill.CasterHero.HeroSkills.SelectedSkill = skill;
       skill.CasterHero.HeroSkills.SelectedTarget = LocalSkillSelectedTarget;
    }
-   
-   /// <summary> 
-   /// Hides the skill target visuals (arrow, nodes, and cross hair)
-   /// TODO: Transfer to Skill Targeting!
-   /// </summary>
-   public void HideSelectedSkillTargetVisuals()
-   {
-      var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
-      
-      if(selectedSkill != null)
-         selectedSkill.SkillTargetCollider.SkillTargeting.DisableSkillTargeting();
-   }
 
    /// <summary>
    /// Displays the skill target visuals (arrow, nodes, and cross hair) from selected skill to selected target hero
-   /// TODO: This should be stand alone
+   /// TODO: Transfer to New Class SkillTargetDisplay
    /// </summary>
-   public void ShowSkillAndHeroTarget()
+   public void ShowSelectedSkillAndTargetVisuals()
    {
       var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
       var selectedTarget = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedTarget;
