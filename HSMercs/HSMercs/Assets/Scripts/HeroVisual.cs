@@ -43,9 +43,6 @@ public class HeroVisual : MonoBehaviour, IHeroVisual
     /// </summary>
     public void UpdateAllHeroVisuals()
     {
-        //TEST
-        //ScaleUpSelectedHero();
-        
         UpdateHeroVisuals();
         
         UpdateHeroPreviewVisuals();

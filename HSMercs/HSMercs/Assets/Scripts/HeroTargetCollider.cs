@@ -53,6 +53,25 @@ public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
         Hero.HeroVisual.HeroPreview.ShowHeroPreview.TurnOnMouseEnter();
     }
     
+    #region TEST
+    
+    /// <summary>
+    /// Actions done when the hero is selected by the player
+    /// </summary>
+    public void SelectHeroActions()
+    {
+        //1) Update all hero visuals - information and displayed images and text
+        Hero.HeroVisual.UpdateAllHeroVisuals();
+      
+        //2)Update the hero skills panel - information and displayed images and text
+        Hero.HeroSkills.HeroSkillsVisual.UpdateSkillsDisplay();
+      
+        //3) Show the existing hero skill and its target (if any)
+        Hero.HeroSkills.HeroSkillsVisual.ShowSkillAndHeroTarget();
+      
+        //4) Update the current hero selected (tracked by the player and the other player)
+        UpdateCurrentSelectedHero();  
+    }
     
     /// <summary>
     /// Update the current hero selected (tracked by the player and the other player)
@@ -61,29 +80,6 @@ public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
     {
         Hero.Player.CurrentHeroSelected = Hero;
         Hero.Player.OtherPlayer.CurrentHeroSelected = Hero;
-    }
-
-    #region TEST
-    
-    /// <summary>
-    /// Actions done when the hero is selected by the player
-    /// </summary>
-    public void SelectHeroActions()
-    {
-        //1) Show hero preview and its skills after a delay  
-        //Hero.HeroVisual.HeroPreview.ShowHeroPreview.TurnOn();
-      
-        //2) Update all hero visuals - information and displayed images and text
-        Hero.HeroVisual.UpdateAllHeroVisuals();
-      
-        //3)Update the hero skills panel - information and displayed images and text
-        Hero.HeroSkills.HeroSkillsVisual.UpdateSkillsDisplay();
-      
-        //4) Show the existing hero skill and its target (if any)
-        Hero.HeroSkills.HeroSkillsVisual.ShowSkillAndHeroTarget();
-      
-        //5) Update the current hero selected (tracked by the player and the other player)
-        UpdateCurrentSelectedHero();  
     }
 
 

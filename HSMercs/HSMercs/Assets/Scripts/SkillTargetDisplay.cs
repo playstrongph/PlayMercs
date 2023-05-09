@@ -51,14 +51,11 @@ public class SkillTargetDisplay : MonoBehaviour, ISkillTargetDisplay
          
          //selectedSkill.SkillTargetCollider.SkillTargeting.ShowArrowAtTargetHero(selectedTarget);
          ShowArrowAtTargetHero(selectedTarget);
-            
-         //selectedSkill.SkillTargetCollider.SkillTargeting.ShowCrossHairAtTargetHero(selectedTarget);
 
          ShowCrossHairAtTargetHero(selectedTarget);
          
          selectedSkill.SkillTargetCollider.TargetNodes.ShowNodesAtTargetHero(selectedTarget);
          
-   
          selectedSkill.SkillVisual.SkillGraphics.SkillCheckGraphic.enabled = true;
       }
    }

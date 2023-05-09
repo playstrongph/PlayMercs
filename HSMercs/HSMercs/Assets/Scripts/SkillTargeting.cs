@@ -7,9 +7,6 @@ using UnityEngine.UI;
 
 public class SkillTargeting : MonoBehaviour, ISkillTargeting
 {
-    
-    [SerializeField] private float distanceMultiplier = 40;
-    
     private ISkillTargetCollider SkillTargetCollider { get; set; }
 
     #region METHODS

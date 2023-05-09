@@ -10,6 +10,6 @@
     /// </summary>
     void ShowVisuals();
     
-    //Turns on the Targeting Displays
+    //Displays the Line Arrow and Cross hair
     void ShowLineArrowAndCrossHair();
 }
