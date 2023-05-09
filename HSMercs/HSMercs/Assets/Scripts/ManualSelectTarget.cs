@@ -76,29 +76,29 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
    }
    
    /// <summary>
-   /// Enables skill targeting or cancels a previously selected skill 
+   /// Enables skill targeting or cancels a previously selected skill
+   /// TODO: Transfer this to skill targeting!
    /// </summary>
    public void EnableSkillTargeting()
    {
       var currentSkill = SkillTargetCollider.Skill;
       var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
 
-      //Cancel a previously selected skill...
+      //Cancel Selected skill by clicking on it
       if (selectedSkill == currentSkill)
       {
-         //NULL both selected target and selected skill
+         //Reset selected skill and targets
          SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill = null;
          SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedTarget = null;
          LocalSkillSelectedTarget = null;
          
-         SkillTargetCollider.DrawTargetLineAndArrow.DisableSkillTargeting();
-
-         HideSkillsDisplayAndScaleBackHero();
+         //Disable skill targeting
+         SkillTargetCollider.SkillTargeting.DisableSkillTargeting();
       }
-      //...or enables skill targeting visuals
+      //Enable skill targeting for a different skill
       else 
       {
-         SkillTargetCollider.DrawTargetLineAndArrow.EnableSkillTargeting();   
+         SkillTargetCollider.SkillTargeting.EnableSkillTargeting();   
       }
    }
 
@@ -164,14 +164,14 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
    
    /// <summary> 
    /// Hides the skill target visuals (arrow, nodes, and cross hair)
-   /// TODO: Should be stand alone
+   /// TODO: Transfer to Skill Targeting!
    /// </summary>
    public void HideSelectedSkillTargetVisuals()
    {
       var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
       
       if(selectedSkill != null)
-         selectedSkill.SkillTargetCollider.DrawTargetLineAndArrow.DisableSkillTargeting();
+         selectedSkill.SkillTargetCollider.SkillTargeting.DisableSkillTargeting();
    }
 
    /// <summary>
@@ -185,9 +185,9 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
          
       if (selectedSkill != null)
       {
-         selectedSkill.SkillTargetCollider.DrawTargetLineAndArrow.ShowArrowAtTargetHero(selectedTarget);
+         selectedSkill.SkillTargetCollider.SkillTargeting.ShowArrowAtTargetHero(selectedTarget);
             
-         selectedSkill.SkillTargetCollider.DrawTargetLineAndArrow.ShowCrossHairAtTargetHero(selectedTarget);
+         selectedSkill.SkillTargetCollider.SkillTargeting.ShowCrossHairAtTargetHero(selectedTarget);
             
          selectedSkill.SkillTargetCollider.TargetNodes.ShowNodesAtTargetHero(selectedTarget);
    

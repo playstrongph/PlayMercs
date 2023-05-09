@@ -13,14 +13,14 @@ public class Draggable : MonoBehaviour, IDraggable
 
     private Camera _mainCamera;
     
-    private IDrawTargetLineAndArrow SelectDragTarget { get; set; }
+    private ISkillTargeting SelectDragTarget { get; set; }
     
     
 
     private void Awake()
     {
         SkillTargetCollider = GetComponent<ISkillTargetCollider>();
-        SelectDragTarget = GetComponent<IDrawTargetLineAndArrow>();
+        SelectDragTarget = GetComponent<ISkillTargeting>();
         _mainCamera = Camera.main;
     }
     
@@ -39,7 +39,7 @@ public class Draggable : MonoBehaviour, IDraggable
             
         thisTransform.position = new Vector3(mousePos.x - _pointerDisplacement.x, mousePos.y - _pointerDisplacement.y, thisTransform.position.z);
             
-        SkillTargetCollider.DrawTargetLineAndArrow.ShowLineAndTarget();
+        SkillTargetCollider.SkillTargeting.ShowLineAndTarget();
     }
     
     private Vector3 MouseInWorldCoords()

@@ -10,7 +10,7 @@ public interface ISkillTargetCollider
   
     Canvas TargetCanvas { get; }
     
-    IDrawTargetLineAndArrow DrawTargetLineAndArrow { get;}
+    ISkillTargeting SkillTargeting { get;}
 
     IDraggable Draggable { get; }
     

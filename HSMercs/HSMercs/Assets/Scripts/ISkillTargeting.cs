@@ -1,4 +1,4 @@
-﻿public interface IDrawTargetLineAndArrow
+﻿public interface ISkillTargeting
 {
     void ShowLineAndTarget();
 

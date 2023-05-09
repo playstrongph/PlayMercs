@@ -44,7 +44,7 @@ namespace SOAssets
 
       public override void DisableTargetVisuals(ISkill skill)
       {
-         skill.SkillTargetCollider.DrawTargetLineAndArrow.DisableSkillTargeting();
+         skill.SkillTargetCollider.SkillTargeting.DisableSkillTargeting();
       }
       
       /// <summary>

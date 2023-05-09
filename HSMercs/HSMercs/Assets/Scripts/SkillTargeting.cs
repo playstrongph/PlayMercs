@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
+public class SkillTargeting : MonoBehaviour, ISkillTargeting
 {
     
     [SerializeField] private float distanceMultiplier = 40;

@@ -21,14 +21,14 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     public GameObject TargetArrow { get => targetArrow; private set => targetArrow = value;}
     public ITargetNodes TargetNodes { get => targetNodes as ITargetNodes; private set => targetNodes = value as Object;}
     public Canvas TargetCanvas { get => targetCanvas; private set => targetCanvas = value;}
-    public IDrawTargetLineAndArrow DrawTargetLineAndArrow { get; private set; }
+    public ISkillTargeting SkillTargeting { get; private set; }
     public IDraggable Draggable { get; private set; }
 
     #endregion
 
     private void Awake()
     {
-        DrawTargetLineAndArrow = GetComponent<IDrawTargetLineAndArrow>();
+        SkillTargeting = GetComponent<ISkillTargeting>();
         Draggable = GetComponent<IDraggable>();
         SkillTargets = GetComponent<ISkillTargets>();
         ManualSelectTarget = GetComponent<IManualSelectTarget>();
@@ -49,7 +49,7 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     private void OnMouseUp()
     {
         //Hide Targeting Visuals
-        DrawTargetLineAndArrow.DisableSkillTargeting();
+        SkillTargeting.DisableSkillTargeting();
 
         //Check if skill is Active or Basic, Skill Ready, Skill Enabled -> this hierarchy
         Skill.SkillAttributes.SkillType.SelectTarget(Skill);
