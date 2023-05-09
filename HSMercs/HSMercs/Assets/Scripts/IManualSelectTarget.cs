@@ -1,9 +1,11 @@
 ﻿public interface IManualSelectTarget
 {
-    void SelectTarget();
-    void ShowSelectedSkillAndTargetVisuals();
-    
     IHero LocalSkillSelectedTarget { get; set; }
+    
+    void SelectTarget();
+   
+    
+   
 
     #region TEST
 

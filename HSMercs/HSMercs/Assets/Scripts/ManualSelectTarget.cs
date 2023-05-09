@@ -49,7 +49,7 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       GetSelectedTarget();
       
       //Displays the skill target visuals (nodes, arrow, cross hair) between the skill and its target hero
-      ShowSelectedSkillAndTargetVisuals();
+      SkillTargetCollider.SkillTargetDisplay.ShowVisuals();
 
       //If there's a valid target, disable the last selected skill visuals and display the current one
       if (LocalSkillSelectedTarget != null)
@@ -134,30 +134,9 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       skill.CasterHero.HeroSkills.SelectedSkill = skill;
       skill.CasterHero.HeroSkills.SelectedTarget = LocalSkillSelectedTarget;
    }
-
-   /// <summary>
-   /// Displays the skill target visuals (arrow, nodes, and cross hair) from selected skill to selected target hero
-   /// TODO: Transfer to New Class SkillTargetDisplay
-   /// </summary>
-   public void ShowSelectedSkillAndTargetVisuals()
-   {
-      var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
-      var selectedTarget = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedTarget;
-         
-      if (selectedSkill != null)
-      {
-         selectedSkill.SkillTargetCollider.SkillTargeting.ShowArrowAtTargetHero(selectedTarget);
-            
-         selectedSkill.SkillTargetCollider.SkillTargeting.ShowCrossHairAtTargetHero(selectedTarget);
-            
-         selectedSkill.SkillTargetCollider.TargetNodes.ShowNodesAtTargetHero(selectedTarget);
    
-         selectedSkill.SkillVisual.SkillGraphics.SkillCheckGraphic.enabled = true;
-      }
-   }
-
+   
    /// <summary>
-   /// TODO: This should be in its own stand alone class
    /// Display the next hero without a selected skill 
    /// </summary>
    private void ShowNextHeroWithoutSelectedSkill()
