@@ -9,4 +9,7 @@
     /// Enables and displays the skill target visuals (arrow, nodes, and cross hair) 
     /// </summary>
     void ShowVisuals();
+    
+    //Turns on the Targeting Displays
+    void ShowLineArrowAndCrossHair();
 }
