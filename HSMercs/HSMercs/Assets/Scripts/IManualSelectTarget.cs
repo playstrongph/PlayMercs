@@ -1,15 +1,17 @@
 ﻿public interface IManualSelectTarget
 {
     void SelectTarget();
-    void EnableSkillTargeting();
-    
+
     void HideSelectedSkillTargetVisuals();
 
     void ShowSkillAndHeroTarget();
+    
+    IHero LocalSkillSelectedTarget { get; set; }
 
     #region TEST
 
-   
+
+
 
     #endregion
 

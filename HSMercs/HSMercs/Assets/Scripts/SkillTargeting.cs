@@ -11,8 +11,11 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
     [SerializeField] private float distanceMultiplier = 40;
     
     private ISkillTargetCollider SkillTargetCollider { get; set; }
+    
+    //TEST
+    private IManualSelectTarget ManualSelectTarget { get; set; }
 
-   
+
 
     #region METHODS
     
@@ -27,11 +30,33 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
     /// </summary>
     public void EnableSkillTargeting()
     {
-        //Enables and updates information on show skill preview
-        SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOn();
+        var currentSkill = SkillTargetCollider.Skill;
+        var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
+
+        //Cancel Selected skill by clicking on it
+        if (selectedSkill == currentSkill)
+        {
+            //Reset selected skill and targets
+            SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill = null;
+            SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedTarget = null;
+            SkillTargetCollider.ManualSelectTarget.LocalSkillSelectedTarget = null;
+         
+            //Disable skill targeting
+            SkillTargetCollider.SkillTargeting.DisableSkillTargeting();
+        }
+        //Enable skill targeting for a different skill
+        else 
+        {
+            //SkillTargetCollider.SkillTargeting.EnableSkillTargeting();
+            
+            //Enables and updates information on show skill preview
+            SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOn();
         
-        //Only show target visuals after confirming skill is both ready and is enabled
-        SkillTargetCollider.Skill.SkillAttributes.SkillReadiness.EnableTargetVisuals(transform,SkillTargetCollider);
+            //Only show target visuals after confirming skill is both ready and is enabled
+            SkillTargetCollider.Skill.SkillAttributes.SkillReadiness.EnableTargetVisuals(transform,SkillTargetCollider);
+        }
+        
+       
     }
     
     /// <summary>

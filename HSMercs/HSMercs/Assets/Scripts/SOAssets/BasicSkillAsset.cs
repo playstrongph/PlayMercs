@@ -51,7 +51,9 @@ namespace SOAssets
       public override void EnableSkillTargeting(ISkill skill)
       {
         skill.SkillTargetCollider.ManualSelectTarget.HideSelectedSkillTargetVisuals();
-        skill.SkillTargetCollider.ManualSelectTarget.EnableSkillTargeting();
+        
+        //TEST
+        skill.SkillTargetCollider.SkillTargeting.EnableSkillTargeting();
       }
 
       #endregion

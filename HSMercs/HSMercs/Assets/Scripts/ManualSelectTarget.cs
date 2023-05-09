@@ -21,7 +21,7 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
    /// <summary>
    /// This the hero target of this skill
    /// </summary>
-   private IHero LocalSkillSelectedTarget
+   public IHero LocalSkillSelectedTarget
    {
       get => localSkillSelectedTarget as IHero;
       set => localSkillSelectedTarget = value as Object;
@@ -73,33 +73,6 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
 
       }
     
-   }
-   
-   /// <summary>
-   /// Enables skill targeting or cancels a previously selected skill
-   /// TODO: Transfer this to skill targeting!
-   /// </summary>
-   public void EnableSkillTargeting()
-   {
-      var currentSkill = SkillTargetCollider.Skill;
-      var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
-
-      //Cancel Selected skill by clicking on it
-      if (selectedSkill == currentSkill)
-      {
-         //Reset selected skill and targets
-         SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill = null;
-         SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedTarget = null;
-         LocalSkillSelectedTarget = null;
-         
-         //Disable skill targeting
-         SkillTargetCollider.SkillTargeting.DisableSkillTargeting();
-      }
-      //Enable skill targeting for a different skill
-      else 
-      {
-         SkillTargetCollider.SkillTargeting.EnableSkillTargeting();   
-      }
    }
 
    /// <summary>
