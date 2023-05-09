@@ -7,7 +7,9 @@ public class GameBoard : MonoBehaviour, IGameBoard
 {
    #region VARIABLES
 
-   [SerializeField] private string boardName = "Default Board";     
+   [SerializeField] private string boardName = "Default Board";
+   
+  
 
    #endregion
         

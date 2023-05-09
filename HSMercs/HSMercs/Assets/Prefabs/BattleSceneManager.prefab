@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 56331960320557924}
   - component: {fileID: 715097479}
   - component: {fileID: 5630847325354506545}
+  - component: {fileID: 1641703657}
   m_Layer: 0
   m_Name: BattleSceneManager
   m_TagString: Untagged
@@ -111,5 +112,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36cca42390353f643bc46fd0b1587671, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1641703657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56331960320557931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ebe99297923be4b9d871220cc9e741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
