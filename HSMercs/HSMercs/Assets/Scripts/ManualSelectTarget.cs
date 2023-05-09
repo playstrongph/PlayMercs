@@ -38,6 +38,16 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
    }
    
    /// <summary>
+   ///  Checks if the skill is active/basic, ready, and enabled state
+   /// </summary>
+   public void CheckSelectTargetPermissive()
+   {
+      SkillTargetCollider.Skill.SkillAttributes.SkillType.SelectTarget(SkillTargetCollider.Skill);
+   }
+
+
+
+   /// <summary>
    /// Sets the valid target hero 
    /// </summary>
    public void SelectTarget()

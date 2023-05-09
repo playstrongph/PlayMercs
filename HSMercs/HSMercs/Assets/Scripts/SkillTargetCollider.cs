@@ -43,7 +43,8 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     /// </summary>
     private void OnMouseDown()
     {
-        Skill.SkillAttributes.SkillType.EnableSkillTargeting(Skill);
+        //Checks the permissive for the 'EnableSkillTargeting' method
+        Skill.SkillTargetCollider.SkillTargeting.CheckEnableSkillTargetingPermissive();
     }
      
     /// <summary>
@@ -54,8 +55,8 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
         //Hide Targeting Visuals
         SkillTargeting.DisableSkillTargeting();
 
-        //Check if skill is Active or Basic, Skill Ready, Skill Enabled -> this hierarchy
-        Skill.SkillAttributes.SkillType.SelectTarget(Skill);
+        //Checks the permissive for the 'SelectTarget' method
+        Skill.SkillTargetCollider.ManualSelectTarget.CheckSelectTargetPermissive();
 
     }
 

@@ -19,6 +19,16 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
         SkillTargetCollider = GetComponent<ISkillTargetCollider>();
     }
     
+    
+    /// <summary>
+    /// Checks if the skill is active/basic, ready, and enabled state
+    /// </summary>
+    public void CheckEnableSkillTargetingPermissive()
+    {
+        //First Check is the skill type
+        SkillTargetCollider.Skill.SkillAttributes.SkillType.EnableSkillTargeting(SkillTargetCollider.Skill);
+    }
+
     /// <summary>
     /// Enables the targeting component visuals - cross hair, triangle, and line renderer.
     /// Also enables draggable. 

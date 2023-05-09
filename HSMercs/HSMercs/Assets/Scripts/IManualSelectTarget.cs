@@ -3,9 +3,10 @@
     IHero LocalSkillSelectedTarget { get; set; }
     
     void SelectTarget();
-   
-    
-   
+
+    void CheckSelectTargetPermissive();
+
+
 
     #region TEST
 

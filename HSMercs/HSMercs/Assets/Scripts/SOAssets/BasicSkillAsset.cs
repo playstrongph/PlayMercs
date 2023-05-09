@@ -50,9 +50,6 @@ namespace SOAssets
       
       public override void EnableSkillTargeting(ISkill skill)
       {
-        
-        //skill.SkillTargetCollider.ManualSelectTarget.HideSelectedSkillAndTargetVisuals();
-        
         //Hides the existing selected skill targeting visuals
         skill.SkillTargetCollider.SkillTargetDisplay.HideVisuals();
         
