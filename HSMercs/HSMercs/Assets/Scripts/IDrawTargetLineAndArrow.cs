@@ -2,9 +2,9 @@
 {
     void ShowLineAndTarget();
 
-    void EnableTargetVisuals();
+    void EnableSkillTargeting();
 
-    void DisableTargetVisuals();
+    void DisableSkillTargeting();
 
     //TEST
     void ShowCrossHairAtTargetHero(IHero hero);

@@ -1,7 +1,7 @@
 ﻿public interface IManualSelectTarget
 {
-    void SetValidTargetHero();
-    void UpdateSelectedSkillAndTarget();
+    void SelectTarget();
+    void EnableSkillTargeting();
     
     void HideSelectedSkillTargetVisuals();
 

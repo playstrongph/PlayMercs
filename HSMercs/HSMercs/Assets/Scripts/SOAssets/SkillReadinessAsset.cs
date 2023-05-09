@@ -39,7 +39,7 @@ namespace SOAssets
       /// Used in verifying if skill is ready and enabled
       /// </summary>
       /// <param name="skill"></param>
-      public virtual void SetValidTargetHero(ISkill skill)
+      public virtual void SelectTarget(ISkill skill)
       {
          
       }

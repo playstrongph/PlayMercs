@@ -23,7 +23,7 @@ namespace SOAssets
          
       }
       
-      public virtual void SetValidTargetHero(ISkill skill)
+      public virtual void SelectTarget(ISkill skill)
       {
          
       }
@@ -34,7 +34,7 @@ namespace SOAssets
          
       }
 
-      public virtual void UpdateSelectedSkillAndTarget(ISkill skill)
+      public virtual void EnableSkillTargeting(ISkill skill)
       {
          
       }

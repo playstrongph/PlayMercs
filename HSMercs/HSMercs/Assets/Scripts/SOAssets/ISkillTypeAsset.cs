@@ -4,10 +4,10 @@
     {
         void LoadSkillTypeVisuals(ISkill skill);
 
-        void SetValidTargetHero(ISkill skill);
+        void SelectTarget(ISkill skill);
 
         void DisableTargetVisuals(ISkill skill);
 
-        void UpdateSelectedSkillAndTarget(ISkill skill);
+        void EnableSkillTargeting(ISkill skill);
     }
 }

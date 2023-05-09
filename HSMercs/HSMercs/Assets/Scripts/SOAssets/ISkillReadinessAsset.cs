@@ -8,7 +8,7 @@ namespace SOAssets
 
         void EnableTargetVisuals(Transform transform, ISkillTargetCollider skillTargetCollider);
 
-        void SetValidTargetHero(ISkill skill);
+        void SelectTarget(ISkill skill);
 
         void DisableTargetVisuals(ISkill skill);
     }

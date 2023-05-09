@@ -38,23 +38,19 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
    }
    
    /// <summary>
-   /// Sets the valid target hero
+   /// Sets the valid target hero 
    /// </summary>
-   public void SetValidTargetHero()
+   public void SelectTarget()
    {
       //This is the current selected skill of the hero
       var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
-      var casterHero = SkillTargetCollider.Skill.CasterHero;
-
+      
       //Returns a valid target, or null if there's none for Local Skill Selected Target
       GetSelectedTarget();
       
       //Displays the skill target visuals (nodes, arrow, cross hair) between the skill and its target hero
       ShowSkillAndHeroTarget();
-      
-      //TEST: set the selected skill to Null
-      //casterHero.HeroInformation.SelectedHeroSkill = null;
-      
+
       //If there's a valid target, disable the last selected skill visuals and display the current one
       if (LocalSkillSelectedTarget != null)
       {
@@ -72,7 +68,7 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
          //This is the Hero Skills' latest selected skill and selected target
          SetSelectedSkillAndTarget();
          
-         //TEST: Find next hero
+         //Find next hero
          ShowNextHeroWithoutSelectedSkill();
 
       }
@@ -80,14 +76,13 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
    }
    
    /// <summary>
-   /// Updates the latest skill and target;  Cancels the skill if selected previously
+   /// Enables skill targeting or cancels a previously selected skill 
    /// </summary>
-   public void UpdateSelectedSkillAndTarget()
+   public void EnableSkillTargeting()
    {
       var currentSkill = SkillTargetCollider.Skill;
       var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
-      
-      
+
       //Cancel a previously selected skill...
       if (selectedSkill == currentSkill)
       {
@@ -96,14 +91,14 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
          SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedTarget = null;
          LocalSkillSelectedTarget = null;
          
-         SkillTargetCollider.DrawTargetLineAndArrow.DisableTargetVisuals();
+         SkillTargetCollider.DrawTargetLineAndArrow.DisableSkillTargeting();
 
          HideSkillsDisplayAndScaleBackHero();
       }
       //...or enables skill targeting visuals
       else 
       {
-         SkillTargetCollider.DrawTargetLineAndArrow.EnableTargetVisuals();   
+         SkillTargetCollider.DrawTargetLineAndArrow.EnableSkillTargeting();   
       }
    }
 
@@ -169,17 +164,19 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
    
    /// <summary> 
    /// Hides the skill target visuals (arrow, nodes, and cross hair)
+   /// TODO: Should be stand alone
    /// </summary>
    public void HideSelectedSkillTargetVisuals()
    {
       var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
       
       if(selectedSkill != null)
-         selectedSkill.SkillTargetCollider.DrawTargetLineAndArrow.DisableTargetVisuals();
+         selectedSkill.SkillTargetCollider.DrawTargetLineAndArrow.DisableSkillTargeting();
    }
 
    /// <summary>
    /// Displays the skill target visuals (arrow, nodes, and cross hair) from selected skill to selected target hero
+   /// TODO: This should be stand alone
    /// </summary>
    public void ShowSkillAndHeroTarget()
    {
@@ -198,12 +195,8 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       }
    }
 
-   #endregion
-
-   #region TEST
-   
-   
    /// <summary>
+   /// TODO: This should be in its own stand alone class
    /// Display the next hero without a selected skill 
    /// </summary>
    private void ShowNextHeroWithoutSelectedSkill()
@@ -231,6 +224,10 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
 
    }
 
-
+   #endregion
+   
+   
+   #region TEST
+   
    #endregion
 }

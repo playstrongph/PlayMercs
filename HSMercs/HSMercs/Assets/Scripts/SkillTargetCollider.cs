@@ -40,7 +40,7 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     /// </summary>
     private void OnMouseDown()
     {
-        Skill.SkillAttributes.SkillType.UpdateSelectedSkillAndTarget(Skill);
+        Skill.SkillAttributes.SkillType.EnableSkillTargeting(Skill);
     }
      
     /// <summary>
@@ -49,10 +49,10 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     private void OnMouseUp()
     {
         //Hide Targeting Visuals
-        DrawTargetLineAndArrow.DisableTargetVisuals();
+        DrawTargetLineAndArrow.DisableSkillTargeting();
 
         //Check if skill is Active or Basic, Skill Ready, Skill Enabled -> this hierarchy
-        Skill.SkillAttributes.SkillType.SetValidTargetHero(Skill);
+        Skill.SkillAttributes.SkillType.SelectTarget(Skill);
 
     }
 

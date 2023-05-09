@@ -31,9 +31,9 @@ namespace SOAssets
       /// Set valid target hero for active/basic skills.  Checks skill readiness
       /// </summary>
       /// <param name="skill"></param>
-      public override void SetValidTargetHero(ISkill skill)
+      public override void SelectTarget(ISkill skill)
       {
-         skill.SkillAttributes.SkillReadiness.SetValidTargetHero(skill);
+         skill.SkillAttributes.SkillReadiness.SelectTarget(skill);
       }
       
       /// <summary>
@@ -47,12 +47,12 @@ namespace SOAssets
          skill.SkillAttributes.SkillReadiness.DisableTargetVisuals(skill);
       }
       
-      public override void UpdateSelectedSkillAndTarget(ISkill skill)
+      public override void EnableSkillTargeting(ISkill skill)
       {
          //Temporarily hides the skill target visuals of the selected skill while selecting a new target
          skill.SkillTargetCollider.ManualSelectTarget.HideSelectedSkillTargetVisuals();
          
-         skill.SkillTargetCollider.ManualSelectTarget.UpdateSelectedSkillAndTarget();
+         skill.SkillTargetCollider.ManualSelectTarget.EnableSkillTargeting();
       }
 
       #endregion

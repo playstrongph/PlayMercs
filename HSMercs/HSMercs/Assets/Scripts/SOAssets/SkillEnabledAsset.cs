@@ -37,16 +37,14 @@ namespace SOAssets
       /// Skill should be enabled before setting the valid target hero
       /// </summary>
       /// <param name="skill"></param>
-      public override void SetValidTargetHero(ISkill skill)
+      public override void SelectTarget(ISkill skill)
       {
-         skill.SkillTargetCollider.ManualSelectTarget.SetValidTargetHero();
-         
-         //TODO: Cancel selected skill (by clicking it again)
+         skill.SkillTargetCollider.ManualSelectTarget.SelectTarget();
       }
 
       public override void DisableTargetVisuals(ISkill skill)
       {
-         skill.SkillTargetCollider.DrawTargetLineAndArrow.DisableTargetVisuals();
+         skill.SkillTargetCollider.DrawTargetLineAndArrow.DisableSkillTargeting();
       }
       
       /// <summary>

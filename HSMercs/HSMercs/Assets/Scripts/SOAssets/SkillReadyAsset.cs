@@ -51,10 +51,10 @@ namespace SOAssets
       /// Skill should be ready and enabled before setting the target valid hero
       /// </summary>
       /// <param name="skill"></param>
-      public override void SetValidTargetHero(ISkill skill)
+      public override void SelectTarget(ISkill skill)
       {
          //Check if skill is enabled
-         skill.SkillAttributes.SkillEnableStatus.SetValidTargetHero(skill);
+         skill.SkillAttributes.SkillEnableStatus.SelectTarget(skill);
       }
       
       public override void DisableTargetVisuals(ISkill skill)

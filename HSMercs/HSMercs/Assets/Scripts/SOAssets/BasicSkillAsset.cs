@@ -32,9 +32,9 @@ namespace SOAssets
       /// Sets the valid target hero
       /// </summary>
       /// <param name="skill"></param>
-      public override void SetValidTargetHero(ISkill skill)
+      public override void SelectTarget(ISkill skill)
       {
-         skill.SkillAttributes.SkillReadiness.SetValidTargetHero(skill);
+         skill.SkillAttributes.SkillReadiness.SelectTarget(skill);
 
          //Note: Technically speaking, basic skills are ALWAYS ACTIVE and READY 
          //The status checking above is not really required
@@ -48,10 +48,10 @@ namespace SOAssets
          //The status checking above is not really required
       }
       
-      public override void UpdateSelectedSkillAndTarget(ISkill skill)
+      public override void EnableSkillTargeting(ISkill skill)
       {
         skill.SkillTargetCollider.ManualSelectTarget.HideSelectedSkillTargetVisuals();
-        skill.SkillTargetCollider.ManualSelectTarget.UpdateSelectedSkillAndTarget();
+        skill.SkillTargetCollider.ManualSelectTarget.EnableSkillTargeting();
       }
 
       #endregion

@@ -23,7 +23,7 @@ namespace SOAssets
       /// For passive skills, just display Skill Preview
       /// </summary>
       /// <param name="skill"></param>
-      public override void UpdateSelectedSkillAndTarget(ISkill skill)
+      public override void EnableSkillTargeting(ISkill skill)
       {
          skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOn();
       }

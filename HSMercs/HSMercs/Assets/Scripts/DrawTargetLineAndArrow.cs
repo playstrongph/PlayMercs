@@ -25,7 +25,7 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
     /// Enables the targeting component visuals - cross hair, triangle, and line renderer.
     /// Also enables draggable. 
     /// </summary>
-    public void EnableTargetVisuals()
+    public void EnableSkillTargeting()
     {
         //Enables and updates information on show skill preview
         SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOn();
@@ -38,7 +38,7 @@ public class DrawTargetLineAndArrow : MonoBehaviour, IDrawTargetLineAndArrow
     /// Disables the targeting component visuals - cross hair, triangle, and line renderer
     /// Also disables draggable.
     /// </summary>
-    public void DisableTargetVisuals()
+    public void DisableSkillTargeting()
     {
         transform.localPosition = Vector3.zero;
         //SkillTargetCollider.TargetArrow.SetActive(false);
