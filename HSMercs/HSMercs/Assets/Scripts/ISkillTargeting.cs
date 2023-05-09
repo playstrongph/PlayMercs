@@ -8,7 +8,4 @@
 
     void DisableSkillTargeting();
 
-    void ShowCrossHairAtTargetHero(IHero hero);
-    void ShowArrowAtTargetHero(IHero targetHero);
-
 }
