@@ -58,7 +58,7 @@ public interface IHeroGraphics
 
     Image TargetCrossHairGraphic { get; set; }
     
-    Image BalloonGraphic { get; }
+    Image RankGraphic { get; }
 
     /// <summary>
     /// Attack Text Graphic
@@ -73,7 +73,7 @@ public interface IHeroGraphics
     /// Armor Text Graphic
     /// </summary>
     TextMeshProUGUI ArmorText { get; set; }
-    TextMeshProUGUI BalloonText { get; set; }
+    TextMeshProUGUI SpeedRankText { get; set; }
     
     ISetHeroAttackText SetHeroAttackText { get; }
     ISetHeroImage SetHeroImage { get; }

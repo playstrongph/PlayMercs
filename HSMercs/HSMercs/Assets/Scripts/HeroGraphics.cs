@@ -41,7 +41,7 @@ public class HeroGraphics : MonoBehaviour, IHeroGraphics
     [SerializeField]private Image blueHeroGraphic;
     [SerializeField]private Image armorGraphic;
     [SerializeField]private Image targetCrossHairGraphic;
-    [SerializeField]private Image balloonGraphic = null;
+    [SerializeField]private Image rankGraphic = null;
     
 
     /// <summary>
@@ -51,7 +51,7 @@ public class HeroGraphics : MonoBehaviour, IHeroGraphics
     [SerializeField] private TextMeshProUGUI attackText;
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private TextMeshProUGUI armorText;
-    [SerializeField] private TextMeshProUGUI balloonText = null;
+    [SerializeField] private TextMeshProUGUI speedRankText = null;
     
     #endregion
 
@@ -115,7 +115,7 @@ public class HeroGraphics : MonoBehaviour, IHeroGraphics
     public Image ArmorGraphic { get => armorGraphic; set => armorGraphic = value; }
     
     public Image TargetCrossHairGraphic { get => targetCrossHairGraphic; set => targetCrossHairGraphic = value; }
-    public Image BalloonGraphic { get => balloonGraphic; set => balloonGraphic = value; }
+    public Image RankGraphic { get => rankGraphic; set => rankGraphic = value; }
     
     /// <summary>
     /// Attack Text Graphic
@@ -132,7 +132,7 @@ public class HeroGraphics : MonoBehaviour, IHeroGraphics
     /// </summary>
     public TextMeshProUGUI ArmorText { get => armorText; set => armorText = value; }
     
-    public TextMeshProUGUI BalloonText { get => balloonText; set => balloonText = value; }
+    public TextMeshProUGUI SpeedRankText { get => speedRankText; set => speedRankText = value; }
     
     public ISetHeroAttackText SetHeroAttackText => GetComponent<ISetHeroAttackText>();
     public ISetHeroImage SetHeroImage => GetComponent<ISetHeroImage>();

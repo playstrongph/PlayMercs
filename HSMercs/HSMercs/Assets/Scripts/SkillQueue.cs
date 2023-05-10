@@ -16,6 +16,8 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
 
    #region PROPERTIES
 
+   private readonly Dictionary<int, string> speedOrderDictionary = new Dictionary<int, string>();
+
 
    /// <summary>
    /// Returns a randomly sorted list
@@ -31,6 +33,7 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
    private void Awake()
    {
       Skills = new List<ISkill>();
+      InitializeSpeedOrderDictionary();
    }
    
    /// <summary>
@@ -50,7 +53,7 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
       UpdateSkillsQueue();
       
       //TODO
-      //UpdateHeroDisplayedRank
+      UpdateHeroSpeedRankText();
    }
    
    /// <summary>
@@ -69,8 +72,11 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
       //Skills Queue needs to be updated everytime a skill is removed
       UpdateSkillsQueue();
       
-      //TODO
-      //UpdateHeroDisplayedRank
+      //Skills Queue needs to be updated everytime a skill is removed
+      UpdateHeroSpeedRankText();
+      
+      //Set the speed rank text back to zero or "..."
+      skill.CasterHero.HeroVisual.HeroGraphics.SpeedRankText.text = "...";
    }
 
    
@@ -120,8 +126,74 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
          }
       }
    }
+   
+   
+   /// <summary>
+   /// Updates the displayed hero speed rank text
+   /// </summary>
+   private void UpdateHeroSpeedRankText()
+   {
+      var rank = 1;
+      for (int i = 0; i < Skills.Count; i++)
+      {
+         //If there are 2 skills with equal speed
+         if (i > 0 && Skills[i].SkillAttributes.SkillSpeed == Skills[i - 1].SkillAttributes.SkillSpeed)
+         {
+            
+            
+            //For 1st, 2nd, 3rd 
+            if (rank <= 3)
+            {
+               var equalRank = rank - 1;
+               var orderText = speedOrderDictionary[equalRank];
+            
+               Skills[i].CasterHero.HeroVisual.HeroGraphics.SpeedRankText.text = orderText;
+               Skills[i-1].CasterHero.HeroVisual.HeroGraphics.SpeedRankText.text = orderText;
+            }
+            //append "th" for 4th and above
+            else
+            {
+               //when 2 skills are tied, the higher rank is retain - e.g. 1st/2nd/2nd, NOT 1st/3rd/3rd
+               var equalRank = rank - 1;
+               
+               Skills[i].CasterHero.HeroVisual.HeroGraphics.SpeedRankText.text = equalRank.ToString() +"th";
+               Skills[i-1].CasterHero.HeroVisual.HeroGraphics.SpeedRankText.text = equalRank.ToString() +"th";
+            }
 
-  
+            
+         }
+         //If there are no equal skills
+         else
+         {  
+            //For 1st, 2nd, 3rd 
+            if (rank <= 3)
+            {
+               var orderText = speedOrderDictionary[rank];
+               Skills[i].CasterHero.HeroVisual.HeroGraphics.SpeedRankText.text = orderText;
+            }
+            //append "th" for 4th and above
+            else
+            {
+               Skills[i].CasterHero.HeroVisual.HeroGraphics.SpeedRankText.text = rank+"th";
+            }
+         }
+         
+         rank++;
+      }
+   }
+   
+   
+   /// <summary>
+   /// Note: it is not foreseen to have more than 14 heroes, so the below dictionary contents shall suffice
+   /// </summary>
+   private void InitializeSpeedOrderDictionary()
+   {
+      speedOrderDictionary.Add(1,"1st");
+      speedOrderDictionary.Add(2,"2nd");
+      speedOrderDictionary.Add(3,"3rd");
+   }
+
+
 
 
    #endregion
