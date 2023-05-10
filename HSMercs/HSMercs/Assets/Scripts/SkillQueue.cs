@@ -7,6 +7,8 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
    #region VARIABLES
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkill))] private List<Object> skills = new List<Object>();
+   
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkill))] private List<Object> skill2 = new List<Object>();
 
 
    #endregion
@@ -29,7 +31,7 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
          
          //Randomize and sort returned skills according to skill speed
          RandomizeSortList(skillsList);
-
+         
          return skillsList;
       }
    }
@@ -66,7 +68,7 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
    /// </summary>
    /// <param name="skillsList"></param>
    /// <returns></returns>
-   private List<ISkill> RandomizeSortList(List<ISkill> skillsList)
+   private void RandomizeSortList(List<ISkill> skillsList)
    {
       // Shuffle the list using the Fisher-Yates shuffle algorithm
       for (int i = skillsList.Count - 1; i > 0; i--)
@@ -90,17 +92,9 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
             }
          }
       }
-      
-      //TEST: Sort the serialized skills list of objects in the same order
-      skills.Clear();
-      foreach (var iSkill in skillsList)
-      {
-         skills.Add(iSkill as Object);
-      }
-
-      return skillsList;
-
    }
+
+  
 
 
    #endregion

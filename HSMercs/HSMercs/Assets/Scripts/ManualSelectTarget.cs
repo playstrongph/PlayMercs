@@ -84,7 +84,7 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
          
          //TEST: TODO Add to BattleSceneManager skill queue
          AddSkillToQueue();
-         
+
          //Find next hero
          ShowNextHeroWithoutSelectedSkill();
 
