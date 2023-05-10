@@ -6,8 +6,10 @@ public interface ISkillQueue
     /// Returns a randomly sorted list
     /// </summary>
     List<ISkill> Skills { get; }
+    //TEST
 
-    void AddToSerializedFieldSkills(ISkill skill);
+    void AddSkillToQueue(ISkill skill);
 
-    void RemoveFromSerializedFieldSkills(ISkill skill);
+    void RemoveSkillFromQueue(ISkill skill);
+   
 }

@@ -67,14 +67,16 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       {
          //Note: This means skill is successfully cast
 
+         var skillQueue = SkillTargetCollider.Skill.CasterHero.Player.BattleSceneManager.SkillQueue;
+
          //Displays the skill check icon of the new selected skill
          SkillTargetCollider.Skill.SkillVisual.SkillGraphics.SkillCheckGraphic.enabled = true;
 
          //Disable the skill target visuals (nodes, arrow, cross hair) of the last selected skill
          selectedSkill?.SkillAttributes.SkillType.DisableTargetVisuals(selectedSkill);
          
-         //Remove skill from queue
-         if (selectedSkill != null) RemoveSkillFromQueue(selectedSkill);
+         //Remove existing selected skill from queue
+         if (selectedSkill != null) skillQueue.RemoveSkillFromQueue(selectedSkill);
          
          //Hide the hero skills panel after successfully choosing a target
          HideSkillsDisplayAndScaleBackHero();
@@ -82,8 +84,8 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
          //This is the Hero Skills' latest selected skill and selected target
          SetSelectedSkillAndTarget();
          
-         //TEST: TODO Add to BattleSceneManager skill queue
-         AddSkillToQueue();
+         //Add new selected skill to queue
+         skillQueue.AddSkillToQueue(SkillTargetCollider.Skill);
 
          //Find next hero
          ShowNextHeroWithoutSelectedSkill();
@@ -180,49 +182,7 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       nextHero?.HeroTargetCollider.SelectHeroActions();
 
    }
-   
-   /// <summary>
-   /// Add skill to Battle Manager Skill Queue
-   /// </summary>
-   private void AddSkillToQueue()
-   {
-      Debug.Log("Add to Skill Queue");
-      
-      var skillQueue = SkillTargetCollider.Skill.CasterHero.Player.BattleSceneManager.SkillQueue;
-      
-      //Add skill to the skill queue
-      if (!skillQueue.Skills.Contains(SkillTargetCollider.Skill))
-      {
-         skillQueue.Skills.Add(SkillTargetCollider.Skill);
-         
-         //Debugging purposes
-         skillQueue.AddToSerializedFieldSkills(SkillTargetCollider.Skill);
-      }
-   }
-   
-   /// <summary>
-   /// Remove skill to Battle Manager Skill Queue
-   /// </summary>
-   private void RemoveSkillFromQueue(ISkill skill)
-   {
-      var skillQueue = skill.CasterHero.Player.BattleSceneManager.SkillQueue;
-        
-      Debug.Log("Remove selected skill from Skill Queue: " +skill.SkillAttributes.SkillName);
-        
-      //Add skill to the skill queue
-      if (skillQueue.Skills.Contains(skill))
-      {
-         //Debugging purposes
-         skillQueue.RemoveFromSerializedFieldSkills(skill);
-         
-         skillQueue.Skills.Remove(skill);
-            
-        
-      }
 
-        
-   }
-  
 
    #endregion
    

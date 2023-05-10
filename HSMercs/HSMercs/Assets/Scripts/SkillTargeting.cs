@@ -38,6 +38,12 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
         //Cancel Selected skill by clicking on it
         if (selectedSkill == currentSkill)
         {
+            var skillQueue = SkillTargetCollider.Skill.CasterHero.Player.BattleSceneManager.SkillQueue;
+            
+            //TEST: TODO: Remove skill from skill queue
+            //RemoveSkillFromQueue();
+            skillQueue.RemoveSkillFromQueue(SkillTargetCollider.Skill);
+            
             //Reset selected skill and targets
             SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill = null;
             SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedTarget = null;
@@ -46,8 +52,7 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
             //Disable skill targeting
             SkillTargetCollider.SkillTargeting.DisableSkillTargeting();
             
-            //TEST: TODO: Remove skill from skill queue
-            RemoveSkillFromQueue();
+            
         }
         //Enable skill targeting for a different skill
         else 
@@ -98,26 +103,7 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
         SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = false;
     }
     
-    /// <summary>
-    /// Remove skill to Battle Manager Skill Queue
-    /// </summary>
-    private void RemoveSkillFromQueue()
-    {
-        var skillQueue = SkillTargetCollider.Skill.CasterHero.Player.BattleSceneManager.SkillQueue;
-        
-        Debug.Log("Remove from Skill Queue");
-        
-        //Add skill to the skill queue
-        if (skillQueue.Skills.Contains(SkillTargetCollider.Skill))
-        {
-            skillQueue.Skills.Remove(SkillTargetCollider.Skill);
-            
-            //Debugging purposes
-            skillQueue.RemoveFromSerializedFieldSkills(SkillTargetCollider.Skill);
-        }
-
-        
-    }
+    
 
     #endregion
 
