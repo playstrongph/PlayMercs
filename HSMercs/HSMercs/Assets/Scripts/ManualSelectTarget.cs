@@ -73,6 +73,9 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
          //Disable the skill target visuals (nodes, arrow, cross hair) of the last selected skill
          selectedSkill?.SkillAttributes.SkillType.DisableTargetVisuals(selectedSkill);
          
+         //Remove skill from queue
+         if (selectedSkill != null) RemoveSkillFromQueue(selectedSkill);
+         
          //Hide the hero skills panel after successfully choosing a target
          HideSkillsDisplayAndScaleBackHero();
          
@@ -195,10 +198,30 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
          //Debugging purposes
          skillQueue.AddToSerializedFieldSkills(SkillTargetCollider.Skill);
       }
-
-      
    }
    
+   /// <summary>
+   /// Remove skill to Battle Manager Skill Queue
+   /// </summary>
+   private void RemoveSkillFromQueue(ISkill skill)
+   {
+      var skillQueue = skill.CasterHero.Player.BattleSceneManager.SkillQueue;
+        
+      Debug.Log("Remove selected skill from Skill Queue: " +skill.SkillAttributes.SkillName);
+        
+      //Add skill to the skill queue
+      if (skillQueue.Skills.Contains(skill))
+      {
+         //Debugging purposes
+         skillQueue.RemoveFromSerializedFieldSkills(skill);
+         
+         skillQueue.Skills.Remove(skill);
+            
+        
+      }
+
+        
+   }
   
 
    #endregion

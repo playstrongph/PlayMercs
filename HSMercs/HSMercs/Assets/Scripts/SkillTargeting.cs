@@ -99,7 +99,7 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
     }
     
     /// <summary>
-    /// Add skill to Battle Manager Skill Queue
+    /// Remove skill to Battle Manager Skill Queue
     /// </summary>
     private void RemoveSkillFromQueue()
     {
