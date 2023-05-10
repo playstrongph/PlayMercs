@@ -16,7 +16,7 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
 
    #region PROPERTIES
 
-   private readonly Dictionary<int, string> speedOrderDictionary = new Dictionary<int, string>();
+   private readonly Dictionary<int, string> _speedOrderDictionary = new Dictionary<int, string>();
 
 
    /// <summary>
@@ -145,7 +145,7 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
             if (rank <= 3)
             {
                var equalRank = rank - 1;
-               var orderText = speedOrderDictionary[equalRank];
+               var orderText = _speedOrderDictionary[equalRank];
             
                Skills[i].CasterHero.HeroVisual.HeroGraphics.SpeedRankText.text = orderText;
                Skills[i-1].CasterHero.HeroVisual.HeroGraphics.SpeedRankText.text = orderText;
@@ -168,7 +168,7 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
             //For 1st, 2nd, 3rd 
             if (rank <= 3)
             {
-               var orderText = speedOrderDictionary[rank];
+               var orderText = _speedOrderDictionary[rank];
                Skills[i].CasterHero.HeroVisual.HeroGraphics.SpeedRankText.text = orderText;
             }
             //append "th" for 4th and above
@@ -188,9 +188,9 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
    /// </summary>
    private void InitializeSpeedOrderDictionary()
    {
-      speedOrderDictionary.Add(1,"1st");
-      speedOrderDictionary.Add(2,"2nd");
-      speedOrderDictionary.Add(3,"3rd");
+      _speedOrderDictionary.Add(1,"1st");
+      _speedOrderDictionary.Add(2,"2nd");
+      _speedOrderDictionary.Add(3,"3rd");
    }
 
 
