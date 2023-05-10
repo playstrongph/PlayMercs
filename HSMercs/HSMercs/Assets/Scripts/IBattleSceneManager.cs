@@ -11,4 +11,6 @@ public interface IBattleSceneManager
 
      IGameBoard GameBoard { get; }
 
+     ISkillQueue SkillQueue { get; }
+
 }

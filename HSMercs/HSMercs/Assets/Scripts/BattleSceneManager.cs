@@ -30,6 +30,8 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    public IGameBoard GameBoard { get; private set; }
 
+   public ISkillQueue SkillQueue { get; private set; }
+
 
 
    #endregion
@@ -41,6 +43,9 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
       _initializePlayers = GetComponent<IInitializePlayers>();
       _initializeHeroes = GetComponent<IInitializeHeroes>();
       _initializeSkills = GetComponent<IInitializeSkills>();
+      
+      
+      SkillQueue = GetComponent<ISkillQueue>();
    }
 
    private void Start()

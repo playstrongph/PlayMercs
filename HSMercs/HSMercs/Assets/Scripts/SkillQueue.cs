@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillQueue : MonoBehaviour
+public class SkillQueue : MonoBehaviour, ISkillQueue
 {
    #region VARIABLES
 
@@ -27,11 +27,33 @@ public class SkillQueue : MonoBehaviour
             skillsList.Add(skill as ISkill);
          }
          
-         //TODO: randomize and sort returned skills according to skill speed
+         //Randomize and sort returned skills according to skill speed
          RandomizeSortList(skillsList);
          
          return skillsList;
       }
+   }
+   
+   /// <summary>
+   /// For debugging purposes only
+   /// </summary>
+   public void AddToSerializedFieldSkills(ISkill skill)
+   {
+      var skillObject = skill as Object;
+      
+      if(!Skills.Contains(skill))
+         skills.Add(skillObject);
+   }
+   
+   /// <summary>
+   /// For debugging purposes only
+   /// </summary>
+   public void RemoveFromSerializedFieldSkills(ISkill skill)
+   {
+      var skillObject = skill as Object;
+      
+      if(Skills.Contains(skill))
+         skills.Remove(skillObject);
    }
 
 
@@ -39,7 +61,11 @@ public class SkillQueue : MonoBehaviour
 
    #region METHODS
    
-   
+   /// <summary>
+   /// Randomizes then sorts the contents of the list according to skill speed
+   /// </summary>
+   /// <param name="skillsList"></param>
+   /// <returns></returns>
    private List<ISkill> RandomizeSortList(List<ISkill> skillsList)
    {
       // Shuffle the list using the Fisher-Yates shuffle algorithm

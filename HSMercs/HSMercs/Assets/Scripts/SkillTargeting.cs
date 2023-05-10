@@ -45,6 +45,9 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
          
             //Disable skill targeting
             SkillTargetCollider.SkillTargeting.DisableSkillTargeting();
+            
+            //TEST: TODO: Remove skill from skill queue
+            RemoveSkillFromQueue();
         }
         //Enable skill targeting for a different skill
         else 
@@ -93,6 +96,27 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
     private void HideTargetCrossHair()
     {
         SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = false;
+    }
+    
+    /// <summary>
+    /// Add skill to Battle Manager Skill Queue
+    /// </summary>
+    private void RemoveSkillFromQueue()
+    {
+        var skillQueue = SkillTargetCollider.Skill.CasterHero.Player.BattleSceneManager.SkillQueue;
+        
+        Debug.Log("Remove from Skill Queue");
+        
+        //Add skill to the skill queue
+        if (skillQueue.Skills.Contains(SkillTargetCollider.Skill))
+        {
+            skillQueue.Skills.Remove(SkillTargetCollider.Skill);
+            
+            //Debugging purposes
+            skillQueue.RemoveFromSerializedFieldSkills(SkillTargetCollider.Skill);
+        }
+
+        
     }
 
     #endregion

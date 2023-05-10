@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+//using System.Linq;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using Object = UnityEngine.Object;
@@ -77,6 +78,9 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
          
          //This is the Hero Skills' latest selected skill and selected target
          SetSelectedSkillAndTarget();
+         
+         //TEST: TODO Add to BattleSceneManager skill queue
+         AddSkillToQueue();
          
          //Find next hero
          ShowNextHeroWithoutSelectedSkill();
@@ -173,6 +177,29 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       nextHero?.HeroTargetCollider.SelectHeroActions();
 
    }
+   
+   /// <summary>
+   /// Add skill to Battle Manager Skill Queue
+   /// </summary>
+   private void AddSkillToQueue()
+   {
+      Debug.Log("Add to Skill Queue");
+      
+      var skillQueue = SkillTargetCollider.Skill.CasterHero.Player.BattleSceneManager.SkillQueue;
+      
+      //Add skill to the skill queue
+      if (!skillQueue.Skills.Contains(SkillTargetCollider.Skill))
+      {
+         skillQueue.Skills.Add(SkillTargetCollider.Skill);
+         
+         //Debugging purposes
+         skillQueue.AddToSerializedFieldSkills(SkillTargetCollider.Skill);
+      }
+
+      
+   }
+   
+  
 
    #endregion
    
