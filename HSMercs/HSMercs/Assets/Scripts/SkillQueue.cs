@@ -29,7 +29,7 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
          
          //Randomize and sort returned skills according to skill speed
          RandomizeSortList(skillsList);
-         
+
          return skillsList;
       }
    }
@@ -89,6 +89,13 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
                skillsList[j + 1] = temp;
             }
          }
+      }
+      
+      //TEST: Sort the serialized skills list of objects in the same order
+      skills.Clear();
+      foreach (var iSkill in skillsList)
+      {
+         skills.Add(iSkill as Object);
       }
 
       return skillsList;

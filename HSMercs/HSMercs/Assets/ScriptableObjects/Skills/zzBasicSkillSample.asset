@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 752c4d7ea14777d46a60bfe0bdbcab9c, type: 3}
   m_Name: zzBasicSkillSample
   m_EditorClassIdentifier: 
-  skillName: Basic Skill Sample
+  skillName: Basic Skill Sample 456
   skillDescription: Attack an enemy.  If it was damaged this turn, gain +5 Attack
     and Attack it again.
   skillCooldown: 124

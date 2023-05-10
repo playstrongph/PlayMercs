@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 752c4d7ea14777d46a60bfe0bdbcab9c, type: 3}
-  m_Name: zzActiveSkillSample
+  m_Name: zzActiveSkillSample 1
   m_EditorClassIdentifier: 
-  skillName: Active Skill Sample 12
+  skillName: Active Skill Sample 24
   skillDescription: 'Test Skill 2
 
 '
   skillCooldown: 9
-  skillSpeed: 12
+  skillSpeed: 24
   fightingSpirit: 0
   skillSprite: {fileID: -3912667378497300665, guid: d6c2e4e890e3c0c489c64604a95b04f4,
     type: 3}
