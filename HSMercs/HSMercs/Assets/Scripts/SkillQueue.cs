@@ -52,7 +52,7 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
       //Skills Queue needs to be updated everytime a skill is added
       UpdateSkillsQueue();
       
-      //TODO
+      //Updates the Hero Speed Rank Text 
       UpdateHeroSpeedRankText();
    }
    
