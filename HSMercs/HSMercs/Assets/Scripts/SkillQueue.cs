@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using UnityEngine;
 
 public class SkillQueue : MonoBehaviour, ISkillQueue
@@ -7,9 +8,6 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
    #region VARIABLES
 
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkill))] private List<Object> skills = new List<Object>();
-   
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkill))] private List<Object> skill2 = new List<Object>();
-
 
    #endregion
 
@@ -31,7 +29,7 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
          
          //Randomize and sort returned skills according to skill speed
          RandomizeSortList(skillsList);
-         
+
          return skillsList;
       }
    }
