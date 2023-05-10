@@ -26,6 +26,9 @@ public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
     /// </summary>
     private void OnMouseDown()
     {
+        //TEST
+        Hero.HeroVisual.HeroPreview.ShowHeroPreview.TurnOn();
+        
        SelectHeroActions();
     }
         

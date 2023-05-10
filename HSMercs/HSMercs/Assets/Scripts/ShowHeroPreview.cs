@@ -12,6 +12,9 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
     private IHeroPreview _heroPreview;
     
     private bool _enablePreview = false;
+    
+    //TEST 
+    private Coroutine delayCoroutine = null;
 
     #endregion
 
@@ -29,7 +32,10 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
     {
         _enablePreview = true;
         
-        StartCoroutine(ShowPreview());
+        //TEST - stop coroutine if running previously
+        if(delayCoroutine!=null) StopCoroutine(delayCoroutine);
+        
+        delayCoroutine = StartCoroutine(ShowPreview());
     }
     
     /// <summary>
@@ -37,6 +43,9 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
     /// </summary>
     public void TurnOnMouseEnter()
     {
+        //TEST - stop coroutine if running previously
+        if(delayCoroutine!=null) StopCoroutine(delayCoroutine);
+        
         StartCoroutine(ShowPreview());
     }
     
@@ -47,6 +56,10 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
     {
         _enablePreview = false;
         _heroPreview.HeroPreviewCanvas.enabled = false;
+        
+        //TEST - stop coroutine if running previously
+        if(delayCoroutine!=null) StopCoroutine(delayCoroutine);
+        
         StopCoroutine(ShowPreview());
     }
     
@@ -55,6 +68,9 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
     /// </summary>
     public void TurnOffMouseExit()
     {
+        //TEST - stop coroutine if running previously
+        if(delayCoroutine!=null) StopCoroutine(delayCoroutine);
+        
         _heroPreview.HeroPreviewCanvas.enabled = false;
     }
 
