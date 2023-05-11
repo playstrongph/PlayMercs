@@ -59,7 +59,7 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
         {
          
             //Enables and updates information on show skill preview
-            SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOn();
+            //SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOn();
         
             //Only show target visuals after confirming skill is both ready and is enabled
             SkillTargetCollider.Skill.SkillAttributes.SkillReadiness.EnableTargetVisuals(transform,SkillTargetCollider);

@@ -53,7 +53,9 @@ public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
     /// </summary>
     private void OnMouseEnter()
     {
-        Hero.HeroVisual.HeroPreview.ShowHeroPreview.TurnOn();
+        //Prevents Hero preview appearing during hover or skill targeting
+        if (Input.GetMouseButtonDown(0))
+            Hero.HeroVisual.HeroPreview.ShowHeroPreview.TurnOn();
     }
     
     #region TEST

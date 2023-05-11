@@ -129,7 +129,8 @@ public class SkillTargetDisplay : MonoBehaviour, ISkillTargetDisplay
       {
          HideArrow();
          SkillTargetCollider.TargetNodes.HideArrowNodes();
-         SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOn();    
+         
+         //SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOn();    
       }
 
         
