@@ -12,8 +12,7 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
     private IHeroPreview _heroPreview;
     
     //private bool _enablePreview = false;
-    
-    
+
     private Coroutine _delayCoroutine = null;
 
     #endregion
@@ -48,7 +47,7 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
         //_enablePreview = false;
         _heroPreview.HeroPreviewCanvas.enabled = false;
         
-        //Stop delayCoroutine if it's not currently null
+        //Stop coroutine if running previously
         if(_delayCoroutine!=null) StopCoroutine(_delayCoroutine);
     }
     
@@ -73,6 +72,7 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
             _heroPreview.HeroGraphicPreview.PreviewNameText.text = hero.HeroInformation.HeroName;
 
             PreviewArmorDisplay(hero);
+            
             UpdateHeroSkillPreview(hero);
         //}
         

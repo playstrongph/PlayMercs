@@ -43,8 +43,6 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     /// </summary>
     private void OnMouseDown()
     {
-        Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOn();
-        
         //Checks the permissive for the 'EnableSkillTargeting' method
         Skill.SkillTargetCollider.SkillTargeting.CheckEnableSkillTargetingPermissive();
     }
