@@ -11,10 +11,11 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
 
     private IHeroPreview _heroPreview;
     
+    //This prevents turning on hero preview during skill targeting
     private bool _enablePreview = false;
     
     //TEST 
-    private Coroutine delayCoroutine = null;
+    private Coroutine _delayCoroutine = null;
 
     #endregion
 
@@ -33,20 +34,21 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
         _enablePreview = true;
         
         //Stop coroutine if running previously
-        if(delayCoroutine!=null) StopCoroutine(delayCoroutine);
+        if(_delayCoroutine!=null) StopCoroutine(_delayCoroutine);
         
-        delayCoroutine = StartCoroutine(ShowPreview());
+        _delayCoroutine = StartCoroutine(ShowPreview());
     }
     
     /// <summary>
     /// Show hero preview on Mouse Enter but after mousedown
+    /// Prevents hero preview appearing during skill targeting
     /// </summary>
     public void TurnOnMouseEnter()
     {
         //Stop coroutine if running previously
-        if(delayCoroutine!=null) StopCoroutine(delayCoroutine);
+        if(_delayCoroutine!=null) StopCoroutine(_delayCoroutine);
         
-        StartCoroutine(ShowPreview());
+        _delayCoroutine = StartCoroutine(ShowPreview());
     }
     
     /// <summary>
@@ -58,20 +60,20 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
         _heroPreview.HeroPreviewCanvas.enabled = false;
         
         //Stop coroutine if running previously
-        if(delayCoroutine!=null) StopCoroutine(delayCoroutine);
-        
-        StopCoroutine(ShowPreview());
+        if(_delayCoroutine!=null) StopCoroutine(_delayCoroutine);
     }
     
     /// <summary>
     /// Turns off upon mouse exit but doesn't change the enable state
+    /// Prevents hero preview appearing during skill targeting
     /// </summary>
     public void TurnOffMouseExit()
     {
-        //Stop coroutine if running previously
-        if(delayCoroutine!=null) StopCoroutine(delayCoroutine);
-        
+        //_enablePreview = false;
         _heroPreview.HeroPreviewCanvas.enabled = false;
+        
+        //Stop coroutine if running previously
+        if(_delayCoroutine!=null) StopCoroutine(_delayCoroutine);
     }
 
     /// <summary>
@@ -96,6 +98,8 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
             
             UpdateHeroSkillPreview(hero);
         }
+
+        _delayCoroutine = null;
     }
 
     private void PreviewArmorDisplay(IHero hero)

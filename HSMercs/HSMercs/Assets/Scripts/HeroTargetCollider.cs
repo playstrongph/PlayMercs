@@ -26,8 +26,7 @@ public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
     /// </summary>
     private void OnMouseDown()
     {
-        //TEST
-        Hero.HeroVisual.HeroPreview.ShowHeroPreview.TurnOn();
+       Hero.HeroVisual.HeroPreview.ShowHeroPreview.TurnOn();
         
        SelectHeroActions();
     }
@@ -55,9 +54,7 @@ public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
     {
         Hero.HeroVisual.HeroPreview.ShowHeroPreview.TurnOnMouseEnter();
     }
-    
-    #region TEST
-    
+
     /// <summary>
     /// Actions done when the hero is selected by the player
     /// </summary>
@@ -85,7 +82,7 @@ public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
         Hero.Player.OtherPlayer.CurrentHeroSelected = Hero;
     }
 
-
+    #region TEST
     #endregion
 
 
