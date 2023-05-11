@@ -11,10 +11,9 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
 
     private IHeroPreview _heroPreview;
     
-    private bool _enablePreview = false;
-    
-    //TEST 
-    private Coroutine delayCoroutine = null;
+    //private bool _enablePreview = false;
+
+    private Coroutine _delayCoroutine = null;
 
     #endregion
 
@@ -30,49 +29,29 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
     /// </summary>
     public void TurnOn()
     {
-        _enablePreview = true;
+        //_enablePreview = true;
         
         //Stop coroutine if running previously
-        if(delayCoroutine!=null) StopCoroutine(delayCoroutine);
+        if(_delayCoroutine!=null) StopCoroutine(_delayCoroutine);
         
-        delayCoroutine = StartCoroutine(ShowPreview());
+        _delayCoroutine = StartCoroutine(ShowPreview());
     }
     
-    /// <summary>
-    /// Show hero preview on Mouse Enter but after mousedown
-    /// </summary>
-    public void TurnOnMouseEnter()
-    {
-        //Stop coroutine if running previously
-        if(delayCoroutine!=null) StopCoroutine(delayCoroutine);
-        
-        StartCoroutine(ShowPreview());
-    }
+    
     
     /// <summary>
     /// Hides Hero Preview
     /// </summary>
     public void TurnOff()
     {
-        _enablePreview = false;
+        //_enablePreview = false;
         _heroPreview.HeroPreviewCanvas.enabled = false;
         
         //Stop coroutine if running previously
-        if(delayCoroutine!=null) StopCoroutine(delayCoroutine);
-        
-        StopCoroutine(ShowPreview());
+        if(_delayCoroutine!=null) StopCoroutine(_delayCoroutine);
     }
     
-    /// <summary>
-    /// Turns off upon mouse exit but doesn't change the enable state
-    /// </summary>
-    public void TurnOffMouseExit()
-    {
-        //Stop coroutine if running previously
-        if(delayCoroutine!=null) StopCoroutine(delayCoroutine);
-        
-        _heroPreview.HeroPreviewCanvas.enabled = false;
-    }
+    
 
     /// <summary>
     /// Waits for a delay before checking if preview is enabled
@@ -82,8 +61,8 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
     {
         yield return new WaitForSeconds(displayDelay);
         
-        if (_enablePreview)
-        {
+        //if (_enablePreview)
+        //{
             var hero = _heroPreview.Hero;
             
             _heroPreview.HeroPreviewCanvas.enabled = true;
@@ -95,7 +74,10 @@ public class ShowHeroPreview : MonoBehaviour, IShowHeroPreview
             PreviewArmorDisplay(hero);
             
             UpdateHeroSkillPreview(hero);
-        }
+        //}
+        
+        //To prevent trigger during fast multiple mouse clicks (or presses)
+        //_delayCoroutine = null;
     }
 
     private void PreviewArmorDisplay(IHero hero)
