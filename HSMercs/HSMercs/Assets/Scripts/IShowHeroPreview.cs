@@ -3,4 +3,8 @@
 
     void TurnOn();
     void TurnOff();
+
+    void TurnOnMouseEnter();
+
+    void TurnOffMouseExit();
 }

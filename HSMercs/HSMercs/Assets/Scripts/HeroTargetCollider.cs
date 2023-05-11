@@ -26,8 +26,8 @@ public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
     /// </summary>
     private void OnMouseDown()
     {
-       //Show hero and skill previews
-       Hero.HeroVisual.HeroPreview.ShowHeroPreview.TurnOn();
+        //TEST
+        Hero.HeroVisual.HeroPreview.ShowHeroPreview.TurnOn();
         
        SelectHeroActions();
     }
@@ -45,7 +45,7 @@ public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
     /// </summary>
     private void OnMouseExit()
     {
-        Hero.HeroVisual.HeroPreview.ShowHeroPreview.TurnOff();
+        Hero.HeroVisual.HeroPreview.ShowHeroPreview.TurnOffMouseExit();
     }
     
     /// <summary>
@@ -53,7 +53,7 @@ public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
     /// </summary>
     private void OnMouseEnter()
     {
-        Hero.HeroVisual.HeroPreview.ShowHeroPreview.TurnOn();
+        Hero.HeroVisual.HeroPreview.ShowHeroPreview.TurnOnMouseEnter();
     }
     
     #region TEST
