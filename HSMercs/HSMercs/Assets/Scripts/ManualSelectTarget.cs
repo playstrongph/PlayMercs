@@ -65,34 +65,65 @@ public class ManualSelectTarget : MonoBehaviour, IManualSelectTarget
       //If there's a valid target, disable the last selected skill visuals and display the current one
       if (LocalSkillSelectedTarget != null)
       {
-         //Note: This means skill is successfully cast
-
-         var skillQueue = SkillTargetCollider.Skill.CasterHero.Player.BattleSceneManager.SkillQueue;
-
-         //Displays the skill check icon of the new selected skill
-         SkillTargetCollider.Skill.SkillVisual.SkillGraphics.SkillCheckGraphic.enabled = true;
-
-         //Disable the skill target visuals (nodes, arrow, cross hair) of the last selected skill
-         selectedSkill?.SkillAttributes.SkillType.DisableTargetVisuals(selectedSkill);
+         //clean up previously selected skill
+         RemovePreviouslySelectedSkill();
          
-         //Remove existing selected skill from queue
-         if (selectedSkill != null) skillQueue.RemoveSkillFromQueue(selectedSkill);
-         
-         //Hide the hero skills panel after successfully choosing a target
-         HideSkillsDisplayAndScaleBackHero();
-         
-         //This is the Hero Skills' latest selected skill and selected target
-         SetSelectedSkillAndTarget();
-         
-         //Add new selected skill to queue
-         skillQueue.AddSkillToQueue(SkillTargetCollider.Skill);
+         //Update new selected skill
+         UpdateNewSelectedSkill();
 
          //Find next hero
          ShowNextHeroWithoutSelectedSkill();
 
       }
     
+      //TEST
+      else
+      {
+         SkillTargetCollider.Skill.SkillAttributes.SkillType.DisableTargetVisuals(SkillTargetCollider.Skill);
+      }
    }
+   
+   /// <summary>
+   /// Cleans up the visuals and logic of the existing selected skill
+   /// </summary>
+   private void RemovePreviouslySelectedSkill()
+   {
+      var existingSelectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
+      var skillQueue = SkillTargetCollider.Skill.CasterHero.Player.BattleSceneManager.SkillQueue;
+      
+      //TEST
+      //Disable the skill target visuals (nodes, arrow, cross hair) of the last selected skill
+      if (existingSelectedSkill != null)
+      {
+         existingSelectedSkill.SkillAttributes.SkillType.DisableTargetVisuals(existingSelectedSkill);
+         existingSelectedSkill.SkillVisual.SkillPreviewVisual.PreviewCanvas.enabled = false;
+      }
+
+      //Remove existing selected skill from queue
+      if (existingSelectedSkill != null) skillQueue.RemoveSkillFromQueue(existingSelectedSkill);
+   }
+
+   private void UpdateNewSelectedSkill()
+   {
+      var skillQueue = SkillTargetCollider.Skill.CasterHero.Player.BattleSceneManager.SkillQueue;
+
+      //This is the Hero Skills' latest selected skill and selected target
+      SetSelectedSkillAndTarget();
+         
+      //Displays the skill check icon of the new selected skill
+      SkillTargetCollider.Skill.SkillVisual.SkillGraphics.SkillCheckGraphic.enabled = true;
+         
+      //TEST - Turn on selected skill
+      SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.PreviewCanvas.enabled = true;
+         
+      //Add new selected skill to queue
+      skillQueue.AddSkillToQueue(SkillTargetCollider.Skill);
+      
+      //Hide the hero skills panel after successfully choosing a target
+      HideSkillsDisplayAndScaleBackHero();
+   }
+
+
 
    /// <summary>
    /// Gets a Local Selected target from valid targets

@@ -66,6 +66,7 @@ public class HeroSkillsVisual : MonoBehaviour, IHeroSkillsVisual
    /// </summary>
    public void ShowSkillAndHeroTarget()
    {
+      //If there's a selected target
       if (HeroSkills.SelectedTarget != null)
       {
          //HeroSkills.SelectedSkill.SkillTargetCollider.ManualSelectTarget.ShowSelectedSkillAndTargetVisuals();

@@ -50,9 +50,8 @@ public class SkillTargetDisplay : MonoBehaviour, ISkillTargetDisplay
       {
          
          //selectedSkill.SkillTargetCollider.SkillTargeting.ShowArrowAtTargetHero(selectedTarget);
-         ShowArrowAtTargetHero(selectedTarget);
-
-         ShowCrossHairAtTargetHero(selectedTarget);
+         ShowArrowAtTargetHero(selectedTarget,selectedSkill);
+         ShowCrossHairAtTargetHero(selectedTarget,selectedSkill);
          
          selectedSkill.SkillTargetCollider.TargetNodes.ShowNodesAtTargetHero(selectedTarget);
          
@@ -64,13 +63,14 @@ public class SkillTargetDisplay : MonoBehaviour, ISkillTargetDisplay
    /// Shows the cross hair at target hero
    /// </summary>
    /// <param name="hero"></param>
-   private void ShowCrossHairAtTargetHero(IHero hero)
+   ///  <param name="skill"></param>
+   private void ShowCrossHairAtTargetHero(IHero hero, ISkill skill)
    {
       var heroTransform = hero.HeroTransform;
 
-      SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = true;
+      skill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = true;
         
-      SkillTargetCollider.Skill.SkillVisual.SkillGraphics.CrossHairGraphic.transform.position =
+      skill.SkillVisual.SkillGraphics.CrossHairGraphic.transform.position =
          heroTransform.position;
    }
    
@@ -78,7 +78,8 @@ public class SkillTargetDisplay : MonoBehaviour, ISkillTargetDisplay
    /// Shows the Arrow at the Target Hero
    /// </summary>
    /// <param name="targetHero"></param>
-   private void ShowArrowAtTargetHero(IHero targetHero)
+   /// <param name="skill"></param>
+   private void ShowArrowAtTargetHero(IHero targetHero, ISkill skill)
    {
       var targetHeroTransform = targetHero.HeroTransform;
       var position = targetHeroTransform.position;
@@ -93,12 +94,12 @@ public class SkillTargetDisplay : MonoBehaviour, ISkillTargetDisplay
         
       //SkillTargetCollider.TargetArrow.SetActive(true);
 
-      SkillTargetCollider.TargetArrow.GetComponent<Image>().enabled = true;
+      skill.SkillTargetCollider.TargetArrow.GetComponent<Image>().enabled = true;
         
       //SkillTargetCollider.TargetArrow.transform.position = transform.position - 15f * directionTarget;
-      SkillTargetCollider.TargetArrow.transform.position = position - 15f * directionTarget;
+      skill.SkillTargetCollider.TargetArrow.transform.position = position - 15f * directionTarget;
         
-      SkillTargetCollider.TargetArrow.transform.rotation = Quaternion.Euler(0f,0f,rotZ-90);
+      skill.SkillTargetCollider.TargetArrow.transform.rotation = Quaternion.Euler(0f,0f,rotZ-90);
    }
    
    
