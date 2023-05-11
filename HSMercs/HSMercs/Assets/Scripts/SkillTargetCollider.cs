@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
 {
@@ -43,6 +45,8 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     /// </summary>
     private void OnMouseDown()
     {
+        Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOn();
+        
         //Checks the permissive for the 'EnableSkillTargeting' method
         Skill.SkillTargetCollider.SkillTargeting.CheckEnableSkillTargetingPermissive();
     }
@@ -52,6 +56,8 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     /// </summary>
     private void OnMouseUp()
     {
+         Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOff();
+        
         //Hide Targeting Visuals
         SkillTargeting.DisableSkillTargeting();
 
@@ -61,6 +67,4 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     }
 
     
-    
-
 }

@@ -42,15 +42,11 @@ namespace SOAssets
       /// <param name="skill"></param>
       public override void DisableTargetVisuals(ISkill skill)
       {
-         //skill.SkillTargetCollider.DrawTargetLineAndArrow.DisableTargetVisuals();
-         
          skill.SkillAttributes.SkillReadiness.DisableTargetVisuals(skill);
       }
       
       public override void EnableSkillTargeting(ISkill skill)
       {
-         //skill.SkillTargetCollider.ManualSelectTarget.HideSelectedSkillAndTargetVisuals();
-        
          //Hides the existing selected skill targeting visuals
          skill.SkillTargetCollider.SkillTargetDisplay.HideVisuals();
          

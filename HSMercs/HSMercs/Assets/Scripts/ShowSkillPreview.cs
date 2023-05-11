@@ -14,6 +14,8 @@ public class ShowSkillPreview : MonoBehaviour, IShowSkillPreview
     private bool _enablePreview = false;
 
     private ISkill _skill;
+
+    private Coroutine _delayCoroutine = null;
     
     #endregion
 
@@ -37,8 +39,12 @@ public class ShowSkillPreview : MonoBehaviour, IShowSkillPreview
     {
         _enablePreview = true;
         
-        StartCoroutine(ShowPreview());
+        if(_delayCoroutine!=null) StopCoroutine(_delayCoroutine);
+        
+       _delayCoroutine = StartCoroutine(ShowPreview());
     }
+    
+   
 
     /// <summary>
     /// Turns off according to mouse location and skill position displacement
@@ -47,11 +53,16 @@ public class ShowSkillPreview : MonoBehaviour, IShowSkillPreview
     {
         _enablePreview = false;
         skillPreviewCanvas.enabled = false;
+        
+        if(_delayCoroutine!=null) StopCoroutine(_delayCoroutine);
     }
+    
+    
     
     private IEnumerator ShowPreview()
     {
         yield return new WaitForSeconds(displayDelay);
+        
         if (_enablePreview)
         {
             skillPreviewCanvas.enabled = true;

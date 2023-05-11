@@ -39,8 +39,7 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
         if (selectedSkill == currentSkill)
         {
             var skillQueue = SkillTargetCollider.Skill.CasterHero.Player.BattleSceneManager.SkillQueue;
-            
-            //TEST: TODO: Remove skill from skill queue
+
             //RemoveSkillFromQueue();
             skillQueue.RemoveSkillFromQueue(SkillTargetCollider.Skill);
             
@@ -57,10 +56,6 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
         //Enable skill targeting for a different skill
         else 
         {
-         
-            //Enables and updates information on show skill preview
-            SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOn();
-        
             //Only show target visuals after confirming skill is both ready and is enabled
             SkillTargetCollider.Skill.SkillAttributes.SkillReadiness.EnableTargetVisuals(transform,SkillTargetCollider);
         }
@@ -83,7 +78,7 @@ public class SkillTargeting : MonoBehaviour, ISkillTargeting
         
         HideArrow();
         
-        SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOff();
+        //SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOff();
         
         SkillTargetCollider.SkillTargets.HideValidTargetsGlow();
 

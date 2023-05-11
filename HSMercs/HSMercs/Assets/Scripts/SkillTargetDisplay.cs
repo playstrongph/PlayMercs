@@ -122,14 +122,12 @@ public class SkillTargetDisplay : MonoBehaviour, ISkillTargetDisplay
          SkillTargetCollider.TargetNodes.ShowArrowNodes();
             
          ShowTargetCrossHair();
-            
-         SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOff();
+         
       }
       else  //if there is NO distance between skill position and mouse position
       {
          HideArrow();
          SkillTargetCollider.TargetNodes.HideArrowNodes();
-         SkillTargetCollider.Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOn();    
       }
 
         

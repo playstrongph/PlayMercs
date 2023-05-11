@@ -19,14 +19,14 @@ namespace SOAssets
         
       #region METHODS
       
-      /// <summary>
+      /*/// <summary>
       /// For passive skills, just display Skill Preview
       /// </summary>
       /// <param name="skill"></param>
       public override void EnableSkillTargeting(ISkill skill)
       {
          skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOn();
-      }
+      }*/
       
       public override void LoadSkillTypeVisuals(ISkill skill)
       {
