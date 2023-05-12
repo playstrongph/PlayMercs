@@ -4,5 +4,5 @@
     void ShowArrowNodes();
     
     //TEST
-    void ShowNodesAtTargetHero(IHero targetHero);
+    void ShowNodesAtTargetHero(IHero targetHero,ISkill skill);
 }

@@ -66,7 +66,7 @@ public class HeroTargetCollider : MonoBehaviour, IHeroTargetCollider
         //2)Update the hero skills panel - information and displayed images and text
         Hero.HeroSkills.HeroSkillsVisual.UpdateSkillsDisplay();
       
-        //3) Show the existing hero skill and its target (if any)
+        //3) Show the existing SELECTED hero skill and its SELECTED target (if any)
         Hero.HeroSkills.HeroSkillsVisual.ShowSkillAndHeroTarget();
       
         //4) Update the current hero selected (tracked by the player and the other player)

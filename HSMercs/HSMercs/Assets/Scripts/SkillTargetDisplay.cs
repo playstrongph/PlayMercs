@@ -29,15 +29,35 @@ public class SkillTargetDisplay : MonoBehaviour, ISkillTargetDisplay
    /// <summary>
    /// Hides and disables the skill targeting visuals (arrow, nodes, and cross hair)
    /// </summary>
-   public void HideVisuals()
+   /*public void HideVisuals()
    {
       var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
       
       if(selectedSkill != null)
          selectedSkill.SkillTargetCollider.SkillTargeting.DisableSkillTargeting();
+   }*/
+
+   public void HideVisuals()
+   {
+      var selectedSkill = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedSkill;
+      var selectedTarget = SkillTargetCollider.Skill.CasterHero.HeroSkills.SelectedTarget;
+
+      if (selectedSkill != null)
+      {
+         //Hide Arrow
+         selectedSkill.SkillTargetCollider.TargetArrow.GetComponent<Image>().enabled = false;
+         
+         //Hide CrossHair
+         selectedSkill.SkillVisual.SkillGraphics.CrossHairGraphic.enabled = false;
+         
+         //Hide Nodes
+         selectedSkill.SkillTargetCollider.TargetNodes.HideArrowNodes();
+         
+      }
+      
    }
-   
-   
+
+
    /// <summary>
    /// Enables and displays the skill target visuals (arrow, nodes, and cross hair) 
    /// </summary>
@@ -53,7 +73,7 @@ public class SkillTargetDisplay : MonoBehaviour, ISkillTargetDisplay
          ShowArrowAtTargetHero(selectedTarget,selectedSkill);
          ShowCrossHairAtTargetHero(selectedTarget,selectedSkill);
          
-         selectedSkill.SkillTargetCollider.TargetNodes.ShowNodesAtTargetHero(selectedTarget);
+         selectedSkill.SkillTargetCollider.TargetNodes.ShowNodesAtTargetHero(selectedTarget,selectedSkill);
          
          selectedSkill.SkillVisual.SkillGraphics.SkillCheckGraphic.enabled = true;
       }
@@ -77,29 +97,23 @@ public class SkillTargetDisplay : MonoBehaviour, ISkillTargetDisplay
    /// <summary>
    /// Shows the Arrow at the Target Hero
    /// </summary>
-   /// <param name="targetHero"></param>
-   /// <param name="skill"></param>
-   private void ShowArrowAtTargetHero(IHero targetHero, ISkill skill)
+   /// <param name="selectedTarget"></param>
+   /// <param name="selectedSkill"></param>
+   private void ShowArrowAtTargetHero(IHero selectedTarget, ISkill selectedSkill)
    {
-      var targetHeroTransform = targetHero.HeroTransform;
-      var position = targetHeroTransform.position;
-      var notNormalizedTarget = position - transform.parent.position;
-        
-      //var notNormalizedTarget = transform.parent.position - targetHeroTransform.position;
-        
+      
+      var targetHeroPosition = selectedTarget.HeroTransform.position;
+      var selectedSkillPosition = selectedSkill.ThisGameObject.transform.position;
+      var notNormalizedTarget = targetHeroPosition - selectedSkillPosition;
       var directionTarget = notNormalizedTarget.normalized;
-        
-            
       var rotZ = Mathf.Atan2(notNormalizedTarget.y, notNormalizedTarget.x) * Mathf.Rad2Deg;
-        
-      //SkillTargetCollider.TargetArrow.SetActive(true);
+      
 
-      skill.SkillTargetCollider.TargetArrow.GetComponent<Image>().enabled = true;
+      selectedSkill.SkillTargetCollider.TargetArrow.GetComponent<Image>().enabled = true;
+      
+      selectedSkill.SkillTargetCollider.TargetArrow.transform.position = targetHeroPosition - 15f * directionTarget;
         
-      //SkillTargetCollider.TargetArrow.transform.position = transform.position - 15f * directionTarget;
-      skill.SkillTargetCollider.TargetArrow.transform.position = position - 15f * directionTarget;
-        
-      skill.SkillTargetCollider.TargetArrow.transform.rotation = Quaternion.Euler(0f,0f,rotZ-90);
+      selectedSkill.SkillTargetCollider.TargetArrow.transform.rotation = Quaternion.Euler(0f,0f,rotZ-90);
    }
    
    

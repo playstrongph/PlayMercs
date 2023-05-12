@@ -103,12 +103,16 @@ public class TargetNodes : MonoBehaviour, ITargetNodes
        /// Draw nodes at selected target hero
        /// </summary>
        /// <param name="targetHero"></param>
-       public void ShowNodesAtTargetHero(IHero targetHero)
+       /// <param name="skill"></param>
+       public void ShowNodesAtTargetHero(IHero targetHero,ISkill skill)
        {
            //Transform where the mouse currently is
 
-           var skillTransform = GetComponentInParent<ISkillTargetCollider>().Skill.ThisGameObject.transform;
+           var skillTransform = skill.ThisGameObject.transform;
+           
            var targetHeroTransform = targetHero.HeroTransform;
+           
+           Debug.Log("Selected Skill position: " +_controlPoints[2]);
            
            
 
