@@ -10,5 +10,9 @@
     /// </summary>
     void TurnOff();
 
-   
+    void TurnOnEnter();
+
+    void TurnOffExit();
+
+
 }

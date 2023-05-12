@@ -56,7 +56,7 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
     /// </summary>
     private void OnMouseUp()
     {
-         Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOff();
+        Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOff();
         
         //Hide Targeting Visuals
         SkillTargeting.DisableSkillTargeting();
@@ -66,5 +66,13 @@ public class SkillTargetCollider : MonoBehaviour, ISkillTargetCollider
 
     }
 
-    
+    private void OnMouseEnter()
+    {
+        Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOnEnter();
+    }
+
+    private void OnMouseExit()
+    {
+        Skill.SkillVisual.SkillPreviewVisual.ShowSkillPreview.TurnOffExit();
+    }
 }

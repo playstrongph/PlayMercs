@@ -109,11 +109,9 @@ public class TargetNodes : MonoBehaviour, ITargetNodes
            //Transform where the mouse currently is
 
            var skillTransform = skill.ThisGameObject.transform;
-           
            var targetHeroTransform = targetHero.HeroTransform;
            
-           Debug.Log("Selected Skill position: " +_controlPoints[2]);
-           
+      
            
 
            //P0 is where the mouse is at (the target)

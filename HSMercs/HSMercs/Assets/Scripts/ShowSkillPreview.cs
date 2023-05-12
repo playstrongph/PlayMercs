@@ -83,6 +83,32 @@ public class ShowSkillPreview : MonoBehaviour, IShowSkillPreview
         skillPreview.SpeedText.text = _skill.SkillAttributes.SkillSpeed.ToString();
         skillPreview.SkillDescriptionText.text = _skill.SkillAttributes.Description;
     }
+    
+    
+    /// <summary>
+    /// Can only turn on if within distance difference between the mouse location and the skill location
+    /// Note that the collider moves with the mouse
+    /// </summary>
+    public void TurnOnEnter()
+    {
+        
+        
+        if(_delayCoroutine!=null) StopCoroutine(_delayCoroutine);
+        
+        _delayCoroutine = StartCoroutine(ShowPreview());
+    }
+    
+   
+
+    /// <summary>
+    /// Turns off according to mouse location and skill position displacement
+    /// </summary>
+    public void TurnOffExit()
+    {
+        skillPreviewCanvas.enabled = false;
+        
+        if(_delayCoroutine!=null) StopCoroutine(_delayCoroutine);
+    }
 
     #endregion
 
