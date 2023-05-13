@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
 
-public class SkillQueuePreview : MonoBehaviour
+public class SkillQueuePreview : MonoBehaviour, ISkillQueuePreview
 {
    #region VARIABLES
    
