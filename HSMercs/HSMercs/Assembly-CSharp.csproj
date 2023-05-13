@@ -182,6 +182,8 @@
      <Compile Include="Assets\Scripts\SkillPanelVisual.cs" />
      <Compile Include="Assets\Scripts\SkillPreviewVisual.cs" />
      <Compile Include="Assets\Scripts\SkillQueue.cs" />
+     <Compile Include="Assets\Scripts\SkillQueueGridLayoutGroup.cs" />
+     <Compile Include="Assets\Scripts\SkillQueuePreview.cs" />
      <Compile Include="Assets\Scripts\SkillTargetCollider.cs" />
      <Compile Include="Assets\Scripts\SkillTargetDisplay.cs" />
      <Compile Include="Assets\Scripts\SkillTargeting.cs" />
