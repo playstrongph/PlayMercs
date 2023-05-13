@@ -50,6 +50,9 @@ TagManager:
   - name: HeroPreview
     uniqueID: 2727781215
     locked: 0
+  - name: Skill Queue Preview
+    uniqueID: 9759015
+    locked: 0
   - name: AboveEverything
     uniqueID: 2381631933
     locked: 0

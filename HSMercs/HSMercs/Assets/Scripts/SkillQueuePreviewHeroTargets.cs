@@ -1,14 +1,19 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Object = UnityEngine.Object;
 
-public class SkillQueueGridLayoutGroup : MonoBehaviour
+public class SkillQueuePreviewHeroTargets : MonoBehaviour
 {
    #region VARIABLES
 
-   [SerializeField] private GridLayoutGroup heroesGrid = null;
-   
+   //[SerializeField] private GridLayoutGroup heroesGrid = null;
+   //private GridLayoutGroup HeroesGrid;
+
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroGraphicPreview))] private List<Object> heroTargetPreviews = new List<Object>();
+
    [Header("SINGLE HERO TARGET")]
    //Default Values
    [SerializeField]private RectOffset singleHeroPadding = new RectOffset();
@@ -37,17 +42,36 @@ public class SkillQueueGridLayoutGroup : MonoBehaviour
 
    #region PROPERTIES
 
-   private GridLayoutGroup HeroesGrid => heroesGrid;
+   //private GridLayoutGroup HeroesGrid => heroesGrid;
+   private GridLayoutGroup HeroesGrid { get; set; }
+
+   public List<IHeroGraphicPreview> HeroTargetPreviews
+   {
+      get
+      {
+         var newTargetPreviews = new List<IHeroGraphicPreview>();
+         foreach (var targetPreview in heroTargetPreviews)
+         {
+            newTargetPreviews.Add(targetPreview as IHeroGraphicPreview);
+         }
+         return newTargetPreviews;
+      }
+   }
 
    #endregion
 
    #region METHODS
-   
+
+   private void Awake()
+   {
+      HeroesGrid = GetComponent<GridLayoutGroup>();
+   }
+
    /// <summary>
    /// Changes the grid setup based on the number of heroes - 1 or many;
    /// </summary>
    /// <param name="heroTargets"></param>
-   private void UpdateGridSetup(List<IHero> heroTargets)
+   public void UpdateGridSetup(List<IHero> heroTargets)
    {
       if (heroTargets.Count > 1)
       {
@@ -73,12 +97,6 @@ public class SkillQueueGridLayoutGroup : MonoBehaviour
          HeroesGrid.constraint = singleHeroConstraint;
          HeroesGrid.constraintCount = singleHeroConstraintCount;   
       }
-
-
-      
-      
-      
-
    }
 
 
