@@ -13,10 +13,13 @@ public class SkillQueuePreview : MonoBehaviour, ISkillQueuePreview
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPreviewVisual))] private Object skillPreviewVisual = null;
    
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroGraphicPreview))] private Object heroGraphicPreview = null;
+   
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPreviewTargets))] private Object skillPreviewTargets = null;
+   
+   
 
 
-   [Header("SKILL TARGETS")] 
-   [SerializeField] private GridLayoutGroup heroGrid = null;
+   
 
 
    #endregion
@@ -27,8 +30,12 @@ public class SkillQueuePreview : MonoBehaviour, ISkillQueuePreview
    public ISkillPreviewVisual SkillPreviewVisual => skillPreviewVisual as ISkillPreviewVisual;
    
    public IHeroGraphicPreview HeroGraphicPreview => heroGraphicPreview as IHeroGraphicPreview;
+   
+   public ISkillPreviewTargets SkillPreviewTargets => skillPreviewTargets as ISkillPreviewTargets;
+   
+   
 
-   private GridLayoutGroup HeroGrid => heroGrid;
+   
    
    
 

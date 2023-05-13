@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
 
-public class SkillQueuePreviewHeroTargets : MonoBehaviour
+public class SkillPreviewTargets : MonoBehaviour, ISkillPreviewTargets
 {
    #region VARIABLES
 
@@ -43,7 +43,9 @@ public class SkillQueuePreviewHeroTargets : MonoBehaviour
    #region PROPERTIES
 
    //private GridLayoutGroup HeroesGrid => heroesGrid;
-   private GridLayoutGroup HeroesGrid { get; set; }
+   public GridLayoutGroup HeroesGrid { get; set; }
+
+   public Canvas Canvas { get; set; }
 
    public List<IHeroGraphicPreview> HeroTargetPreviews
    {
@@ -65,6 +67,7 @@ public class SkillQueuePreviewHeroTargets : MonoBehaviour
    private void Awake()
    {
       HeroesGrid = GetComponent<GridLayoutGroup>();
+      Canvas = GetComponent<Canvas>();
    }
 
    /// <summary>
