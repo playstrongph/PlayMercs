@@ -38,7 +38,7 @@ public class SkillQueuePreview : MonoBehaviour, ISkillQueuePreview
 
    private void Awake()
    {
-      throw new NotImplementedException();
+      
    }
 
    #endregion
