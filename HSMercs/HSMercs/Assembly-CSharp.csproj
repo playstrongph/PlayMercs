@@ -98,6 +98,10 @@
      <Compile Include="Assets\Scripts\IInitializeSkills.cs" />
      <Compile Include="Assets\Scripts\IManualSelectTarget.cs" />
      <Compile Include="Assets\Scripts\IPlayer.cs" />
+     <Compile Include="Assets\Scripts\IQueueHeroPreviewVisual.cs" />
+     <Compile Include="Assets\Scripts\IQueuePreviewHeroTargets.cs" />
+     <Compile Include="Assets\Scripts\IQueueSkillPreviewVisual.cs" />
+     <Compile Include="Assets\Scripts\IQueueTargetPreview.cs" />
      <Compile Include="Assets\Scripts\ISetHeroArmorText.cs" />
      <Compile Include="Assets\Scripts\ISetHeroAttackText.cs" />
      <Compile Include="Assets\Scripts\ISetHeroHealthText.cs" />
@@ -108,7 +112,6 @@
      <Compile Include="Assets\Scripts\ISkillAttributes.cs" />
      <Compile Include="Assets\Scripts\ISkillGraphics.cs" />
      <Compile Include="Assets\Scripts\ISkillPanelVisual.cs" />
-     <Compile Include="Assets\Scripts\ISkillPreviewTargets.cs" />
      <Compile Include="Assets\Scripts\ISkillPreviewVisual.cs" />
      <Compile Include="Assets\Scripts\ISkillQueue.cs" />
      <Compile Include="Assets\Scripts\ISkillQueuePreview.cs" />
@@ -125,7 +128,10 @@
      <Compile Include="Assets\Scripts\InitializeSkills.cs" />
      <Compile Include="Assets\Scripts\ManualSelectTarget.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\QueueHeroPreviewVisual.cs" />
+     <Compile Include="Assets\Scripts\QueuePreviewHeroTargets.cs" />
      <Compile Include="Assets\Scripts\QueueSkillPreviewVisual.cs" />
+     <Compile Include="Assets\Scripts\QueueTargetPreview.cs" />
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceAttribute.cs" />
      <Compile Include="Assets\Scripts\RequireInterfaceAttribute\RequireInterfaceDrawer.cs" />
      <Compile Include="Assets\Scripts\SOAssets\ActiveSkillAsset.cs" />
@@ -183,7 +189,6 @@
      <Compile Include="Assets\Scripts\SkillAttributes.cs" />
      <Compile Include="Assets\Scripts\SkillGraphics.cs" />
      <Compile Include="Assets\Scripts\SkillPanelVisual.cs" />
-     <Compile Include="Assets\Scripts\SkillPreviewTargets.cs" />
      <Compile Include="Assets\Scripts\SkillPreviewVisual.cs" />
      <Compile Include="Assets\Scripts\SkillQueue.cs" />
      <Compile Include="Assets\Scripts\SkillQueuePreview.cs" />

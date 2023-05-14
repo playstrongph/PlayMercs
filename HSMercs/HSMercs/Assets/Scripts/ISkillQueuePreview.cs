@@ -1,5 +1,6 @@
 ﻿public interface ISkillQueuePreview
 {
-    ISkillPreviewVisual SkillPreviewVisual { get; }
-    IHeroGraphicPreview HeroGraphicPreview { get; }
+    IQueueSkillPreviewVisual QueuesSkillPreviewVisual { get; }
+    IQueueHeroPreviewVisual QueueHeroPreviewVisual { get; }
+    IQueuePreviewHeroTargets QueuePreviewHeroTargets { get; }
 }

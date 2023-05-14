@@ -2,17 +2,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
 
-public class SkillPreviewTargets : MonoBehaviour, ISkillPreviewTargets
+public class QueuePreviewHeroTargets : MonoBehaviour, IQueuePreviewHeroTargets
 {
    #region VARIABLES
 
    //[SerializeField] private GridLayoutGroup heroesGrid = null;
    //private GridLayoutGroup HeroesGrid;
 
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroGraphicPreview))] private List<Object> heroTargetPreviews = new List<Object>();
+   [FormerlySerializedAs("heroTargetPreviews")] [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IQueueTargetPreview))] private List<Object> queueTargetPreviews = new List<Object>();
 
    [Header("SINGLE HERO TARGET")]
    //Default Values
@@ -47,12 +48,12 @@ public class SkillPreviewTargets : MonoBehaviour, ISkillPreviewTargets
 
    public Canvas Canvas { get; set; }
 
-   public List<IHeroGraphicPreview> HeroTargetPreviews
+   public List<IHeroGraphicPreview> QueueTargetPreviews
    {
       get
       {
          var newTargetPreviews = new List<IHeroGraphicPreview>();
-         foreach (var targetPreview in heroTargetPreviews)
+         foreach (var targetPreview in queueTargetPreviews)
          {
             newTargetPreviews.Add(targetPreview as IHeroGraphicPreview);
          }

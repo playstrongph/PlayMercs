@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
 
@@ -9,12 +10,13 @@ public class SkillQueuePreview : MonoBehaviour, ISkillQueuePreview
 {
    #region VARIABLES
    
+   [FormerlySerializedAs("skillPreviewVisual")]
    [Header("COMPONENTS")]
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPreviewVisual))] private Object skillPreviewVisual = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IQueueSkillPreviewVisual))] private Object queuesSkillPreviewVisual = null;
    
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IHeroGraphicPreview))] private Object heroGraphicPreview = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IQueueHeroPreviewVisual))] private Object queueHeroPreviewVisual = null;
    
-   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkillPreviewTargets))] private Object skillPreviewTargets = null;
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IQueuePreviewHeroTargets))] private Object skillPreviewTargets = null;
    
    
 
@@ -27,11 +29,11 @@ public class SkillQueuePreview : MonoBehaviour, ISkillQueuePreview
    #region PROPERTIES
    
   
-   public ISkillPreviewVisual SkillPreviewVisual => skillPreviewVisual as ISkillPreviewVisual;
+   public IQueueSkillPreviewVisual QueuesSkillPreviewVisual => queuesSkillPreviewVisual as IQueueSkillPreviewVisual;
    
-   public IHeroGraphicPreview HeroGraphicPreview => heroGraphicPreview as IHeroGraphicPreview;
+   public IQueueHeroPreviewVisual QueueHeroPreviewVisual => queueHeroPreviewVisual as IQueueHeroPreviewVisual;
    
-   public ISkillPreviewTargets SkillPreviewTargets => skillPreviewTargets as ISkillPreviewTargets;
+   public IQueuePreviewHeroTargets QueuePreviewHeroTargets => skillPreviewTargets as IQueuePreviewHeroTargets;
    
    
 

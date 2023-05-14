@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
 
-public class QueueSkillPreviewVisual : MonoBehaviour
+public class QueueSkillPreviewVisual : MonoBehaviour, IQueueSkillPreviewVisual
 {
     #region VARIALBES
 

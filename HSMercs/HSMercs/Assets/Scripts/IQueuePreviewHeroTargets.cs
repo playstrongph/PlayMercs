@@ -2,9 +2,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public interface ISkillPreviewTargets
+public interface IQueuePreviewHeroTargets
 {
-    List<IHeroGraphicPreview> HeroTargetPreviews { get; }
+    List<IHeroGraphicPreview> QueueTargetPreviews { get; }
     GridLayoutGroup HeroesGrid { get; set; }
     Canvas Canvas { get; set; }
 
