@@ -34,12 +34,13 @@ public class SkillQueuePreview : MonoBehaviour, ISkillQueuePreview
    public IQueueHeroPreviewVisual QueueHeroPreviewVisual => queueHeroPreviewVisual as IQueueHeroPreviewVisual;
    
    public IQueuePreviewHeroTargets QueuePreviewHeroTargets => skillPreviewTargets as IQueuePreviewHeroTargets;
-   
-   
 
-   
-   
-   
+   public Canvas Canvas { get; private set; }
+
+
+
+
+
 
    #endregion
 
@@ -47,7 +48,7 @@ public class SkillQueuePreview : MonoBehaviour, ISkillQueuePreview
 
    private void Awake()
    {
-      
+      Canvas = GetComponent<Canvas>();
    }
 
    #endregion
