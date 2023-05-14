@@ -63,7 +63,7 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    private IEnumerator StartAllCoroutines()
    {
       
-      //TEST
+      
       yield return StartCoroutine(InitializeGameBoard());
       
       yield return StartCoroutine(InitializeAllPlayers());
@@ -72,8 +72,10 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
       yield return StartCoroutine(InitializeAllSkills());
       
-      //TODO: InitializeSkillPreview
       yield return StartCoroutine(InitializeSkillQueuePreview());
+      
+      //TEST
+      yield return StartCoroutine(StartBattle());
       
       yield return null;
    }
@@ -146,6 +148,36 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
       
       yield return null;
    }
+   
+   //Temporary
+   //TODO: Create its own class
+   private IEnumerator StartBattle()
+   {
+      
+      var allyHeroList = MainPlayer.Heroes.HeroStatusLists.GetAliveHeroList();
+      var invertedAllyHeroList = new List<IHero>(allyHeroList);
+      
+      //List is inverted so that the order of displaying heroes will be towards the "RIGHT" direction
+      invertedAllyHeroList.Reverse();
+      
+      //This is the closest hero to the "RIGHT" of the hero with a skill selected
+      IHero nextHero = null;
+      
+      foreach (var hero in invertedAllyHeroList)
+      {
+         var selectedSkill = hero.HeroSkills.SelectedSkill;
+         if (selectedSkill == null)
+         {
+            nextHero = hero;
+         }
+      }
+      
+      //If there's a next hero, trigger the "OnMouseDown" actions
+      nextHero?.HeroTargetCollider.SelectHeroActions();
+      yield return null;
+   }
+   
+   
 
 
 
