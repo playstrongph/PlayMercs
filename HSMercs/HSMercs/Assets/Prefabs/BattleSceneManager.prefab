@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 715097479}
   - component: {fileID: 5630847325354506545}
   - component: {fileID: 1641703657}
+  - component: {fileID: 2114722635753487791}
   m_Layer: 0
   m_Name: BattleSceneManager
   m_TagString: Untagged
@@ -127,3 +128,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skills: []
+--- !u!114 &2114722635753487791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56331960320557931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922aa59189c9163419398025b726f2d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

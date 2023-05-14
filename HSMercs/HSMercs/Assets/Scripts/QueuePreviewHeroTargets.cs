@@ -13,7 +13,7 @@ public class QueuePreviewHeroTargets : MonoBehaviour, IQueuePreviewHeroTargets
    //[SerializeField] private GridLayoutGroup heroesGrid = null;
    //private GridLayoutGroup HeroesGrid;
 
-   [FormerlySerializedAs("heroTargetPreviews")] [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IQueueTargetPreview))] private List<Object> queueTargetPreviews = new List<Object>();
+   [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(IQueueTargetPreview))] private List<Object> queueTargetPreviews = new List<Object>();
 
    [Header("SINGLE HERO TARGET")]
    //Default Values

@@ -13,4 +13,6 @@ public interface IBattleSceneManager
 
      ISkillQueue SkillQueue { get; }
 
+     ISkillQueuePreview SkillQueuePreview { get; set; }
+
 }

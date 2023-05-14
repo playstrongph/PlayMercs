@@ -25,12 +25,18 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    private IInitializeSkills _initializeSkills;
 
+   private IInitializeSkillsQueuePreview _initializeSkillsQueuePreview;
+   
+   
+
    public IPlayer MainPlayer { get; set; }
    public IPlayer EnemyPlayer { get; set; }
 
    public IGameBoard GameBoard { get; private set; }
 
    public ISkillQueue SkillQueue { get; private set; }
+
+   public ISkillQueuePreview SkillQueuePreview { get; set; }
 
 
 
@@ -43,6 +49,7 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
       _initializePlayers = GetComponent<IInitializePlayers>();
       _initializeHeroes = GetComponent<IInitializeHeroes>();
       _initializeSkills = GetComponent<IInitializeSkills>();
+      _initializeSkillsQueuePreview = GetComponent<IInitializeSkillsQueuePreview>();
       
       
       SkillQueue = GetComponent<ISkillQueue>();
@@ -64,6 +71,9 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
       yield return StartCoroutine(InitializeAllHeroes());
 
       yield return StartCoroutine(InitializeAllSkills());
+      
+      //TODO: InitializeSkillPreview
+      yield return StartCoroutine(InitializeSkillQueuePreview());
       
       yield return null;
    }
@@ -126,6 +136,13 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
       
       //Set Reference
       GameBoard = gameBoard;
+      
+      yield return null;
+   }
+
+   private IEnumerator InitializeSkillQueuePreview()
+   {
+      _initializeSkillsQueuePreview.StartAction(BattleSceneSettings.SkillQueuePreviewPrefab,this);
       
       yield return null;
    }
