@@ -25,7 +25,10 @@ public class InitializeSkillsQueuePreview : MonoBehaviour, IInitializeSkillsQueu
    {
         //Instantiate skill queue preview object    
         var skillQueuePreviewObject = Instantiate(skillQueuePreviewPrefab, battleSceneManager.ThisGameObject.transform);
+        skillQueuePreviewObject.transform.position = Vector3.zero;
         skillQueuePreviewObject.name = "SkillQueuePreview";
+        
+        
         
         //Set reference to the instantiated object
         var skillQueuePreview = skillQueuePreviewObject.GetComponent<ISkillQueuePreview>();

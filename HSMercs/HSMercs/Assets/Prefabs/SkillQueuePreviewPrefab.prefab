@@ -538,7 +538,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -192.45033, y: -17}
+  m_AnchoredPosition: {x: -181.65034, y: -17}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &30880085671270438
@@ -2058,7 +2058,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 431.5, y: -232}
+  m_AnchoredPosition: {x: 442.3, y: -232}
   m_SizeDelta: {x: 193.79346, y: 193.79346}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2491180613630702801
@@ -3275,7 +3275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 45.5, y: -19.385712}
+  m_AnchoredPosition: {x: 56.3, y: -19.385712}
   m_SizeDelta: {x: -1147.0624, y: -408.64905}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7549589610430977223
@@ -3318,7 +3318,7 @@ MonoBehaviour:
   singleHeroConstraint: 2
   singleHeroConstraintCount: 3
   multipleHeroPadding:
-    m_Left: -31
+    m_Left: -44
     m_Right: 0
     m_Top: 0
     m_Bottom: 23
@@ -5068,7 +5068,7 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
-  m_OverrideSorting: 0
+  m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
