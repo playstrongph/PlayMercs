@@ -85,6 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3082124669956889599}
   - component: {fileID: 3082124669956889598}
+  - component: {fileID: 6416918807771846321}
   - component: {fileID: 629301101}
   m_Layer: 0
   m_Name: SkillQueuePanel
@@ -135,6 +136,19 @@ Canvas:
   m_SortingLayerID: 9759015
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &6416918807771846321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3082124669956889592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ebe99297923be4b9d871220cc9e741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skills: []
 --- !u!114 &629301101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,6 +281,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkillQueueIconPrefab (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -325,22 +344,22 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 31.12369
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -243.62752
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -350,7 +369,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -360,7 +379,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -403,6 +422,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SkillQueueIconPrefab (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -462,22 +486,22 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 31.12369
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -273.39752
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -487,7 +511,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -497,7 +521,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -540,6 +564,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SkillQueueIconPrefab (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -599,22 +628,22 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 31.12369
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -303.1675
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -624,7 +653,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -634,7 +663,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -677,6 +706,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SkillQueueIconPrefab (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -736,22 +770,22 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 31.12369
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -154.31752
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -761,7 +795,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -771,7 +805,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -785,15 +819,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 631530e1b69e51949af2575f41eedd74, type: 3}
---- !u!1 &672136031424536561 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
-    type: 3}
-  m_PrefabInstance: {fileID: 3941953555008466330}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &672136031424536566 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
+    type: 3}
+  m_PrefabInstance: {fileID: 3941953555008466330}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &672136031424536561 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
     type: 3}
   m_PrefabInstance: {fileID: 3941953555008466330}
   m_PrefabAsset: {fileID: 0}
@@ -808,6 +842,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SkillQueueIconPrefab (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -867,22 +906,22 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 31.12369
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -5.467514
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -892,7 +931,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -902,7 +941,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -916,15 +955,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 631530e1b69e51949af2575f41eedd74, type: 3}
---- !u!1 &587820874367320757 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
-    type: 3}
-  m_PrefabInstance: {fileID: 4021452848681955550}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &587820874367320754 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
+    type: 3}
+  m_PrefabInstance: {fileID: 4021452848681955550}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &587820874367320757 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
     type: 3}
   m_PrefabInstance: {fileID: 4021452848681955550}
   m_PrefabAsset: {fileID: 0}
@@ -939,6 +978,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SkillQueueIconPrefab (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -998,22 +1042,22 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 31.12369
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -35.237514
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1023,7 +1067,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1033,7 +1077,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1070,6 +1114,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SkillQueueIconPrefab (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1129,22 +1178,22 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 31.12369
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -184.08752
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1154,7 +1203,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1164,7 +1213,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1178,15 +1227,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 631530e1b69e51949af2575f41eedd74, type: 3}
---- !u!224 &8227475659721110260 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
-    type: 3}
-  m_PrefabInstance: {fileID: 5605455907208790168}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8227475659721110259 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
+    type: 3}
+  m_PrefabInstance: {fileID: 5605455907208790168}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &8227475659721110260 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
     type: 3}
   m_PrefabInstance: {fileID: 5605455907208790168}
   m_PrefabAsset: {fileID: 0}
@@ -1201,6 +1250,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SkillQueueIconPrefab (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1260,22 +1314,22 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 31.12369
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -213.85751
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1285,7 +1339,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1295,7 +1349,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1309,15 +1363,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 631530e1b69e51949af2575f41eedd74, type: 3}
---- !u!224 &7215262703759151950 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
-    type: 3}
-  m_PrefabInstance: {fileID: 6613125680817414434}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7215262703759151945 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
+    type: 3}
+  m_PrefabInstance: {fileID: 6613125680817414434}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &7215262703759151950 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
     type: 3}
   m_PrefabInstance: {fileID: 6613125680817414434}
   m_PrefabAsset: {fileID: 0}
@@ -1332,6 +1386,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SkillQueueIconPrefab (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1391,22 +1450,22 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 31.12369
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -65.007515
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1416,7 +1475,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1426,7 +1485,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1463,6 +1522,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SkillQueueIconPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1522,22 +1586,22 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 31.12369
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -332.93753
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1547,7 +1611,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1557,7 +1621,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1577,15 +1641,15 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 631530e1b69e51949af2575f41eedd74, type: 3}
---- !u!1 &6713264069375788631 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
-    type: 3}
-  m_PrefabInstance: {fileID: 7119355304392487996}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6713264069375788624 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
+    type: 3}
+  m_PrefabInstance: {fileID: 7119355304392487996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6713264069375788631 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
     type: 3}
   m_PrefabInstance: {fileID: 7119355304392487996}
   m_PrefabAsset: {fileID: 0}
@@ -1600,6 +1664,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SkillQueueIconPrefab (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1659,22 +1728,22 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 31.12369
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -124.547516
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1684,7 +1753,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1694,7 +1763,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1708,15 +1777,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 631530e1b69e51949af2575f41eedd74, type: 3}
---- !u!1 &5857221521201081953 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
-    type: 3}
-  m_PrefabInstance: {fileID: 7975397783893203978}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5857221521201081958 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
+    type: 3}
+  m_PrefabInstance: {fileID: 7975397783893203978}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5857221521201081953 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
     type: 3}
   m_PrefabInstance: {fileID: 7975397783893203978}
   m_PrefabAsset: {fileID: 0}
@@ -1731,6 +1800,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SkillQueueIconPrefab (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604730472010019435, guid: 631530e1b69e51949af2575f41eedd74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1790,22 +1864,22 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 31.12369
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -94.77751
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1815,7 +1889,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
@@ -1825,7 +1899,7 @@ PrefabInstance:
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4604730472010019436, guid: 631530e1b69e51949af2575f41eedd74,
         type: 3}

@@ -70,14 +70,14 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
       
       yield return StartCoroutine(InitializeSkillQueuePanel());
       
+      yield return StartCoroutine(InitializeSkillQueuePreview());
+      
       yield return StartCoroutine(InitializeAllPlayers());
       
       yield return StartCoroutine(InitializeAllHeroes());
 
       yield return StartCoroutine(InitializeAllSkills());
-      
-      yield return StartCoroutine(InitializeSkillQueuePreview());
-      
+
       //TEST
       yield return StartCoroutine(StartBattle());
       
@@ -145,7 +145,11 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
       
       yield return null;
    }
-
+   
+   /// <summary>
+   /// Creates the Skill Queue Panel
+   /// </summary>
+   /// <returns></returns>
    private IEnumerator InitializeSkillQueuePanel()
    {
       SkillQueue.InitializeSkillQueuePanel(this);
