@@ -36,6 +36,8 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    public ISkillQueue SkillQueue { get; private set; }
 
+   public ISkillQueuePanel SkillQueuePanel { get; set; }
+
    public ISkillQueuePreview SkillQueuePreview { get; set; }
 
 
@@ -65,6 +67,8 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
       
       
       yield return StartCoroutine(InitializeGameBoard());
+      
+      yield return StartCoroutine(InitializeSkillQueuePanel());
       
       yield return StartCoroutine(InitializeAllPlayers());
       
@@ -139,6 +143,12 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
       //Set Reference
       GameBoard = gameBoard;
       
+      yield return null;
+   }
+
+   private IEnumerator InitializeSkillQueuePanel()
+   {
+      SkillQueue.InitializeSkillQueuePanel(this);
       yield return null;
    }
 

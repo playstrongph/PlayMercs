@@ -35,7 +35,25 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
       Skills = new List<ISkill>();
       InitializeSpeedOrderDictionary();
    }
-   
+
+   public void InitializeSkillQueuePanel(BattleSceneManager battleSceneManager)
+   {
+      var skillQueuePanelPrefab = battleSceneManager.BattleSceneSettings.SkillQueuePanel;
+      var skillQueuePanelObject = Instantiate(skillQueuePanelPrefab, battleSceneManager.transform);
+      var skillQueuePanel = skillQueuePanelObject.GetComponent<ISkillQueuePanel>();
+
+      skillQueuePanelObject.transform.position = skillQueuePanel.PanelPosition;
+
+      //Set Reference
+      battleSceneManager.SkillQueuePanel = skillQueuePanel;
+      
+      
+      //skillQueuePanelObject.name = "Skill Queue Panel";
+
+   }
+
+
+
    /// <summary>
    /// Add skill to Battle Manager Skill Queue
    /// </summary>

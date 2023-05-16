@@ -20,6 +20,8 @@ MonoBehaviour:
     type: 3}
   gameBoardPrefab: {fileID: 4725815384894953042, guid: bb7555f22b260fe4db9f0ecc9470dd3a,
     type: 3}
+  skillQueuePanel: {fileID: 3082124669956889592, guid: 9e363971031169b4480cdb7b6317b638,
+    type: 3}
   skillQueuePreviewPrefab: {fileID: 3398279949013156436, guid: cc918bd7929c8474ea9645ac24ba3bca,
     type: 3}
   allyTeamHeroes: {fileID: 11400000, guid: 42568677ef1050347852989fdffd0e7c, type: 2}

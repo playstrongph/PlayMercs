@@ -13,6 +13,8 @@ namespace SOAssets
         ITeamHeroesAsset EnemyTeamHeroes { get; }
 
         GameObject GameBoardPrefab { get; }
+
+        GameObject SkillQueuePanel { get; }
         GameObject SkillQueuePreviewPrefab { get; }
 
 

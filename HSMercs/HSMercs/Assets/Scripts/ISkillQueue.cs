@@ -11,5 +11,6 @@ public interface ISkillQueue
     void AddSkillToQueue(ISkill skill);
 
     void RemoveSkillFromQueue(ISkill skill);
-   
+    void InitializeSkillQueuePanel(BattleSceneManager battleSceneManager);
+
 }

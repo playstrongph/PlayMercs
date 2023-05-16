@@ -12,6 +12,8 @@ public interface IBattleSceneManager
      IGameBoard GameBoard { get; }
 
      ISkillQueue SkillQueue { get; }
+     
+     ISkillQueuePanel SkillQueuePanel { get; set; }
 
      ISkillQueuePreview SkillQueuePreview { get; set; }
 

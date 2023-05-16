@@ -11,15 +11,17 @@ namespace SOAssets
 
     #region VARIABLES
 
-    [SerializeField]  private GameObject heroPrefab;
+    [SerializeField]  private GameObject heroPrefab=null;
 
-    [SerializeField]  private GameObject heroSkillsPrefab;
+    [SerializeField]  private GameObject heroSkillsPrefab=null;
 
-    [SerializeField]  private GameObject playerPrefab;
+    [SerializeField]  private GameObject playerPrefab= null;
 
-    [SerializeField] private GameObject gameBoardPrefab;
+    [SerializeField] private GameObject gameBoardPrefab = null;
     
-    [SerializeField] private GameObject skillQueuePreviewPrefab;
+    [SerializeField] private GameObject skillQueuePanel =null;
+    
+    [SerializeField] private GameObject skillQueuePreviewPrefab = null;
     
    
 
@@ -32,12 +34,12 @@ namespace SOAssets
 
     #region PROPERTIES
 
-    public GameObject HeroPrefab { get=> heroPrefab; private set => heroPrefab = value;}
-    //public GameObject SkillPrefab { get=> skillPrefab; private set => skillPrefab = value;}
-    public GameObject HeroSkillsPrefab { get=> heroSkillsPrefab; private set => heroSkillsPrefab = value;}
-    public GameObject PlayerPrefab { get=> playerPrefab; private set => playerPrefab = value;}
-    public GameObject GameBoardPrefab { get=> gameBoardPrefab; private set => gameBoardPrefab = value;}
-    public GameObject SkillQueuePreviewPrefab { get=> skillQueuePreviewPrefab; private set => skillQueuePreviewPrefab = value;}
+    public GameObject HeroPrefab => heroPrefab;
+    public GameObject HeroSkillsPrefab => heroSkillsPrefab;
+    public GameObject PlayerPrefab => playerPrefab;
+    public GameObject GameBoardPrefab => gameBoardPrefab;
+    public GameObject SkillQueuePanel => skillQueuePanel;
+    public GameObject SkillQueuePreviewPrefab => skillQueuePreviewPrefab; 
 
     public ITeamHeroesAsset AllyTeamHeroes { get => allyTeamHeroes as ITeamHeroesAsset; private set => allyTeamHeroes = value as ScriptableObject; }
     public ITeamHeroesAsset EnemyTeamHeroes { get => enemyTeamHeroes as ITeamHeroesAsset; private set => enemyTeamHeroes = value as ScriptableObject; }
