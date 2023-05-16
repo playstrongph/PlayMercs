@@ -53,6 +53,9 @@ TagManager:
   - name: Skill Queue Preview
     uniqueID: 9759015
     locked: 0
+  - name: Buttons
+    uniqueID: 3219523843
+    locked: 0
   - name: AboveEverything
     uniqueID: 2381631933
     locked: 0
