@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
-public class SkillQueuePanel : MonoBehaviour, ISkillQueuePanel
+public class SkillQueueVisual : MonoBehaviour, ISkillQueueVisual
 {
    #region VARIABLES
 
@@ -18,6 +20,8 @@ public class SkillQueuePanel : MonoBehaviour, ISkillQueuePanel
    #endregion
 
    #region PROPERTIES
+
+   private ISkillQueue SkillQueue { get; set; }
 
    public Vector3 PanelPosition => panelPosition;
    
@@ -37,6 +41,11 @@ public class SkillQueuePanel : MonoBehaviour, ISkillQueuePanel
    #endregion
 
    #region METHODS
+
+   private void Awake()
+   {
+      SkillQueue = GetComponent<ISkillQueue>();
+   }
 
    public void UpdateSkillQueuePanel()
    {

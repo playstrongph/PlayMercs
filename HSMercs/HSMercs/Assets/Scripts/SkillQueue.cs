@@ -9,6 +9,8 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
 {
    #region VARIABLES
    
+   
+   
    [Header("For viewing purposes only")]
    [SerializeField] [RequireInterfaceAttribute.RequireInterface(typeof(ISkill))] private List<Object> skills = new List<Object>();
 
@@ -17,9 +19,11 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
    #region PROPERTIES
 
    private readonly Dictionary<int, string> _speedOrderDictionary = new Dictionary<int, string>();
-   
+
+   public ISkillQueueVisual SkillQueueVisual { get; private set; }
+
    //Local Reference to the skill queue panel
-   private ISkillQueuePanel _skillQueuePanel;
+   private ISkillQueueVisual _skillQueueVisual;
 
    /// <summary>
    /// Returns a randomly sorted list
@@ -33,6 +37,7 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
 
    private void Awake()
    {
+      SkillQueueVisual = GetComponent<ISkillQueueVisual>();
       Skills = new List<ISkill>();
       InitializeSpeedOrderDictionary();
    }
@@ -44,21 +49,7 @@ public class SkillQueue : MonoBehaviour, ISkillQueue
    /// <param name="battleSceneManager"></param>
    public void InitializeSkillQueuePanel(BattleSceneManager battleSceneManager)
    {
-      var skillQueuePanelPrefab = battleSceneManager.BattleSceneSettings.SkillQueuePanel;
-      var skillQueuePanelObject = Instantiate(skillQueuePanelPrefab, battleSceneManager.transform);
-      _skillQueuePanel = skillQueuePanelObject.GetComponent<ISkillQueuePanel>();
       
-      //Set the Parent
-      skillQueuePanelObject.transform.SetParent(battleSceneManager.transform);
-      
-      //Set the correct world position
-      skillQueuePanelObject.transform.position = _skillQueuePanel.PanelPosition;
-
-      //Set Reference
-      battleSceneManager.SkillQueuePanel = _skillQueuePanel;
-      
-      //Set the Panel Name
-      skillQueuePanelObject.name = "Skill Queue Panel";
       
       
 

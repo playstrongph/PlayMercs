@@ -25,7 +25,11 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    private IInitializeSkills _initializeSkills;
 
+   private IInitializeSkillQueue _initializeSkillQueue;
+
    private IInitializeSkillsQueuePreview _initializeSkillsQueuePreview;
+   
+   
    
    
 
@@ -34,10 +38,7 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    public IGameBoard GameBoard { get; private set; }
 
-   public ISkillQueue SkillQueue { get; private set; }
-
-   public ISkillQueuePanel SkillQueuePanel { get; set; }
-
+   public ISkillQueue SkillQueue { get; set; }
    public ISkillQueuePreview SkillQueuePreview { get; set; }
 
 
@@ -51,10 +52,8 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
       _initializePlayers = GetComponent<IInitializePlayers>();
       _initializeHeroes = GetComponent<IInitializeHeroes>();
       _initializeSkills = GetComponent<IInitializeSkills>();
+      _initializeSkillQueue = GetComponent<IInitializeSkillQueue>();
       _initializeSkillsQueuePreview = GetComponent<IInitializeSkillsQueuePreview>();
-      
-      
-      SkillQueue = GetComponent<ISkillQueue>();
    }
 
    private void Start()
@@ -68,7 +67,7 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
       
       yield return StartCoroutine(InitializeGameBoard());
       
-      yield return StartCoroutine(InitializeSkillQueuePanel());
+      yield return StartCoroutine(InitializeSkillQueue());
       
       yield return StartCoroutine(InitializeSkillQueuePreview());
       
@@ -150,9 +149,10 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    /// Creates the Skill Queue Panel
    /// </summary>
    /// <returns></returns>
-   private IEnumerator InitializeSkillQueuePanel()
+   private IEnumerator InitializeSkillQueue()
    {
-      SkillQueue.InitializeSkillQueuePanel(this);
+      _initializeSkillQueue.StartAction(this);
+
       yield return null;
    }
 
