@@ -11,6 +11,10 @@ public class FightButton : MonoBehaviour, IFightButton
 
    [SerializeField] private Image buttonImage = null;
    [SerializeField] private TextMeshProUGUI buttonText = null;
+
+   [Header("Button Position")] [SerializeField]
+   private Vector3 buttonPosition = new Vector3(297, 23, 0);
+   
    
    [Header("Color Hex Codes")]
    [SerializeField] private string yellowColorHex = "#FFE800";
@@ -22,6 +26,7 @@ public class FightButton : MonoBehaviour, IFightButton
    #region PROPERTIES
 
    public BattleSceneManager BattleSceneManager { get; set; }
+   public Vector3 ButtonPosition => buttonPosition;
 
    private Image ButtonImage => buttonImage;
    
@@ -32,7 +37,7 @@ public class FightButton : MonoBehaviour, IFightButton
 
    public void StartBattle()
    {
-      
+      Debug.Log("Button Start Battle");
    }
    
    //Updates the button Text

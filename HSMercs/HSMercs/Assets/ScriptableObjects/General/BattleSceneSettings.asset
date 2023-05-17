@@ -24,5 +24,7 @@ MonoBehaviour:
     type: 3}
   skillQueuePreviewPrefab: {fileID: 3398279949013156436, guid: cc918bd7929c8474ea9645ac24ba3bca,
     type: 3}
+  fightButtonPrefab: {fileID: 6335389228124570756, guid: f855b7292401b56479e0b02e04b4823f,
+    type: 3}
   allyTeamHeroes: {fileID: 11400000, guid: 42568677ef1050347852989fdffd0e7c, type: 2}
   enemyTeamHeroes: {fileID: 11400000, guid: 061bfa95ee4b39248967364f066747a2, type: 2}

@@ -28,10 +28,9 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
    private IInitializeSkillQueue _initializeSkillQueue;
 
    private IInitializeSkillsQueuePreview _initializeSkillsQueuePreview;
-   
-   
-   
-   
+
+   private IInitializeFightButton _initializeFightButton;
+
 
    public IPlayer MainPlayer { get; set; }
    public IPlayer EnemyPlayer { get; set; }
@@ -40,6 +39,9 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
 
    public ISkillQueue SkillQueue { get; set; }
    public ISkillQueuePreview SkillQueuePreview { get; set; }
+
+   public IFightButton FightButton { get; set; }
+
 
 
 
@@ -54,6 +56,7 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
       _initializeSkills = GetComponent<IInitializeSkills>();
       _initializeSkillQueue = GetComponent<IInitializeSkillQueue>();
       _initializeSkillsQueuePreview = GetComponent<IInitializeSkillsQueuePreview>();
+      _initializeFightButton = GetComponent<IInitializeFightButton>();
    }
 
    private void Start()
@@ -76,6 +79,8 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
       yield return StartCoroutine(InitializeAllHeroes());
 
       yield return StartCoroutine(InitializeAllSkills());
+
+      yield return StartCoroutine(InitializeFightButton());
 
       //TEST
       yield return StartCoroutine(StartBattle());
@@ -162,7 +167,14 @@ public class BattleSceneManager : MonoBehaviour, IBattleSceneManager
       
       yield return null;
    }
-   
+
+   private IEnumerator InitializeFightButton()
+   {
+      _initializeFightButton.StartAction(this);
+      
+      yield return null;
+   }
+
    //Temporary
    //TODO: Create its own class
    private IEnumerator StartBattle()

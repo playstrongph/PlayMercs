@@ -17,6 +17,8 @@ namespace SOAssets
         GameObject SkillQueuePanel { get; }
         GameObject SkillQueuePreviewPrefab { get; }
 
+        GameObject FightButtonPrefab { get; }
+
 
     }
 }

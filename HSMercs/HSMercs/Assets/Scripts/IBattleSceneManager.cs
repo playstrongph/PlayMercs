@@ -15,4 +15,6 @@ public interface IBattleSceneManager
 
      ISkillQueuePreview SkillQueuePreview { get; set; }
      
+     IFightButton FightButton { get; set; }
+     
 }

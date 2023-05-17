@@ -95,6 +95,7 @@
      <Compile Include="Assets\Scripts\IHeroTargetCollider.cs" />
      <Compile Include="Assets\Scripts\IHeroVisual.cs" />
      <Compile Include="Assets\Scripts\IHeroes.cs" />
+     <Compile Include="Assets\Scripts\IInitializeFightButton.cs" />
      <Compile Include="Assets\Scripts\IInitializeHeroes.cs" />
      <Compile Include="Assets\Scripts\IInitializePlayers.cs" />
      <Compile Include="Assets\Scripts\IInitializeSkillQueue.cs" />
@@ -129,6 +130,7 @@
      <Compile Include="Assets\Scripts\IStatusEffectPreviewVisual.cs" />
      <Compile Include="Assets\Scripts\IStatusEffectVisual.cs" />
      <Compile Include="Assets\Scripts\ITargetNodes.cs" />
+     <Compile Include="Assets\Scripts\InitializeFightButton.cs" />
      <Compile Include="Assets\Scripts\InitializeHeroes.cs" />
      <Compile Include="Assets\Scripts\InitializePlayers.cs" />
      <Compile Include="Assets\Scripts\InitializeSkillQueue.cs" />
